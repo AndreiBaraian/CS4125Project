@@ -29,6 +29,8 @@ public class Main {
 		tx.commit();
 		session.disconnect();
 		
+		System.out.println("Hello!");
+		
 	}
 
 }

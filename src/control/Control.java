@@ -1,5 +1,4 @@
 package control;
-import ccc.Number;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -21,21 +20,21 @@ public class Control {
 
 	private List<Region> availableRegions;
 	private List<String> types;
-	private List<Number> registeredNumbers;
-	private Number numi;
+	private List<String> registeredNumbers;
+	private String numi;
 	Random rand;
 
 	public Control() {
 		types = new ArrayList<String>(Arrays.asList("Message", "Call", "Internet"));
 		
 		availableRegions = new ArrayList<Region>();
-		registeredNumbers =new ArrayList<Number>();
+		registeredNumbers =new ArrayList<String>();
 		services= new ArrayList<Service>();
 		Region irlanda= new Region("Irlanda");
 		Region eu= new Region("EU");
 		Region usa = new Region ("USA");
 		Region china = new Region ("China");
-		numi= new Number("1112121");
+		numi= "1112121";
 		availableRegions.add(irlanda);
 		availableRegions.add(eu);
 		availableRegions.add(usa);
@@ -49,7 +48,7 @@ public class Control {
 		Region from=new Region();
 		Region to= new Region();
 		int duration;
-		Number number;
+		String number;
 		int quantity = C.getQuantity();
 		
 
@@ -75,7 +74,7 @@ public class Control {
 			duration = rand.nextInt((C.getMaxDuration() - C.getMinDuration()) + 1) + C.getMinDuration();
 			Service S= ServiceFactory.getService(generatedType, from, number, to, duration);
 			services.add(S);
-			System.out.println("type:"+generatedType+" from "+ from.getName()+ " to "+to.getName()+ " number "+ number.getValue()+ " duration "+ duration);
+			System.out.println("type:"+generatedType+" from "+ from.getName()+ " to "+to.getName()+ " number "+ number + " duration "+ duration);
 			
 		}
 	}

@@ -4,12 +4,18 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import control.Control;
 import dao.SessionFactoryUtil;
+import gui.Menu;
 import model.Service;
 
 public class Main {
 
 	public static void main(String[] args) {
+		
+		Control c= new Control();
+		Menu window = new Menu(c);
+		window.getFrmMainMenu().setVisible(true);
 		
 		Service s1 = new Service();
 		Service s2 = new Service();
@@ -28,6 +34,8 @@ public class Main {
 		session.save(s2);
 		tx.commit();
 		session.disconnect();
+		
+		System.out.println("Hello!");
 		
 	}
 

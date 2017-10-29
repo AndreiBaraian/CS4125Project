@@ -2,8 +2,8 @@ package promotion;
 import report.Report;
 
 public class SurferPromotion extends Promotion {
-	public SurferPromotion(Account p) {
-		super(p);
+	public SurferPromotion(Account account) {
+		super(account);
 		// TODO Auto-generated constructor stub
 	}
 	private String mobileData;

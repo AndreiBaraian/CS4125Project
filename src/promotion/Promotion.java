@@ -3,16 +3,18 @@ import report.Report;
 import region.Region;
 
 public class Promotion extends Account {
-	Account p;
-	
-	public Promotion(Account p) {
-		this.p = p;
+	Account account;
+	int minutes;
+	float duration;
+	int giftpoints;
+	public Promotion(Account account) {
+		this.account = account;
 	}
 
 	@Override
 	public Report generateReport() {
 		// TODO Auto-generated method stub
-		return p.generateReport();
+		return account.generateReport();
 	}
 
 	@Override

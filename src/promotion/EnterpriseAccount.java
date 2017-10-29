@@ -15,6 +15,10 @@ public class EnterpriseAccount extends Account {
 	public Report generateReport() {
 		return null;
 	}
+	public void extendDate(String date)
+	{
+		
+	}
 	
 	
 }

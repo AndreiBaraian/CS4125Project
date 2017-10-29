@@ -28,13 +28,13 @@ public abstract class Service {
 	@Column(name = "cost")
 	protected double cost;
 	
-	/*
+	
 	public Service(Region locationFrom, String number)
 	{
 		this.locationFrom=locationFrom;
 		this.locationFromString = locationFrom.toString();
 		this.number=number;
-	}*/
+	}
 	public abstract void applyPrice(double price);
 	
 	public int getId() {

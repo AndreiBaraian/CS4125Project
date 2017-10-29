@@ -1,6 +1,8 @@
 package main;
 
+import control.Control;
 import dao.CallDAO;
+import gui.Menu;
 import region.Region;
 import service.Call;
 
@@ -8,9 +10,10 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		//Control c= new Control();
-		//Menu window = new Menu(c);
-		//window.getFrmMainMenu().setVisible(true);
+		Control c= new Control();
+		Menu window = new Menu(c);
+		window.getFrmMainMenu().setVisible(true);
+		
 		
 		CallDAO cdao = new CallDAO();
 		Region Romania = new Region("Romania");

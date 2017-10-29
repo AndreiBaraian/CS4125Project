@@ -24,16 +24,12 @@ public class Call extends Service implements Serializable {
 	@Column(name = "duration")
 	private int duration;
 	
-	//public Call() {}
-	
 	public Call(Region locationFrom, String number, Region locationTo, float duration) {
-		//super(locationFrom, number);
-		this.locationFrom = locationFrom;
+		super(locationFrom, number);
 		this.locationFromString = locationFrom.toString();
-		this.number = number;
 		this.locationTo=locationTo;
-		this.duration=(int)duration;
 		this.locationToString = locationTo.toString();
+		this.duration=(int)duration;
 	}
 	
 	@Override

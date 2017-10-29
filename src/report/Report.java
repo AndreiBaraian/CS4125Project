@@ -1,6 +1,11 @@
 package report;
 
 public class Report {
-		public float callPrice;
-		public float roamingTax;
+		private float spentMinutes ;
+		private float spentMessages;
+		private float usedMobileData;
+		private float leftMinutes;
+		private float leftMessages;
+		private float leftMobileData;
+		private float CostUntilNow;
 }

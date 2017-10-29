@@ -7,7 +7,7 @@ public class FamilyAccount extends Account {
 	private int numberCount;
 	private List<Number> numbers;
 	@Override
-	public Report generateReport() {
+	public Report generateReport(String customer) {
 		// TODO Auto-generated method stub
 		return null;
 	}

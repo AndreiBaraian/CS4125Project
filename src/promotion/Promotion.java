@@ -12,9 +12,9 @@ public class Promotion extends Account {
 	}
 
 	@Override
-	public Report generateReport() {
+	public Report generateReport(String customer) {
 		// TODO Auto-generated method stub
-		return account.generateReport();
+		return account.generateReport(customer);
 	}
 
 	@Override

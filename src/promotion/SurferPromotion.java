@@ -7,7 +7,7 @@ public class SurferPromotion extends Promotion {
 		// TODO Auto-generated constructor stub
 	}
 	private String mobileData;
-	public Report generateReport()
+	public Report generateReport(String customer)
 	{
 		return null;
 	}

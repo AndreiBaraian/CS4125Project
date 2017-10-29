@@ -6,7 +6,7 @@ public class FriendPromotion extends Promotion {
 		// TODO Auto-generated constructor stub
 	}
 	private int differentProviderMinutes;
-	public Report generateReport()
+	public Report generateReport(String customer)
 	{
 		return null;
 	}

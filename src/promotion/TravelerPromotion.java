@@ -8,7 +8,7 @@ public class TravelerPromotion extends Promotion {
 		this.internationalMinutes = 100;
 		// TODO Auto-generated constructor stub
 	}
-	public Report generateReport()
+	public Report generateReport(String customer)
 	{
 		return null;
 	}

@@ -12,7 +12,7 @@ public class EnterpriseAccount extends Account {
 	}
 
 	@Override
-	public Report generateReport() {
+	public Report generateReport(String customer) {
 		return null;
 	}
 	public void extendDate(String date)

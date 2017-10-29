@@ -4,17 +4,23 @@ import region.Region;
 
 public class Promotion extends Account {
 	Account account;
-	int minutes;
-	float duration;
-	int giftpoints;
+	protected int minutes;
+	protected float duration;
+	protected int giftpoints;
 	public Promotion(Account account) {
 		this.account = account;
 	}
+	
+	public Promotion()
+	{
+		
+	}
+
 
 	@Override
-	public Report generateReport(String customer) {
+	public Report generateReport() {
 		// TODO Auto-generated method stub
-		return account.generateReport(customer);
+		return account.generateReport();
 	}
 
 	@Override
@@ -22,5 +28,7 @@ public class Promotion extends Account {
 		// TODO Auto-generated method stub
 		
 	}
+
+
 	
 }

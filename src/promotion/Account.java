@@ -6,10 +6,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 public abstract class Account {
-	private float balance;
-	private Region homeregion;
+	protected float balance;
+	protected Region homeregion;
 	protected String customer;
-	private List<Promotion> promotions = new ArrayList();
-	public abstract Report generateReport(String customer);
+	//protected List<Promotion> promotions;
+	protected Promotion promotion;
+	public abstract Report generateReport();
 	public abstract void computeDiscount();
+	
+	public Account(float balance, Region homeregion,Promotion promotion) {
+		super();
+		this.balance = balance;
+		this.homeregion = homeregion;
+		this.promotion = promotion;
+	}
+	public Account()
+	{
+		
+	}
+	
 }

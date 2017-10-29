@@ -8,9 +8,22 @@ public class TravelerPromotion extends Promotion {
 		this.internationalMinutes = 100;
 		// TODO Auto-generated constructor stub
 	}
-	public Report generateReport(String customer)
+	
+	public TravelerPromotion(Account account, int minutes,float duration,int giftpoints,int internationalMinutes) { //get the value from GUI
+		super(account);
+		this.internationalMinutes = internationalMinutes;
+		this.minutes = minutes;
+		this.duration = duration;
+		this.giftpoints = giftpoints;
+	}
+	public TravelerPromotion()
 	{
-		return null;
+		
+	}
+
+	public Report generateReport()
+	{
+		return new Report(super.generateReport());
 	}
 	public void computeDiscount()
 	{

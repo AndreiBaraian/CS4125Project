@@ -1,15 +1,19 @@
 package promotion;
 import java.util.List;
 
+import region.Region;
 import report.Report;
 
 public class FamilyAccount extends Account {
 	private int numberCount;
 	private List<Number> numbers;
+	
+
 	@Override
-	public Report generateReport(String customer) {
+	public Report generateReport() {
 		// TODO Auto-generated method stub
-		return null;
+		Report r = new Report();  //get value from GUI
+		return r;
 	}
 
 	@Override
@@ -17,5 +21,13 @@ public class FamilyAccount extends Account {
 		// TODO Auto-generated method stub
 		
 	}
+
+	public FamilyAccount(float balance, Region homeregion, String customer,
+			Promotion promotion, int numberCount, List<Number> numbers) {
+		super(balance, homeregion, promotion);
+		this.numberCount = numberCount;
+		this.numbers = numbers;
+	}
+	
 		
 }

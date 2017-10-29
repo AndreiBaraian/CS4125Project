@@ -1,14 +1,29 @@
 package promotion;
 import report.Report;
 public class FriendPromotion extends Promotion {
-	public FriendPromotion(Account account) {
+	private int differentProviderMinutes;
+	
+	public FriendPromotion(Account account, int differentProviderMinutes) {
+		super(account);
+		this.differentProviderMinutes = differentProviderMinutes;
+	}
+
+	public FriendPromotion(Account account, int minutes,float duration,int giftpoints,int differentproviderminutes) { //get the value from GUI
 		super(account);
 		// TODO Auto-generated constructor stub
+		this.minutes = minutes;
+		this.duration = duration;
+		this.giftpoints = giftpoints;
+		this.differentProviderMinutes = differentproviderminutes;
 	}
-	private int differentProviderMinutes;
-	public Report generateReport(String customer)
+	public FriendPromotion()
 	{
-		return null;
+		
+	}
+	
+	public Report generateReport()
+	{
+		return new Report(super.generateReport());
 	}
 	public void computeDiscuont()
 	{

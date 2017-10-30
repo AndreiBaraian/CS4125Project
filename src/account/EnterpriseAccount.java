@@ -1,6 +1,7 @@
-package promotion;
+package account;
 import java.util.ArrayList;
 import java.util.List;
+
 import promotion.Promotion;
 import region.Region;
 import report.Report;

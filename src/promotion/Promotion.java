@@ -1,4 +1,5 @@
 package promotion;
+import account.Account;
 import report.Report;
 import region.Region;
 

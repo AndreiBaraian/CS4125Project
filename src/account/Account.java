@@ -1,9 +1,11 @@
-package promotion;
+package account;
 import region.Region;
 import report.Report;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import promotion.Promotion;
 
 public abstract class Account {
 	protected float balance;

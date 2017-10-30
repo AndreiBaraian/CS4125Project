@@ -1,6 +1,9 @@
 package promotion;
 
 import java.util.ArrayList;
+
+import account.Account;
+import account.EnterpriseAccount;
 import region.Region; 
 import promotion.PDFcreater;
 import report.Report;

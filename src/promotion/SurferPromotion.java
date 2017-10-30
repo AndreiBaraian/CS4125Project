@@ -1,4 +1,5 @@
 package promotion;
+import account.Account;
 import report.Report;
 
 public class SurferPromotion extends Promotion {

@@ -1,32 +1,40 @@
 package service;
-import ccc.Number;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import region.Region;
 
+@Entity
+@Table(name = "internetusage")
 public class InternetUsage extends Service{
 
-
-
-	private float speed;
-	private float traffic;
+	@Column(name = "speed")
+	private double speed;
 	
+	@Column(name = "traffic")
+	private int traffic;
 	
-	public InternetUsage(Region locationFrom, Number number, float traffic) {
+	public InternetUsage(Region locationFrom, String number, float traffic) {
 		super(locationFrom, number);
-		this.traffic= traffic;
+		this.traffic= (int)traffic;
 	}
-	public void applyPrice(float price) {
+	
+	@Override
+	public void applyPrice(double price) {
 		super.setCost(price*((float)traffic/1000));
 	}
-	public float getTraffic() {
+	
+	public int getTraffic() {
 		return traffic;
 	}
-	public void setTraffic(float traffic) {
+	public void setTraffic(int traffic) {
 		this.traffic = traffic;
 	}
-	public float getSpeed() {
+	public double getSpeed() {
 		return speed;
 	}
-	public void setSpeed(float speed) {
+	public void setSpeed(double speed) {
 		this.speed = speed;
 	}
 

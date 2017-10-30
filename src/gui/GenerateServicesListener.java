@@ -50,15 +50,15 @@ public class GenerateServicesListener implements ActionListener{
 		{
 			if(s instanceof Message)
 			{
-				model.addRow(new Object[]{ "Message",s.getNumber().getValue(),s.getLocationFrom().getName(),((Message) s).getLocationTo().getName(),((Message) s).getNrOfWords()+" words" , "Not yet"});
+				model.addRow(new Object[]{ "Message",s.getNumber(),s.getLocationFrom().getName(),((Message) s).getLocationTo().getName(),((Message) s).getNrOfWords()+" words" , "Not yet"});
 			}
 			else if (s instanceof Call)
 			{
-				model.addRow(new Object[]{ "Call",s.getNumber().getValue(),s.getLocationFrom().getName(),((Call) s).getLocationTo().getName(),((Call) s).getDuration()+" secs" , "Not yet"});
+				model.addRow(new Object[]{ "Call",s.getNumber(),s.getLocationFrom().getName(),((Call) s).getLocationTo().getName(),((Call) s).getDuration()+" secs" , "Not yet"});
 			}
 			else
 			{
-				model.addRow(new Object[]{ "Internet Usage",s.getNumber().getValue(),s.getLocationFrom().getName(),"None",((InternetUsage) s).getTraffic()+" Kb" , "Not yet"});
+				model.addRow(new Object[]{ "Internet Usage",s.getNumber(),s.getLocationFrom().getName(),"None",((InternetUsage) s).getTraffic()+" Kb" , "Not yet"});
 
 			}
 

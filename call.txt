@@ -1,0 +1,8 @@
+CREATE TABLE `phonecompanydb`.`call` (
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `locationFrom` VARCHAR(45) NULL,
+  `number` VARCHAR(45) NULL,
+  `cost` DOUBLE NULL,
+  `locationTo` VARCHAR(45) NULL,
+  `duration` INT NULL,
+  PRIMARY KEY (`id`));

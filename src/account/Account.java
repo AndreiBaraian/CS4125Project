@@ -18,8 +18,9 @@ public abstract class Account {
 			float leftMobileData, float costUntilNow);
 	public abstract void computeDiscount();
 	
-	public Account(float balance, Region homeregion,Promotion promotion) {
+	public Account(float balance, Region homeregion,Promotion promotion,Customer customer) {
 		super();
+		this.customer = customer;
 		this.balance = balance;
 		this.homeregion = homeregion;
 		this.promotion = promotion;

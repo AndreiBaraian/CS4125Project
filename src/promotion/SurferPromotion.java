@@ -1,29 +1,32 @@
 package promotion;
 import account.Account;
 import report.Report;
+import account.*;
 
 public class SurferPromotion extends Promotion {
-	private String mobileData;
-	public SurferPromotion(Account account) {
+	private float mobileData;
+	public SurferPromotion(Account account,Customer customer) {
 		super(account);
+		this.customer = customer;
 		// TODO Auto-generated constructor stub
 	}
 	
-	public SurferPromotion(Account account, int minutes,float duration,int giftpoints,String mobileData) { //get the value from GUI
-		super(account);
+	public SurferPromotion(int minutes,float duration,int giftpoints,float mobileData) { //get the value from GUI
+		super();
 		this.mobileData = mobileData;
-		this.minutes = minutes;
-		this.duration = duration;
-		this.giftpoints = giftpoints;
+		this.setMinutes(minutes);
+		this.setDuration(duration); 
+		this.setGiftpoints(giftpoints);
+		
 	}
 
-	public Report generateReport(float spentMinutes, float spentMessages,
-			float usedMobileData, float leftMinutes, float leftMessages,
-			float leftMobileData, float costUntilNow)
+	public Report generateReport(float spentMinutes, float spentMessages,float usedMobileData, float leftMinutes, float leftMessages,float leftMobileData, float costUntilNow)
 	{
 		Report r = super.generateReport(spentMinutes,spentMessages,usedMobileData,leftMinutes,leftMessages,leftMobileData,costUntilNow);
-		r
-		return ;
+		r.setMobileData(mobileData);
+		PDFcreater pdfc = new PDFcreater(r,customer);
+		pdfc.outputPDF();
+		return r;
 	}
 	public void computeDiscount()
 	{

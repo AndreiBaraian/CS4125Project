@@ -5,14 +5,51 @@ import region.Region;
 
 public class Promotion extends Account {
 	Account account;
-	protected int minutes;
-	protected float duration;
-	protected int giftpoints;
+	private int minutes;
+	private float duration;
+	private int giftpoints;
+	private int messages;
+	
+	public int getMessages() {
+		return messages;
+	}
+
+	public void setMessages(int messages) {
+		this.messages = messages;
+	}
+
+	public int getMinutes() {
+		return minutes;
+	}
+
+	public void setMinutes(int minutes) {
+		this.minutes = minutes;
+	}
+
+	public float getDuration() {
+		return duration;
+	}
+
+	public void setDuration(float duration) {
+		this.duration = duration;
+	}
+
+	public int getGiftpoints() {
+		return giftpoints;
+	}
+
+	public void setGiftpoints(int giftpoints) {
+		this.giftpoints = giftpoints;
+	}
+
 	public Promotion(Account account) {
 		this.account = account;
 	}
 	
-
+	public Promotion()
+	{
+		
+	}
 
 	@Override
 	public Report generateReport(float spentMinutes, float spentMessages,

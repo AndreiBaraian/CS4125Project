@@ -20,20 +20,23 @@ public class EnterpriseAccount extends Account {
 	public Report generateReport(float spentMinutes, float spentMessages,
 			float usedMobileData, float leftMinutes, float leftMessages,
 			float leftMobileData, float costUntilNow) {
-		Report r = new Report(spentMinutes, spentMessages,usedMobileData, leftMinutes,leftMessages,leftMobileData,costUntilNow); //get value from GUI
-		PDFcreater pdf = new PDFcreater(customer,r);
-		pdf.outputPDF(customer.name);
-		return r;
+		Report report = new Report(spentMinutes, spentMessages,usedMobileData, leftMinutes,leftMessages,leftMobileData,costUntilNow); //get value from GUI
+		report.setNumber(number);
+		report.setEndate(endate);
+		PDFcreater pdf = new PDFcreater(report,this.customer);
+		pdf.outputPDF();
+		return report;
 	}
 	public void extendDate(String date)
 	{
 		
 	}
 
-	public EnterpriseAccount(float balance, Region homeregion,Promotion promotion, String endate, String number) {
-		super(balance, homeregion,promotion);
+	public EnterpriseAccount(float balance, Region homeregion,Promotion promotion,Customer customer, String endate, String number) {
+		super(balance, homeregion,promotion,customer);
 		this.endate = endate;
 		this.number = number;
+		this.customer = customer;
 	}
 
 

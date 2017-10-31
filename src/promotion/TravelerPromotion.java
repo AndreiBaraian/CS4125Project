@@ -1,4 +1,5 @@
 package promotion;
+import customer.Customer;
 import account.Account;
 import report.Report;
 import account.*;
@@ -20,7 +21,9 @@ public class TravelerPromotion extends Promotion {
 		this.setGiftpoints(giftpoints);
 	}
 
-	public Report generateReport(float spentMinutes, float spentMessages,float usedMobileData, float leftMinutes, float leftMessages,float leftMobileData, float costUntilNow)
+	public Report generateReport(double spentMinutes, double spentMessages,
+			double usedMobileData, double leftMinutes, double leftMessages,
+			double leftMobileData, double costUntilNow)
 	{
 		Report r = super.generateReport(spentMinutes,spentMessages,usedMobileData,leftMinutes,leftMessages,leftMobileData,costUntilNow);
 		r.setInternationalMinutes(internationalMinutes);

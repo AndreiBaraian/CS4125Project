@@ -1,10 +1,11 @@
 package promotion;
+import customer.Customer;
 import account.Account;
 import report.Report;
 import account.*;
 
 public class SurferPromotion extends Promotion {
-	private float mobileData;
+	private double mobileData;
 	public SurferPromotion(Account account,Customer customer) {
 		super(account);
 		this.customer = customer;
@@ -20,7 +21,9 @@ public class SurferPromotion extends Promotion {
 		
 	}
 
-	public Report generateReport(float spentMinutes, float spentMessages,float usedMobileData, float leftMinutes, float leftMessages,float leftMobileData, float costUntilNow)
+	public Report generateReport(double spentMinutes, double spentMessages,
+			double usedMobileData, double leftMinutes, double leftMessages,
+			double leftMobileData, double costUntilNow)
 	{
 		Report r = super.generateReport(spentMinutes,spentMessages,usedMobileData,leftMinutes,leftMessages,leftMobileData,costUntilNow);
 		r.setMobileData(mobileData);

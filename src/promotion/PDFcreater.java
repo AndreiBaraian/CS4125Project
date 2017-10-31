@@ -16,6 +16,8 @@ import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Element;
 
+import customer.Customer;
+
 public class PDFcreater {
     Customer customer;
     Report report;

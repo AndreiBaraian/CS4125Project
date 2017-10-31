@@ -6,7 +6,7 @@ import region.Region;
 public class Promotion extends Account {
 	Account account;
 	private int minutes;
-	private float duration;
+	private double duration;
 	private int giftpoints;
 	private int messages;
 	
@@ -26,11 +26,11 @@ public class Promotion extends Account {
 		this.minutes = minutes;
 	}
 
-	public float getDuration() {
+	public double getDuration() {
 		return duration;
 	}
 
-	public void setDuration(float duration) {
+	public void setDuration(double duration) {
 		this.duration = duration;
 	}
 
@@ -52,9 +52,9 @@ public class Promotion extends Account {
 	}
 
 	@Override
-	public Report generateReport(float spentMinutes, float spentMessages,
-			float usedMobileData, float leftMinutes, float leftMessages,
-			float leftMobileData, float costUntilNow) {
+	public Report generateReport(double spentMinutes, double spentMessages,
+			double usedMobileData, double leftMinutes, double leftMessages,
+			double leftMobileData, double costUntilNow) {
 		// TODO Auto-generated method stub
 		return account.generateReport( spentMinutes,  spentMessages,
 				 usedMobileData,  leftMinutes,  leftMessages,

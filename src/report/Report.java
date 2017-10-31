@@ -9,19 +9,19 @@ public class Report {
 		private String number;
 		private int numberCount;
 		private List<Number> numbers;
-		private float spentMinutes  ;
-		private float spentMessages ;
-		private float usedMobileData ;
-		private float leftMinutes ;
-		private float leftMessages ;
-		private float leftMobileData ;
-		private float CostUntilNow ;
-		private float mobileData;
-		private float internationalMinutes;
-		private float differentProviderMinutes;
-	public Report(float spentMinutes, float spentMessages,
-				float usedMobileData, float leftMinutes, float leftMessages,
-				float leftMobileData, float costUntilNow) {
+		private double spentMinutes  ;
+		private double spentMessages ;
+		private double usedMobileData ;
+		private double leftMinutes ;
+		private double leftMessages ;
+		private double leftMobileData ;
+		private double CostUntilNow ;
+		private double mobileData;
+		private double internationalMinutes;
+		private double differentProviderMinutes;
+	public Report(double spentMinutes, double spentMessages,
+			double usedMobileData, double leftMinutes, double leftMessages,
+				double leftMobileData, double costUntilNow) {
 			super();
 			this.spentMinutes = spentMinutes;
 			this.spentMessages = spentMessages;
@@ -64,81 +64,81 @@ public class Report {
 		this.numbers = numbers;
 	}
 
-		public float getSpentMinutes()
+		public double getSpentMinutes()
 		{
 			return spentMinutes;
 		}
-		public void setSpentMinutes(float spentMinutes)
+		public void setSpentMinutes(double spentMinutes)
 		{
 			this.spentMinutes = spentMinutes;
 		}
-		public float getSpentMessages()
+		public double getSpentMessages()
 		{
 			return spentMessages;
 		}
-		public void setSpentMessages(float spentMessages)
+		public void setSpentMessages(double spentMessages)
 		{
 			this.spentMessages = spentMessages;
 		}
-		public float getLeftMinutes()
+		public double getLeftMinutes()
 		{
 			return leftMinutes;
 		}
-		public void setLeftMinutes(float leftMinutes)
+		public void setLeftMinutes(double leftMinutes)
 		{
 			this.leftMinutes = leftMinutes;
 		}
-		public float getLeftMessages()
+		public double getLeftMessages()
 		{
 			return leftMessages;
 		}
-		public void setLeftMessages(float leftMessages)
+		public void setLeftMessages(double leftMessages)
 		{
 			this.leftMessages = leftMessages;
 		}
-		public float getLeftMobileData()
+		public double getLeftMobileData()
 		{
 			return leftMobileData; 
 		}
-		public void setLeftMobileData(float leftMobileData)
+		public void setLeftMobileData(double leftMobileData)
 		{
 			this.leftMobileData = leftMobileData;
 		}
-		public float getMobileData() {
+		public double getMobileData() {
 			return mobileData;
 		}
-		public void setMobileData(float mobileData2) {
+		public void setMobileData(double mobileData2) {
 			this.mobileData = mobileData2;
 		}
-		public float getCostUntilNow()
+		public double getCostUntilNow()
 		{
 			return CostUntilNow;
 		}
-		public void setCostUntilNow(float costUntilNow)
+		public void setCostUntilNow(double costUntilNow)
 		{
 			this.CostUntilNow = costUntilNow;
 		}
-		public float getUsedMobileData()
+		public double getUsedMobileData()
 		{
 			return usedMobileData;
 		}
-		public void setUsedMobileData(float usedMobileData)
+		public void setUsedMobileData(double usedMobileData)
 		{
 			this.usedMobileData = usedMobileData;
 		}
-		public float getInternationalMinutes()
+		public double getInternationalMinutes()
 		{
 			return internationalMinutes;
 		}
-		public void setInternationalMinutes(float internationalMinutes)
+		public void setInternationalMinutes(double internationalMinutes)
 		{
 			this.internationalMinutes = internationalMinutes;
 		}
-		public float getDifferentProviderMinutes()
+		public double getDifferentProviderMinutes()
 		{
 			return differentProviderMinutes;
 		}
-		public void setDifferentProviderMinutes(float differentProviderMinutes)
+		public void setDifferentProviderMinutes(double differentProviderMinutes)
 		{
 			this.differentProviderMinutes = differentProviderMinutes;
 		}

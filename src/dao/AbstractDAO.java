@@ -29,7 +29,7 @@ public abstract class AbstractDAO<T extends Service> {
 		//@SuppressWarnings("deprecation")
 		//Criteria criteria = session.createCriteria(parameterType);
 		//criteria.add(Restrictions.eq(propertyName, value))
-		session.save(object);
+		//session.save(object);
 		tx.commit();
 		return object.getId();
 	}

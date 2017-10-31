@@ -10,10 +10,12 @@ import promotion.Promotion;
 public abstract class Account {
 	protected float balance;
 	protected Region homeregion;
-	protected String customer;
+	protected Customer customer;
 	//protected List<Promotion> promotions;
 	protected Promotion promotion;
-	public abstract Report generateReport();
+	public abstract Report generateReport(float spentMinutes, float spentMessages,
+			float usedMobileData, float leftMinutes, float leftMessages,
+			float leftMobileData, float costUntilNow);
 	public abstract void computeDiscount();
 	
 	public Account(float balance, Region homeregion,Promotion promotion) {

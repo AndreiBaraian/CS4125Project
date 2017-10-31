@@ -16,9 +16,11 @@
         <property name="hibernate.cache.provider_class">org.hibernate.cache.HashtableCacheProvider</property>
         <property name="current_session_context_class">thread</property>
         <property name="hibernate.id.new_generator_mappings">false</property>
+        <property name="show_sql">true</property>
         
         <!-- List of XML mapping files -->
-   		<mapping class="model.Service"/>
+   		<mapping class="service.Service"/>
+ 		<mapping class="service.Call"/>
  
 	</session-factory>
 

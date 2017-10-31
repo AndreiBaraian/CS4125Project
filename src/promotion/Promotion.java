@@ -12,16 +12,16 @@ public class Promotion extends Account {
 		this.account = account;
 	}
 	
-	public Promotion()
-	{
-		
-	}
 
 
 	@Override
-	public Report generateReport() {
+	public Report generateReport(float spentMinutes, float spentMessages,
+			float usedMobileData, float leftMinutes, float leftMessages,
+			float leftMobileData, float costUntilNow) {
 		// TODO Auto-generated method stub
-		return account.generateReport();
+		return account.generateReport( spentMinutes,  spentMessages,
+				 usedMobileData,  leftMinutes,  leftMessages,
+				 leftMobileData,costUntilNow);
 	}
 
 	@Override

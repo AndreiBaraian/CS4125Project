@@ -1,19 +1,16 @@
 package main;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-
 import control.Control;
-import dao.SessionFactoryUtil;
+import dao.CallDAO;
 import gui.Menu;
-import model.Service;
+import region.Region;
+import service.Call;
 
 public class Main {
 
 	public static void main(String[] args) {
 		
-		Control c= new Control();
+	/*	Control c= new Control();
 		Menu window = new Menu(c);
 		window.getFrmMainMenu().setVisible(true);
 		
@@ -34,9 +31,20 @@ public class Main {
 		session.save(s2);
 		tx.commit();
 		session.disconnect();
+
+		
+		CallDAO cdao = new CallDAO();
+		Region Romania = new Region("Romania");
+		Region Ireland = new Region("Ireland");
+		Call c1 = new Call(Romania, "0727566956", Ireland, 14);
+		c1.setCost(3);
+		System.out.println(c1.getNumber());
+		System.out.println(c1.getLocationFromString());
+		System.out.println(cdao.add(c1));
+
 		
 		System.out.println("Hello!");
-		
+		*/
 	}
 
 }

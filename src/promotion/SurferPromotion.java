@@ -16,14 +16,14 @@ public class SurferPromotion extends Promotion {
 		this.duration = duration;
 		this.giftpoints = giftpoints;
 	}
-	public SurferPromotion()
-	{
-		
-	}
 
-	public Report generateReport()
+	public Report generateReport(float spentMinutes, float spentMessages,
+			float usedMobileData, float leftMinutes, float leftMessages,
+			float leftMobileData, float costUntilNow)
 	{
-		return new Report(super.generateReport());
+		Report r = super.generateReport(spentMinutes,spentMessages,usedMobileData,leftMinutes,leftMessages,leftMobileData,costUntilNow);
+		r
+		return ;
 	}
 	public void computeDiscount()
 	{

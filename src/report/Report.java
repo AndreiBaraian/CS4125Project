@@ -1,14 +1,17 @@
 package report;
 
 public class Report {
-		float spentMinutes = 0 ;
-		float spentMessages = 0;
-		float usedMobileData = 0;
-		float leftMinutes = 0;
-		float leftMessages = 0;
-		float leftMobileData = 0;
-		float CostUntilNow = 0;
-		public Report(float spentMinutes, float spentMessages,
+		private float spentMinutes  ;
+		private float spentMessages ;
+		private float usedMobileData ;
+		private float leftMinutes ;
+		private float leftMessages ;
+		private float leftMobileData ;
+		private float CostUntilNow ;
+		private String mobileData;
+		private int internationalMinutes;
+		private float differentProviderMinutes;
+	public Report(float spentMinutes, float spentMessages,
 				float usedMobileData, float leftMinutes, float leftMessages,
 				float leftMobileData, float costUntilNow) {
 			super();
@@ -20,19 +23,14 @@ public class Report {
 			this.leftMobileData = leftMobileData;
 			this.CostUntilNow = costUntilNow;
 		}
-		public Report(Report r)
-		{
-			super();
-			this.spentMinutes = r.spentMinutes;
-			this.spentMessages = r.spentMessages;
-			this.usedMobileData = r.usedMobileData;
-			this.leftMinutes = r.leftMinutes;
-			this.leftMessages = r.leftMessages;
-			this.leftMobileData = r.leftMobileData;
-			this.CostUntilNow = r.CostUntilNow;
-		}
 		public Report()
 		{
 			
+		}
+		public String getMobileData() {
+			return mobileData;
+		}
+		public void setMobileData(String mobileData) {
+			this.mobileData = mobileData;
 		}
 }

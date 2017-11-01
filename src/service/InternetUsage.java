@@ -38,4 +38,10 @@ public class InternetUsage extends Service{
 		this.speed = speed;
 	}
 
+	@Override
+	public void setReferenceNumber(String referenceNumber) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

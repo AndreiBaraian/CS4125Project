@@ -2,6 +2,7 @@ package main;
 
 import control.Control;
 import dao.CallDAO;
+import exceptions.InsertException;
 import gui.Menu;
 import region.Region;
 import service.Call;
@@ -10,10 +11,11 @@ public class Main {
 
 	public static void main(String[] args) {
 		
+		/*
 		Control c= new Control();
 		Menu window = new Menu(c);
 		window.getFrmMainMenu().setVisible(true);
-		
+		*/
 		
 		CallDAO cdao = new CallDAO();
 		Region Romania = new Region("Romania");
@@ -22,7 +24,13 @@ public class Main {
 		c1.setCost(3);
 		System.out.println(c1.getNumber());
 		System.out.println(c1.getLocationFromString());
-		System.out.println(cdao.add(c1));
+		c1.setReferenceNumber("1");
+		try {
+			System.out.println(cdao.add(c1));
+		} catch (InsertException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		System.out.println("Hello!");
 		

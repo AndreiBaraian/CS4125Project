@@ -11,6 +11,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
+import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -48,6 +49,25 @@ public abstract class AbstractDAO<T extends Service> {
 		return object.getId();
 	}
 	
-	
+	public List<T> getAll() {
+		List<T> objects = null;
+		 Session session = sessionFactory.openSession();
+		 Transaction tx = null;
+		 try{
+			 tx = session.beginTransaction();
+			 CriteriaBuilder builder = session.getCriteriaBuilder();
+			CriteriaQuery<T> query = builder.createQuery(parameterType);
+			Root<T> root = query.from(parameterType);
+			query.select(root);
+			Query<T> q = session.createQuery(query);
+	        objects = q.getResultList();
+	        tx.commit();
+		 }catch(HibernateException ex){
+			 if(tx != null)
+				 tx.rollback();
+			 ex.printStackTrace();
+		 }
+		 return objects;
+	}
 
 }

@@ -8,9 +8,6 @@ import javax.swing.table.DefaultTableModel;
 
 import control.Control;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JTable;
 import javax.swing.JComboBox;
@@ -19,6 +16,7 @@ import javax.swing.JTextField;
 
 public class ProcessBills extends JFrame {
 
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable table;
 	private JButton btnSetPrices;

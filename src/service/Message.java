@@ -53,8 +53,7 @@ public class Message extends Service{
 
 	@Override
 	public void setReferenceNumber(String referenceNumber) {
-		// TODO Auto-generated method stub
-		
+		this.referenceNumber = "REF-" + referenceNumber;
 	}
 
 }

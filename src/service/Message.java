@@ -51,4 +51,9 @@ public class Message extends Service{
 		this.nrOfWords = nrOfWords;
 	}
 
+	@Override
+	public void setReferenceNumber(String referenceNumber) {
+		this.referenceNumber = "REF-" + referenceNumber;
+	}
+
 }

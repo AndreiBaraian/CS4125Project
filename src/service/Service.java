@@ -28,6 +28,14 @@ public abstract class Service {
 	@Column(name = "cost")
 	protected double cost;
 	
+	@Transient
+	private String uniqueIdentifierFieldName = "referenceNumber";
+	
+	@Column(name = "referenceNumber")
+	protected String referenceNumber;
+
+	public Service() {}
+	
 	
 	public Service(Region locationFrom, String number)
 	{
@@ -35,7 +43,26 @@ public abstract class Service {
 		this.locationFromString = locationFrom.toString();
 		this.number=number;
 	}
+	
 	public abstract void applyPrice(double price);
+	
+	/*
+	public String getUniqueIdentifierFieldName() {
+		return uniqueIdentifierFieldName;
+	}
+
+
+	public void setUniqueIdentifierFieldName(String uniqueIdentifierFieldName){
+		this.uniqueIdentifierFieldName = uniqueIdentifierFieldName;
+	}
+	*/
+
+	public String getReferenceNumber() {
+		return referenceNumber;
+	}
+
+
+	public abstract void setReferenceNumber(String referenceNumber);
 	
 	public int getId() {
 		return id;

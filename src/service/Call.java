@@ -24,6 +24,8 @@ public class Call extends Service implements Serializable {
 	@Column(name = "duration")
 	private int duration;
 	
+	public Call(){ }
+	
 	public Call(Region locationFrom, String number, Region locationTo, float duration) {
 		super(locationFrom, number);
 		this.locationFromString = locationFrom.toString();
@@ -31,7 +33,7 @@ public class Call extends Service implements Serializable {
 		this.locationToString = locationTo.toString();
 		this.duration=(int)duration;
 	}
-	
+
 	@Override
 	public void applyPrice(double price) {
 		super.setCost(price * this.duration);
@@ -49,6 +51,11 @@ public class Call extends Service implements Serializable {
 	}
 	public void setLocationTo(Region locationTo) {
 		this.locationTo = locationTo;
+	}
+
+	@Override
+	public void setReferenceNumber(String referenceNumber) {
+		this.referenceNumber = "REF-" + referenceNumber;
 	}
 
 }

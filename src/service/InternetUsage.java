@@ -38,4 +38,9 @@ public class InternetUsage extends Service{
 		this.speed = speed;
 	}
 
+	@Override
+	public void setReferenceNumber(String referenceNumber) {
+		this.referenceNumber = "REF-" + referenceNumber;
+	}
+
 }

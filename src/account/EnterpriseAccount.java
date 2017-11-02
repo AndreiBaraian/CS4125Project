@@ -1,6 +1,5 @@
 package account;
-import java.util.ArrayList;
-import java.util.List;
+
 
 import customer.Customer;
 import promotion.PDFcreater;
@@ -9,7 +8,7 @@ import region.Region;
 import report.Report;
 
 public class EnterpriseAccount extends Account {
-	private String endate;
+	private String endDate;
 	private String number;
 	@Override
 	public void computeDiscount() {
@@ -23,8 +22,8 @@ public class EnterpriseAccount extends Account {
 			double leftMobileData, double costUntilNow) {
 		Report report = new Report(spentMinutes, spentMessages,usedMobileData, leftMinutes,leftMessages,leftMobileData,costUntilNow); //get value from GUI
 		report.setNumber(number);
-		report.setEndate(endate);
-		PDFcreater pdf = new PDFcreater(report,this.customer);
+		report.setEndDate(endDate);
+		PDFcreater pdf = new PDFcreater(report,this.getCustomer());
 		pdf.outputPDF();
 		return report;
 	}
@@ -33,11 +32,11 @@ public class EnterpriseAccount extends Account {
 		
 	}
 
-	public EnterpriseAccount(double balance, Region homeregion,Promotion promotion,Customer customer, String endate, String number) {
-		super(balance, homeregion,promotion,customer);
-		this.endate = endate;
+	public EnterpriseAccount(double balance, Region homeregion,Customer customer, String endDate, String number) {
+		super(balance, homeregion,customer);
+		this.endDate = endDate;
 		this.number = number;
-		this.customer = customer;
+		this.setCustomer(customer);
 	}
 
 

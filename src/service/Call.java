@@ -1,5 +1,7 @@
 package service;
-
+/**
+ * @author Lucian Epure 
+ */
 import java.io.Serializable;
 
 import javax.persistence.Column;
@@ -27,7 +29,7 @@ public class Call extends Service implements Serializable {
 	public Call(){ }
 	
 	public Call(Region locationFrom, String number, Region locationTo, float duration) {
-		super(locationFrom, number);
+		super(locationFrom, number,duration);
 		this.locationFromString = locationFrom.toString();
 		this.locationTo=locationTo;
 		this.locationToString = locationTo.toString();

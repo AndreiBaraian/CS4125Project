@@ -1,7 +1,6 @@
 package promotion;
 import account.Account;
 import report.Report;
-import region.Region;
 
 public class Promotion extends Account {
 	Account account;
@@ -50,6 +49,8 @@ public class Promotion extends Account {
 	{
 		
 	}
+
+	
 
 	@Override
 	public Report generateReport(double spentMinutes, double spentMessages,

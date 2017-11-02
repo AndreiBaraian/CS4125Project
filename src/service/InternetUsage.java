@@ -1,4 +1,7 @@
 package service;
+/**
+ * @author Lucian Epure 
+ */
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
@@ -16,7 +19,7 @@ public class InternetUsage extends Service{
 	private int traffic;
 	
 	public InternetUsage(Region locationFrom, String number, float traffic) {
-		super(locationFrom, number);
+		super(locationFrom, number,traffic);
 		this.traffic= (int)traffic;
 	}
 	

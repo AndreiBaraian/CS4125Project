@@ -1,15 +1,14 @@
 package promotion;
-import customer.Customer;
 import account.Account;
+
 import report.Report;
-import account.*;
 
 public class SurferPromotion extends Promotion {
 	private double mobileData;
-	public SurferPromotion(Account account,Customer customer) {
+	public SurferPromotion(Account account) {
 		super(account);
-		this.customer = customer;
-		// TODO Auto-generated constructor stub
+		
+		
 	}
 	
 	public SurferPromotion(int minutes,float duration,int giftpoints,float mobileData) { //get the value from GUI
@@ -27,7 +26,7 @@ public class SurferPromotion extends Promotion {
 	{
 		Report r = super.generateReport(spentMinutes,spentMessages,usedMobileData,leftMinutes,leftMessages,leftMobileData,costUntilNow);
 		r.setMobileData(mobileData);
-		PDFcreater pdfc = new PDFcreater(r,customer);
+		PDFcreater pdfc = new PDFcreater(r,account.getCustomer());
 		pdfc.outputPDF();
 		return r;
 	}

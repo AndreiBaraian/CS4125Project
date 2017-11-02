@@ -1,4 +1,7 @@
 package service;
+/**
+ * @author Lucian Epure 
+ */
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -22,7 +25,7 @@ public class Message extends Service{
 	private int nrOfWords;
 	
 	public Message(Region locationFrom, String number, Region locationTo, float nrOfWords) {
-		super(locationFrom, number);
+		super(locationFrom, number,nrOfWords);
 		this.locationTo=locationTo;
 		this.nrOfWords=(int)nrOfWords;
 		this.locationToString = locationTo.toString();

@@ -6,6 +6,7 @@ import java.util.List;
 import report.Report;
 import account.*;
 import account.Number;
+import customer.Customer;
 
 import com.itextpdf.text.Document;
 import com.itextpdf.text.DocumentException;
@@ -15,8 +16,6 @@ import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Element;
-
-import customer.Customer;
 
 public class PDFcreater {
     Customer customer;
@@ -38,16 +37,16 @@ public class PDFcreater {
             document.add(new Paragraph("MobileData:"+report.getMobileData()));
             document.add(new Paragraph("InternationalMinutes:"+report.getInternationalMinutes()));
             document.add(new Paragraph("DifferentProviderMinutes:"+report.getDifferentProviderMinutes()));
-            document.add(new Paragraph("Enddate:"+report.getEndate()));
+            document.add(new Paragraph("Enddate:"+report.getEndDate()));
             document.add(new Paragraph("Number:"+report.getNumber()));
             document.add(new Paragraph("NumberCount:"+report.getNumberCount()));
             if(report.getNumbers()!=null)
             {
             	int num = 1;
             	
-            	for(Number item: report.getNumbers())
+            	for(String item: report.getNumbers())
             	{
-            		document.add(new Paragraph("Number"+num+":"+item.getNumberValue()));
+            		document.add(new Paragraph("Number"+num+":"+item));
             		num++;
             	}
             }

@@ -4,8 +4,8 @@ public class Customer {
 	private String id; 
 	private String name;
 	private int age;
+	private String sex;
 	private String address;
-	private String status;
 	private String email;
 	
 	public String getId() {
@@ -40,14 +40,6 @@ public class Customer {
 		this.address = address;
 	}
 
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
 	public String getEmail() {
 		return email;
 	}
@@ -57,15 +49,21 @@ public class Customer {
 	}
 
 
-	public Customer(String id, String name, int age, String address,
-			String status, String email) {
-		super();
+	public Customer(String id, String name, int age, String sex,String address,String email) {
+		
 		this.id = id;
 		this.name = name;
 		this.age = age;
 		this.address = address;
-		this.status = status;
 		this.email = email;
+	}
+
+	public String getSex() {
+		return sex;
+	}
+
+	public void setSex(String sex) {
+		this.sex = sex;
 	}
 	
 }

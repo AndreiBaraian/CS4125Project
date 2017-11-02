@@ -8,7 +8,7 @@ import report.Report;
 
 public class FamilyAccount extends Account {
 	private int numberCount;
-	private List<Number> numbers;
+	private List<String> numbers;
 	
 
 	@Override
@@ -19,7 +19,7 @@ public class FamilyAccount extends Account {
 		Report r = new Report(spentMinutes, spentMessages,usedMobileData, leftMinutes,leftMessages,leftMobileData,costUntilNow);  //get value from GUI
 	    r.setNumberCount(numberCount);
 	    r.setNumbers(numbers);
-		PDFcreater pdc = new PDFcreater(r,customer);
+		PDFcreater pdc = new PDFcreater(r,getCustomer());
 		pdc.outputPDF();
 	    return r;
 	}
@@ -30,10 +30,8 @@ public class FamilyAccount extends Account {
 		
 	}
 
-	public FamilyAccount(double balance, Region homeregion, Customer customer,
-			Promotion promotion, int numberCount, List<Number> numbers) {
-		super(balance, homeregion, promotion,customer);
-		this.numberCount = numberCount;
+	public FamilyAccount(double balance, Region homeregion, Customer customer,  List<String> numbers) {
+		super(balance, homeregion, customer);
 		this.numbers = numbers;
 	}
 	

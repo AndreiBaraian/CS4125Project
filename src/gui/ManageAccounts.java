@@ -1,7 +1,7 @@
 package gui;
-
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+/**
+ * @author Lucian Epure 
+ */
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
@@ -9,6 +9,9 @@ import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
+
+import control.Control;
+
 import javax.swing.JButton;
 
 public class ManageAccounts extends JFrame {
@@ -19,8 +22,10 @@ public class ManageAccounts extends JFrame {
 	private JTable numbers;
 	private JScrollPane accountsH;
 	private JScrollPane numbersH;
-	private ApplyPromotion applyPromotionFrame;
-
+	private Control c;
+	private int selectedRow;
+	private int selectedCol;
+	private Object obj=null;
 	/**
 	 * Launch the application.
 	 */
@@ -29,9 +34,10 @@ public class ManageAccounts extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ManageAccounts() {
+	public ManageAccounts(Control c) {
+		this.c=c;
 		setTitle("Manage Accounts");
-		setBounds(100, 100, 683, 333);
+		setBounds(100, 100, 846, 350);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -57,43 +63,32 @@ public class ManageAccounts extends JFrame {
 		btnReport.setBounds(10, 238, 118, 45);
 		contentPane.add(btnReport);
 		
-		Object[] accountsColumn = {  "Customer", "Numbers quant" };
+		Object[] accountsColumn = {  "Id", "Name","Region","Account Type","Minutes", "Messages","Balance" };
 
 		final DefaultTableModel accountsModel = new DefaultTableModel(accountsColumn, 0);
 		accounts = new JTable(accountsModel);
 		accounts.setBounds(231, 15, 388, 246);
-		
+		accounts.addMouseListener(new java.awt.event.MouseAdapter() {
+			@Override
+			 public void mouseClicked(java.awt.event.MouseEvent evt) {
+			   selectedRow = accounts.rowAtPoint(evt.getPoint());
+			   selectedCol = accounts.columnAtPoint(evt.getPoint());
+			   obj=accounts.getValueAt(selectedRow,selectedCol);
+			 }
+			});
 		accountsH = new JScrollPane(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
 		accountsH.setViewportView(accounts);
-		accountsH.setBounds(145, 11, 207, 272);
+		accountsH.setBounds(145, 11, 651, 272);
 		contentPane.add(accountsH);
-		
-		
-		Object[] numbersColumn = {  "Number", "Minutes", "Messages","Cost" };
-
-		final DefaultTableModel numbersModel = new DefaultTableModel(numbersColumn, 0);
-		numbers = new JTable(numbersModel);
-		numbers.setBounds(231, 15, 388, 246);
-		
-		numbersH = new JScrollPane(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
-		numbersH.setViewportView(numbers);
-		numbersH.setBounds(362, 11, 295, 272);
-		contentPane.add(numbersH);
 		
 		JButton btnApplyPromotion = new JButton("Apply Promotion");
 		btnApplyPromotion.setBounds(10, 106, 118, 45);
 		contentPane.add(btnApplyPromotion);
-		btnApplyPromotion.addActionListener(new ActionListener(){
-
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				applyPromotionFrame = new ApplyPromotion();
-				applyPromotionFrame.setVisible(true);
-				
-				
-			}
-			
-			
-		});
+		
+		btnAddAccount.addActionListener(new AddAccountListener(c,accounts));
+		btnRemoveAccount.addActionListener(new RemoveAccountListener(c,accounts,selectedRow,selectedCol));
+		btnReport.addActionListener(new ReportListener(accounts,selectedRow,selectedCol));
+		
+		btnApplyPromotion.addActionListener(new PromotionListener());
 	}
 }

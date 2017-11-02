@@ -1,12 +1,44 @@
 package customer;
 
+/**
+ * @author 
+ * @author Andrei Baraian 5% hibernate anotations
+ */
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "tb_customer")
 public class Customer {
-	private String id; 
+	
+	@Id
+	@GeneratedValue
+	@Column(name = "id")
+	private String id;
+	
+	@Column(name = "name")
 	private String name;
+	
+	@Column(name = "age")
 	private int age;
+	
+	@Column(name = "address")
 	private String address;
-	private String status;
+	
+	@Column(name = "email")
 	private String email;
+	
+	public Customer(String id, String name, int age, String address, String email) {
+		this.id = id;
+		this.name = name;
+		this.age = age;
+		this.address = address;
+		this.email = email;
+	}
 	
 	public String getId() {
 		return id;
@@ -40,31 +72,11 @@ public class Customer {
 		this.address = address;
 	}
 
-	public String getStatus() {
-		return status;
-	}
-
-	public void setStatus(String status) {
-		this.status = status;
-	}
-
 	public String getEmail() {
 		return email;
 	}
 
 	public void setEmail(String email) {
-		this.email = email;
-	}
-
-
-	public Customer(String id, String name, int age, String address,
-			String status, String email) {
-		super();
-		this.id = id;
-		this.name = name;
-		this.age = age;
-		this.address = address;
-		this.status = status;
 		this.email = email;
 	}
 	

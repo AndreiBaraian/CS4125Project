@@ -51,23 +51,45 @@ public abstract class AbstractDAO<T extends Service> {
 	
 	public List<T> getAll() {
 		List<T> objects = null;
-		 Session session = sessionFactory.openSession();
-		 Transaction tx = null;
-		 try{
-			 tx = session.beginTransaction();
-			 CriteriaBuilder builder = session.getCriteriaBuilder();
+		Session session = sessionFactory.openSession();
+		Transaction tx = null;
+		try{
+			tx = session.beginTransaction();
+			CriteriaBuilder builder = session.getCriteriaBuilder();
 			CriteriaQuery<T> query = builder.createQuery(parameterType);
 			Root<T> root = query.from(parameterType);
 			query.select(root);
 			Query<T> q = session.createQuery(query);
 	        objects = q.getResultList();
 	        tx.commit();
-		 }catch(HibernateException ex){
+		}catch(HibernateException ex){
+			ex.printStackTrace();
 			 if(tx != null)
 				 tx.rollback();
-			 ex.printStackTrace();
 		 }
 		 return objects;
+	}
+	
+	
+	// TO BE TESTED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+	public List<T> getByField(String fieldName, String value){
+		List<T> objects = null;
+		Transaction tx = null;
+		try (Session session = sessionFactory.openSession()){
+			tx = session.beginTransaction();
+			CriteriaBuilder builder = session.getCriteriaBuilder();
+			CriteriaQuery<T> query = builder.createQuery(parameterType);
+			Root<T> root = query.from(parameterType);
+			query.select(root).where(builder.equal(root.get(fieldName), value));
+			Query<T> q = session.createQuery(query);
+	        objects = q.getResultList();
+	        tx.commit();
+		}catch(HibernateException ex){
+			ex.printStackTrace();
+			 if(tx != null)
+				 tx.rollback();
+		 }
+		return objects;
 	}
 
 }

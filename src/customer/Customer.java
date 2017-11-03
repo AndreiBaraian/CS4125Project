@@ -1,35 +1,24 @@
 package customer;
 
-/**
- * @author 
- * @author Andrei Baraian 5% hibernate anotations
- */
-
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
-
-@Entity
-@Table(name = "tb_customer")
+//@Entity
+//@Table(name = "tb_customer")
 public class Customer {
 	
-	@Id
-	@GeneratedValue
-	@Column(name = "id")
+	//@Id
+	//@GeneratedValue
+	//@Column(name = "id")
 	private String id;
 	
-	@Column(name = "name")
+	//@Column(name = "name")
 	private String name;
 	
-	@Column(name = "age")
+	//@Column(name = "age")
 	private int age;
 	
-	@Column(name = "address")
+	//@Column(name = "address")
 	private String address;
 	
-	@Column(name = "email")
+	//@Column(name = "email")
 	private String email;
 	
 	public Customer(String id, String name, int age, String address, String email) {

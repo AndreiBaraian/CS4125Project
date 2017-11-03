@@ -11,11 +11,12 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Transient;
 
 import customer.Customer;
+import dao.DBRecord;
 import region.Region;
 import report.Report;
 
 @MappedSuperclass
-public abstract class Account {
+public abstract class Account extends DBRecord{
 
 	@Column(name = "balance")
 	private double balance;
@@ -44,11 +45,22 @@ public abstract class Account {
 		this.homeRegionString = homeRegion.toString();
 		this.customerName = customer.getName();
 		this.customerId = customer.getId();
+		this.uniqueIdentifierFieldName = "customerId";
 	}
 	
 	public abstract Report generateReport(double spentMinutes, double spentMessages, double usedMobileData, double leftMinutes, double leftMessages, double leftMobileData, double costUntilNow);
 	
 	public abstract void computeDiscount();
+	
+	@Override
+	public String getReferenceNumber(){
+		return customerId;
+	}
+	
+	@Override
+	public void setUniqueIdentifierFieldName(){
+		this.uniqueIdentifierFieldName = "customerId";
+	}
 
 	public double getBalance() {
 		return balance;

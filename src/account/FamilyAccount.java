@@ -21,9 +21,6 @@ import report.Report;
 public class FamilyAccount extends Account {
 	
 	@Transient
-	private int numberCount;
-	
-	@Transient
 	private List<String> numbers;
 	
 	@Column(name = "numbers")
@@ -35,13 +32,13 @@ public class FamilyAccount extends Account {
 		super(balance, homeregion, customer);
 		this.numbers = numbers;
 		this.numbersString = numbersToString(numbers);
+		this.uniqueIdentifierFieldName = "customerId";
 	}
 
 	@Override
 	public Report generateReport(double spentMinutes, double spentMessages, double usedMobileData, double leftMinutes, double leftMessages, double leftMobileData, double costUntilNow) {
 		// TODO Auto-generated method stub
 		Report r = new Report(spentMinutes, spentMessages,usedMobileData, leftMinutes,leftMessages,leftMobileData,costUntilNow);  //get value from GUI
-	    r.setNumberCount(numberCount);
 	    r.setNumbers(numbers);
 		PDFcreater pdc = new PDFcreater(r,getCustomer());
 		pdc.outputPDF();
@@ -52,14 +49,6 @@ public class FamilyAccount extends Account {
 	public void computeDiscount() {
 		// TODO Auto-generated method stub
 		
-	}
-	
-	public int getNumberCount() {
-		return numberCount;
-	}
-
-	public void setNumberCount(int numberCount) {
-		this.numberCount = numberCount;
 	}
 
 	public List<String> getNumbers() {
@@ -77,12 +66,15 @@ public class FamilyAccount extends Account {
 	public void setNumbersString(String numbersString) {
 		this.numbersString = numbersString;
 	}
+	
+	public void setUniqueIdentifierFieldName(){
+		this.uniqueIdentifierFieldName = "customerId";
+	}
 
 	private String numbersToString(List<String> numbers){
-		String result = null;
-		result = result + numbers.get(0);
+		String result = numbers.get(0);
 		for(int i = 1; i < numbers.size(); i++)
-			result = ", " + result;
+			result = result + ", " + numbers.get(i);
 		return result;
 	}
 		

@@ -1,5 +1,12 @@
 package dao;
 
-public class FamilyAccountDAO {
+import account.FamilyAccount;
+
+public class FamilyAccountDAO extends AbstractDAO<FamilyAccount> {
+	
+	public FamilyAccountDAO(){
+		this.uniqueIdentifierFieldName = "customerId";
+	}
+
 
 }

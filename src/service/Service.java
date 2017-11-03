@@ -42,6 +42,7 @@ public abstract class Service extends DBRecord {
 		this.locationFromString = locationFrom.toString();
 		this.value=value;
 		this.number=number;
+		this.uniqueIdentifierFieldName = "referenceNumber";
 	}
 	
 	public abstract void applyPrice(double price);
@@ -63,6 +64,10 @@ public abstract class Service extends DBRecord {
 
 
 	public abstract void setReferenceNumber(String referenceNumber);
+	
+	public void setUniqueIdentifierFieldName(){
+		this.uniqueIdentifierFieldName = "referenceNumber";
+	}
 	
 	public String getLocationFromString() {
 		return locationFromString;

@@ -29,9 +29,7 @@ public abstract class DBRecord {
 		return uniqueIdentifierFieldName;
 	}
 
-	public void setUniqueIdentifierFieldName(String uniqueIdentifierFieldName) {
-		this.uniqueIdentifierFieldName = uniqueIdentifierFieldName;
-	}
+	public abstract void setUniqueIdentifierFieldName();
 	
 	public abstract String getReferenceNumber();
 

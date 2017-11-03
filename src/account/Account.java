@@ -1,4 +1,5 @@
 package account;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -6,7 +7,6 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import customer.Customer;
-import promotion.Promotion;
 import region.Region;
 import report.Report;
 
@@ -31,17 +31,13 @@ public abstract class Account {
 	
 	@Column(name = "customerName")
 	private String customerName;
-	
-	@Column(name = "promotion")
-	private Promotion promotion;
 
 	public Account() {}
 	
-	public Account(double balance, Region homeRegion,Promotion promotion,Customer customer) {
+	public Account(double balance, Region homeRegion,Customer customer) {
 		this.customer = customer;
 		this.balance = balance;
 		this.homeRegion = homeRegion;
-		this.promotion = promotion;
 		this.homeRegionString = homeRegion.toString();
 	}
 	
@@ -79,14 +75,6 @@ public abstract class Account {
 
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
-	}
-
-	public Promotion getPromotion() {
-		return promotion;
-	}
-
-	public void setPromotion(Promotion promotion) {
-		this.promotion = promotion;
 	}
 	
 }

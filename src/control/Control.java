@@ -1,8 +1,13 @@
 package control;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
+
+import com.opencsv.CSVWriter;
 
 import region.Region;
 import service.Service;
@@ -23,7 +28,8 @@ public class Control {
 	private List<String> registeredNumbers;
 	private String numi;
 	Random rand;
-
+	String outputFile = "generatedServices.txt";
+	BufferedWriter writer;
 	public Control() {
 		types = new ArrayList<String>(Arrays.asList("Message", "Call", "Internet"));
 		
@@ -50,7 +56,8 @@ public class Control {
 		int duration;
 		String number;
 		int quantity = C.getQuantity();
-		
+		try {
+			writer = new BufferedWriter(new FileWriter(outputFile));
 
 		for (int i = 0; i < quantity; i++) {
 
@@ -74,8 +81,18 @@ public class Control {
 			duration = rand.nextInt((C.getMaxDuration() - C.getMinDuration()) + 1) + C.getMinDuration();
 			Service S= ServiceFactory.getService(generatedType, from, number, to, duration);
 			services.add(S);
-			System.out.println("type:"+generatedType+" from "+ from.getName()+ " to "+to.getName()+ " number "+ number + " duration "+ duration);
 			
+			writer.write(S.toString());
+			writer.write("\n");
+			System.out.println(S.toString());
+			
+		}
+		writer.close();
+		}
+		
+		catch(IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
 		}
 	}
 

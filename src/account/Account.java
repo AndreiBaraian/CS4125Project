@@ -1,17 +1,20 @@
 package account;
 
+/*
+ * @author Andrei Baraian 5% Hibernate annotations
+ */
+
 import javax.persistence.Column;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.MappedSuperclass;
+import javax.persistence.Transient;
 
 import customer.Customer;
 import region.Region;
 import report.Report;
 
-@Entity
-@Table(name = "tb_account")
+@MappedSuperclass
 public abstract class Account {
 	
 	@Id
@@ -22,11 +25,13 @@ public abstract class Account {
 	@Column(name = "balance")
 	private double balance;
 	
+	@Transient
 	private Region homeRegion;
 	
 	@Column(name = "homeRegion")
 	private String homeRegionString;
 	
+	@Transient
 	private Customer customer;
 	
 	@Column(name = "customerName")

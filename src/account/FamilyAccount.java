@@ -1,15 +1,41 @@
 package account;
+
+/*
+ * @author Andrei Baraian 5% Hibernate annotations
+ */
+
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
 import customer.Customer;
-import promotion.*;
+import promotion.PDFcreater;
 import region.Region;
 import report.Report;
 
+@Entity
+@Table(name = "tb_familyAccount")
 public class FamilyAccount extends Account {
+	
+	@Transient
 	private int numberCount;
+	
+	@Transient
 	private List<String> numbers;
 	
+	@Column(name = "numbers")
+	private String numbersString;
+	
+	public FamilyAccount() {}
+	
+	public FamilyAccount(double balance, Region homeregion, Customer customer,  List<String> numbers) {
+		super(balance, homeregion, customer);
+		this.numbers = numbers;
+		this.numbersString = numbersToString(numbers);
+	}
 
 	@Override
 	public Report generateReport(double spentMinutes, double spentMessages,
@@ -29,11 +55,13 @@ public class FamilyAccount extends Account {
 		// TODO Auto-generated method stub
 		
 	}
-
-	public FamilyAccount(double balance, Region homeregion, Customer customer,  List<String> numbers) {
-		super(balance, homeregion, customer);
-		this.numbers = numbers;
-	}
 	
+	private String numbersToString(List<String> numbers){
+		String result = null;
+		result = result + numbers.get(0);
+		for(int i = 1; i < numbers.size(); i++)
+			result = ", " + result;
+		return result;
+	}
 		
 }

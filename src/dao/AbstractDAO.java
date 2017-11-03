@@ -21,7 +21,7 @@ import exceptions.InsertException;
 import service.Service;
 
 
-public abstract class AbstractDAO<T extends Service> {
+public abstract class AbstractDAO<T extends DBRecord> {
 	
 	@SuppressWarnings("unchecked")
 	protected final Class<T> parameterType = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass())

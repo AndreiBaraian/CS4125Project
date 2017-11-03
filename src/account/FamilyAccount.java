@@ -17,7 +17,7 @@ import region.Region;
 import report.Report;
 
 @Entity
-@Table(name = "tb_familyAccount")
+@Table(name = "tb_familyaccount")
 public class FamilyAccount extends Account {
 	
 	@Transient
@@ -38,9 +38,7 @@ public class FamilyAccount extends Account {
 	}
 
 	@Override
-	public Report generateReport(double spentMinutes, double spentMessages,
-			double usedMobileData, double leftMinutes, double leftMessages,
-			double leftMobileData, double costUntilNow) {
+	public Report generateReport(double spentMinutes, double spentMessages, double usedMobileData, double leftMinutes, double leftMessages, double leftMobileData, double costUntilNow) {
 		// TODO Auto-generated method stub
 		Report r = new Report(spentMinutes, spentMessages,usedMobileData, leftMinutes,leftMessages,leftMobileData,costUntilNow);  //get value from GUI
 	    r.setNumberCount(numberCount);
@@ -56,6 +54,30 @@ public class FamilyAccount extends Account {
 		
 	}
 	
+	public int getNumberCount() {
+		return numberCount;
+	}
+
+	public void setNumberCount(int numberCount) {
+		this.numberCount = numberCount;
+	}
+
+	public List<String> getNumbers() {
+		return numbers;
+	}
+
+	public void setNumbers(List<String> numbers) {
+		this.numbers = numbers;
+	}
+
+	public String getNumbersString() {
+		return numbersString;
+	}
+
+	public void setNumbersString(String numbersString) {
+		this.numbersString = numbersString;
+	}
+
 	private String numbersToString(List<String> numbers){
 		String result = null;
 		result = result + numbers.get(0);

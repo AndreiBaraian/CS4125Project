@@ -9,22 +9,15 @@ import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Transient;
 
+import dao.DBRecord;
 import region.Region;
 
 @MappedSuperclass
-public abstract class Service {
+public abstract class Service extends DBRecord {
 	
-	@Override
-	public String toString() {
-		return  id + ","  + locationFromString + "," + number + "," + cost+","+ value;
-	}
-
-
-	@Id
-	@GeneratedValue
-	@Column(name = "id")
-	private int id;
-	private float value;
+	@Transient
+	private double value;
+	
 	@Transient
 	protected Region locationFrom;
 	
@@ -36,9 +29,6 @@ public abstract class Service {
 	
 	@Column(name = "cost")
 	protected double cost;
-	
-	@Transient
-	private String uniqueIdentifierFieldName = "referenceNumber";
 	
 	@Column(name = "referenceNumber")
 	protected String referenceNumber;
@@ -74,12 +64,6 @@ public abstract class Service {
 
 	public abstract void setReferenceNumber(String referenceNumber);
 	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
 	public String getLocationFromString() {
 		return locationFromString;
 	}
@@ -108,12 +92,18 @@ public abstract class Service {
 	}
 
 
-	public float getValue() {
+	public double getValue() {
 		return value;
 	}
 
 
-	public void setValue(float value) {
+	public void setValue(double value) {
 		this.value = value;
 	}
+	
+	@Override
+	public String toString() {
+		return  id + ","  + locationFromString + "," + number + "," + cost+","+ value;
+	}
+
 }

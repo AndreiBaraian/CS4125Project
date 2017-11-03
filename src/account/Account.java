@@ -16,12 +16,7 @@ import report.Report;
 
 @MappedSuperclass
 public abstract class Account {
-	
-	@Id
-	@GeneratedValue
-	@Column(name = "id")
-	private int id;
-	
+
 	@Column(name = "balance")
 	private double balance;
 	
@@ -36,6 +31,9 @@ public abstract class Account {
 	
 	@Column(name = "customerName")
 	private String customerName;
+	
+	@Column(name = "customerId")
+	private String customerId;
 
 	public Account() {}
 	
@@ -44,19 +42,13 @@ public abstract class Account {
 		this.balance = balance;
 		this.homeRegion = homeRegion;
 		this.homeRegionString = homeRegion.toString();
+		this.customerName = customer.getName();
+		this.customerId = customer.getId();
 	}
 	
 	public abstract Report generateReport(double spentMinutes, double spentMessages, double usedMobileData, double leftMinutes, double leftMessages, double leftMobileData, double costUntilNow);
 	
 	public abstract void computeDiscount();
-	
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
-	}
 
 	public double getBalance() {
 		return balance;
@@ -73,6 +65,14 @@ public abstract class Account {
 	public void setHomeregion(Region homeRegion) {
 		this.homeRegion = homeRegion;
 	}
+	
+	public String getHomeRegionString() {
+		return homeRegionString;
+	}
+
+	public void setHomeRegionString(String homeRegionString) {
+		this.homeRegionString = homeRegionString;
+	}
 
 	public Customer getCustomer() {
 		return customer;
@@ -80,6 +80,22 @@ public abstract class Account {
 
 	public void setCustomer(Customer customer) {
 		this.customer = customer;
+	}
+
+	public String getCustomerName() {
+		return customerName;
+	}
+
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+
+	public String getCustomerId() {
+		return customerId;
+	}
+
+	public void setCustomerId(String customerId) {
+		this.customerId = customerId;
 	}
 	
 }

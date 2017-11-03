@@ -11,7 +11,7 @@ import region.Region;
 import report.Report;
 
 @Entity
-@Table(name = "tb_enterpriseAccount")
+@Table(name = "tb_enterpriseaccount")
 public class EnterpriseAccount extends Account {
 	
 	@Column(name = "endDate")
@@ -21,7 +21,7 @@ public class EnterpriseAccount extends Account {
 	private String number;
 	
 	public EnterpriseAccount() {}
-	
+
 	public EnterpriseAccount(double balance, Region homeregion,Customer customer, String endDate, String number) {
 		super(balance, homeregion,customer);
 		this.endDate = endDate;
@@ -36,9 +36,7 @@ public class EnterpriseAccount extends Account {
 	}
 
 	@Override
-	public Report generateReport(double spentMinutes, double spentMessages,
-			double usedMobileData, double leftMinutes, double leftMessages,
-			double leftMobileData, double costUntilNow) {
+	public Report generateReport(double spentMinutes, double spentMessages, double usedMobileData, double leftMinutes, double leftMessages, double leftMobileData, double costUntilNow) {
 		Report report = new Report(spentMinutes, spentMessages,usedMobileData, leftMinutes,leftMessages,leftMobileData,costUntilNow); //get value from GUI
 		report.setNumber(number);
 		report.setEndDate(endDate);
@@ -48,5 +46,21 @@ public class EnterpriseAccount extends Account {
 	}
 	
 	public void extendDate(String date) {}
+	
+	public String getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(String endDate) {
+		this.endDate = endDate;
+	}
+
+	public String getNumber() {
+		return number;
+	}
+
+	public void setNumber(String number) {
+		this.number = number;
+	}
 	
 }

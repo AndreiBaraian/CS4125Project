@@ -1,5 +1,7 @@
 package gui;
-
+/**
+ * @author Lucian Epure 
+ */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -45,22 +47,15 @@ public class GenerateServicesListener implements ActionListener{
 		
 		Configuration config= new Configuration((String)type.getSelectedItem(),(String)from.getSelectedItem(),(String)to.getSelectedItem(),min.getText(),max.getText(),quantity.getText());
 		c.generateServices(config);
+		
+		
 		DefaultTableModel model= (DefaultTableModel) table.getModel();
 		for(Service s: c.getServices())
 		{
-			if(s instanceof Message)
-			{
-				model.addRow(new Object[]{ "Message",s.getNumber(),s.getLocationFrom().getName(),((Message) s).getLocationTo().getName(),((Message) s).getNrOfWords()+" words" , "Not yet"});
-			}
-			else if (s instanceof Call)
-			{
-				model.addRow(new Object[]{ "Call",s.getNumber(),s.getLocationFrom().getName(),((Call) s).getLocationTo().getName(),((Call) s).getDuration()+" secs" , "Not yet"});
-			}
-			else
-			{
-				model.addRow(new Object[]{ "Internet Usage",s.getNumber(),s.getLocationFrom().getName(),"None",((InternetUsage) s).getTraffic()+" Kb" , "Not yet"});
-
-			}
+			
+				model.addRow(new Object[]{ s.getClass().getSimpleName(),s.getNumber(),s.getLocationFrom().getName(),s.getValue() , "Not yet"});
+			
+			
 
 			}
 		}

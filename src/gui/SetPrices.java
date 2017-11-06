@@ -1,8 +1,7 @@
 package gui;
-
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
+/**
+ * @author Lucian Epure 
+ */
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
@@ -14,6 +13,7 @@ import javax.swing.SwingConstants;
 
 public class SetPrices extends JFrame {
 
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTextField previousTFCaller;
 	private JTextField newTFCaller;

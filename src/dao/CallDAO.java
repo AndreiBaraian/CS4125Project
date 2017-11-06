@@ -4,6 +4,8 @@ import service.Call;
 
 public class CallDAO extends AbstractDAO<Call> {
 	
-	public CallDAO(){}
+	public CallDAO(){
+		this.uniqueIdentifierFieldName = "referenceNumber";
+	}
 
 }

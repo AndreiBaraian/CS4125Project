@@ -1,16 +1,16 @@
 package report;
-
-import java.util.List;
-
-import account.Number;
 /*
  * @author Xiangkai Tang
  */
+import java.util.List;
+
+import account.Number;
+
 public class Report {
-		private String endate;
+		private String endDate;
 		private String number;
 		private int numberCount;
-		private List<Number> numbers;
+		private List<String> numbers;
 		private double spentMinutes  ;
 		private double spentMessages ;
 		private double usedMobileData ;
@@ -34,12 +34,12 @@ public class Report {
 			this.CostUntilNow = costUntilNow;
 		}
 		
-		public String getEndate() {
-		return endate;
+		public String getEndDate() {
+		return endDate;
 	}
 
-	public void setEndate(String endate) {
-		this.endate = endate;
+	public void setEndDate(String endate) {
+		this.endDate = endate;
 	}
 
 	public String getNumber() {
@@ -58,11 +58,11 @@ public class Report {
 		this.numberCount = numberCount;
 	}
 
-	public List<Number> getNumbers() {
+	public List<String> getNumbers() {
 		return numbers;
 	}
 
-	public void setNumbers(List<Number> numbers) {
+	public void setNumbers(List<String> numbers) {
 		this.numbers = numbers;
 	}
 

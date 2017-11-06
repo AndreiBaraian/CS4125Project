@@ -1,8 +1,11 @@
 package service;
+/**
+ * @author Lucian Epure 
+ */
 import region.Region;
 
 public class ServiceFactory {
-	public static Service getService(String type, Region locationFrom,String number, Region locationTo, float value){
+	public static Service getService(String type, Region locationFrom,String number, Region locationTo, int value){
 			if("Message".equalsIgnoreCase(type)){
 				return new Message(locationFrom,number,locationTo,value);
 			}

@@ -1,6 +1,5 @@
 package promotion;
-import customer.Customer;
-import account.*;
+import account.Account;
 import report.Report;
 /*
  * @author Xiangkai Tang
@@ -8,14 +7,12 @@ import report.Report;
 public class FriendPromotion extends Promotion {
 	private float differentProviderMinutes;
 	
-	public FriendPromotion(Account account, Customer customer) {
+	public FriendPromotion(Account account) {
 		super(account);
-		this.customer = customer;
 	}
 
 	public FriendPromotion(int minutes,float duration,int giftpoints,int differentproviderminutes) { //get the value from GUI
 		super();
-		// TODO Auto-generated constructor stub
 		this.setMinutes(minutes);
 		this.setDuration(duration); 
 		this.setGiftpoints(giftpoints);
@@ -29,7 +26,7 @@ public class FriendPromotion extends Promotion {
 	{
 		Report r = super.generateReport(spentMinutes,spentMessages,usedMobileData,leftMinutes,leftMessages,leftMobileData,costUntilNow);
 		r.setDifferentProviderMinutes(differentProviderMinutes);
-		PDFcreater pdfc = new PDFcreater(r,customer);
+		PDFcreater pdfc = new PDFcreater(r,account.getCustomer());
 		pdfc.outputPDF();
 		return r;
 	}

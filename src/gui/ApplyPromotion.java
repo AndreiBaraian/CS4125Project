@@ -1,8 +1,7 @@
 package gui;
-
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
-
+/**
+ * @author Lucian Epure 
+ */
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -15,6 +14,7 @@ import javax.swing.JButton;
 
 public class ApplyPromotion extends JFrame {
 
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable promotions;
 	private JScrollPane promotionsH;

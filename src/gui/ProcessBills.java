@@ -1,5 +1,7 @@
  package gui;
-
+ /**
+  * @author Lucian Epure 
+  */
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -7,9 +9,6 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
 import control.Control;
-
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JTable;
@@ -19,6 +18,7 @@ import javax.swing.JTextField;
 
 public class ProcessBills extends JFrame {
 
+	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable table;
 	private JButton btnSetPrices;
@@ -40,7 +40,7 @@ public class ProcessBills extends JFrame {
 	
 
 	public ProcessBills(Control c) {
-		this.c=c;
+		this.setC(c);
 		setTitle("Processing Bill");
 		setBounds(100, 100, 713, 363);
 		contentPane = new JPanel();
@@ -50,7 +50,7 @@ public class ProcessBills extends JFrame {
 		
 		
 		
-		Object[] column = { "Type","Caller", "From", "To","Duration","Date" };
+		Object[] column = { "Type","Caller", "From", "Duration","Date" };
 
 		final DefaultTableModel model = new DefaultTableModel(column, 0);
 		table = new JTable(model);
@@ -145,7 +145,17 @@ public class ProcessBills extends JFrame {
 		btnGeneratePerformedServices.setBounds(20, 26, 182, 23);
 		contentPane.add(btnGeneratePerformedServices);
 		GenerateServicesListener G= new GenerateServicesListener(c,typeCB,countryFromCB,countryToCB,minDurationTF,maxDurationTF,quantityTF, table);
-		btnGeneratePerformedServices.addActionListener( G);
+		btnGeneratePerformedServices.addActionListener(G);
 		
+	}
+
+
+	public Control getC() {
+		return c;
+	}
+
+
+	public void setC(Control c) {
+		this.c = c;
 	}
 }

@@ -1,6 +1,7 @@
 package gui;
-
-import java.awt.EventQueue;
+/**
+ * @author Lucian Epure 
+ */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -53,7 +54,7 @@ public class Menu {
 		btnManageAccounts.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
-				manageAccounts = new ManageAccounts();
+				manageAccounts = new ManageAccounts(c);
 				manageAccounts.setVisible(true);
 			}
 		});

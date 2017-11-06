@@ -1,16 +1,16 @@
 package promotion;
-import customer.Customer;
-import account.Account;
-import report.Report;
-import account.*;
 /*
  * @author Xiangkai Tang
  */
+
+
+import report.Report;
+import account.*;
+
 public class TravelerPromotion extends Promotion {
 	private int internationalMinutes;
-	public TravelerPromotion(Account account,Customer customer) {
+	public TravelerPromotion(Account account) {
 		super(account);
-		this.customer = customer;
 		this.internationalMinutes = 100;
 		// TODO Auto-generated constructor stub
 	}
@@ -29,7 +29,7 @@ public class TravelerPromotion extends Promotion {
 	{
 		Report r = super.generateReport(spentMinutes,spentMessages,usedMobileData,leftMinutes,leftMessages,leftMobileData,costUntilNow);
 		r.setInternationalMinutes(internationalMinutes);
-		PDFcreater pdfc = new PDFcreater(r,customer);
+		PDFcreater pdfc = new PDFcreater(r,account.getCustomer());
 		pdfc.outputPDF();
 		return r;
 	}

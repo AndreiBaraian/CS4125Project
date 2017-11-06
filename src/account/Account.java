@@ -8,6 +8,9 @@ import java.util.List;
 import customer.Customer;
 import promotion.Promotion;
 
+/*
+ * @author Xiangkai Tang
+ */
 public abstract class Account {
 	protected double balance;
 	protected Region homeregion;

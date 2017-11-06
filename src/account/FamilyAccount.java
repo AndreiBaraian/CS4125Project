@@ -6,6 +6,9 @@ import promotion.*;
 import region.Region;
 import report.Report;
 
+/*
+ * @author Xiangkai Tang
+ */
 public class FamilyAccount extends Account {
 	private int numberCount;
 	private List<Number> numbers;

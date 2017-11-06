@@ -8,6 +8,9 @@ import promotion.Promotion;
 import region.Region;
 import report.Report;
 
+/*
+ * @author Xiangkai Tang
+ */
 public class EnterpriseAccount extends Account {
 	private String endate;
 	private String number;

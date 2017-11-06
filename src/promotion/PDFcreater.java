@@ -17,7 +17,9 @@ import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Element;
 
 import customer.Customer;
-
+/*
+ * @author Xiangkai Tang
+ */
 public class PDFcreater {
     Customer customer;
     Report report;

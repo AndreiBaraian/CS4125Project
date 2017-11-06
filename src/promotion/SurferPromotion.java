@@ -3,7 +3,9 @@ import customer.Customer;
 import account.Account;
 import report.Report;
 import account.*;
-
+/*
+ * @author Xiangkai Tang
+ */
 public class SurferPromotion extends Promotion {
 	private double mobileData;
 	public SurferPromotion(Account account,Customer customer) {

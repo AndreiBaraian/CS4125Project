@@ -6,6 +6,7 @@ package service;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 import region.Region;
 
@@ -13,6 +14,7 @@ import region.Region;
 @Table(name = "message")
 public class Message extends Service{
 
+	@Transient
 	private Region locationTo;
 	
 	@Column(name = "locationTo")
@@ -24,7 +26,7 @@ public class Message extends Service{
 	@Column(name = "words")
 	private int nrOfWords;
 	
-	public Message(Region locationFrom, String number, Region locationTo, float nrOfWords) {
+	public Message(Region locationFrom, String number, Region locationTo, double nrOfWords) {
 		super(locationFrom, number,nrOfWords);
 		this.locationTo=locationTo;
 		this.nrOfWords=(int)nrOfWords;

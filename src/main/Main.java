@@ -1,13 +1,12 @@
 package main;
 
-import bll.AccountBLL;
-import bll.CustomerBLL;
-import bll.EnterpriseAccountBLL;
-import bll.FamilyAccountBLL;
-import customer.Customer;
+import dao.CallDAO;
 import exceptions.InsertException;
 import region.Region;
 import region.Romania;
+import service.Call;
+import service.Message;
+import service.Service;
 
 public class Main {
 
@@ -34,6 +33,11 @@ public class Main {
 		AccountBLL ac = new FamilyAccountBLL();
 		ac.addAccount("Family", romania, luci, "005463450", "34243242");
 		*/
+		
+		Region romania = new Romania(23,23);
+		Service msg = new Call(romania, "05353450", romania, 50);
+		CallDAO md = new CallDAO();
+		md.add((Call)msg);
 		
 		
 	}

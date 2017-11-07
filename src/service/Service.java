@@ -4,8 +4,6 @@ package service;
  */
 
 import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Transient;
 
@@ -36,38 +34,25 @@ public abstract class Service extends DBRecord {
 	public Service() {}
 	
 	
-	public Service(Region locationFrom, String number, float value)
-	{
+	public Service(Region locationFrom, String number, double value){
 		this.locationFrom=locationFrom;
 		this.locationFromString = locationFrom.toString();
 		this.value=value;
 		this.number=number;
-		this.uniqueIdentifierFieldName = "referenceNumber";
 	}
 	
-	public abstract void applyPrice(double price);
-	
-	/*
-	public String getUniqueIdentifierFieldName() {
-		return uniqueIdentifierFieldName;
-	}
-
-
-	public void setUniqueIdentifierFieldName(String uniqueIdentifierFieldName){
-		this.uniqueIdentifierFieldName = uniqueIdentifierFieldName;
-	}
-	*/
-
 	public String getReferenceNumber() {
 		return referenceNumber;
 	}
 
+	public String getUniqueIdentifierFieldValue(){
+		return "referenceNumber";
+	}
 
 	public abstract void setReferenceNumber(String referenceNumber);
-	
-	public void setUniqueIdentifierFieldName(){
-		this.uniqueIdentifierFieldName = "referenceNumber";
-	}
+
+
+	public abstract void applyPrice(double price);
 	
 	public String getLocationFromString() {
 		return locationFromString;
@@ -76,7 +61,6 @@ public abstract class Service extends DBRecord {
 		this.locationFromString = locationFromString;
 	}
 
-	@Transient
 	public Region getLocationFrom() {
 		return locationFrom;
 	}

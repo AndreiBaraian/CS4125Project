@@ -28,7 +28,7 @@ public class Call extends Service implements Serializable {
 	
 	public Call(){ }
 	
-	public Call(Region locationFrom, String number, Region locationTo, float duration) {
+	public Call(Region locationFrom, String number, Region locationTo, double duration) {
 		super(locationFrom, number,duration);
 		this.locationFromString = locationFrom.toString();
 		this.locationTo=locationTo;

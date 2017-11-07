@@ -22,6 +22,8 @@
         <mapping class="dao.DBRecord"/>
    		<mapping class="service.Service"/>
  		<mapping class="service.Call"/>
+ 		<mapping class="service.Message"/>
+ 		<mapping class="service.InternetUsage"/>
  		<mapping class="account.Account"/>
  		<mapping class="account.FamilyAccount"/>
  		<mapping class="account.EnterpriseAccount"/>

@@ -1,6 +1,9 @@
 package promotion;
 import account.Account;
 import report.Report;
+/*
+ * @author Xiangkai Tang
+ */
 public class FriendPromotion extends Promotion {
 	private float differentProviderMinutes;
 	

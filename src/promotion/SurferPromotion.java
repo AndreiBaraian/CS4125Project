@@ -1,7 +1,10 @@
 package promotion;
-import account.Account;
-
+/*
+ * @author Xiangkai Tang
+ */
 import report.Report;
+import account.*;
+
 
 public class SurferPromotion extends Promotion {
 	private double mobileData;

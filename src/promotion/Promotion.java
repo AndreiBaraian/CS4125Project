@@ -1,6 +1,12 @@
 package promotion;
+/*
+ * @author Xiangkai Tang
+ */
 import account.Account;
 import report.Report;
+
+import region.Region;
+
 
 public class Promotion extends Account {
 	Account account;

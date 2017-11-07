@@ -1,6 +1,7 @@
 package account;
 
-/*
+/**
+ * @author Xiangkai Tang
  * @author Andrei Baraian 5% Hibernate annotations
  */
 

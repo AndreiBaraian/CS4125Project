@@ -1,6 +1,11 @@
 package promotion;
-import account.Account;
+/*
+ * @author Xiangkai Tang
+ */
+
+
 import report.Report;
+import account.*;
 
 public class TravelerPromotion extends Promotion {
 	private int internationalMinutes;

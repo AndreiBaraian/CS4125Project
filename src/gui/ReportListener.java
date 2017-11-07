@@ -24,7 +24,7 @@ public ReportListener(JTable table, int row, int col)
 	public void actionPerformed(ActionEvent arg0) {
 		System.out.println("Working on that");
 		String id= table.getValueAt(row, col).toString();
-		
+		//generate report and account;
 	}
 		
 }

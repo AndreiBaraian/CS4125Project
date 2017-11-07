@@ -1,5 +1,8 @@
 package account;
-
+/**
+ * @author Andrei Baraian 5% Hibernate annotations
+ * @author Xiangkai Tang
+ */
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

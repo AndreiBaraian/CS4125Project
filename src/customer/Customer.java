@@ -1,4 +1,7 @@
 package customer;
+/*
+ * @author Xiangkai Tang
+ */
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

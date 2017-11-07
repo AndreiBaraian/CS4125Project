@@ -1,4 +1,9 @@
 package promotion;
+
+/*
+ * @author Xiangkai Tang
+ */
+
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.List;
@@ -16,6 +21,9 @@ import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.BaseColor;
 import com.itextpdf.text.Element;
+
+import customer.Customer;
+
 
 public class PDFcreater {
     Customer customer;

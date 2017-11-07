@@ -1,12 +1,5 @@
 package main;
 
-import dao.CallDAO;
-import exceptions.InsertException;
-import region.Region;
-import region.Romania;
-import service.Call;
-import service.Message;
-import service.Service;
 
 public class Main {
 
@@ -34,12 +27,12 @@ public class Main {
 		ac.addAccount("Family", romania, luci, "005463450", "34243242");
 		*/
 		
+		/*
 		Region romania = new Romania(23,23);
 		Service msg = new Call(romania, "05353450", romania, 50);
 		CallDAO md = new CallDAO();
 		md.add((Call)msg);
-		
-		
+		*/
 	}
 
 }

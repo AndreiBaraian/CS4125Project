@@ -18,6 +18,16 @@ import report.Report;
 @Table(name = "tb_account")
 public abstract class Account {
 	
+    public Account() {}
+	
+	public Account(double balance, Region homeRegion,Customer customer) {
+		this.customer = customer;
+		this.balance = balance;
+		this.homeRegion = homeRegion;
+		this.homeRegionString = homeRegion.toString();
+	}
+	
+	
 	@Id
 	@GeneratedValue
 	@Column(name = "id")
@@ -36,18 +46,10 @@ public abstract class Account {
 	@Column(name = "customerName")
 	private String customerName;
 
-	public Account() {}
-	
-	public Account(double balance, Region homeRegion,Customer customer) {
-		this.customer = customer;
-		this.balance = balance;
-		this.homeRegion = homeRegion;
-		this.homeRegionString = homeRegion.toString();
-	}
-	
-	public abstract Report generateReport(double spentMinutes, double spentMessages, double usedMobileData, double leftMinutes, double leftMessages, double leftMobileData, double costUntilNow);
+    public abstract Report generateReport(double spentMinutes, double spentMessages, double usedMobileData, double leftMinutes, double leftMessages, double leftMobileData, double costUntilNow);
 	
 	public abstract void computeDiscount();
+	
 	
 	public int getId() {
 		return id;

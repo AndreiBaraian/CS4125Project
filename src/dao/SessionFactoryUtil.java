@@ -1,5 +1,9 @@
 package dao;
 
+/**
+ * @author Andrei Baraian
+ */
+
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 

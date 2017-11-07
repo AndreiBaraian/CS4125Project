@@ -19,11 +19,15 @@
         <property name="show_sql">true</property>
         
         <!-- List of XML mapping files -->
+        <mapping class="dao.DBRecord"/>
    		<mapping class="service.Service"/>
  		<mapping class="service.Call"/>
  		<mapping class="account.Account"/>
  		<mapping class="account.FamilyAccount"/>
  		<mapping class="account.EnterpriseAccount"/>
+ 		<mapping class="region.Region"/>
+ 		<mapping class="customer.Customer"/>
+ 		<mapping class="region.Romania"/>
  
 	</session-factory>
 

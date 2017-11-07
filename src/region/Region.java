@@ -1,21 +1,37 @@
 package region;
 
-public class Region {
+/**
+ * @author Andrei Barian
+ */
+
+import javax.persistence.Column;
+import javax.persistence.DiscriminatorColumn;
+import javax.persistence.DiscriminatorType;
+import javax.persistence.Entity;
+import javax.persistence.Inheritance;
+import javax.persistence.InheritanceType;
+import javax.persistence.Table;
+
+import dao.DBRecord;
+
+@Entity
+@Table(name = "tb_region")
+@Inheritance(strategy=InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name="regionCode", discriminatorType=DiscriminatorType.STRING)
+public abstract class Region extends DBRecord{
 	
-	private double callingPrice;
-	private double roamingTax;
-	private String name;
+	@Column(name = "callingPrice")
+	protected double callingPrice;
 	
+	@Column(name = "roamingTax")
+	protected double roamingTax;
+	
+	@Column(name = "regionName")
+	protected String regionName;
+
 	public Region() {}
 	
-	public Region(String name) {
-		this.name=name;
-	}
-	
-	public void computeRoamingTax(int percent) {
-		float roaming= (float)(this.callingPrice * percent)/100;
-		this.setRoamingTax(roaming);
-	}
+	public abstract void computeRoamingTax(double percent);
 	
 	public double getRoamingTax() {
 		return roamingTax;
@@ -25,25 +41,16 @@ public class Region {
 		this.roamingTax = roamingTax;
 	}
 	
-	public double getCallPrice() {
+	public double getCallingPrice() {
 		return callingPrice;
 	}
 	
-	public void setCallPrice(double callPrice) {
-		this.callingPrice = callPrice;
-	}
+	public abstract void setCallingPrice(double callPrice);
 	
-	public String getName() {
-		return name;
+	public String getRegionName() {
+		return regionName;
 	}
-	
-	public void setName(String name) {
-		this.name = name;
-	}
-	
-	@Override
-	public String toString(){
-		return name;
-	}
+
+	public abstract void setRegionName(String regionName);
 	
 }

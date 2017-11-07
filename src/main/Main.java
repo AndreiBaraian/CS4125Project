@@ -1,51 +1,32 @@
 package main;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import account.Account;
-import account.FamilyAccount;
-import control.Control;
-import customer.Customer;
-import dao.FamilyAccountDAO;
+import dao.RegionDAO;
 import exceptions.InsertException;
-import gui.Menu;
 import region.Region;
+import region.Romania;
 
 public class Main {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InsertException {
 		
-		
+		/*
 		Control c= new Control();
 		Menu window = new Menu(c);
 		window.getFrmMainMenu().setVisible(true);
+		*/
 		
 		/*
-		CallDAO cdao = new CallDAO();
-		for(Call ca : cdao.getAll()){
-			System.out.println(ca.getId() + ca.getLocationFromString());
-		}*/
+		EnterpriseAccountBLL e = new EnterpriseAccountBLL();
+		Region reg = new Region("Romania");
+		Customer cust = new Customer("Andrei", "Baraian",21,"Bihorului","andrei@gmail.com");
+		cust.setSystemReference("ref");
+		e.createAccount("Enterprise", reg, cust, "0004354353", "3DEC");
+		*/
 		
-		List<String> numbers = new ArrayList<String>();
-		numbers.add("072354345");
-		numbers.add("074358645");
-		numbers.add("072444335");
-		numbers.add("072357909");
-		Region Germany = new Region("Germany");
-		Customer cust = new Customer("12","Andrei", 21, "Bihorului", "andrei@gmail.com");
-		FamilyAccount acc = new FamilyAccount(45.2,Germany, cust, numbers);
-		System.out.println(acc.getNumbersString());
+		Region romania = new Romania(12,34);
+		RegionDAO rd = new RegionDAO();
+		rd.add(romania);
 		
-		FamilyAccountDAO accDAO = new FamilyAccountDAO();
-		try {
-			accDAO.add(acc);
-		} catch (InsertException e) {
-			e.printStackTrace();
-		}
-		
-		
-		System.out.println("Hello!");
 	}
 
 }

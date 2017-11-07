@@ -5,8 +5,6 @@ package account;
  */
 
 import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Transient;
 
@@ -33,8 +31,8 @@ public abstract class Account extends DBRecord{
 	@Column(name = "customerName")
 	private String customerName;
 	
-	@Column(name = "customerId")
-	private String customerId;
+	@Column(name = "customerSystemReference")
+	protected String customerSystemReference;
 
 	public Account() {}
 	
@@ -43,8 +41,8 @@ public abstract class Account extends DBRecord{
 		this.balance = balance;
 		this.homeRegion = homeRegion;
 		this.homeRegionString = homeRegion.toString();
-		this.customerName = customer.getName();
-		this.customerId = customer.getId();
+		this.customerName = customer.getFirstName() + " " + customer.getLastName();
+		this.customerSystemReference = customer.getSystemReference();
 		this.uniqueIdentifierFieldName = "customerId";
 	}
 	
@@ -54,12 +52,12 @@ public abstract class Account extends DBRecord{
 	
 	@Override
 	public String getReferenceNumber(){
-		return customerId;
+		return customerSystemReference;
 	}
 	
 	@Override
 	public void setUniqueIdentifierFieldName(){
-		this.uniqueIdentifierFieldName = "customerId";
+		this.uniqueIdentifierFieldName = "customerSystemReference";
 	}
 
 	public double getBalance() {
@@ -102,12 +100,12 @@ public abstract class Account extends DBRecord{
 		this.customerName = customerName;
 	}
 
-	public String getCustomerId() {
-		return customerId;
+	public String getCustomerSystemReference() {
+		return customerSystemReference;
 	}
 
-	public void setCustomerId(String customerId) {
-		this.customerId = customerId;
+	public void setCustomerSystemReference(String customerSystemReference) {
+		this.customerSystemReference = customerSystemReference;
 	}
 	
 }

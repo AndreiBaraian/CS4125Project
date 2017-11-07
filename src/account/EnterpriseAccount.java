@@ -15,10 +15,10 @@ import report.Report;
 public class EnterpriseAccount extends Account {
 	
 	@Column(name = "endDate")
-	private String endDate;
+	protected String endDate;
 	
 	@Column(name = "number")
-	private String number;
+	protected String number;
 	
 	public EnterpriseAccount() {}
 
@@ -61,6 +61,10 @@ public class EnterpriseAccount extends Account {
 
 	public void setNumber(String number) {
 		this.number = number;
+	}
+	
+	public String getReferenceNumber(){
+		return customerSystemReference;
 	}
 	
 }

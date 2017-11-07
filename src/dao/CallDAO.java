@@ -1,5 +1,9 @@
 package dao;
 
+/**
+ * @author Andrei Baraian
+ */
+
 import service.Call;
 
 public class CallDAO extends AbstractDAO<Call> {

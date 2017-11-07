@@ -1,5 +1,9 @@
 package dao;
 
+/**
+ *  @author Andrei Baraian
+ */
+
 import javax.persistence.Column;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -29,8 +33,8 @@ public abstract class DBRecord {
 		return uniqueIdentifierFieldName;
 	}
 
-	public abstract void setUniqueIdentifierFieldName();
+	//public abstract void setUniqueIdentifierFieldName();
 	
-	public abstract String getReferenceNumber();
+	public abstract String getUniqueIdentifierFieldValue();
 
 }

@@ -18,7 +18,6 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
 import exceptions.InsertException;
-import service.Service;
 
 
 public abstract class AbstractDAO<T extends DBRecord> {
@@ -38,7 +37,7 @@ public abstract class AbstractDAO<T extends DBRecord> {
 		CriteriaBuilder builder = session.getCriteriaBuilder();
 		CriteriaQuery<T> query = builder.createQuery(parameterType);
 		Root<T> root = query.from(parameterType);
-		query.select(root).where(builder.equal(root.get(uniqueIdentifierFieldName), object.getReferenceNumber()));
+		query.select(root).where(builder.equal(root.get(uniqueIdentifierFieldName), object.getUniqueIdentifierFieldValue()));
 		Query<T> q = session.createQuery(query);
         List<T> list = q.getResultList();
         if(list.size() == 0)

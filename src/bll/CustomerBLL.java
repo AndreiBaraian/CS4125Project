@@ -1,6 +1,6 @@
 package bll;
 
-/*
+/**
  * @author Andrei Baraian
  */
 

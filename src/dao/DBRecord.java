@@ -32,8 +32,6 @@ public abstract class DBRecord {
 	public String getUniqueIdentifierFieldName() {
 		return uniqueIdentifierFieldName;
 	}
-
-	//public abstract void setUniqueIdentifierFieldName();
 	
 	public abstract String getUniqueIdentifierFieldValue();
 

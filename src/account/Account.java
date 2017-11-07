@@ -51,13 +51,8 @@ public abstract class Account extends DBRecord{
 	public abstract void computeDiscount();
 	
 	@Override
-	public String getReferenceNumber(){
+	public String getUniqueIdentifierFieldValue(){
 		return customerSystemReference;
-	}
-	
-	@Override
-	public void setUniqueIdentifierFieldName(){
-		this.uniqueIdentifierFieldName = "customerSystemReference";
 	}
 
 	public double getBalance() {

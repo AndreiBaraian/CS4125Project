@@ -86,14 +86,8 @@ public class Customer extends DBRecord {
 		this.systemReference = systemReference;
 	}
 
-	
 	@Override
-	public void setUniqueIdentifierFieldName() {
-		this.uniqueIdentifierFieldName = "systemReference";
-	}
-
-	@Override
-	public String getReferenceNumber() {
+	public String getUniqueIdentifierFieldValue() {
 		return systemReference;
 	}
 	

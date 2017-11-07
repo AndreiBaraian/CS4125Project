@@ -15,9 +15,10 @@ public abstract class AccountBLL<T extends Account> {
 		this.accountDAO = abstractDAO;
 	}
 	
-	public Integer createAccount(String type, Region region, Customer customer,String number,String endDate) throws InsertException{
-		
+	@SuppressWarnings("unchecked")
+	public Integer addAccount(String type, Region region, Customer customer,String number,String endDate) throws InsertException{
 		Account account = AccountFactory.getAccount(type, 0, region, customer, number, endDate);
+		System.out.println(account.getCustomerSystemReference());
 		return accountDAO.add((T)account);
 	}
 	

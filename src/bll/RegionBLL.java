@@ -13,10 +13,7 @@ public class RegionBLL {
 		this.regionDAO = new RegionDAO();
 	}
 	
-	public Integer add(String name, double callingPrice, double percent) throws InsertException{
-		Region region = new Region(name);
-		region.setCallingPrice(callingPrice);
-		region.computeRoamingTax(percent);
+	public Integer add(Region region) throws InsertException{
 		return regionDAO.add(region);
 	}
 

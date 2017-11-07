@@ -1,15 +1,18 @@
 package main;
 
+import control.Control;
+import exceptions.InsertException;
+import gui.Menu;
 
 public class Main {
 
 	public static void main(String[] args) throws InsertException {
 		
-		/*
+		
 		Control c= new Control();
 		Menu window = new Menu(c);
 		window.getFrmMainMenu().setVisible(true);
-		*/
+		
 		
 		/*
 		EnterpriseAccountBLL e = new EnterpriseAccountBLL();

@@ -12,9 +12,6 @@ import javax.swing.table.DefaultTableModel;
 
 import control.Configuration;
 import control.Control;
-import service.Call;
-import service.InternetUsage;
-import service.Message;
 import service.Service;
 
 public class GenerateServicesListener implements ActionListener{
@@ -53,7 +50,7 @@ public class GenerateServicesListener implements ActionListener{
 		for(Service s: c.getServices())
 		{
 			
-				model.addRow(new Object[]{ s.getClass().getSimpleName(),s.getNumber(),s.getLocationFrom().getName(),s.getValue() , "Not yet"});
+				model.addRow(new Object[]{ s.getClass().getSimpleName(),s.getNumber(),s.getLocationFrom().getRegionName(),s.getValue() , "Not yet"});
 			
 			
 

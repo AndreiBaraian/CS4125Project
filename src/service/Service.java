@@ -36,7 +36,7 @@ public abstract class Service extends DBRecord {
 	
 	public Service(Region locationFrom, String number, double value){
 		this.locationFrom=locationFrom;
-		this.locationFromString = locationFrom.toString();
+		this.locationFromString = locationFrom.getRegionName();
 		this.value=value;
 		this.number=number;
 	}

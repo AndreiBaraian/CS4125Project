@@ -28,7 +28,7 @@ public class AddAccount extends JFrame {
 	private JTable table;
 	private JTextField lastNameTF;
 	
-	public AddAccount(Control c,JTable table) {
+	public AddAccount(JTable table) {
 		setTitle("Add");
 		this.table=table;
 		setBounds(100, 100, 225, 369);
@@ -113,8 +113,6 @@ public class AddAccount extends JFrame {
 		endDateTF.setBounds(86, 252, 113, 20);
 		contentPane.add(endDateTF);
 		endDateTF.setColumns(10);
-	
-		btnAdd.addActionListener(new DoneAddingListener(c,typeCB,nameTF,lastNameTF,numberTF,addressTF,ageTF,emailTF,regionCB,endDateTF,table));
 		
 		JLabel lblLastName = new JLabel("Last Name");
 		lblLastName.setBounds(10, 52, 66, 14);
@@ -124,6 +122,10 @@ public class AddAccount extends JFrame {
 		lastNameTF.setBounds(86, 49, 113, 20);
 		contentPane.add(lastNameTF);
 		lastNameTF.setColumns(10);
+	
+		btnAdd.addActionListener(new DoneAddingListener(typeCB,nameTF,lastNameTF,numberTF,addressTF,ageTF,emailTF,regionCB,endDateTF,table));
+		
+	
 		
 	}
 }

@@ -9,8 +9,8 @@ public class Main {
 	public static void main(String[] args) throws InsertException {
 		
 		
-		Control c= new Control();
-		Menu window = new Menu(c);
+		//Control c= Control.getInstance();
+		Menu window = new Menu();
 		window.getFrmMainMenu().setVisible(true);
 		
 		

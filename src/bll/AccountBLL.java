@@ -7,7 +7,7 @@ import dao.AbstractDAO;
 import exceptions.InsertException;
 import region.Region;
 
-public abstract class AccountBLL<T extends Account> {
+public  class AccountBLL<T extends Account> {
 	
 	private AbstractDAO<T> accountDAO;
 	
@@ -20,6 +20,10 @@ public abstract class AccountBLL<T extends Account> {
 		Account account = AccountFactory.getAccount(type, 0, region, customer, number, endDate);
 		System.out.println(account.getCustomerSystemReference());
 		return accountDAO.add((T)account);
+	}
+	
+	public void applyPromotion(){
+		
 	}
 	
 }

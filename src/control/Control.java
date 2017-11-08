@@ -13,15 +13,8 @@ import service.Service;
 import service.ServiceFactory;
 
 public class Control {
+	private static final Control controlInstance= new Control();
 	private List<Service> services;
-	public List<Service> getServices() {
-		return services;
-	}
-
-	public void setServices(List<Service> services) {
-		this.services = services;
-	}
-
 	private List<Region> availableRegions;
 	private List<String> types;
 	private List<String> registeredNumbers;
@@ -29,18 +22,23 @@ public class Control {
 	Random rand;
 	String outputFile = "generatedServices.txt";
 	BufferedWriter writer;
-	public Control() {
+	private Control() {
 		types = new ArrayList<String>(Arrays.asList("Message", "Call", "Internet"));
 		
 		availableRegions = new ArrayList<Region>();
 		registeredNumbers =new ArrayList<String>();
 		services= new ArrayList<Service>();
-		Region romania= new Romania();
+		Region romania= new Romania(0,0);
 		
 		numi= "1112121";
 		availableRegions.add(romania);
 		registeredNumbers.add(numi);
 		rand = new Random();
+	}
+	
+	public static Control getInstance()
+	{
+		return controlInstance;
 	}
 	public Region search(String name)
 	{
@@ -56,8 +54,8 @@ public class Control {
 
 	public void generateServices(Configuration C) {
 		String generatedType = new String();
-		Region from = null;
-		Region to = null;
+		Region from=null;
+		Region to= null;
 		int duration;
 		String number;
 		int quantity = C.getQuantity();
@@ -101,5 +99,19 @@ public class Control {
 		}
 	}
 
+	public List<Region> getAvailableRegions() {
+		return availableRegions;
+	}
 
+	public void setAvailableRegions(List<Region> availableRegions) {
+		this.availableRegions = availableRegions;
+	}
+
+	public List<Service> getServices() {
+		return services;
+	}
+
+	public void setServices(List<Service> services) {
+		this.services = services;
+		}
 }

@@ -25,8 +25,8 @@ public class GenerateServicesListener implements ActionListener{
 	private JComboBox<String> to;
 	private JTable table;
 	private Control c;
-	public GenerateServicesListener(Control c, JComboBox<String> t, JComboBox<String> from, JComboBox<String> to, JTextField min, JTextField max, JTextField quantity,JTable table){
-		this.c=c;
+	public GenerateServicesListener(JComboBox<String> t, JComboBox<String> from, JComboBox<String> to, JTextField min, JTextField max, JTextField quantity,JTable table){
+		
 		this.type=t;
 		this.from=from;
 		this.to=to;
@@ -43,6 +43,7 @@ public class GenerateServicesListener implements ActionListener{
 		
 		
 		Configuration config= new Configuration((String)type.getSelectedItem(),(String)from.getSelectedItem(),(String)to.getSelectedItem(),min.getText(),max.getText(),quantity.getText());
+		c=Control.getInstance();
 		c.generateServices(config);
 		
 		

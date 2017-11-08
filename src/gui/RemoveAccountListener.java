@@ -22,11 +22,11 @@ public class RemoveAccountListener implements ActionListener {
 	private int row;
 	private int col;
 
-	public RemoveAccountListener(Control c, JTable table, int row, int col) {
+	public RemoveAccountListener(JTable table, int row, int col) {
 		this.table = table;
 		this.row = row;
 		this.col = col;
-		this.c = c;
+		
 	}
 
 	@Override

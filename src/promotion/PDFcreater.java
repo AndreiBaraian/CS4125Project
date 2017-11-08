@@ -34,7 +34,8 @@ public class PDFcreater {
         try {
             PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream("Receipt.pdf"));
             document.open();
-            document.add(new Paragraph("Name:"+customer.getName()));
+            document.add(new Paragraph("First Name:"+customer.getFirstName()));
+            document.add(new Paragraph("Last Name:"+customer.getLastName()));
             document.add(new Paragraph("SpentMinutes:"+report.getSpentMinutes()));
             document.add(new Paragraph("SpentMessages:"+report.getSpentMessages()));
             document.add(new Paragraph("UsedMobileData"+report.getUsedMobileData()));

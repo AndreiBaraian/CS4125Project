@@ -36,11 +36,11 @@ public class ProcessBills extends JFrame {
 	private JLabel lblFromcountry;
 	private JLabel lblTocountry;
 	private JButton btnComputeTranscation;
-	private Control c;
+
 	
 
-	public ProcessBills(Control c) {
-		this.setC(c);
+	public ProcessBills() {
+
 		setTitle("Processing Bill");
 		setBounds(100, 100, 713, 363);
 		contentPane = new JPanel();
@@ -116,19 +116,13 @@ public class ProcessBills extends JFrame {
 		countryFromCB = new JComboBox<String>();
 		countryFromCB.setBounds(116, 156, 86, 17);
 		countryFromCB.addItem("Any");
-		countryFromCB.addItem("Ireland");
-		countryFromCB.addItem("EU");
-		countryFromCB.addItem("USA");
-		countryFromCB.addItem("China");
+		countryFromCB.addItem("Romania");
 		contentPane.add(countryFromCB);
 		
 		countryToCB = new JComboBox<String>();
 		countryToCB.setBounds(116, 181, 86, 20);
 		countryToCB.addItem("Any");
-		countryToCB.addItem("Ireland");
-		countryToCB.addItem("EU");
-		countryToCB.addItem("USA");
-		countryToCB.addItem("China");
+		countryToCB.addItem("Romania");
 		contentPane.add(countryToCB);
 		
 		
@@ -144,18 +138,8 @@ public class ProcessBills extends JFrame {
 		JButton btnGeneratePerformedServices = new JButton("Generate Performed Services");
 		btnGeneratePerformedServices.setBounds(20, 26, 182, 23);
 		contentPane.add(btnGeneratePerformedServices);
-		GenerateServicesListener G= new GenerateServicesListener(c,typeCB,countryFromCB,countryToCB,minDurationTF,maxDurationTF,quantityTF, table);
-		btnGeneratePerformedServices.addActionListener(G);
+		btnGeneratePerformedServices.addActionListener(new GenerateServicesListener(typeCB,countryFromCB,countryToCB,minDurationTF,maxDurationTF,quantityTF, table));
 		
 	}
 
-
-	public Control getC() {
-		return c;
-	}
-
-
-	public void setC(Control c) {
-		this.c = c;
-	}
 }

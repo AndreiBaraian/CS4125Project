@@ -17,13 +17,12 @@ public class Menu {
 	private ProcessBills processBills;
 	private ManageAccounts manageAccounts;
 
-	private Control c;
+
 	/**
 	 * Create the application.
 	 * @param c 
 	 */
-	public Menu(Control c) {
-		this.c= c;
+	public Menu() {
 		initialize();
 	}
 
@@ -43,7 +42,7 @@ public class Menu {
 		btnProcessBills.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
-				processBills = new ProcessBills(c);
+				processBills = new ProcessBills();
 				processBills.setVisible(true);
 			}
 		});
@@ -54,7 +53,7 @@ public class Menu {
 		btnManageAccounts.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 
-				manageAccounts = new ManageAccounts(c);
+				manageAccounts = new ManageAccounts();
 				manageAccounts.setVisible(true);
 			}
 		});

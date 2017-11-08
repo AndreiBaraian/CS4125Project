@@ -8,19 +8,13 @@ import java.util.List;
 import java.util.Random;
 
 import region.Region;
+import region.Romania;
 import service.Service;
 import service.ServiceFactory;
 
 public class Control {
+	private static final Control controlInstance= new Control();
 	private List<Service> services;
-	public List<Service> getServices() {
-		return services;
-	}
-
-	public void setServices(List<Service> services) {
-		this.services = services;
-	}
-
 	private List<Region> availableRegions;
 	private List<String> types;
 	private List<String> registeredNumbers;
@@ -28,29 +22,40 @@ public class Control {
 	Random rand;
 	String outputFile = "generatedServices.txt";
 	BufferedWriter writer;
-	public Control() {
+	private Control() {
 		types = new ArrayList<String>(Arrays.asList("Message", "Call", "Internet"));
 		
 		availableRegions = new ArrayList<Region>();
 		registeredNumbers =new ArrayList<String>();
 		services= new ArrayList<Service>();
-		Region irlanda= new Region("Irlanda");
-		Region eu= new Region("EU");
-		Region usa = new Region ("USA");
-		Region china = new Region ("China");
+		Region romania= new Romania(0,0);
+		
 		numi= "1112121";
-		availableRegions.add(irlanda);
-		availableRegions.add(eu);
-		availableRegions.add(usa);
-		availableRegions.add(china);
+		availableRegions.add(romania);
 		registeredNumbers.add(numi);
 		rand = new Random();
 	}
+	
+	public static Control getInstance()
+	{
+		return controlInstance;
+	}
+	public Region search(String name)
+	{
+		for (Region r:availableRegions)
+		{
+			if(r.getRegionName().equals(name))
+				return r;
+		}
+		System.out.println("Region not found");
+		return null;
+	}
+
 
 	public void generateServices(Configuration C) {
 		String generatedType = new String();
-		Region from=new Region();
-		Region to= new Region();
+		Region from=null;
+		Region to= null;
 		int duration;
 		String number;
 		int quantity = C.getQuantity();
@@ -70,12 +75,12 @@ public class Control {
 				from = availableRegions.get(rand.nextInt(availableRegions.size()));
 			} 
 			if (C.getFrom().equals("Any")==false)
-				from = new Region(C.getFrom());
+				from = this.search(C.getFrom());
 			if (C.getTo().equals("Any")) {
 				to = availableRegions.get(rand.nextInt(availableRegions.size()));
 			} 
 			if (C.getTo().equals("Any")==false)
-				to = new Region(C.getTo());
+				to = this.search(C.getTo());
 			duration = rand.nextInt((C.getMaxDuration() - C.getMinDuration()) + 1) + C.getMinDuration();
 			Service S= ServiceFactory.getService(generatedType, from, number, to, duration);
 			services.add(S);
@@ -94,5 +99,19 @@ public class Control {
 		}
 	}
 
+	public List<Region> getAvailableRegions() {
+		return availableRegions;
+	}
 
+	public void setAvailableRegions(List<Region> availableRegions) {
+		this.availableRegions = availableRegions;
+	}
+
+	public List<Service> getServices() {
+		return services;
+	}
+
+	public void setServices(List<Service> services) {
+		this.services = services;
+		}
 }

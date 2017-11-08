@@ -12,9 +12,6 @@ import javax.swing.table.DefaultTableModel;
 
 import control.Configuration;
 import control.Control;
-import service.Call;
-import service.InternetUsage;
-import service.Message;
 import service.Service;
 
 public class GenerateServicesListener implements ActionListener{
@@ -28,8 +25,8 @@ public class GenerateServicesListener implements ActionListener{
 	private JComboBox<String> to;
 	private JTable table;
 	private Control c;
-	public GenerateServicesListener(Control c, JComboBox<String> t, JComboBox<String> from, JComboBox<String> to, JTextField min, JTextField max, JTextField quantity,JTable table){
-		this.c=c;
+	public GenerateServicesListener(JComboBox<String> t, JComboBox<String> from, JComboBox<String> to, JTextField min, JTextField max, JTextField quantity,JTable table){
+		
 		this.type=t;
 		this.from=from;
 		this.to=to;
@@ -46,6 +43,7 @@ public class GenerateServicesListener implements ActionListener{
 		
 		
 		Configuration config= new Configuration((String)type.getSelectedItem(),(String)from.getSelectedItem(),(String)to.getSelectedItem(),min.getText(),max.getText(),quantity.getText());
+		c=Control.getInstance();
 		c.generateServices(config);
 		
 		
@@ -53,7 +51,7 @@ public class GenerateServicesListener implements ActionListener{
 		for(Service s: c.getServices())
 		{
 			
-				model.addRow(new Object[]{ s.getClass().getSimpleName(),s.getNumber(),s.getLocationFrom().getName(),s.getValue() , "Not yet"});
+				model.addRow(new Object[]{ s.getClass().getSimpleName(),s.getNumber(),s.getLocationFrom().getRegionName(),s.getValue() , "Not yet"});
 			
 			
 

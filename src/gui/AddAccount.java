@@ -26,8 +26,9 @@ public class AddAccount extends JFrame {
 	private JTextField addressTF;
 	private JTextField endDateTF;
 	private JTable table;
+	private JTextField lastNameTF;
 	
-	public AddAccount(Control c,JTable table) {
+	public AddAccount(JTable table) {
 		setTitle("Add");
 		this.table=table;
 		setBounds(100, 100, 225, 369);
@@ -36,7 +37,7 @@ public class AddAccount extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JLabel lblName = new JLabel("Name");
+		JLabel lblName = new JLabel("First Name");
 		lblName.setBounds(10, 27, 66, 14);
 		contentPane.add(lblName);
 		
@@ -91,21 +92,13 @@ public class AddAccount extends JFrame {
 		contentPane.add(emailTF);
 		emailTF.setColumns(10);
 		
-		JLabel sex = new JLabel("Sex");
-		sex.setBounds(10, 52, 66, 14);
-		contentPane.add(sex);
-		
 		JLabel lblRegion = new JLabel("Region");
 		lblRegion.setBounds(10, 179, 66, 14);
 		contentPane.add(lblRegion);
 		
 		JComboBox<String> regionCB = new JComboBox<String>();
 		regionCB.setBounds(86, 184, 113, 20);
-		regionCB.addItem("Ireland");
-		regionCB.addItem("EU");
-		regionCB.addItem("USA");
-		regionCB.addItem("China");
-		regionCB.addItem("Russia");
+		regionCB.addItem("Romania");
 		contentPane.add(regionCB);
 		
 		JButton btnAdd = new JButton("Add");
@@ -120,8 +113,19 @@ public class AddAccount extends JFrame {
 		endDateTF.setBounds(86, 252, 113, 20);
 		contentPane.add(endDateTF);
 		endDateTF.setColumns(10);
+		
+		JLabel lblLastName = new JLabel("Last Name");
+		lblLastName.setBounds(10, 52, 66, 14);
+		contentPane.add(lblLastName);
+		
+		lastNameTF = new JTextField();
+		lastNameTF.setBounds(86, 49, 113, 20);
+		contentPane.add(lastNameTF);
+		lastNameTF.setColumns(10);
 	
-		btnAdd.addActionListener(new DoneAddingListener(c,typeCB,nameTF,numberTF,addressTF,ageTF,emailTF,regionCB,endDateTF,table));
+		btnAdd.addActionListener(new DoneAddingListener(typeCB,nameTF,lastNameTF,numberTF,addressTF,ageTF,emailTF,regionCB,endDateTF,table));
+		
+	
 		
 	}
 }

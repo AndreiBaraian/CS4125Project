@@ -5,6 +5,9 @@ package gui;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import control.Control;
+
 import javax.swing.JLabel;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
@@ -15,8 +18,6 @@ public class SetPrices extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTextField previousTFCaller;
-	private JTextField newTFCaller;
 	private JButton btnSet;
 	private JLabel lblServiceType;
 	private JComboBox<String> serviceTypeCB;
@@ -24,16 +25,18 @@ public class SetPrices extends JFrame {
 	private JLabel lblNew;
 	private JLabel lblPrevious;
 	private JLabel lblCountry;
-	private JTextField previousTFReciever;
-	private JTextField newTFReciever;
+	private JTextField previousTF;
+	private JTextField newTF;
+	
 
 	/**
 	 * Create the frame.
 	 */
 	public SetPrices() {
+		
 		setTitle("Set Prices");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 394, 280);
+		setBounds(100, 100, 282, 280);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -46,23 +49,13 @@ public class SetPrices extends JFrame {
 		
 		lblPrevious = new JLabel("Previous");
 		lblPrevious.setHorizontalAlignment(SwingConstants.CENTER);
-		lblPrevious.setBounds(160, 153, 84, 14);
+		lblPrevious.setBounds(10, 128, 84, 14);
 		contentPane.add(lblPrevious);
-		
-		previousTFCaller = new JTextField();
-		previousTFCaller.setBounds(23, 150, 92, 20);
-		contentPane.add(previousTFCaller);
-		previousTFCaller.setColumns(10);
 		
 		lblNew = new JLabel("New");
 		lblNew.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNew.setBounds(160, 178, 84, 14);
+		lblNew.setBounds(10, 153, 84, 14);
 		contentPane.add(lblNew);
-		
-		newTFCaller = new JTextField();
-		newTFCaller.setBounds(23, 175, 92, 20);
-		contentPane.add(newTFCaller);
-		newTFCaller.setColumns(10);
 		
 		lblServiceType = new JLabel("Service Type");
 		lblServiceType.setBounds(10, 61, 84, 14);
@@ -70,43 +63,32 @@ public class SetPrices extends JFrame {
 		
 		
 		countryCB = new JComboBox<String>();
-		countryCB.setBounds(121, 27, 237, 20);
-		countryCB.addItem("Ireland");
-		countryCB.addItem("EU");
-		countryCB.addItem("USA");
-		countryCB.addItem("China");
-		countryCB.addItem("Russia");
-		countryCB.addItem("Australia");
+		countryCB.setBounds(121, 27, 119, 20);
+		countryCB.addItem("Romania");
 		contentPane.add(countryCB);
 		
 		
 		serviceTypeCB = new JComboBox<String>();
-		serviceTypeCB.setBounds(121, 58, 237, 20);
+		serviceTypeCB.setBounds(121, 58, 119, 20);
 		serviceTypeCB.addItem("Call");
 		serviceTypeCB.addItem("Message");
 		serviceTypeCB.addItem("Internet");
 		contentPane.add(serviceTypeCB);
 		
+		previousTF = new JTextField();
+		previousTF.setBounds(121, 125, 86, 20);
+		contentPane.add(previousTF);
+		previousTF.setColumns(10);
+		
+		newTF = new JTextField();
+		newTF.setBounds(121, 156, 86, 20);
+		contentPane.add(newTF);
+		newTF.setColumns(10);
+		
 		btnSet = new JButton("Set");
-		btnSet.setBounds(155, 203, 89, 23);
+		btnSet.setBounds(57, 207, 89, 23);
 		contentPane.add(btnSet);
+		btnSet.addActionListener(new DoneSetting(previousTF,newTF,serviceTypeCB,countryCB));
 		
-		JLabel lblCaller = new JLabel("Caller");
-		lblCaller.setBounds(54, 118, 46, 14);
-		contentPane.add(lblCaller);
-		
-		JLabel lblReciever = new JLabel("Reciever");
-		lblReciever.setBounds(286, 118, 72, 14);
-		contentPane.add(lblReciever);
-		
-		previousTFReciever = new JTextField();
-		previousTFReciever.setBounds(272, 150, 86, 20);
-		contentPane.add(previousTFReciever);
-		previousTFReciever.setColumns(10);
-		
-		newTFReciever = new JTextField();
-		newTFReciever.setBounds(272, 175, 86, 20);
-		contentPane.add(newTFReciever);
-		newTFReciever.setColumns(10);
 	}
 }

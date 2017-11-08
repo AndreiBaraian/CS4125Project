@@ -16,19 +16,20 @@ public class ApplyPromotion extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
-	private JTable promotions;
-	private JScrollPane promotionsH;
+	private JTable availablePromotions;
+	private JScrollPane availablePromotionsH;
+	private int accountSelectedRow;
+	private int accountSelectedCol;
+	private JTable accountsTable;
 
-	/**
-	 * Launch the application.
-	 */
-
-	/**
-	 * Create the frame.
-	 */
-	public ApplyPromotion() {
+	
+	public ApplyPromotion(JTable accountsTable,int selectedRow,int selectedCol) {
+		this.accountsTable=accountsTable;
+		this.accountSelectedCol=selectedCol;
+		this.accountSelectedRow=selectedRow;
+		
 		setTitle("Apply Promotion");
-		setBounds(100, 100, 450, 174);
+		setBounds(100, 100, 430, 174);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
@@ -44,13 +45,15 @@ public class ApplyPromotion extends JFrame {
 		Object[] promotionsColumn = {  "Added Promotions" };
 
 		final DefaultTableModel promotionModel = new DefaultTableModel(promotionsColumn, 0);
-		promotions = new JTable(promotionModel);
-		promotions.setBounds(231, 15, 388, 246);
 		
-		promotionsH = new JScrollPane(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
-		promotionsH.setViewportView(promotions);
-		promotionsH.setBounds(215, 11, 188, 110);
-		contentPane.add(promotionsH);
+		final DefaultTableModel availablePromotionsModel = new DefaultTableModel(promotionsColumn, 0);
+		availablePromotions = new JTable(availablePromotionsModel);
+		availablePromotions.setBounds(231, 15, 388, 246);
+		
+		availablePromotionsH = new JScrollPane(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+		availablePromotionsH.setViewportView(availablePromotions);
+		availablePromotionsH.setBounds(215, 11, 188, 110);
+		contentPane.add(availablePromotionsH);
 		
 		
 		
@@ -62,5 +65,6 @@ public class ApplyPromotion extends JFrame {
 		JButton btnConfirm = new JButton("Confirm");
 		btnConfirm.setBounds(57, 98, 89, 23);
 		contentPane.add(btnConfirm);
+		btnConfirm.addActionListener(new DonePromoting(applyPromotionCB,availablePromotions,accountsTable,accountSelectedRow,accountSelectedCol));
 	}
 }

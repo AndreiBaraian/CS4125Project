@@ -21,7 +21,8 @@ import region.Region;
 
 public class DoneAddingListener implements ActionListener {
 
-	private JTextField name;
+	private JTextField firstName;
+	private JTextField lastName;
 	private JTextField number;
 	private JTextField address;
 	private JTextField age;
@@ -30,11 +31,13 @@ public class DoneAddingListener implements ActionListener {
 	private JComboBox<String> region;
 	private JTextField endDate;
 	private JTable table;
-	Control c;
-	public DoneAddingListener(Control c,JComboBox<String> type,  JTextField name, JTextField number,JTextField address, JTextField age,JTextField email, JComboBox<String> region, JTextField endDate,JTable table)
+	private DefaultTableModel model;
+	private Control c;
+	public DoneAddingListener(JComboBox<String> type,  JTextField firstName, JTextField lastName, JTextField number,JTextField address, JTextField age,JTextField email, JComboBox<String> region, JTextField endDate,JTable table)
 	{
-		this.c=c;
-		this.name=name;
+		
+		this.firstName=firstName;
+		this.lastName=lastName;
 		this.number=number;
 		this.address=address;
 		this.age=age;
@@ -46,20 +49,12 @@ public class DoneAddingListener implements ActionListener {
 	}
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
-		System.out.println("hei");
-		UUID id = UUID.randomUUID();
-        String randomUUIDString = id.toString();
-        Customer cust= new Customer(randomUUIDString,name.getText(),Integer.parseInt(age.getText()),address.getText(),email.getText());
-        Account a= AccountFactory.getAccount((String)type.getSelectedItem(), 0.0, new Region((String)region.getSelectedItem()), cust, number.getText(), endDate.getText());
-        //*******************************************************************************************
-        // Andrei add a to the data base
-        //********************************************************************************************
-        DefaultTableModel model= (DefaultTableModel) table.getModel();
-   
-        	model.addRow(new Object[]{a.getCustomer().getId(),a.getCustomer().getName(),a.getHomeregion().getName(),(String)type.getSelectedItem(),"0","0",a.getBalance()}); 
-      
-        System.out.println("ccc"+a.getCustomer().getName());
+        c=Control.getInstance();
+        model= (DefaultTableModel) table.getModel();
+        
+    	model.addRow(new Object[]{firstName.getText(),lastName.getText(),c.search(this.region.getSelectedItem().toString()),(String)type.getSelectedItem(),"0","0","0.0"}); //change these
+  
+       
 	}
 
 

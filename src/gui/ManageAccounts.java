@@ -22,7 +22,6 @@ public class ManageAccounts extends JFrame {
 	private JTable numbers;
 	private JScrollPane accountsH;
 	private JScrollPane numbersH;
-	private Control c;
 	private int selectedRow;
 	private int selectedCol;
 	private Object obj=null;
@@ -34,8 +33,7 @@ public class ManageAccounts extends JFrame {
 	/**
 	 * Create the frame.
 	 */
-	public ManageAccounts(Control c) {
-		this.c=c;
+	public ManageAccounts() {
 		setTitle("Manage Accounts");
 		setBounds(100, 100, 846, 350);
 		contentPane = new JPanel();
@@ -85,10 +83,10 @@ public class ManageAccounts extends JFrame {
 		btnApplyPromotion.setBounds(10, 106, 118, 45);
 		contentPane.add(btnApplyPromotion);
 		
-		btnAddAccount.addActionListener(new AddAccountListener(c,accounts));
-		btnRemoveAccount.addActionListener(new RemoveAccountListener(c,accounts,selectedRow,selectedCol));
+		btnAddAccount.addActionListener(new AddAccountListener(accounts));
+		btnRemoveAccount.addActionListener(new RemoveAccountListener(accounts,selectedRow,selectedCol));
 		btnReport.addActionListener(new ReportListener(accounts,selectedRow,selectedCol));
 		
-		btnApplyPromotion.addActionListener(new PromotionListener());
+		btnApplyPromotion.addActionListener(new PromotionListener(accounts,selectedRow,selectedCol));
 	}
 }

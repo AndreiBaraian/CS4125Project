@@ -1,5 +1,7 @@
 package test;
-
+/*
+ * @author Xiangkai Tang
+ */
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -17,7 +19,7 @@ public class EnterpriseAccountTest {
 	public void testGenerateReport(){
 		ea.setEndDate("2017-11-08");
 		ea.setNumber("083-123456");
-		assertNotNull(ea.generateReport(10, 20, 30, 40, 50, 60, 70));
+		assertNotNull(ea.generateReport(10, 20, 30, 40, 50,0,0,0,0,0,0));
 	}
 
 }

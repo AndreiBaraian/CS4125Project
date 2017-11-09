@@ -1,6 +1,7 @@
 package gui;
 /*
  * @author Lucian Epure
+ * 
  */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -33,6 +34,9 @@ public class DoneAddingListener implements ActionListener {
 	private JTable table;
 	private DefaultTableModel model;
 	private Control c;
+	public static Customer customer; //get Customer
+	public static String endate;     //get endate
+	public static String custo_number;  //get number in account
 	public DoneAddingListener(JComboBox<String> type,  JTextField firstName, JTextField lastName, JTextField number,JTextField address, JTextField age,JTextField email, JComboBox<String> region, JTextField endDate,JTable table)
 	{
 		
@@ -53,8 +57,11 @@ public class DoneAddingListener implements ActionListener {
         model= (DefaultTableModel) table.getModel();
         
     	model.addRow(new Object[]{firstName.getText(),lastName.getText(),c.search(this.region.getSelectedItem().toString()),(String)type.getSelectedItem(),"0","0","0.0"}); //change these
-  
-       
+    	
+    	//get value for applying promotion
+    	customer = new Customer(firstName.getText(),lastName.getText(),Integer.parseInt(age.getText()),address.getText(),email.getText());
+    	endate = endDate.getText();
+    	custo_number = number.getText();
 	}
 
 

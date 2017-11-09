@@ -9,24 +9,64 @@ import region.Region;
 
 public class Promotion extends Account {
 	Account account;
-	private int minutes;
+	private double minutes;
 	private double duration;
-	private int giftpoints;
-	private int messages;
+	private double giftpoints;
+	private double messages;
+	private double differentProviderMinutes;
+	private double mobileData;
+	private double internationalMinutes;
+	private double costUntilNow;
 	
-	public int getMessages() {
+	
+	
+	
+	
+	public double getCostUntilNow() {
+		return costUntilNow;
+	}
+
+	public void setCostUntilNow(double costUntilNow) {
+		this.costUntilNow = costUntilNow;
+	}
+
+	public double getDifferentProviderMinutes() {
+		return differentProviderMinutes;
+	}
+
+	public void setDifferentProviderMinutes(double differentProviderMinutes) {
+		this.differentProviderMinutes = differentProviderMinutes;
+	}
+
+	public double getMobileData() {
+		return mobileData;
+	}
+
+	public void setMobileData(double mobileData) {
+		this.mobileData = mobileData;
+	}
+
+	public double getInternationalMinutes() {
+		return internationalMinutes;
+	}
+
+	public void setInternationalMinutes(double internationalMinutes) {
+		this.internationalMinutes = internationalMinutes;
+	}
+
+	public double getMessages() {
 		return messages;
 	}
 
-	public void setMessages(int messages) {
+	public void setMessages(double messages) {
 		this.messages = messages;
 	}
 
-	public int getMinutes() {
+	public double getMinutes() {
 		return minutes;
 	}
 
-	public void setMinutes(int minutes) {
+	public void setMinutes(double minutes) {
 		this.minutes = minutes;
 	}
 
@@ -38,11 +78,11 @@ public class Promotion extends Account {
 		this.duration = duration;
 	}
 
-	public int getGiftpoints() {
+	public double getGiftpoints() {
 		return giftpoints;
 	}
 
-	public void setGiftpoints(int giftpoints) {
+	public void setGiftpoints(double giftpoints) {
 		this.giftpoints = giftpoints;
 	}
 
@@ -57,17 +97,16 @@ public class Promotion extends Account {
 
 	
 
-	@Override
-	public Report generateReport(double spentMinutes, double spentMessages,
-			double usedMobileData, double leftMinutes, double leftMessages,
-			double leftMobileData, double costUntilNow) {
+	
+	public Report generateReport(double spentMinutes, double spentMessages, double usedMobileData,double usedDifferentProviderMinutes,double usedInternationalMinutes,double leftMinutes, double leftMessages,
+			double leftMobileData, double leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow) {
 		// TODO Auto-generated method stub
 		return account.generateReport( spentMinutes,  spentMessages,
-				 usedMobileData,  leftMinutes,  leftMessages,
-				 leftMobileData,costUntilNow);
+				 usedMobileData,  usedDifferentProviderMinutes,usedInternationalMinutes,leftMinutes,  leftMessages,
+				 leftMobileData,leftInternationalMinutes,leftDifferentProviderMinutes,costUntilNow);
 	}
 
-	@Override
+	
 	public void computeDiscount() {
 		// TODO Auto-generated method stub
 		

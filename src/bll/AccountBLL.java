@@ -7,7 +7,7 @@ import dao.AbstractDAO;
 import exceptions.InsertException;
 import region.Region;
 
-public  class AccountBLL<T extends Account> {
+public class AccountBLL<T extends Account> {
 	
 	private AbstractDAO<T> accountDAO;
 	

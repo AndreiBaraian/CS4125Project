@@ -44,6 +44,7 @@ private AccountBLL accountbll;
 			List<String> numbers = new ArrayList<>();
 			numbers.add(DoneAddingListener.custo_number);
 			Account SurferPromotionFamilyAccount = new SurferPromotion(new FamilyAccount(Double.parseDouble(accountsTable.getValueAt(selectedRow, 6).toString()),new Romania(),DoneAddingListener.customer,numbers));
+			
 			System.out.println("Promotion Complete! your promotion type is "+promotion);
 			System.out.println("Applied Account is "+accountsTable.getValueAt(selectedRow, 3).toString() +" Account");
 			System.out.println("Account owner is "+id);

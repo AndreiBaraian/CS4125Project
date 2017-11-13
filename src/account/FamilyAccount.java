@@ -78,5 +78,13 @@ public class FamilyAccount extends Account {
 			result = result + ", " + numbers.get(i);
 		return result;
 	}
+
+	@Override
+	public String toString() {
+		return "FamilyAccount [numbers=" + numbers + ", numbersString=" + numbersString + ", customerSystemReference="
+				+ customerSystemReference + ", id=" + id + "]";
+	}
+	
+	
 		
 }

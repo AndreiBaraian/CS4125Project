@@ -1,11 +1,9 @@
 package main;
 
+import account.Account;
 import bll.AccountBLL;
-import customer.Customer;
 import exceptions.InsertException;
 import gui.Menu;
-import region.Region;
-import region.Romania;
 
 public class Main {
 
@@ -17,13 +15,21 @@ public class Main {
 		window.getFrmMainMenu().setVisible(true);
 		*/
 		
-		
-		AccountBLL e = new AccountBLL();
+		/*
+		AccountBLL<?> e = new EnterpriseAccountBLL();
 		Region reg = new Romania();
 		Customer cust = new Customer("Andrei", "Baraian",21,"Bihorului","andrei@gmail.com");
-		cust.setSystemReference("ref2");
+		cust.setSystemReference("ref4");
 		e.addAccount("Enterprise", reg, cust, "0004354353", "3DEC");
+		*/
 		
+		
+		AccountBLL<?> acb = new AccountBLL();
+		Account acc = acb.getAccount("072354345");
+		acc.setBalance(30);
+		acb.modifyAccount(acc);
+		System.out.println(acc.toString());
+		System.out.println(acc.getClass().getSimpleName());
 		
 		/*
 		CustomerBLL cb = new CustomerBLL();

@@ -69,5 +69,14 @@ public class EnterpriseAccount extends Account {
 	public String getReferenceNumber(){
 		return customerSystemReference;
 	}
+
+	@Override
+	public String toString() {
+		return "EnterpriseAccount [endDate=" + endDate + ", number=" + number + ", customerSystemReference="
+				+ customerSystemReference + ", id=" + id + ", uniqueIdentifierFieldName=" + uniqueIdentifierFieldName
+				+ "]";
+	}
+	
+	
 	
 }

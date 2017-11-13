@@ -48,6 +48,24 @@ public abstract class AbstractDAO<T extends DBRecord> {
 		return object.getId();
 	}
 	
+	public void modify(T newObject){
+		Session session = sessionFactory.openSession();
+		Transaction tx = null;
+		try{
+			tx = session.beginTransaction();
+			//T t = (T) session.get(parameterType, newObject.getId());
+			session.update(newObject);
+			tx.commit();
+		}catch(HibernateException e){
+			if (tx != null) {
+				tx.rollback();
+			}
+			e.printStackTrace();
+		} finally {
+			session.close();
+		}
+	}
+	
 	public List<T> getAll() {
 		List<T> objects = null;
 		Session session = sessionFactory.openSession();
@@ -69,8 +87,6 @@ public abstract class AbstractDAO<T extends DBRecord> {
 		 return objects;
 	}
 	
-	
-	// TO BE TESTED!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	public List<T> getByField(String fieldName, String value){
 		List<T> objects = null;
 		Transaction tx = null;
@@ -88,6 +104,8 @@ public abstract class AbstractDAO<T extends DBRecord> {
 			 if(tx != null)
 				 tx.rollback();
 		 }
+		if(objects.size() == 0)
+			objects = null;
 		return objects;
 	}
 

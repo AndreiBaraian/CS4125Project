@@ -39,8 +39,8 @@ public class EnterpriseAccount extends Account {
 	}
 
 	@Override
-	public Report generateReport(double spentMinutes, double spentMessages, double usedMobileData,double usedDifferentProviderMinutes,double usedInternationalMinutes,double leftMinutes, double leftMessages,
-			double leftMobileData, double leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow) {
+	public Report generateReport(int spentMinutes, int spentMessages, double usedMobileData,double usedDifferentProviderMinutes,int usedInternationalMinutes,int leftMinutes, int leftMessages,
+			double leftMobileData, int leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow) {
 		 leftMinutes = 0;
 		 leftMessages = 0;
 		 leftMobileData = 0;

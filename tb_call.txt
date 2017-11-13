@@ -1,0 +1,10 @@
+CREATE TABLE `tb_call` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `locationFrom` varchar(45) DEFAULT NULL,
+  `number` varchar(45) DEFAULT NULL,
+  `cost` double DEFAULT NULL,
+  `locationTo` varchar(45) DEFAULT NULL,
+  `duration` int(11) DEFAULT NULL,
+  `referenceNumber` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;

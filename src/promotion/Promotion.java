@@ -9,34 +9,11 @@ import region.Region;
 
 public class Promotion extends Account {
 	Account account;
-	private int minutes;
-	private double duration;
-	private int giftpoints;
-	private int messages;
 	
-	public int getMessages() {
-		return messages;
-	}
-
-	public void setMessages(int messages) {
-		this.messages = messages;
-	}
-
-	public int getMinutes() {
-		return minutes;
-	}
-
-	public void setMinutes(int minutes) {
-		this.minutes = minutes;
-	}
-
-	public double getDuration() {
-		return duration;
-	}
-
-	public void setDuration(double duration) {
-		this.duration = duration;
-	}
+	private int giftpoints;
+	
+	
+	
 
 	public int getGiftpoints() {
 		return giftpoints;
@@ -47,6 +24,8 @@ public class Promotion extends Account {
 	}
 
 	public Promotion(Account account) {
+		account.setMinutes(500);
+		account.setMessages(500);
 		this.account = account;
 	}
 	

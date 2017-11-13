@@ -29,9 +29,8 @@ public class FamilyAccount extends Account {
 	
 	public FamilyAccount() {}
 	
-	public FamilyAccount(double balance, Region homeregion, Customer customer,  List<String> numbers) {
+	public FamilyAccount(double balance, Region homeregion, Customer customer) {
 		super(balance, homeregion, customer);
-		this.numbers = numbers;
 		this.numbersString = numbersToString(numbers);
 		this.uniqueIdentifierFieldName = "customerId";
 	}

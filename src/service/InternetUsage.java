@@ -24,8 +24,8 @@ public class InternetUsage extends Service{
 	}
 	
 	@Override
-	public void applyPrice(double price) {
-		super.setCost(price*((float)traffic/1000));
+	public void applyPrice(double roamingTax) {
+		super.setCost(roamingTax+locationFrom.getInternetPrice()*((float)traffic/1000));
 	}
 	
 	public int getTraffic() {

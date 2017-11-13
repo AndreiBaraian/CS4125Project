@@ -12,7 +12,7 @@ public class AccountFactory {
 		if("Family".equalsIgnoreCase(type)){
 			List<String> numbers=new ArrayList<String>();
 			numbers.add(number);
-			return new FamilyAccount(balance,homeRegion,customer,numbers);
+			return new FamilyAccount(balance,homeRegion,customer);
 		}
 		else if("Enterprise".equalsIgnoreCase(type)){
 			return new EnterpriseAccount(balance,homeRegion,customer,endDate,number);

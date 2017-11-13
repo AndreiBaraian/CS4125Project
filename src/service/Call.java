@@ -16,7 +16,7 @@ import region.Region;
 public class Call extends Service implements Serializable {
 
 	private static final long serialVersionUID = 1L;
-
+	
 	@Transient
 	private Region locationTo;
 	
@@ -37,8 +37,11 @@ public class Call extends Service implements Serializable {
 	}
 
 	@Override
-	public void applyPrice(double price) {
-		super.setCost(price * this.duration);
+	public void applyPrice(double roamingTax) { //--------------------------modify this to take care of the location
+		//-----------------------------------------------------based on number, obtain homeRegion of the caller
+		double price=roamingTax+locationTo.getCallingPrice()*duration;
+		super.setCost(price);
+		
 	}
 	
 	public int getDuration() {

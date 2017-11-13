@@ -7,19 +7,16 @@ import account.*;
 
 
 public class SurferPromotion extends Promotion {
-	private double mobileData;
+	
 	public SurferPromotion(Account account) {
 		super(account);
-		
+		super.setMobileData(100);
 		
 	}
 	
-	public SurferPromotion(int minutes,float duration,int giftpoints,float mobileData) { //get the value from GUI
+	public SurferPromotion(double value) { //get the value from GUI
 		super();
-		this.mobileData = mobileData;
-		this.setMinutes(minutes);
-		this.setDuration(duration); 
-		this.setGiftpoints(giftpoints);
+		
 		
 	}
 
@@ -28,7 +25,7 @@ public class SurferPromotion extends Promotion {
 			double leftMobileData, double costUntilNow)
 	{
 		Report r = super.generateReport(spentMinutes,spentMessages,usedMobileData,leftMinutes,leftMessages,leftMobileData,costUntilNow);
-		r.setMobileData(mobileData);
+		r.setMobileData(getMobileData());
 		PDFcreater pdfc = new PDFcreater(r,account.getCustomer());
 		pdfc.outputPDF();
 		return r;

@@ -1,0 +1,9 @@
+CREATE TABLE `tb_internetusage` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `locationFrom` varchar(45) DEFAULT NULL,
+  `number` varchar(45) DEFAULT NULL,
+  `cost` double DEFAULT NULL,
+  `speed` double DEFAULT NULL,
+  `traffic` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

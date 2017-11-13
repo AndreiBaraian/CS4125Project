@@ -1,0 +1,8 @@
+CREATE TABLE `tb_region` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `regionCode` varchar(45) DEFAULT NULL,
+  `regionName` varchar(45) DEFAULT NULL,
+  `callingPrice` varchar(45) DEFAULT NULL,
+  `roamingTax` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;

@@ -27,6 +27,7 @@ public class AccountBLL<T extends Account> {
 		this.abstractDAO = abstractDAO;
 	}
 	
+	
 	@SuppressWarnings("unchecked")
 	public Integer addAccount(String type, Region region, Customer customer,String number,String endDate) throws InsertException{
 		Integer id = null;
@@ -65,5 +66,11 @@ public class AccountBLL<T extends Account> {
 	public void applyPromotion(){
 		
 	}
-
+	
+	public void presentReport(String idValue){
+		//--------------------------------------------------------------------------- get account from data base, based on id;
+		
+		//Account account=(Account) familyAccount.getByField("id", idValue);
+		//account.generateReport();
+	}
 }

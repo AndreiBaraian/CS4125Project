@@ -4,7 +4,6 @@ package report;
  */
 import java.util.List;
 
-import account.Number;
 
 public class Report {
 		private String endDate;

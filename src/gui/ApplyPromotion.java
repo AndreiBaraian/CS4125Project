@@ -28,6 +28,8 @@ public class ApplyPromotion extends JFrame {
 		this.accountSelectedCol=selectedCol;
 		this.accountSelectedRow=selectedRow;
 		
+		String name = accountsTable.getValueAt(0, 4).toString();
+		
 		setTitle("Apply Promotion");
 		setBounds(100, 100, 430, 174);
 		contentPane = new JPanel();

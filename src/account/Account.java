@@ -65,7 +65,8 @@ public abstract class Account extends DBRecord{
 		this.uniqueIdentifierFieldName = "customerId";
 	}
 	
-	public abstract Report generateReport(double spentMinutes, double spentMessages, double usedMobileData, double leftMinutes, double leftMessages, double leftMobileData, double costUntilNow);
+	public abstract Report generateReport(double spentMinutes, double spentMessages, double usedMobileData,double usedDifferentProviderMinutes,double usedInternationalMinutes,double leftMinutes, double leftMessages,
+			double leftMobileData, double leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow);
 	
 	public abstract void computeDiscount();
 	

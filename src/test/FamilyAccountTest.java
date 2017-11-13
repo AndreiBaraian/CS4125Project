@@ -26,6 +26,6 @@ public class FamilyAccountTest {
 			FamilyAccount fa = new FamilyAccount(10,new Romania(),conrad);
 			fa.setNumbersString("083-7654321");
 			fa.setNumbers(numbers);
-			assertNotNull(fa.generateReport(10, 20, 30, 40, 50, 60, 70));
+			assertNotNull(fa.generateReport(10, 20, 30, 40, 50,0,0,0,0,0,0));
 		}
 }

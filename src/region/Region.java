@@ -38,8 +38,8 @@ public abstract class Region extends DBRecord{
 	protected String regionName;
 
 	public Region() {
+		
 	}
-	
 	public abstract void computeRoamingTax(double percent);
 	
 	public double getRoamingTax() {

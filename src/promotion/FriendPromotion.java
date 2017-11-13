@@ -1,9 +1,10 @@
 package promotion;
-import account.Account;
-import report.Report;
 /*
  * @author Xiangkai Tang
  */
+import account.Account;
+import report.Report;
+
 public class FriendPromotion extends Promotion {
 	
 	

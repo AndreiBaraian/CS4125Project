@@ -12,7 +12,7 @@ public class TravelerPromotion extends Promotion {
 	public TravelerPromotion(Account account) {
 		super(account);
 		account.setInternationalMinutes(100);
-		// TODO Auto-generated constructor stub
+
 	}
 	
 	public TravelerPromotion() { //get the value from GUI

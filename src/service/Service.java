@@ -52,7 +52,7 @@ public abstract class Service extends DBRecord {
 	public abstract void setReferenceNumber(String referenceNumber);
 
 
-	public abstract void applyPrice(double price);
+	public abstract void applyPrice(double roamingTax);
 	
 	public String getLocationFromString() {
 		return locationFromString;

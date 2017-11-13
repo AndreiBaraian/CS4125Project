@@ -34,8 +34,8 @@ public class Message extends Service{
 	}
 	
 	@Override
-	public void applyPrice(double price) {
-		super.setCost((float) (price * (Math.ceil((float)nrOfWords/limit)))) ;
+	public void applyPrice(double roamingTax) {
+		super.setCost( roamingTax+locationTo.getMessagePrice() * (Math.ceil((float)nrOfWords/limit))) ;
 	}
 	public Region getLocationTo() {
 		return locationTo;

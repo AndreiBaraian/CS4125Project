@@ -17,6 +17,24 @@ import report.Report;
 @MappedSuperclass
 public abstract class Account extends DBRecord{
 
+	@Transient
+	private float differentProviderMinutes;
+	
+	@Transient
+	private int internationalMinutes;
+	
+	@Transient
+	private double mobileData;
+	
+	@Transient
+	private int minutes;
+	
+	@Transient
+	private double duration;
+	
+	@Transient
+	private int messages;
+	
 	@Column(name = "balance")
 	private double balance;
 	
@@ -102,6 +120,54 @@ public abstract class Account extends DBRecord{
 
 	public void setCustomerSystemReference(String customerSystemReference) {
 		this.customerSystemReference = customerSystemReference;
+	}
+
+	public int getMessages() {
+		return messages;
+	}
+
+	public void setMessages(int messages) {
+		this.messages = messages;
+	}
+
+	public double getDuration() {
+		return duration;
+	}
+
+	public void setDuration(double duration) {
+		this.duration = duration;
+	}
+
+	public int getMinutes() {
+		return minutes;
+	}
+
+	public void setMinutes(int minutes) {
+		this.minutes = minutes;
+	}
+
+	public float getDifferentProviderMinutes() {
+		return differentProviderMinutes;
+	}
+
+	public void setDifferentProviderMinutes(float differentProviderMinutes) {
+		this.differentProviderMinutes = differentProviderMinutes;
+	}
+
+	public int getInternationalMinutes() {
+		return internationalMinutes;
+	}
+
+	public void setInternationalMinutes(int internationalMinutes) {
+		this.internationalMinutes = internationalMinutes;
+	}
+
+	public double getMobileData() {
+		return mobileData;
+	}
+
+	public void setMobileData(double mobileData) {
+		this.mobileData = mobileData;
 	}
 	
 }

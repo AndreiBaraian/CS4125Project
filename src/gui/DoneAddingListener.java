@@ -13,8 +13,12 @@ import javax.swing.table.DefaultTableModel;
 
 import account.Account;
 import account.AccountFactory;
+import account.EnterpriseAccount;
+import bll.AccountBLL;
+import bll.CustomerBLL;
 import control.Control;
 import customer.Customer;
+import exceptions.InsertException;
 import region.Region;
 
 
@@ -33,6 +37,8 @@ public class DoneAddingListener implements ActionListener {
 	private JTable table;
 	private DefaultTableModel model;
 	private Control c;
+	private AccountBLL accountBll;
+	private CustomerBLL customerBll;
 	public DoneAddingListener(JComboBox<String> type,  JTextField firstName, JTextField lastName, JTextField number,JTextField address, JTextField age,JTextField email, JComboBox<String> region, JTextField endDate,JTable table)
 	{
 		
@@ -46,13 +52,33 @@ public class DoneAddingListener implements ActionListener {
 		this.region=region;
 		this.endDate=endDate;
 		this.table=table;
+		customerBll= new CustomerBLL();
+		accountBll=new AccountBLL();
 	}
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-        c=Control.getInstance();
+        
+		
+		Customer customer = null;
+	
+			try {
+				customer = customerBll.add(firstName.getText(), lastName.getText(), Integer.parseInt(age.getText()), address.getText(), email.getText());
+			} catch (NumberFormatException | InsertException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			Region r=c.search(this.region.getSelectedItem().toString());
+			try {
+				accountBll.addAccount((String)type.getSelectedItem(), r, customer, number.getText(), endDate.getText());
+			} catch (InsertException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+
+		c=Control.getInstance();
         model= (DefaultTableModel) table.getModel();
         
-    	model.addRow(new Object[]{firstName.getText(),lastName.getText(),c.search(this.region.getSelectedItem().toString()),(String)type.getSelectedItem(),"0","0","0.0"}); //change these
+    	model.addRow(new Object[]{firstName.getText(),lastName.getText(),r,(String)type.getSelectedItem(),"0","0","0.0"}); //change these
   
        
 	}

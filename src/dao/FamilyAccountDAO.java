@@ -2,10 +2,10 @@ package dao;
 
 import account.FamilyAccount;
 
-public class FamilyAccountDAO extends AbstractDAO<FamilyAccount> {
+public class FamilyAccountDAO extends AccountDAO<FamilyAccount> {
 	
 	public FamilyAccountDAO(){
-		this.uniqueIdentifierFieldName = "customerSystemReference";
+		super();
 	}
 
 

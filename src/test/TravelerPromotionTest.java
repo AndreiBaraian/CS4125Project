@@ -1,5 +1,7 @@
 package test;
-
+/*
+ * @author Xiangkai Tang
+ */
 import org.junit.Test;
 
 import customer.Customer;
@@ -15,6 +17,6 @@ public class TravelerPromotionTest {
 	
 	@Test
 	public void testGenerateReport(){
-		assertNotNull(tp.generateReport(10, 20, 30, 40, 50, 60, 70));
+		assertNotNull(tp.generateReport(10, 20, 30, 40,50));
 	}
 }

@@ -1,6 +1,7 @@
 package main;
 
-import control.Control;
+import account.Account;
+import bll.AccountBLL;
 import exceptions.InsertException;
 import gui.Menu;
 
@@ -8,19 +9,27 @@ public class Main {
 
 	public static void main(String[] args) throws InsertException {
 		
-		
+		/*
 		//Control c= Control.getInstance();
 		Menu window = new Menu();
 		window.getFrmMainMenu().setVisible(true);
-		
+		*/
 		
 		/*
-		EnterpriseAccountBLL e = new EnterpriseAccountBLL();
-		Region reg = new Region("Romania");
+		AccountBLL<?> e = new EnterpriseAccountBLL();
+		Region reg = new Romania();
 		Customer cust = new Customer("Andrei", "Baraian",21,"Bihorului","andrei@gmail.com");
-		cust.setSystemReference("ref");
-		e.createAccount("Enterprise", reg, cust, "0004354353", "3DEC");
+		cust.setSystemReference("ref4");
+		e.addAccount("Enterprise", reg, cust, "0004354353", "3DEC");
 		*/
+		
+		
+		AccountBLL<?> acb = new AccountBLL();
+		Account acc = acb.getAccount("072354345");
+		acc.setBalance(30);
+		acb.modifyAccount(acc);
+		System.out.println(acc.toString());
+		System.out.println(acc.getClass().getSimpleName());
 		
 		/*
 		CustomerBLL cb = new CustomerBLL();

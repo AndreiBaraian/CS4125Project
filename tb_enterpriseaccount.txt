@@ -1,0 +1,15 @@
+CREATE TABLE `tb_enterpriseaccount` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `balance` double DEFAULT NULL,
+  `homeRegion` varchar(45) DEFAULT NULL,
+  `customerName` varchar(45) DEFAULT NULL,
+  `customerSystemReference` varchar(45) DEFAULT NULL,
+  `endDate` varchar(45) DEFAULT NULL,
+  `number` varchar(45) DEFAULT NULL,
+  `differentProviderMinutes` double DEFAULT NULL,
+  `internationalMinutes` int(11) DEFAULT NULL,
+  `mobileData` double DEFAULT NULL,
+  `duration` double DEFAULT NULL,
+  `messages` int(11) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;

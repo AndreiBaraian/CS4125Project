@@ -17,22 +17,22 @@ import report.Report;
 @MappedSuperclass
 public abstract class Account extends DBRecord{
 
-	@Transient
-	private float differentProviderMinutes;
+	@Column(name = "differentProviderMinutes")
+	private double differentProviderMinutes;
 	
-	@Transient
+	@Column(name = "internationalMinutes")
 	private int internationalMinutes;
 	
-	@Transient
+	@Column(name = "mobileData")
 	private double mobileData;
 	
-	@Transient
+	@Column(name = "minutes")
 	private int minutes;
 	
-	@Transient
+	@Column(name = "duration")
 	private double duration;
 	
-	@Transient
+	@Column(name = "messages")
 	private int messages;
 	
 	@Column(name = "balance")
@@ -65,7 +65,8 @@ public abstract class Account extends DBRecord{
 		this.uniqueIdentifierFieldName = "customerId";
 	}
 	
-	public abstract Report generateReport(double spentMinutes, double spentMessages, double usedMobileData, double leftMinutes, double leftMessages, double leftMobileData, double costUntilNow);
+	public abstract Report generateReport(int spentMinutes, int spentMessages, double usedMobileData,double usedDifferentProviderMinutes,int usedInternationalMinutes,int leftMinutes, int leftMessages,
+			double leftMobileData, int leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow);
 	
 	public abstract void computeDiscount();
 	
@@ -146,11 +147,11 @@ public abstract class Account extends DBRecord{
 		this.minutes = minutes;
 	}
 
-	public float getDifferentProviderMinutes() {
+	public double getDifferentProviderMinutes() {
 		return differentProviderMinutes;
 	}
 
-	public void setDifferentProviderMinutes(float differentProviderMinutes) {
+	public void setDifferentProviderMinutes(double differentProviderMinutes) {
 		this.differentProviderMinutes = differentProviderMinutes;
 	}
 

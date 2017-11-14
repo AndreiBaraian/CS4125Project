@@ -68,6 +68,7 @@ public class AccountBLL<T extends Account> {
 	@SuppressWarnings("unchecked")
 	public List<String> applyPromotion(String promotionType,String accountId){
 		List<String> recievedAttributes = new ArrayList<String>();
+		System.out.println(accountId);
 		Account retrievedAccount = abstractDAO.getByField("id", accountId).get(0);
 		Account promotedAccount = PromotionFactory.applyPromotion(promotionType, retrievedAccount);
 		abstractDAO.modify((T) promotedAccount);

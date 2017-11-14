@@ -19,11 +19,12 @@ import region.*;
 public class DonePromoting implements ActionListener{
 private JComboBox<String> applyPromotion;
 private JTable availablePromotionsTable;
-private DefaultTableModel model; 
+private DefaultTableModel promotionModel; 
+private DefaultTableModel accountModel;
 private JTable accountsTable;
 private int selectedRow;
 private int selectedCol;
-private AccountBLL accountbll;
+private AccountBLL accountBLL;
 	public DonePromoting(JComboBox<String> applyPromotion, JTable availablePromotionsTable,JTable accountsTable, int selectedAccountRow, int selectedAccountCol)
 	{
 		this.accountsTable=accountsTable;
@@ -31,15 +32,27 @@ private AccountBLL accountbll;
 		this.selectedRow=selectedRow;
 		this.availablePromotionsTable=availablePromotionsTable;
 		this.applyPromotion=applyPromotion;
+		this.accountBLL= new AccountBLL();
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
-		String id= accountsTable.getValueAt(selectedRow, selectedCol).toString(); 
+		List<String> recievedAttributes=new ArrayList<String>();
+		String recievedMinutes;
+		String recievedMessages;
+		String accountId= accountsTable.getValueAt(selectedRow, selectedCol).toString(); 
 		String promotion= applyPromotion.getSelectedItem().toString();
-		model= (DefaultTableModel) availablePromotionsTable.getModel();
-		model.addRow(new Object[]{promotion}); 
-		if(accountsTable.getValueAt(selectedRow, 3).toString()=="Family"&&promotion=="Surfer")
+		promotionModel= (DefaultTableModel) availablePromotionsTable.getModel();
+		promotionModel.addRow(new Object[]{promotion}); 
+		accountModel=(DefaultTableModel) accountsTable.getModel();
+		recievedAttributes=accountBLL.applyPromotion(promotion,accountId);
+		recievedMinutes=recievedAttributes.get(0);
+		recievedMessages=recievedAttributes.get(1);
+		accountModel.setValueAt(recievedMinutes, selectedRow, 4);
+		accountModel.setValueAt(recievedMessages, selectedRow, 5);
+		
+	
+		/*
+		 * if(accountsTable.getValueAt(selectedRow, 3).toString()=="Family"&&promotion=="Surfer")
 		{
 			List<String> numbers = new ArrayList<>();
 			numbers.add(DoneAddingListener.custo_number);
@@ -90,7 +103,7 @@ private AccountBLL accountbll;
 		}
 		
 		
-
+*/
 	}
 
 }

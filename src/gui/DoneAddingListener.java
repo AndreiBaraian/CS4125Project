@@ -37,7 +37,7 @@ public class DoneAddingListener implements ActionListener {
 	private JTextField endDate;
 	private JTable table;
 	private DefaultTableModel model;
-	private Control c;
+	private Control control;
 	private AccountBLL accountBll;
 	private CustomerBLL customerBll;
 	public static Customer customer; //get Customer
@@ -66,7 +66,7 @@ public class DoneAddingListener implements ActionListener {
 		
 		Customer customer = null;
 	
-			try {
+		/*	try {
 				customer = customerBll.add(firstName.getText(), lastName.getText(), Integer.parseInt(age.getText()), address.getText(), email.getText());
 			} catch (NumberFormatException | InsertException e) {
 				// TODO Auto-generated catch block
@@ -78,13 +78,13 @@ public class DoneAddingListener implements ActionListener {
 			} catch (InsertException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
-			}
+			}*/
 
-		c=Control.getInstance();
+		control=Control.getInstance();
         model= (DefaultTableModel) table.getModel();
         
 
-    	model.addRow(new Object[]{firstName.getText(),lastName.getText(),c.search(this.region.getSelectedItem().toString()),(String)type.getSelectedItem(),"0","0","0.0"}); //change these
+    	model.addRow(new Object[]{firstName.getText(),lastName.getText(),control.search(this.region.getSelectedItem().toString()),(String)type.getSelectedItem(),"0","0","0.0"}); //change these
     	
     	//get value for applying promotion
     	customer = new Customer(firstName.getText(),lastName.getText(),Integer.parseInt(age.getText()),address.getText(),email.getText());

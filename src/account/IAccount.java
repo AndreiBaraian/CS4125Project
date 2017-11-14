@@ -8,7 +8,7 @@ import report.Report;
 
 public interface IAccount {
     
-	public Report generateReport(double spentMinutes, double spentMessages, double usedMobileData, double leftMinutes, double leftMessages, double leftMobileData, double costUntilNow);
+	public Report generateReport(double spentMinutes, double spentMessages, double usedMobileData,double usedDifferentProviderMinutes,double usedInternationalMinutes);
 	public void computeDiscount();
 	
 }

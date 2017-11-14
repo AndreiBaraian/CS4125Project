@@ -1,5 +1,6 @@
 package bll;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import account.Account;
@@ -12,6 +13,7 @@ import dao.AccountDAO;
 import dao.EnterpriseAccountDAO;
 import dao.FamilyAccountDAO;
 import exceptions.InsertException;
+import promotion.PromotionFactory;
 import region.Region;
 
 public class AccountBLL<T extends Account> {
@@ -63,8 +65,13 @@ public class AccountBLL<T extends Account> {
 		accountDAO.modify(newAccount);
 	}
 	
-	public void applyPromotion(){
-		
+	public List<String >applyPromotion(String promotionType,String accountId){
+		List<String> recievedAttributes=new ArrayList<String>();
+		Account retrievedAccount;//=-----------------------------------------get from data base with accountId
+		Account promotedAccount=PromotionFactory.applyPromotion(promotionType, retrievedAccount);//------update the account with promotedAccount
+		recievedAttributes.add(Integer.toString(promotedAccount.getMinutes()));
+		recievedAttributes.add(Integer.toString(promotedAccount.getMessages()));
+		return recievedAttributes;
 	}
 	
 	public void presentReport(String idValue){

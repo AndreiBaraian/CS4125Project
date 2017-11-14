@@ -1,5 +1,7 @@
 package test;
-
+/*
+ *@author Xiangkai Tang 
+ */
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,10 +16,10 @@ import account.*;
 
 public class SurferPromotionTest {
 	Customer conrad = new Customer("140556235", "conrad", 21, "Troy", "Active");
-	Account SurferPromotionEnterpriseAccount = new SurferPromotion(new EnterpriseAccount(10,new Romania(),conrad,"2017-5-5","083-123456"));
+	SurferPromotion SurferPromotionEnterpriseAccount = new SurferPromotion(new EnterpriseAccount(10,new Romania(),conrad,"2017-5-5","083-123456"));
 	
 	@Test
 	public void testGenerateReport(){
-		assertNotNull(SurferPromotionEnterpriseAccount.generateReport(20, 20, 10, 30, 40, 50, 70));
+		assertNotNull(SurferPromotionEnterpriseAccount.generateReport(10, 20, 30, 40, 50));
 	}
 }

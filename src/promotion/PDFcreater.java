@@ -44,8 +44,8 @@ public class PDFcreater {
             document.add(new Paragraph("LeftMobileData:"+report.getLeftMobileData()));
             document.add(new Paragraph("CostUntilNow:"+report.getCostUntilNow()));
             document.add(new Paragraph("MobileData:"+report.getMobileData()));
-            document.add(new Paragraph("InternationalMinutes:"+report.getInternationalMinutes()));
-            document.add(new Paragraph("DifferentProviderMinutes:"+report.getDifferentProviderMinutes()));
+            document.add(new Paragraph("InternationalMinutes:"+report.getLeftInternationalMinutes()));
+            document.add(new Paragraph("DifferentProviderMinutes:"+report.getLeftDifferentProviderMinutes()));
             document.add(new Paragraph("Enddate:"+report.getEndDate()));
             document.add(new Paragraph("Number:"+report.getNumber()));
             document.add(new Paragraph("NumberCount:"+report.getNumberCount()));

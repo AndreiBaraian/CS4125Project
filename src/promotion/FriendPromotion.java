@@ -6,30 +6,80 @@ import account.Account;
 import report.Report;
 
 public class FriendPromotion extends Promotion {
-	
+
 	
 	public FriendPromotion(Account account) {
 		super(account);
-		account.setDifferentProviderMinutes(100);
+		this.setMinutes(super.getMinutes()+100);
+		this.setDuration(super.getDuration()+200); 
+		this.setGiftpoints(super.getGiftpoints()+300);
+		this.setDifferentProviderMinutes(super.getDifferentProviderMinutes()+200); 
 	}
 
-	public FriendPromotion() { //get the value from GUI
-		super();
 
-	}
 	
-	public Report generateReport(double spentMinutes, double spentMessages,
-			double usedMobileData, double leftMinutes, double leftMessages,
-			double leftMobileData, double costUntilNow)
+	public Report generateReport(int spentMinutes, int spentMessages,
+			double usedMobileData,double usedDifferentProviderMinutes,int usedInternationalMinutes)
 	{
-		Report r = super.generateReport(spentMinutes,spentMessages,usedMobileData,leftMinutes,leftMessages,leftMobileData,costUntilNow);
-		//r.setDifferentProviderMinutes(differentProviderMinutes);
+
+		int leftMinutes = super.getMinutes() - spentMinutes ;
+		int leftMessages = super.getMessages() - spentMessages;
+		double leftMobileData = super.getMobileData()-usedMobileData;
+		double leftDifferentProviderMinutes = super.getDifferentProviderMinutes()-usedDifferentProviderMinutes;
+		int leftInternationalMinutes = super.getInternationalMinutes()-usedInternationalMinutes;
+		double costUntilNow = spentMinutes*0.1+spentMessages*0.2+usedMobileData*0.5;
+		if(leftMinutes<0)
+		{
+			leftMinutes = 0;
+			this.setMinutes(leftMinutes);
+		}
+		else
+		{
+			this.setMinutes(leftMinutes);
+		}
+		if(leftMessages<0)
+		{
+			leftMessages = 0;
+			this.setMessages(leftMessages);
+		}
+		else
+		{
+			this.setMessages(leftMessages);
+		}
+		if(leftMobileData<0)
+		{
+			leftMobileData = 0;
+			this.setMobileData(leftMobileData);
+		}
+		else
+		{
+			this.setMobileData(leftMobileData);
+		}
+		if(leftDifferentProviderMinutes<0)
+		{
+			leftDifferentProviderMinutes = 0;
+			this.setDifferentProviderMinutes(leftDifferentProviderMinutes);
+		}
+		else
+		{
+			this.setDifferentProviderMinutes(leftDifferentProviderMinutes);
+		}
+		if(leftInternationalMinutes<0)
+		{
+			leftInternationalMinutes = 0;
+			this.setInternationalMinutes(leftInternationalMinutes);
+		}
+		else
+		{
+			this.setInternationalMinutes(leftInternationalMinutes);
+		}
+		Report r = super.generateReport(spentMinutes,spentMessages,usedMobileData,usedDifferentProviderMinutes,usedInternationalMinutes,leftMinutes,leftMessages,leftMobileData,leftInternationalMinutes,leftDifferentProviderMinutes,costUntilNow);
 		PDFcreater pdfc = new PDFcreater(r,account.getCustomer());
 		pdfc.outputPDF();
 		return r;
 	}
-	public void computeDiscuont()
+	public void computeDiscount()
 	{
-		
+	   
 	}
 }

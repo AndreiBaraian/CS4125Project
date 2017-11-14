@@ -18,11 +18,10 @@ public class Report {
 		private double leftMobileData ;
 		private double CostUntilNow ;
 		private double mobileData;
-		private double internationalMinutes;
-		private double differentProviderMinutes;
-	public Report(double spentMinutes, double spentMessages,
-			double usedMobileData, double leftMinutes, double leftMessages,
-				double leftMobileData, double costUntilNow) {
+		private double leftInternationalMinutes;
+		private double leftDifferentProviderMinutes;
+	public Report(double spentMinutes, double spentMessages, double usedMobileData,double usedDifferentProviderMinutes,double usedInternationalMinutes,double leftMinutes, double leftMessages,
+			double leftMobileData, double leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow) {
 			super();
 			this.spentMinutes = spentMinutes;
 			this.spentMessages = spentMessages;
@@ -31,6 +30,8 @@ public class Report {
 			this.leftMessages = leftMessages;
 			this.leftMobileData = leftMobileData;
 			this.CostUntilNow = costUntilNow;
+			this.leftDifferentProviderMinutes = leftDifferentProviderMinutes;
+			this.leftDifferentProviderMinutes = leftDifferentProviderMinutes;
 		}
 		
 		public String getEndDate() {
@@ -127,21 +128,22 @@ public class Report {
 		{
 			this.usedMobileData = usedMobileData;
 		}
-		public double getInternationalMinutes()
-		{
-			return internationalMinutes;
+
+		public double getLeftInternationalMinutes() {
+			return leftInternationalMinutes;
 		}
-		public void setInternationalMinutes(double internationalMinutes)
-		{
-			this.internationalMinutes = internationalMinutes;
+
+		public void setLeftInternationalMinutes(double leftInternationalMinutes) {
+			this.leftInternationalMinutes = leftInternationalMinutes;
 		}
-		public double getDifferentProviderMinutes()
-		{
-			return differentProviderMinutes;
+
+		public double getLeftDifferentProviderMinutes() {
+			return leftDifferentProviderMinutes;
 		}
-		public void setDifferentProviderMinutes(double differentProviderMinutes)
-		{
-			this.differentProviderMinutes = differentProviderMinutes;
+
+		public void setLeftDifferentProviderMinutes(double leftDifferentProviderMinutes) {
+			this.leftDifferentProviderMinutes = leftDifferentProviderMinutes;
 		}
+		
 		
 }

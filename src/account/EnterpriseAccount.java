@@ -39,8 +39,15 @@ public class EnterpriseAccount extends Account {
 	}
 
 	@Override
-	public Report generateReport(double spentMinutes, double spentMessages, double usedMobileData, double leftMinutes, double leftMessages, double leftMobileData, double costUntilNow) {
-		Report report = new Report(spentMinutes, spentMessages,usedMobileData, leftMinutes,leftMessages,leftMobileData,costUntilNow); //get value from GUI
+	public Report generateReport(int spentMinutes, int spentMessages, double usedMobileData,double usedDifferentProviderMinutes,int usedInternationalMinutes,int leftMinutes, int leftMessages,
+			double leftMobileData, int leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow) {
+		 leftMinutes = 0;
+		 leftMessages = 0;
+		 leftMobileData = 0;
+		 leftInternationalMinutes = 0;
+		 leftDifferentProviderMinutes = 0;
+		 costUntilNow = spentMinutes*0.1+spentMessages*0.2+usedMobileData*0.5+usedDifferentProviderMinutes*0.8+usedInternationalMinutes;
+		Report report = new Report(spentMinutes,spentMessages,usedMobileData,usedDifferentProviderMinutes,usedInternationalMinutes,leftMinutes,leftMessages,leftMobileData,leftInternationalMinutes,leftDifferentProviderMinutes,costUntilNow); //get value from GUI
 		report.setNumber(number);
 		report.setEndDate(endDate);
 		PDFcreater pdf = new PDFcreater(report,this.getCustomer());
@@ -70,6 +77,7 @@ public class EnterpriseAccount extends Account {
 		return customerSystemReference;
 	}
 
+
 	@Override
 	public String toString() {
 		return "EnterpriseAccount [endDate=" + endDate + ", number=" + number + ", customerSystemReference="
@@ -77,6 +85,7 @@ public class EnterpriseAccount extends Account {
 				+ "]";
 	}
 	
+
 	
 	
 }

@@ -50,13 +50,8 @@ public class Menu {
 		JButton btnManageAccounts = new JButton("Manage Accounts");
 		btnManageAccounts.setBounds(79, 108, 231, 23);
 		getFrmMainMenu().getContentPane().add(btnManageAccounts);
-		btnManageAccounts.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-
-				manageAccounts = new ManageAccounts();
-				manageAccounts.setVisible(true);
-			}
-		});
+		btnManageAccounts.addActionListener(new ManageAccountsListener());
+			
 	}
 	
 	

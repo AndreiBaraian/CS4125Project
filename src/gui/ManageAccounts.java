@@ -3,6 +3,9 @@ package gui;
  * @author Lucian Epure 
  */
 
+import java.util.List;
+
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -10,9 +13,7 @@ import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
-import control.Control;
-
-import javax.swing.JButton;
+import account.Account;
 
 public class ManageAccounts extends JFrame {
 
@@ -25,8 +26,10 @@ public class ManageAccounts extends JFrame {
 	private int selectedRow;
 	private int selectedCol;
 	private Object obj=null;
-
-	public ManageAccounts() {
+	private List<Account> allAccounts;
+	
+	public ManageAccounts(List<Account> allAccounts) {
+		this.allAccounts=allAccounts;
 		setTitle("Manage Accounts");
 		setBounds(100, 100, 846, 350);
 		contentPane = new JPanel();
@@ -59,6 +62,9 @@ public class ManageAccounts extends JFrame {
 		final DefaultTableModel accountsModel = new DefaultTableModel(accountsColumn, 0);
 		accounts = new JTable(accountsModel);
 		accounts.setBounds(231, 15, 388, 246);
+		for(Account account:allAccounts){
+			accountsModel.addRow(new Object[]{account.getId(),account.getCustomerName(),account.getHomeRegionString(),account.getClass().getSimpleName(),account.getMinutes(),account.getMessages(),account.getBalance()});
+		}	
 		accounts.addMouseListener(new java.awt.event.MouseAdapter() {
 			@Override
 			 public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -79,7 +85,6 @@ public class ManageAccounts extends JFrame {
 		btnAddAccount.addActionListener(new AddAccountListener(accounts));
 		btnRemoveAccount.addActionListener(new RemoveAccountListener(accounts,selectedRow,selectedCol));
 		btnReport.addActionListener(new ReportListener(accounts,selectedRow,selectedCol));
-		
 		btnApplyPromotion.addActionListener(new PromotionListener(accounts,selectedRow,selectedCol));
 	}
 }

@@ -37,10 +37,11 @@ public class DoneAddingListener implements ActionListener {
 	private Control control;
 	private AccountBLL<?> accountBLL;
 	private CustomerBLL customerBLL;
-
+	private AddAccount addAccount;
+	
 	public DoneAddingListener(JComboBox<String> type, JTextField firstName, JTextField lastName, JTextField number,
 			JTextField address, JTextField age, JTextField email, JComboBox<String> regionCB, JTextField endDate,
-			JTable table) {
+			JTable table,AddAccount addAccount) {
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.number = number;
@@ -51,6 +52,7 @@ public class DoneAddingListener implements ActionListener {
 		this.regionCB = regionCB;
 		this.endDate = endDate;
 		this.table = table;
+		this.addAccount=addAccount;
 		this.customerBLL = new CustomerBLL();
 		this.accountBLL = getAccountBLL((String)type.getSelectedItem());
 	}
@@ -69,6 +71,7 @@ public class DoneAddingListener implements ActionListener {
 		}
 		model = (DefaultTableModel) table.getModel();
 		model.addRow(new Object[] { firstName.getText(), lastName.getText(), region.getClass().getSimpleName(), (String) type.getSelectedItem(), "0","0", "0.0" }); // change these
+		addAccount.dispose();
 	}
 	
 	private AccountBLL<?> getAccountBLL(String type) {

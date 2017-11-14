@@ -25,14 +25,7 @@ public class ManageAccounts extends JFrame {
 	private int selectedRow;
 	private int selectedCol;
 	private Object obj=null;
-	/**
-	 * Launch the application.
-	 */
-	
 
-	/**
-	 * Create the frame.
-	 */
 	public ManageAccounts() {
 		setTitle("Manage Accounts");
 		setBounds(100, 100, 846, 350);

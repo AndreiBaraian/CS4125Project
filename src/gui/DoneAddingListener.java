@@ -61,9 +61,9 @@ public class DoneAddingListener implements ActionListener {
 		Customer customer = null;
 		Region region = null;
 		try{
-		customer = customerBLL.add(firstName.getText(), lastName.getText(), Integer.parseInt(age.getText()), address.getText(), email.getText());
-		region = control.search(regionCB.getSelectedItem().toString());
-		accountBLL.addAccount((String) type.getSelectedItem(), region, customer, number.getText(), endDate.getText());
+			customer = customerBLL.add(firstName.getText(), lastName.getText(), Integer.parseInt(age.getText()), address.getText(), email.getText());
+			region = control.search(regionCB.getSelectedItem().toString());
+			accountBLL.addAccount((String) type.getSelectedItem(), region, customer, number.getText(), endDate.getText());
 		}catch (NumberFormatException | InsertException e) {
 			e.printStackTrace();
 		}

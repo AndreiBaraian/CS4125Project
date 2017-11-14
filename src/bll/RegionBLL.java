@@ -1,5 +1,7 @@
 package bll;
 
+import java.util.List;
+
 import control.Control;
 import dao.AbstractDAO;
 import dao.RegionDAO;
@@ -9,10 +11,9 @@ import region.Region;
 public class RegionBLL {
 	
 	private AbstractDAO<Region> regionDAO;
-	private Control c;
+	
 	public RegionBLL(){
 		this.regionDAO = new RegionDAO();
-		c=Control.getInstance();
 	}
 	
 	public Integer add(Region region) throws InsertException{
@@ -20,7 +21,7 @@ public class RegionBLL {
 	}
 	
 	public void modifyPrice(String regionName, double newPrice, String service){
-		Region selectedRegion=c.search(regionName);
+		Region selectedRegion = search(regionName);
 		if(service.equalsIgnoreCase("call"))
 			selectedRegion.setCallingPrice(newPrice);
 		else if(service.equalsIgnoreCase("message"))
@@ -33,5 +34,13 @@ public class RegionBLL {
 		System.out.println(selectedRegion.getInternetPrice());
 	}
 	
+	public Region search(String name){
+		List<Region> regions = regionDAO.getAll();
+		for(Region region : regions){
+			if(region.getRegionName().equals(name))
+				return region;
+		}
+		return null;
+	}
 
 }

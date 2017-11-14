@@ -36,14 +36,12 @@ public class Control {
 		rand = new Random();
 	}
 	
-	public static Control getInstance()
-	{
+	public static Control getInstance(){
 		return controlInstance;
 	}
-	public Region search(String name)
-	{
-		for (Region r:availableRegions)
-		{
+	
+	public Region search(String name){
+		for (Region r:availableRegions){
 			if(r.getRegionName().equals(name))
 				return r;
 		}

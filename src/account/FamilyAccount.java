@@ -29,16 +29,16 @@ public class FamilyAccount extends Account {
 	
 	public FamilyAccount() {}
 	
-	public FamilyAccount(double balance, Region homeregion, Customer customer) {
+	public FamilyAccount(double balance, Region homeregion, Customer customer,List<String> numbers) {
 		super(balance, homeregion, customer);
-		this.numbersString = numbersToString(numbers);
+		this.numbers = numbers;
+		this.numbersString = numbersToString(this.numbers);
 		this.uniqueIdentifierFieldName = "customerId";
 	}
 
 	@Override
 	public Report generateReport(int spentMinutes, int spentMessages, double usedMobileData,double usedDifferentProviderMinutes,int usedInternationalMinutes,int leftMinutes, int leftMessages,
 			double leftMobileData, int leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow) {
-		// TODO Auto-generated method stub
 		 leftMinutes = 0;
 		 leftMessages = 0;
 		 leftMobileData = 0;
@@ -90,7 +90,5 @@ public class FamilyAccount extends Account {
 		return "FamilyAccount [numbers=" + numbers + ", numbersString=" + numbersString + ", customerSystemReference="
 				+ customerSystemReference + ", id=" + id + "]";
 	}
-	
-	
 		
 }

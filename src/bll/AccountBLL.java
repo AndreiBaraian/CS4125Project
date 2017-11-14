@@ -31,12 +31,12 @@ public class AccountBLL<T extends Account> {
 	
 	
 	@SuppressWarnings("unchecked")
-	public Integer addAccount(String type, Region region, Customer customer,String number,String endDate) throws InsertException{
+	public Account addAccount(String type, Region region, Customer customer,String number,String endDate) throws InsertException{
 		Integer id = null;
 		Account account = AccountFactory.getAccount(type, 0, region, customer, number, endDate);
-		System.out.println(account.toString());
-		abstractDAO.add((T) account);
-		return id;
+		id = abstractDAO.add((T) account);
+		account.setId(id);
+		return account;
 	}
 	
 	public Account getAccount(String number){
@@ -65,10 +65,12 @@ public class AccountBLL<T extends Account> {
 		accountDAO.modify(newAccount);
 	}
 	
-	public List<String >applyPromotion(String promotionType,String accountId){
-		List<String> recievedAttributes=new ArrayList<String>();
-		Account retrievedAccount;//=-----------------------------------------get from data base with accountId
-		Account promotedAccount=PromotionFactory.applyPromotion(promotionType, retrievedAccount);//------update the account with promotedAccount
+	@SuppressWarnings("unchecked")
+	public List<String> applyPromotion(String promotionType,String accountId){
+		List<String> recievedAttributes = new ArrayList<String>();
+		Account retrievedAccount = abstractDAO.getByField("id", accountId).get(0);
+		Account promotedAccount = PromotionFactory.applyPromotion(promotionType, retrievedAccount);
+		abstractDAO.modify((T) promotedAccount);
 		recievedAttributes.add(Integer.toString(promotedAccount.getMinutes()));
 		recievedAttributes.add(Integer.toString(promotedAccount.getMessages()));
 		return recievedAttributes;

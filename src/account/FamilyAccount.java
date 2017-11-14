@@ -45,11 +45,11 @@ public class FamilyAccount extends Account {
 		 leftInternationalMinutes = 0;
 		 leftDifferentProviderMinutes = 0;
 		 costUntilNow = spentMinutes*0.1+spentMessages*0.2+usedMobileData*0.5+usedDifferentProviderMinutes*0.8+usedInternationalMinutes;
-		Report r = new Report(spentMinutes,spentMessages,usedMobileData,usedDifferentProviderMinutes,usedInternationalMinutes,leftMinutes,leftMessages,leftMobileData,leftInternationalMinutes,leftDifferentProviderMinutes,costUntilNow); 
-	    r.setNumbers(numbers);
-		PDFcreater pdc = new PDFcreater(r,getCustomer());
+		Report report = new Report(spentMinutes,spentMessages,usedMobileData,usedDifferentProviderMinutes,usedInternationalMinutes,leftMinutes,leftMessages,leftMobileData,leftInternationalMinutes,leftDifferentProviderMinutes,costUntilNow); 
+	    report.setNumbers(numbers);
+		PDFcreater pdc = new PDFcreater(report,getCustomer());
 		pdc.outputPDF();
-	    return r;
+	    return report;
 	}
 
 	@Override

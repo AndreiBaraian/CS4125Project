@@ -73,7 +73,12 @@ public class AccountBLL<T extends Account> {
 		recievedAttributes.add(Integer.toString(promotedAccount.getMessages()));
 		return recievedAttributes;
 	}
-	
+	public List<T> getAll(){
+		List<T> accounts = new ArrayList<T>();
+		
+		accounts = abstractDAO.getAll();
+		return accounts;
+	}
 	public void presentReport(String idValue){
 		//--------------------------------------------------------------------------- get account from data base, based on id;
 		

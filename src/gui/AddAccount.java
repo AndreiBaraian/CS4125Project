@@ -122,7 +122,7 @@ public class AddAccount extends JFrame {
 		contentPane.add(lastNameTF);
 		lastNameTF.setColumns(10);
 	
-		btnAdd.addActionListener(new DoneAddingListener(typeCB,nameTF,lastNameTF,numberTF,addressTF,ageTF,emailTF,regionCB,endDateTF,table));
+		btnAdd.addActionListener(new DoneAddingListener(typeCB,nameTF,lastNameTF,numberTF,addressTF,ageTF,emailTF,regionCB,endDateTF,table,this));
 		
 	
 		

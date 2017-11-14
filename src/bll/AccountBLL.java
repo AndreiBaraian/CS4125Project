@@ -32,8 +32,8 @@ public class AccountBLL<T extends Account> {
 	public Integer addAccount(String type, Region region, Customer customer,String number,String endDate) throws InsertException{
 		Integer id = null;
 		Account account = AccountFactory.getAccount(type, 0, region, customer, number, endDate);
-		System.out.println(account.getCustomerSystemReference());
-		id = abstractDAO.add((T) account);
+		System.out.println(account.toString());
+		abstractDAO.add((T) account);
 		return id;
 	}
 	

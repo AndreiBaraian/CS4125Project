@@ -31,6 +31,8 @@ public abstract class AbstractDAO<T extends DBRecord> {
 	protected String uniqueIdentifierFieldName;
 	
 	public Integer add(T object) throws InsertException{
+		System.out.println(object.getClass().getSimpleName());
+		System.out.println(parameterType.toString());
 		Session session = sessionFactory.openSession();
 		Transaction tx = null;
 		tx = session.beginTransaction();

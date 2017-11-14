@@ -1,19 +1,23 @@
 package main;
 
-import account.Account;
 import bll.AccountBLL;
+import bll.EnterpriseAccountBLL;
+import control.Control;
+import customer.Customer;
 import exceptions.InsertException;
 import gui.Menu;
+import region.Region;
+import region.Romania;
 
 public class Main {
 
 	public static void main(String[] args) throws InsertException {
 		
-		/*
-		//Control c= Control.getInstance();
+		
+		Control c = Control.getInstance();
 		Menu window = new Menu();
 		window.getFrmMainMenu().setVisible(true);
-		*/
+		
 		
 		/*
 		AccountBLL<?> e = new EnterpriseAccountBLL();
@@ -23,13 +27,14 @@ public class Main {
 		e.addAccount("Enterprise", reg, cust, "0004354353", "3DEC");
 		*/
 		
-		
+		/*
 		AccountBLL<?> acb = new AccountBLL();
 		Account acc = acb.getAccount("072354345");
 		acc.setBalance(30);
 		acb.modifyAccount(acc);
 		System.out.println(acc.toString());
 		System.out.println(acc.getClass().getSimpleName());
+		*/
 		
 		/*
 		CustomerBLL cb = new CustomerBLL();

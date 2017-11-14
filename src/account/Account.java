@@ -59,7 +59,7 @@ public abstract class Account extends DBRecord{
 		this.customer = customer;
 		this.balance = balance;
 		this.homeRegion = homeRegion;
-		this.homeRegionString = homeRegion.toString();
+		this.homeRegionString = homeRegion.getClass().getSimpleName();
 		this.customerName = customer.getFirstName() + " " + customer.getLastName();
 		this.customerSystemReference = customer.getSystemReference();
 		this.uniqueIdentifierFieldName = "customerId";

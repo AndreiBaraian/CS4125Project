@@ -17,30 +17,32 @@ import customer.*;
 import promotion.*;
 import region.*;
 public class DonePromoting implements ActionListener{
-private JComboBox<String> applyPromotion;
-private JTable availablePromotionsTable;
-private DefaultTableModel promotionModel; 
-private DefaultTableModel accountModel;
-private JTable accountsTable;
-private int selectedRow;
-private int selectedCol;
-private AccountBLL accountBLL;
+	
+	private JComboBox<String> applyPromotion;
+	private JTable availablePromotionsTable;
+	private DefaultTableModel promotionModel; 
+	private DefaultTableModel accountModel;
+	private JTable accountsTable;
+	private int selectedRow;
+	private int selectedCol;
+	private AccountBLL<?> accountBLL;
+
 	public DonePromoting(JComboBox<String> applyPromotion, JTable availablePromotionsTable,JTable accountsTable, int selectedAccountRow, int selectedAccountCol)
 	{
 		this.accountsTable=accountsTable;
-		this.selectedCol=selectedCol;
-		this.selectedRow=selectedRow;
+		this.selectedCol=selectedAccountCol;
+		this.selectedRow=selectedAccountRow;
 		this.availablePromotionsTable=availablePromotionsTable;
 		this.applyPromotion=applyPromotion;
 		this.accountBLL= new AccountBLL();
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		List<String> recievedAttributes=new ArrayList<String>();
+		List<String> recievedAttributes = new ArrayList<String>();
 		String recievedMinutes;
 		String recievedMessages;
-		String accountId= accountsTable.getValueAt(selectedRow, selectedCol).toString(); 
-		String promotion= applyPromotion.getSelectedItem().toString();
+		String accountId = accountsTable.getValueAt(selectedRow, selectedCol).toString(); 
+		String promotion = applyPromotion.getSelectedItem().toString();
 		promotionModel= (DefaultTableModel) availablePromotionsTable.getModel();
 		promotionModel.addRow(new Object[]{promotion}); 
 		accountModel=(DefaultTableModel) accountsTable.getModel();

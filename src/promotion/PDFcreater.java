@@ -36,9 +36,6 @@ public class PDFcreater {
             document.open();
             document.add(new Paragraph("First Name:"+customer.getFirstName()));
             document.add(new Paragraph("Last Name:"+customer.getLastName()));
-            document.add(new Paragraph("SpentMinutes:"+report.getSpentMinutes()));
-            document.add(new Paragraph("SpentMessages:"+report.getSpentMessages()));
-            document.add(new Paragraph("UsedMobileData"+report.getUsedMobileData()));
             document.add(new Paragraph("LeftMinutes:"+report.getLeftMinutes()));
             document.add(new Paragraph("LeftMessages:"+report.getLeftMessages()));
             document.add(new Paragraph("LeftMobileData:"+report.getLeftMobileData()));

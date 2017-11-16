@@ -102,12 +102,9 @@ public class Promotion extends Account {
 	
 
 	
-	public Report generateReport(int spentMinutes, int spentMessages, double usedMobileData,double usedDifferentProviderMinutes,int usedInternationalMinutes,int leftMinutes, int leftMessages,
-			double leftMobileData, int leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow) {
+	public Report generateReport(int leftMinutes, int leftMessages,double leftMobileData, int leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow) {
 		// TODO Auto-generated method stub
-		return account.generateReport( spentMinutes,  spentMessages,
-				 usedMobileData,  usedDifferentProviderMinutes,usedInternationalMinutes,leftMinutes,  leftMessages,
-				 leftMobileData,leftInternationalMinutes,leftDifferentProviderMinutes,costUntilNow);
+		return account.generateReport( leftMinutes,  leftMessages,leftMobileData,leftInternationalMinutes,leftDifferentProviderMinutes,costUntilNow);
 	}
 
 	

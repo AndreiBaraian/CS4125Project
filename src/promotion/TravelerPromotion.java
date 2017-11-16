@@ -74,7 +74,7 @@ public class TravelerPromotion extends Promotion {
 		{
 			this.setInternationalMinutes(leftInternationalMinutes);
 		}
-		Report r = super.generateReport(spentMinutes,spentMessages,usedMobileData,usedDifferentProviderMinutes,usedInternationalMinutes,leftMinutes,leftMessages,leftMobileData,leftInternationalMinutes,leftDifferentProviderMinutes,costUntilNow);
+		Report r = super.generateReport(leftMinutes,leftMessages,leftMobileData,leftInternationalMinutes,leftDifferentProviderMinutes,costUntilNow);
 		PDFcreater pdfc = new PDFcreater(r,account.getCustomer());
 		pdfc.outputPDF();
 		return r;

@@ -18,7 +18,7 @@ public class InternetUsage extends Service{
 	@Column(name = "traffic")
 	private int traffic;
 	
-	public InternetUsage(Region locationFrom, String number, float traffic) {
+	public InternetUsage(Region locationFrom, String number, double traffic) {
 		super(locationFrom, number,traffic);
 		this.traffic= (int)traffic;
 	}

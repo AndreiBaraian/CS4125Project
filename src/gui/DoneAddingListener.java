@@ -16,6 +16,7 @@ import bll.AccountBLL;
 import bll.CustomerBLL;
 import bll.EnterpriseAccountBLL;
 import bll.FamilyAccountBLL;
+import bll.RegionBLL;
 import control.Control;
 import customer.Customer;
 import exceptions.InsertException;
@@ -34,10 +35,11 @@ public class DoneAddingListener implements ActionListener {
 	private JTextField endDate;
 	private JTable table;
 	private DefaultTableModel model;
-	private Control control;
+	//private Control control;
 	private AccountBLL<?> accountBLL;
 	private CustomerBLL customerBLL;
 	private AddAccount addAccount;
+	private RegionBLL regionBLL;
 	
 	public DoneAddingListener(JComboBox<String> type, JTextField firstName, JTextField lastName, JTextField number,
 			JTextField address, JTextField age, JTextField email, JComboBox<String> regionCB, JTextField endDate,
@@ -55,16 +57,17 @@ public class DoneAddingListener implements ActionListener {
 		this.addAccount=addAccount;
 		this.customerBLL = new CustomerBLL();
 		this.accountBLL = getAccountBLL((String)type.getSelectedItem());
+		this.regionBLL = new RegionBLL();
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		control = Control.getInstance();
+		//control = Control.getInstance();
 		Customer customer = null;
 		Region region = null;
 		try{
 			customer = customerBLL.add(firstName.getText(), lastName.getText(), Integer.parseInt(age.getText()), address.getText(), email.getText());
-			region = control.search(regionCB.getSelectedItem().toString());
+			region = regionBLL.search(regionCB.getSelectedItem().toString());
 			accountBLL.addAccount((String) type.getSelectedItem(), region, customer, number.getText(), endDate.getText());
 		}catch (NumberFormatException | InsertException e) {
 			e.printStackTrace();

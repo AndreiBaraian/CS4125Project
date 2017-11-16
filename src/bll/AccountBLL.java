@@ -81,10 +81,10 @@ public class AccountBLL<T extends Account> {
 		accounts = abstractDAO.getAll();
 		return accounts;
 	}
-	public void presentReport(String idValue){
+	public void presentReport(String accountId){
 		//--------------------------------------------------------------------------- get account from data base, based on id;
 		
-		//Account account=(Account) familyAccount.getByField("id", idValue);
-		//account.generateReport();
+		Account account =  abstractDAO.getByField("id", accountId).get(0);
+		account.generateReport(account.getMinutes(),account.getMessages(),account.getMobileData(),account.getInternationalMinutes(),account.getDifferentProviderMinutes(),account.getBalance());
 	}
 }

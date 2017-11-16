@@ -10,8 +10,6 @@ public class Report {
 		private String number;
 		private int numberCount;
 		private List<String> numbers;
-		private double spentMinutes  ;
-		private double spentMessages ;
 		private double usedMobileData ;
 		private double leftMinutes ;
 		private double leftMessages ;
@@ -20,12 +18,9 @@ public class Report {
 		private double mobileData;
 		private double leftInternationalMinutes;
 		private double leftDifferentProviderMinutes;
-	public Report(double spentMinutes, double spentMessages, double usedMobileData,double usedDifferentProviderMinutes,double usedInternationalMinutes,double leftMinutes, double leftMessages,
-			double leftMobileData, double leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow) {
+	public Report(double leftMinutes, double leftMessages,double leftMobileData, double leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow) {
 			super();
-			this.spentMinutes = spentMinutes;
-			this.spentMessages = spentMessages;
-			this.usedMobileData = usedMobileData;
+			
 			this.leftMinutes = leftMinutes;
 			this.leftMessages = leftMessages;
 			this.leftMobileData = leftMobileData;
@@ -66,22 +61,7 @@ public class Report {
 		this.numbers = numbers;
 	}
 
-		public double getSpentMinutes()
-		{
-			return spentMinutes;
-		}
-		public void setSpentMinutes(double spentMinutes)
-		{
-			this.spentMinutes = spentMinutes;
-		}
-		public double getSpentMessages()
-		{
-			return spentMessages;
-		}
-		public void setSpentMessages(double spentMessages)
-		{
-			this.spentMessages = spentMessages;
-		}
+		
 		public double getLeftMinutes()
 		{
 			return leftMinutes;

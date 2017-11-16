@@ -23,7 +23,8 @@ public class ComputeTransaction {
 	}
 	
 	public void processServices(){
-		List<Service> services= new ArrayList<Service>();
+		
+		
 		
 	}
 }

@@ -20,7 +20,7 @@ public class Control {
 	private List<String> registeredNumbers;
 	private String numi;
 	Random rand;
-	String outputFile = "generatedServices.txt";
+	String outputFile = "generatedServices.csv";
 	BufferedWriter writer;
 	private Control() {
 		types = new ArrayList<String>(Arrays.asList("Message", "Call", "Internet"));

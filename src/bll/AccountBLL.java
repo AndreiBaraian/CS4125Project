@@ -39,7 +39,7 @@ public class AccountBLL<T extends Account> {
 		return account;
 	}
 	
-	public Account getAccount(String number){
+/*public Account getAccount(String number){
 		List<?> listAccounts = null;
 		Account account = null;
 		accountDAO = new EnterpriseAccountDAO();
@@ -52,6 +52,15 @@ public class AccountBLL<T extends Account> {
 		else{
 			account = (EnterpriseAccount) listAccounts.get(0);
 		}
+		return account;
+	}*/
+	public Account getAccount(String id){
+		List<?> listAccounts = null;
+		Account account = null;
+		accountDAO = new FamilyAccountDAO();
+		listAccounts = accountDAO.getByField("id", id);
+		account = (FamilyAccount) listAccounts.get(0);
+		
 		return account;
 	}
 	

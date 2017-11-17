@@ -1,11 +1,11 @@
 package test;
+
 /*
  * @author Xiangkai Tang
  */
-import org.junit.Test;
 
+import org.junit.Test;
 import static org.junit.Assert.*;
-import report.Report;
 import account.*;
 import customer.*;
 import region.*;

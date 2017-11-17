@@ -1,13 +1,14 @@
 package promotion;
+
 /*
  * @author Xiangkai Tang
  */
+
 import account.Account;
 import report.Report;
-import region.Region;
-
 
 public class Promotion extends Account {
+	
 	Account account;
 	private int minutes;
 	private double duration;
@@ -18,9 +19,14 @@ public class Promotion extends Account {
 	private int internationalMinutes;
 	private double costUntilNow;
 	
+	public Promotion(Account account) {
+		account.setMinutes(500);
+		account.setMessages(500);
+		this.account = account;
+	}
 	
-	
-	
+	public Promotion(){	
+	}
 	
 	public double getCostUntilNow() {
 		return costUntilNow;
@@ -45,7 +51,6 @@ public class Promotion extends Account {
 	public void setMobileData(double mobileData) {
 		this.mobileData = mobileData;
 	}
-
 
 	public int getMinutes() {
 		return minutes;
@@ -79,7 +84,6 @@ public class Promotion extends Account {
 		this.duration = duration;
 	}
 
-
 	public double getGiftpoints() {
 		return giftpoints;
 	}
@@ -88,31 +92,12 @@ public class Promotion extends Account {
 		this.giftpoints = giftpoints;
 	}
 
-	public Promotion(Account account) {
-		account.setMinutes(500);
-		account.setMessages(500);
-		this.account = account;
-	}
-	
-	public Promotion()
-	{
-		
-	}
-
-	
-
-	
 	public Report generateReport(int leftMinutes, int leftMessages,double leftMobileData, int leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow) {
 		// TODO Auto-generated method stub
 		return account.generateReport( leftMinutes,  leftMessages,leftMobileData,leftInternationalMinutes,leftDifferentProviderMinutes,costUntilNow);
 	}
 
-	
 	public void computeDiscount() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	
+		// TODO Auto-generated method stub	
+	}	
 }

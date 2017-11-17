@@ -1,12 +1,10 @@
 package test;
+
 /*
  * @author Xiangkai Tang
  */
-import java.util.ArrayList;
-import java.util.List;
 
 import org.junit.Test;
-
 import customer.Customer;
 import static org.junit.Assert.*;
 import region.Romania;

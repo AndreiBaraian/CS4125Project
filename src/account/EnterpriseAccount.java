@@ -1,4 +1,5 @@
 package account;
+
 /**
  * @author Andrei Baraian 5% Hibernate annotations
  * @author Xiangkai Tang
@@ -40,8 +41,6 @@ public class EnterpriseAccount extends Account {
 
 	@Override
 	public Report generateReport(int leftMinutes, int leftMessages,double leftMobileData, int leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow) {
-		
-		
 		Report report = new Report(leftMinutes,leftMessages,leftMobileData,leftInternationalMinutes,leftDifferentProviderMinutes,costUntilNow); //get value from GUI
 		report.setNumber(number);
 		report.setEndDate(endDate);

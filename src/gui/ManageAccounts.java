@@ -57,7 +57,7 @@ public class ManageAccounts extends JFrame {
 		btnReport.setBounds(10, 238, 118, 45);
 		contentPane.add(btnReport);
 		
-		Object[] accountsColumn = {  "Id", "Name","Region","Account Type","Minutes", "Messages","Balance" };
+		Object[] accountsColumn = {  "Id", "Name","Region","Account Type","Numbers", "Messages","Balance" };
 
 		final DefaultTableModel accountsModel = new DefaultTableModel(accountsColumn, 0);
 		accounts = new JTable(accountsModel);
@@ -86,5 +86,6 @@ public class ManageAccounts extends JFrame {
 		btnRemoveAccount.addActionListener(new RemoveAccountListener(accounts,selectedRow,selectedCol));
 		btnReport.addActionListener(new ReportListener(accounts,selectedRow,selectedCol));
 		btnApplyPromotion.addActionListener(new PromotionListener(accounts,selectedRow,selectedCol));
+		btnAddNumber.addActionListener(new AddNumberListener(accounts,selectedRow,selectedCol));
 	}
 }

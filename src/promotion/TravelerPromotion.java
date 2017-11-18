@@ -17,8 +17,6 @@ public class TravelerPromotion extends Promotion {
 		this.setGiftpoints(super.getGiftpoints()+100);
 	}
 	
-
-
 	public Report generateReport(int spentMinutes, int spentMessages,
 			double usedMobileData,double usedDifferentProviderMinutes,int usedInternationalMinutes)
 	{
@@ -79,9 +77,7 @@ public class TravelerPromotion extends Promotion {
 		pdfc.outputPDF();
 		return r;
 	}
-	public void computeDiscount()
-	{
-		
+	public void computeDiscount(){	
 	}
 
 }

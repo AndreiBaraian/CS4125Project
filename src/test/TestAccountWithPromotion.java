@@ -8,7 +8,6 @@ import org.junit.Test;
 import region.*;
 import customer.Customer;
 import static org.junit.Assert.*;
-import report.Report;
 import promotion.*;
 import account.*;
 
@@ -19,6 +18,6 @@ public class TestAccountWithPromotion {
 	
 	@Test
 	public void testGenerateReport(){
-		assertNotNull(EnterpriseFriend.generateReport(10, 20, 30, 40, 50,0,0,0,0,0,0));
+		assertNotNull(EnterpriseFriend.generateReport(10, 20, 30, 40, 50,60));
 	}
 }

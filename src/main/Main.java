@@ -14,10 +14,11 @@ public class Main {
 		Menu window = new Menu();
 		window.getFrmMainMenu().setVisible(true);
 		
-		/*
+		
 		DataInsert dt = new DataInsert();
-		dt.insertCustomersAndAccounts();
-		*/
+		//dt.insertCustomersAndAccounts();
+		dt.insertRegions();
+		
 	}
 
 }

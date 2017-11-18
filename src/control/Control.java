@@ -7,6 +7,8 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+import bll.FamilyAccountBLL;
+import account.FamilyAccount;
 import region.Region;
 import region.Romania;
 import service.Service;
@@ -32,9 +34,9 @@ public class Control {
 		services= new ArrayList<Service>();
 		Region romania= new Romania(0,0);
 		
-		numi= "1112121";
+		//numi= "1112121";
 		availableRegions.add(romania);
-		registeredNumbers.add(numi);
+		//registeredNumbers.add(numi);
 		rand = new Random();
 	}
 	
@@ -51,7 +53,13 @@ public class Control {
 		return null;
 	}
 
-
+	public int generateRandomNumber(int min,int max)
+	{
+        Random random = new Random();
+        int s = random.nextInt(max)%(max-min+1) + min;
+        return s;
+	}
+	
 	public void generateServices(Configuration C) {
 		String generatedType = new String();
 		Region from=null;
@@ -59,6 +67,14 @@ public class Control {
 		int duration;
 		String number;
 		int quantity = C.getQuantity();
+		List<FamilyAccount> familyaccount;
+		FamilyAccountBLL familyAccountBLL = new FamilyAccountBLL();
+		familyaccount = familyAccountBLL.getAll();
+		for(int i = 0;i< quantity;i++)
+		{
+			int s = generateRandomNumber(0,familyaccount.size());
+			registeredNumbers.add(familyaccount.get(s).getNumbersString());
+		}
 		try {
 			writer = new BufferedWriter(new FileWriter(outputFile));
 

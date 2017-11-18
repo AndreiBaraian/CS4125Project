@@ -1,7 +1,9 @@
 package promotion;
+
 /*
  * @author Xiangkai Tang
  */
+
 import account.Account;
 import report.Report;
 
@@ -16,8 +18,6 @@ public class FriendPromotion extends Promotion {
 		this.setDifferentProviderMinutes(super.getDifferentProviderMinutes()+200); 
 	}
 
-
-	
 	public Report generateReport(int spentMinutes, int spentMessages,
 			double usedMobileData,double usedDifferentProviderMinutes,int usedInternationalMinutes)
 	{
@@ -73,13 +73,11 @@ public class FriendPromotion extends Promotion {
 		{
 			this.setInternationalMinutes(leftInternationalMinutes);
 		}
-		Report r = super.generateReport(spentMinutes,spentMessages,usedMobileData,usedDifferentProviderMinutes,usedInternationalMinutes,leftMinutes,leftMessages,leftMobileData,leftInternationalMinutes,leftDifferentProviderMinutes,costUntilNow);
+		Report r = super.generateReport(leftMinutes,leftMessages,leftMobileData,leftInternationalMinutes,leftDifferentProviderMinutes,costUntilNow);
 		PDFcreater pdfc = new PDFcreater(r,account.getCustomer());
 		pdfc.outputPDF();
 		return r;
 	}
-	public void computeDiscount()
-	{
-	   
+	public void computeDiscount(){ 
 	}
 }

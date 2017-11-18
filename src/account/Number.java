@@ -1,11 +1,18 @@
 package account;
+
 /*
  * @author Xiangkai Tang
  */
+
 public class Number {
 	
 		private String numberValue;
-
+		
+		public Number(String numberValue) {
+			super();
+			this.numberValue = numberValue;
+		}
+		
 		public String getNumberValue() {
 			return numberValue;
 		}
@@ -14,9 +21,6 @@ public class Number {
 			this.numberValue = numberValue;
 		}
 
-		public Number(String numberValue) {
-			super();
-			this.numberValue = numberValue;
-		}
+		
 		
 }

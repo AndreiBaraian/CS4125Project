@@ -21,6 +21,8 @@ public class AccountBLL<T extends Account> {
 	private AbstractDAO<T> abstractDAO;
 	private AccountDAO accountDAO;
 	
+	public AccountBLL() {}
+	
 	public AccountBLL(AbstractDAO<T> abstractDAO) {
 		this.abstractDAO = abstractDAO;
 	}
@@ -35,7 +37,7 @@ public class AccountBLL<T extends Account> {
 		return account;
 	}
 	
-	public Account getAccount(String number){
+/*      public Account getAccount(String number){  // this is the function for using number to get account by Andrei
 		List<?> listAccounts = null;
 		Account account = null;
 		accountDAO = new EnterpriseAccountDAO();
@@ -48,6 +50,16 @@ public class AccountBLL<T extends Account> {
 		else{
 			account = (EnterpriseAccount) listAccounts.get(0);
 		}
+		return account;
+	}*/
+	
+	public Account getAccount(String id){   //this is the function for using number to get account by Conrad
+		List<?> listAccounts = null;
+		Account account = null;
+		accountDAO = new FamilyAccountDAO();
+		listAccounts = accountDAO.getByField("id", id);
+		account = (FamilyAccount) listAccounts.get(0);
+		
 		return account;
 	}
 	
@@ -78,10 +90,10 @@ public class AccountBLL<T extends Account> {
 		accounts = abstractDAO.getAll();
 		return accounts;
 	}
-	public void presentReport(String idValue){
+	public void presentReport(String accountId){
 		//--------------------------------------------------------------------------- get account from data base, based on id;
 		
-		//Account account=(Account) familyAccount.getByField("id", idValue);
-		//account.generateReport();
+		Account account =  abstractDAO.getByField("id", accountId).get(0);
+		account.generateReport(account.getMinutes(),account.getMessages(),account.getMobileData(),account.getInternationalMinutes(),account.getDifferentProviderMinutes(),account.getBalance());
 	}
 }

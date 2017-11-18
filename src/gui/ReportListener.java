@@ -14,19 +14,20 @@ public class ReportListener implements ActionListener{
 private JTable table;
 private int col;
 private int row;
+private AccountBLL<?> accountBLL;
 
 public ReportListener(JTable table, int row, int col)
 {
-	this.table=table;
-	this.row=row;
-	this.col=col;
+	this.table = table;
+	this.row = row;
+	this.col = col;
+	accountBLL=new AccountBLL();
 }
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		System.out.println("Working on that");
 		String id= table.getValueAt(row, col).toString();
-		AccountBLL accountbll= new AccountBLL();
-		accountbll.presentReport(id);
+		
+		accountBLL.presentReport(id);
 	}
 		
 }

@@ -36,7 +36,6 @@ public class DoneAddingListener implements ActionListener {
 	private JTextField endDate;
 	private JTable table;
 	private DefaultTableModel model;
-	private Control control;
 	private AccountBLL<?> accountBLL;
 	private CustomerBLL customerBLL;
 	private AddAccount addAccount;
@@ -63,7 +62,7 @@ public class DoneAddingListener implements ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		control = Control.getInstance();
+		//control = Control.getInstance();
 		Customer customer = null;
 		Region region = null;
 		Account account = null;

@@ -14,8 +14,16 @@ import region.Region;
 public abstract class Service extends DBRecord {
 	
 	@Transient
-	private double value;
+	protected int value;
 	
+	public int getValue() {
+		return value;
+	}
+
+	public void setValue(int value) {
+		this.value = value;
+	}
+
 	@Transient
 	protected Region locationFrom;
 	
@@ -33,12 +41,11 @@ public abstract class Service extends DBRecord {
 
 	public Service() {}
 	
-	
-	public Service(Region locationFrom, String number, double value){
-		this.locationFrom=locationFrom;
+	public Service(Region locationFrom, String number,int value){
+		this.locationFrom = locationFrom;
 		this.locationFromString = locationFrom.getRegionName();
-		this.value=value;
-		this.number=number;
+		this.number = number;
+		this.value = value;
 	}
 	
 	public String getReferenceNumber() {
@@ -80,19 +87,7 @@ public abstract class Service extends DBRecord {
 		this.cost = cost;
 	}
 
-
-	public double getValue() {
-		return value;
-	}
-
-
-	public void setValue(double value) {
-		this.value = value;
-	}
-	
 	@Override
-	public String toString() {
-		return  id + ","  + locationFromString + "," + number + "," + cost+","+ value;
-	}
+	public abstract String toString();
 
 }

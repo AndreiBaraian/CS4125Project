@@ -13,6 +13,7 @@ import service.Service;
 import service.ServiceFactory;
 
 public class Control {
+	
 	private static final Control controlInstance= new Control();
 	private List<Service> services;
 	private List<Region> availableRegions;
@@ -22,6 +23,7 @@ public class Control {
 	Random rand;
 	String outputFile = "generatedServices.csv";
 	BufferedWriter writer;
+	
 	private Control() {
 		types = new ArrayList<String>(Arrays.asList("Message", "Call", "Internet"));
 		
@@ -83,7 +85,7 @@ public class Control {
 			Service S= ServiceFactory.getService(generatedType, from, number, to, duration);
 			services.add(S);
 			
-			writer.write(S.toString());
+			writer.write(S.getClass().getSimpleName() + ", " + S.toString());
 			writer.write("\n");
 			System.out.println(S.toString());
 			

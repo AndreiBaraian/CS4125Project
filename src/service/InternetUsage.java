@@ -18,9 +18,9 @@ public class InternetUsage extends Service{
 	@Column(name = "traffic")
 	private int traffic;
 	
-	public InternetUsage(Region locationFrom, String number, float traffic) {
-		super(locationFrom, number,traffic);
-		this.traffic= (int)traffic;
+	public InternetUsage(Region locationFrom, String number, int traffic) {
+		super(locationFrom, number, traffic);
+		this.traffic= traffic;
 	}
 	
 	@Override
@@ -44,6 +44,11 @@ public class InternetUsage extends Service{
 	@Override
 	public void setReferenceNumber(String referenceNumber) {
 		this.referenceNumber = "REF-" + referenceNumber;
+	}
+
+	@Override
+	public String toString() {
+		return locationFromString + "," + number + "," + cost + "," + locationFromString + "," + traffic;
 	}
 	
 }

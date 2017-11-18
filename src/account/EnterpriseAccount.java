@@ -85,7 +85,4 @@ public class EnterpriseAccount extends Account {
 				+ "]";
 	}
 	
-
-	
-	
 }

@@ -28,8 +28,6 @@ public abstract class Region extends DBRecord{
 	
 	@Column(name = "internetPrice")
 	protected double internetPrice;
-	
-	
 
 	@Column(name = "roamingTax")
 	protected double roamingTax;

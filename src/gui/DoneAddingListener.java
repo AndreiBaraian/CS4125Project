@@ -17,6 +17,7 @@ import bll.AccountBLL;
 import bll.CustomerBLL;
 import bll.EnterpriseAccountBLL;
 import bll.FamilyAccountBLL;
+import bll.RegionBLL;
 import control.Control;
 import customer.Customer;
 import exceptions.InsertException;
@@ -39,6 +40,7 @@ public class DoneAddingListener implements ActionListener {
 	private AccountBLL<?> accountBLL;
 	private CustomerBLL customerBLL;
 	private AddAccount addAccount;
+	private RegionBLL regionBLL;
 	
 	public DoneAddingListener(JComboBox<String> type, JTextField firstName, JTextField lastName, JTextField number,
 			JTextField address, JTextField age, JTextField email, JComboBox<String> regionCB, JTextField endDate,
@@ -56,6 +58,7 @@ public class DoneAddingListener implements ActionListener {
 		this.addAccount=addAccount;
 		this.customerBLL = new CustomerBLL();
 		this.accountBLL = getAccountBLL((String)type.getSelectedItem());
+		this.regionBLL = new RegionBLL();
 	}
 
 	@Override
@@ -66,13 +69,13 @@ public class DoneAddingListener implements ActionListener {
 		Account account = null;
 		try{
 			customer = customerBLL.add(firstName.getText(), lastName.getText(), Integer.parseInt(age.getText()), address.getText(), email.getText());
-			region = control.search(regionCB.getSelectedItem().toString());
+			region = regionBLL.search(regionCB.getSelectedItem().toString());
 			account = accountBLL.addAccount((String) type.getSelectedItem(), region, customer, number.getText(), endDate.getText());
 		}catch (NumberFormatException | InsertException e) {
 			e.printStackTrace();
 		}
 		model = (DefaultTableModel) table.getModel();
-		model.addRow(new Object[] { account.getId(), account.getCustomerName(), region.getClass().getSimpleName(), (String) type.getSelectedItem(), "0","0", "0.0" }); // change these
+		model.addRow(new Object[] { account.getId(), account.getCustomerName(), region.getClass().getSimpleName(), account.getClass().getSimpleName(), "0","0", "0.0" }); // change these
 		addAccount.dispose();
 	}
 	

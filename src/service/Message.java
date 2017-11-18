@@ -26,11 +26,11 @@ public class Message extends Service{
 	@Column(name = "words")
 	private int nrOfWords;
 	
-	public Message(Region locationFrom, String number, Region locationTo, double nrOfWords) {
-		super(locationFrom, number,nrOfWords);
-		this.locationTo=locationTo;
-		this.nrOfWords=(int)nrOfWords;
-		this.locationToString = locationTo.toString();
+	public Message(Region locationFrom, String number, Region locationTo, int nrOfWords) {
+		super(locationFrom, number, nrOfWords);
+		this.locationTo = locationTo;
+		this.nrOfWords = nrOfWords;
+		this.locationToString = locationTo.getRegionName();
 	}
 	
 	@Override
@@ -59,6 +59,11 @@ public class Message extends Service{
 	@Override
 	public void setReferenceNumber(String referenceNumber) {
 		this.referenceNumber = "REF-" + referenceNumber;
+	}
+
+	@Override
+	public String toString() {
+		return locationFromString + "," + number + "," + cost + "," + locationToString + "," + limit + "," + nrOfWords;
 	}
 
 }

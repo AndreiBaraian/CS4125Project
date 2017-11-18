@@ -39,7 +39,7 @@ public class AccountBLL<T extends Account> {
 		return account;
 	}
 	
-/*public Account getAccount(String number){
+/*      public Account getAccount(String number){  // this is the function for using number to get account by Andrei
 		List<?> listAccounts = null;
 		Account account = null;
 		accountDAO = new EnterpriseAccountDAO();
@@ -54,7 +54,8 @@ public class AccountBLL<T extends Account> {
 		}
 		return account;
 	}*/
-	public Account getAccount(String id){
+	
+	public Account getAccount(String id){   //this is the function for using number to get account by Conrad
 		List<?> listAccounts = null;
 		Account account = null;
 		accountDAO = new FamilyAccountDAO();

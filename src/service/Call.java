@@ -28,12 +28,11 @@ public class Call extends Service implements Serializable {
 	
 	public Call(){ }
 	
-	public Call(Region locationFrom, String number, Region locationTo, double duration) {
-		super(locationFrom, number,duration);
-		this.locationFromString = locationFrom.toString();
-		this.locationTo=locationTo;
-		this.locationToString = locationTo.toString();
-		this.duration=(int)duration;
+	public Call(Region locationFrom, String number, Region locationTo, int duration) {
+		super(locationFrom, number, duration);
+		this.locationTo = locationTo;
+		this.locationToString = locationTo.getRegionName();
+		this.duration = duration;
 	}
 
 	@Override
@@ -72,6 +71,10 @@ public class Call extends Service implements Serializable {
 	}
 
 	@Override
+	public String toString() {
+		return locationFromString + "," + number + "," + cost + "," + locationToString + "," + duration;
+	}
+	
 	public double getInfo() {
 		return duration;
 	}

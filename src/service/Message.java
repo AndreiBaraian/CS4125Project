@@ -28,7 +28,7 @@ public class Message extends Service{
 	@Column(name = "words")
 	private int nrOfWords;
 	
-	public Message(Region locationFrom, String number, Region locationTo, double nrOfWords) {
+	public Message(Region locationFrom, String number, Region locationTo, int nrOfWords) {
 		super(locationFrom, number,nrOfWords);
 		this.locationTo=locationTo;
 		this.nrOfWords=(int)nrOfWords;
@@ -76,6 +76,9 @@ public class Message extends Service{
 	}
 
 	@Override
+	public String toString() {
+		return locationFromString + "," + number + "," + cost + "," + locationToString + "," + limit + "," + nrOfWords;
+	}
 	public double getInfo() {
 		return quantity;
 	}

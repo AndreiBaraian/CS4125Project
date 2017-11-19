@@ -12,6 +12,7 @@ import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
+import account.Account;
 import bll.AccountBLL;
 import bll.CustomerBLL;
 import bll.EnterpriseAccountBLL;
@@ -36,7 +37,6 @@ public class DoneAddingListener implements ActionListener {
 	private JTextField endDate;
 	private JTable table;
 	private DefaultTableModel model;
-	//private Control control;
 	private AccountBLL<?> accountBLL;
 	private CustomerBLL customerBLL;
 	private AddAccount addAccount;
@@ -66,15 +66,16 @@ public class DoneAddingListener implements ActionListener {
 		//control = Control.getInstance();
 		Customer customer = null;
 		Region region = null;
+		Account account = null;
 		try{
 			customer = customerBLL.add(firstName.getText(), lastName.getText(), Integer.parseInt(age.getText()), address.getText(), email.getText());
 			region = regionBLL.search(regionCB.getSelectedItem().toString());
-			accountBLL.addAccount((String) type.getSelectedItem(), region, customer, number.getText(), endDate.getText());
+			account = accountBLL.addAccount((String) type.getSelectedItem(), region, customer, number.getText(), endDate.getText());
 		}catch (NumberFormatException | InsertException e) {
 			e.printStackTrace();
 		}
 		model = (DefaultTableModel) table.getModel();
-		model.addRow(new Object[] { firstName.getText(), lastName.getText(), region.getClass().getSimpleName(), (String) type.getSelectedItem(), "0","0", "0.0" }); // change these
+		model.addRow(new Object[] { account.getId(), account.getCustomerName(), region.getClass().getSimpleName(), account.getClass().getSimpleName(), "0","0", "0.0" }); // change these
 		addAccount.dispose();
 	}
 	

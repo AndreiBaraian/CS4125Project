@@ -21,9 +21,7 @@ public class AccountBLL<T extends Account> {
 	private AbstractDAO<T> abstractDAO;
 	private AccountDAO accountDAO;
 	
-	public AccountBLL() {
-		//this.accountDAO = new AccountDAO();
-	}
+	public AccountBLL() {}
 	
 	public AccountBLL(AbstractDAO<T> abstractDAO) {
 		this.abstractDAO = abstractDAO;
@@ -80,6 +78,7 @@ public class AccountBLL<T extends Account> {
 		List<String> recievedAttributes = new ArrayList<String>();
 		Account retrievedAccount = abstractDAO.getByField("id", accountId).get(0);
 		Account promotedAccount = PromotionFactory.applyPromotion(promotionType, retrievedAccount);
+		System.out.println(promotedAccount.toString());
 		abstractDAO.modify((T) promotedAccount);
 		recievedAttributes.add(Integer.toString(promotedAccount.getMinutes()));
 		recievedAttributes.add(Integer.toString(promotedAccount.getMessages()));

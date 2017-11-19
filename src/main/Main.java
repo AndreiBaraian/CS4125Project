@@ -1,9 +1,11 @@
 package main;
 
+
+import view.Menu;
+
 import control.Control;
 import exceptions.InsertException;
 import insertions.DataInsert;
-import view.Menu;
 
 public class Main {
 
@@ -14,11 +16,17 @@ public class Main {
 		Menu window = new Menu();
 		window.getFrmMainMenu().setVisible(true);
 		
+		/*
+		ComputeTransaction ct = new ComputeTransaction();
+		ct.processServices();
+		*/
 		
-		//DataInsert dt = new DataInsert();
+
+		DataInsert dt = new DataInsert();
 		//dt.insertCustomersAndAccounts();
-		//dt.insertRegions();
+		dt.insertRegions();
 		
+
 	}
 
 }

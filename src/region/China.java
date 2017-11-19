@@ -57,8 +57,5 @@ public class China extends Region {
 		
 	}
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/master
+

@@ -15,9 +15,9 @@ public class Main {
 		window.getFrmMainMenu().setVisible(true);
 		
 		
-		DataInsert dt = new DataInsert();
+		//DataInsert dt = new DataInsert();
 		//dt.insertCustomersAndAccounts();
-		dt.insertRegions();
+		//dt.insertRegions();
 		
 	}
 

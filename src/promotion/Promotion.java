@@ -10,14 +10,8 @@ import report.Report;
 public class Promotion extends Account {
 	
 	Account account;
-	private int minutes;
-	private double duration;
+	
 	private double giftpoints;
-	private int messages;
-	private double differentProviderMinutes;
-	private double mobileData;
-	private int internationalMinutes;
-	private double costUntilNow;
 	
 	public Promotion(Account account) {
 		account.setMinutes(500);
@@ -28,61 +22,9 @@ public class Promotion extends Account {
 	public Promotion(){	
 	}
 	
-	public double getCostUntilNow() {
-		return costUntilNow;
-	}
 
-	public void setCostUntilNow(double costUntilNow) {
-		this.costUntilNow = costUntilNow;
-	}
+	
 
-	public double getDifferentProviderMinutes() {
-		return differentProviderMinutes;
-	}
-
-	public void setDifferentProviderMinutes(double differentProviderMinutes) {
-		this.differentProviderMinutes = differentProviderMinutes;
-	}
-
-	public double getMobileData() {
-		return mobileData;
-	}
-
-	public void setMobileData(double mobileData) {
-		this.mobileData = mobileData;
-	}
-
-	public int getMinutes() {
-		return minutes;
-	}
-
-	public void setMinutes(int leftMinutes) {
-		this.minutes = leftMinutes;
-	}
-
-	public int getMessages() {
-		return messages;
-	}
-
-	public void setMessages(int messages) {
-		this.messages = messages;
-	}
-
-	public int getInternationalMinutes() {
-		return internationalMinutes;
-	}
-
-	public void setInternationalMinutes(int internationalMinutes) {
-		this.internationalMinutes = internationalMinutes;
-	}
-
-	public double getDuration() {
-		return duration;
-	}
-
-	public void setDuration(double duration) {
-		this.duration = duration;
-	}
 
 	public double getGiftpoints() {
 		return giftpoints;

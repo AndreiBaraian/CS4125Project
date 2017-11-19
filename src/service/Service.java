@@ -59,7 +59,9 @@ public abstract class Service extends DBRecord {
 	public abstract void setReferenceNumber(String referenceNumber);
 
 
-	public abstract void applyPrice(double roamingTax);
+	public abstract boolean applyPrice(double roamingTax);            ////////////////////// returns true if international service or false otherwise
+	
+	public abstract double getInfo();
 	
 	public String getLocationFromString() {
 		return locationFromString;

@@ -1,4 +1,4 @@
-package gui;
+package controller;
 /**
  * @author Lucian Epure 
  */
@@ -6,6 +6,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import control.Control;
+import view.SetPrices;
 
 public class SetPricesActionListener implements ActionListener{
 	private SetPrices setPrices;

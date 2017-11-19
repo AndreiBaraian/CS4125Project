@@ -1,4 +1,4 @@
-package gui;
+package view;
 /**
  * @author Lucian Epure 
  * @author Xiangkai Tang 5% implement of add number

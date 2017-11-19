@@ -8,6 +8,7 @@ import bll.RegionBLL;
 import customer.Customer;
 import exceptions.InsertException;
 import region.China;
+import region.Ireland;
 import region.Region;
 import region.Romania;
 
@@ -15,7 +16,7 @@ public class DataInsert {
 	
 	private CustomerBLL customerBLL;
 	private AccountBLL<EnterpriseAccount> enterpriseBLL;
-	RegionBLL regionBLL;
+	private RegionBLL regionBLL;
 	
 	public DataInsert(){
 		this.customerBLL = new CustomerBLL();
@@ -32,10 +33,12 @@ public class DataInsert {
 	}
 	
 	public void insertRegions() throws InsertException{
-		//Region romania = new Romania(3,4);
-		//regionBLL.add(romania);
-		Region china = new China(4,5);
+		Region china = new China();
+		Region romania = new Romania();
+		Region ireland = new Ireland();
+		regionBLL.add(romania);
 		regionBLL.add(china);
+		regionBLL.add(ireland);
 	}
 
 }

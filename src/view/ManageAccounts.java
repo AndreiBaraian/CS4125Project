@@ -1,4 +1,4 @@
-package gui;
+package view;
 /**
  * @author Lucian Epure 
  */
@@ -14,6 +14,11 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
 import account.Account;
+import controller.AddAccountListener;
+import controller.AddNumberListener;
+import controller.PromotionListener;
+import controller.RemoveAccountListener;
+import controller.ReportListener;
 
 public class ManageAccounts extends JFrame {
 

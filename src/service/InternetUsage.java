@@ -24,8 +24,9 @@ public class InternetUsage extends Service{
 	}
 	
 	@Override
-	public void applyPrice(double roamingTax) {
+	public boolean applyPrice(double roamingTax) {
 		super.setCost(roamingTax+locationFrom.getInternetPrice()*((float)traffic/1000));
+		return false;
 	}
 	
 	public int getTraffic() {
@@ -49,6 +50,9 @@ public class InternetUsage extends Service{
 	@Override
 	public String toString() {
 		return locationFromString + "," + number + "," + cost + "," + locationFromString + "," + traffic;
+	}
+	public double getInfo() {
+		return this.cost;
 	}
 	
 }

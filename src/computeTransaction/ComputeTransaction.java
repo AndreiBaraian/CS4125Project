@@ -5,6 +5,7 @@ import java.io.FileReader;
 import java.io.IOException;
 
 import account.Account;
+import bll.AccountBLL;
 import bll.RegionBLL;
 import control.Control;
 import region.Region;
@@ -14,21 +15,31 @@ import service.ServiceFactory;
 public class ComputeTransaction {
 
 	//----------------------------------------------------------have the take the services from the data base and process all of them one by one
-	
+	private AccountBLL<?> accountBLL;
 	private Control control=Control.getInstance();
 	private static final String FILENAME = "generatedServices.csv";
 	private RegionBLL regionBLL;
 	
-	public ComputeTransaction() {
-		this.regionBLL = new RegionBLL();
+	public ComputeTransaction(){
+		accountBLL = new AccountBLL();
+		regionBLL = new RegionBLL();
 	}
 	
-	public void computeBill(Service s){
-		String number= s.getNumber();
-		//---------------------------------------------------------- find the account based on number
-		Account userAccount = null;
-		double roamingTax= userAccount.getHomeregion().getRoamingTax();
-		s.applyPrice(roamingTax);
+	public Service computeBill(Service service){
+		double roamingTax = 0.0;
+		boolean international ;
+		String number= service.getNumber();
+		Account account = accountBLL.getAccountByNumber(number);
+		if(account.getHomeregion().getRegionName().equalsIgnoreCase(service.getLocationFromString())){		
+			roamingTax= account.getHomeregion().getRoamingTax();
+		}		
+	
+		international = service.applyPrice(roamingTax);
+		updateAccount(account,service);
+		return service;
+	}
+	
+	public void updateAccount(Account account, Service service){
 		
 	}
 	

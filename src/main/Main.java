@@ -1,8 +1,10 @@
 package main;
 
+
+import view.Menu;
+
 import control.Control;
 import exceptions.InsertException;
-import gui.Menu;
 
 public class Main {
 

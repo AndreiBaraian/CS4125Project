@@ -1,4 +1,4 @@
-package gui;
+package controller;
 /*
  * @author Lucian Epure
  */
@@ -6,6 +6,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JTable;
+
+import view.ApplyPromotion;
 
 public class PromotionListener implements ActionListener{
 

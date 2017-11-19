@@ -1,4 +1,4 @@
-package gui;
+package controller;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,6 +10,7 @@ import account.EnterpriseAccount;
 import account.FamilyAccount;
 import bll.EnterpriseAccountBLL;
 import bll.FamilyAccountBLL;
+import view.ManageAccounts;
 
 public class ManageAccountsListener implements ActionListener{
 

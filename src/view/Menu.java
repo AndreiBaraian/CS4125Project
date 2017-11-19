@@ -1,4 +1,4 @@
-package gui;
+package view;
 /**
  * @author Lucian Epure 
  */
@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JFrame;
 
 import control.Control;
+import controller.ManageAccountsListener;
 
 import javax.swing.JButton;
 

@@ -1,4 +1,4 @@
-package gui;
+package controller;
 /**
  * @author Lucian Epure 
  */
@@ -8,6 +8,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JTable;
 
 import control.Control;
+import view.AddAccount;
 
 public class AddAccountListener implements ActionListener {
 	

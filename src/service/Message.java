@@ -13,7 +13,9 @@ import region.Region;
 @Entity
 @Table(name = "message")
 public class Message extends Service{
-
+	@Transient
+	private double quantity;
+	
 	@Transient
 	private Region locationTo;
 	
@@ -27,15 +29,27 @@ public class Message extends Service{
 	private int nrOfWords;
 	
 	public Message(Region locationFrom, String number, Region locationTo, int nrOfWords) {
-		super(locationFrom, number, nrOfWords);
-		this.locationTo = locationTo;
-		this.nrOfWords = nrOfWords;
-		this.locationToString = locationTo.getRegionName();
+		super(locationFrom, number,nrOfWords);
+		this.locationTo=locationTo;
+		this.nrOfWords=(int)nrOfWords;
+		this.locationToString = locationTo.toString();
+		this.quantity =  Math.ceil((float)nrOfWords/limit);
 	}
 	
 	@Override
-	public void applyPrice(double roamingTax) {
-		super.setCost( roamingTax+locationTo.getMessagePrice() * (Math.ceil((float)nrOfWords/limit))) ;
+	public boolean applyPrice(double roamingTax) {
+		double price;
+		boolean international;
+		if(locationFromString.equalsIgnoreCase(locationToString)){
+			price = roamingTax+locationFrom.getMessagePrice() * quantity;
+			international = false;
+		}
+		else{
+			price = roamingTax+locationTo.getMessagePrice()/2+locationFrom.getMessagePrice() * quantity;
+			international = true;
+		}
+		super.setCost(price) ;
+		return international;
 	}
 	public Region getLocationTo() {
 		return locationTo;
@@ -64,6 +78,9 @@ public class Message extends Service{
 	@Override
 	public String toString() {
 		return locationFromString + "," + number + "," + cost + "," + locationToString + "," + limit + "," + nrOfWords;
+	}
+	public double getInfo() {
+		return quantity;
 	}
 
 }

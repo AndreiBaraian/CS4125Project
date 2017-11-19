@@ -1,19 +1,20 @@
 package region;
+
+import javax.persistence.DiscriminatorValue;
+import javax.persistence.Entity;
 /*
  * @author Xiangkai Tang
  */
-import javax.persistence.DiscriminatorValue;
-import javax.persistence.Entity;
 
 @Entity
-@DiscriminatorValue("CHN")
-public class China extends Region {
-
-	public China() {}
+@DiscriminatorValue("IRE")
+public class Ireland extends Region {
 	
-	public China(double callPrice, double percent) {
+	public Ireland() {}
+	
+	public Ireland(double callPrice, double percent) {
 		super();
-		this.regionName="China";
+		this.regionName="Ireland";
 		this.setCallingPrice(callPrice);
 		this.computeRoamingTax(percent);
 	}
@@ -36,7 +37,7 @@ public class China extends Region {
 
 	@Override
 	public void setRegionName(String regionName) {
-		this.regionName = "China";
+		this.regionName = "Romania";
 	}
 
 	@Override
@@ -57,8 +58,4 @@ public class China extends Region {
 		
 	}
 
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> origin/master

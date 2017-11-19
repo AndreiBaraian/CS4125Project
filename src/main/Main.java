@@ -2,8 +2,8 @@ package main;
 
 import control.Control;
 import exceptions.InsertException;
-import gui.Menu;
 import insertions.DataInsert;
+import view.Menu;
 
 public class Main {
 

@@ -7,7 +7,9 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
+import bll.EnterpriseAccountBLL;
 import bll.FamilyAccountBLL;
+import account.EnterpriseAccount;
 import account.FamilyAccount;
 import region.Region;
 import region.Romania;
@@ -20,10 +22,11 @@ public class Control {
 	private List<Region> availableRegions;
 	private List<String> types;
 	private List<String> registeredNumbers;
-	private String numi;
+	
 	Random rand;
 	String outputFile = "generatedServices.txt";
 	BufferedWriter writer;
+	
 	private Control() {
 		types = new ArrayList<String>(Arrays.asList("Message", "Call", "Internet"));
 		
@@ -65,13 +68,13 @@ public class Control {
 		int duration;
 		String number;
 		int quantity = C.getQuantity();
-		List<FamilyAccount> familyaccount;
-		FamilyAccountBLL familyAccountBLL = new FamilyAccountBLL();
-		familyaccount = familyAccountBLL.getAll();
+		List<EnterpriseAccount> enterpriseAccount;
+		EnterpriseAccountBLL enterpriseAccountBLL = new EnterpriseAccountBLL();
+		enterpriseAccount = enterpriseAccountBLL.getAll();
 		for(int i = 0;i< quantity;i++)
 		{
-			int s = generateRandomNumber(0,familyaccount.size());
-			registeredNumbers.add(familyaccount.get(s).getNumbersString());
+			int s = generateRandomNumber(0,enterpriseAccount.size());
+			registeredNumbers.add(enterpriseAccount.get(s).getNumber());
 		}
 		try {
 			writer = new BufferedWriter(new FileWriter(outputFile));

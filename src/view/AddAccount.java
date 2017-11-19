@@ -1,4 +1,4 @@
-package gui;
+package view;
 /**
  * @author Lucian Epure 
  */
@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.border.EmptyBorder;
 
+import controller.DoneAddingListener;
 
 import javax.swing.JLabel;
 import javax.swing.JComboBox;

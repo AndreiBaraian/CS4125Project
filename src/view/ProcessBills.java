@@ -1,4 +1,4 @@
- package gui;
+ package view;
  /**
   * @author Lucian Epure 
   */
@@ -9,6 +9,8 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
 import control.Control;
+import controller.GenerateServicesListener;
+import controller.SetPricesActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JTable;

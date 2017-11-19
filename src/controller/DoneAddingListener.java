@@ -1,4 +1,4 @@
-package gui;
+package controller;
 
 /*
  * @author Lucian Epure
@@ -21,6 +21,7 @@ import control.Control;
 import customer.Customer;
 import exceptions.InsertException;
 import region.Region;
+import view.AddAccount;
 
 public class DoneAddingListener implements ActionListener {
 

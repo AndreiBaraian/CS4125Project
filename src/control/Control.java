@@ -101,7 +101,7 @@ public class Control {
 			Service S= ServiceFactory.getService(generatedType, from, number, to, duration);
 			services.add(S);
 			
-			writer.write(S.getClass().getSimpleName() + ", " + S.toString());
+			writer.write(S.getClass().getSimpleName() + "," + S.toString());
 			writer.write("\n");
 			System.out.println(S.toString());
 			

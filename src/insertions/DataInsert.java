@@ -7,6 +7,7 @@ import bll.EnterpriseAccountBLL;
 import bll.RegionBLL;
 import customer.Customer;
 import exceptions.InsertException;
+import region.China;
 import region.Region;
 import region.Romania;
 
@@ -14,10 +15,12 @@ public class DataInsert {
 	
 	private CustomerBLL customerBLL;
 	private AccountBLL<EnterpriseAccount> enterpriseBLL;
+	RegionBLL regionBLL;
 	
 	public DataInsert(){
 		this.customerBLL = new CustomerBLL();
 		enterpriseBLL = new EnterpriseAccountBLL();
+		regionBLL = new RegionBLL();
 	}
 	
 	public void insertCustomersAndAccounts() throws InsertException{
@@ -28,8 +31,11 @@ public class DataInsert {
 		enterpriseBLL.addAccount("Enterprise", romania, customer1, "0727455675", "12/11/2017");
 	}
 	
-	public void insertRegions(){
-		
+	public void insertRegions() throws InsertException{
+		//Region romania = new Romania(3,4);
+		//regionBLL.add(romania);
+		Region china = new China(4,5);
+		regionBLL.add(china);
 	}
 
 }

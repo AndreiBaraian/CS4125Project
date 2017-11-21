@@ -52,10 +52,15 @@ public abstract class Account extends DBRecord{
 	
 	@Column(name = "customerSystemReference")
 	protected String customerSystemReference;
-
+	
 	public Account() {}
 	
 	public Account(double balance, Region homeRegion,Customer customer) {
+		this.messages=0;
+		this.minutes=0;
+		this.internationalMinutes=0;
+		this.mobileData=0;
+		
 		this.customer = customer;
 		this.balance = balance;
 		this.homeRegion = homeRegion;
@@ -64,6 +69,15 @@ public abstract class Account extends DBRecord{
 		this.customerSystemReference = customer.getSystemReference();
 		this.uniqueIdentifierFieldName = "customerId";
 	}
+
+/*
+	public void updateAccount(Service service){
+		this.service = service;
+		while(this.accountState == finalState){
+			this.accountState.update(this);
+		}
+	
+	}*/
 	
 	public abstract Report generateReport(int leftMinutes, int leftMessages,double leftMobileData, int leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow);
 	

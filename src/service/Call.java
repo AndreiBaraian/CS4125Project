@@ -36,19 +36,17 @@ public class Call extends Service implements Serializable {
 	}
 
 	@Override
-	public boolean applyPrice(double roamingTax) { 	
-		boolean international;
+	public void applyPrice(double roamingTax) { 	
 		double price;
 		if(locationFromString.equalsIgnoreCase(locationToString)){
 			price = roamingTax+locationFrom.getCallingPrice()*duration;
-			international = false;
+			this.international = false;
 		}
 		else{
 			price = roamingTax+locationTo.getCallingPrice()/2+locationFrom.getCallingPrice();
-			international = true;
+			this.international = true;
 		}
 		super.setCost(price);
-		return international;
 	}
 	
 	public int getDuration() {
@@ -77,6 +75,16 @@ public class Call extends Service implements Serializable {
 	
 	public double getInfo() {
 		return duration;
+	}
+
+	@Override
+	public String changed() {
+		return "Minutes";
+	}
+
+	@Override
+	public void applyCustomerPrice(int duration, double roamingTax) {
+		this.customerCost = roamingTax + (duration * this.getLocationTo().getCallingPrice());		
 	}
 
 }

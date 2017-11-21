@@ -24,9 +24,9 @@ public class InternetUsage extends Service{
 	}
 	
 	@Override
-	public boolean applyPrice(double roamingTax) {
+	public void applyPrice(double roamingTax) {
 		super.setCost(roamingTax+locationFrom.getInternetPrice()*((float)traffic/1000));
-		return false;
+		this.international = false;
 	}
 	
 	public int getTraffic() {
@@ -52,7 +52,18 @@ public class InternetUsage extends Service{
 		return locationFromString + "," + number + "," + cost + "," + locationFromString + "," + traffic;
 	}
 	public double getInfo() {
-		return this.cost;
+		return this.traffic;
+	}
+
+	@Override
+	public String changed() {
+		// TODO Auto-generated method stub
+		return "Internet";
+	}
+
+	@Override
+	public void applyCustomerPrice(int leftInternet, double roamingTax) {
+		this.customerCost = roamingTax + (leftInternet * this.locationFrom.getInternetPrice());
 	}
 	
 }

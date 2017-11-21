@@ -30,6 +30,7 @@
  		<mapping class="region.Region"/>
  		<mapping class="customer.Customer"/>
  		<mapping class="region.Romania"/>
+ 		<mapping class="region.Ireland"/>
  		<mapping class="region.China"/>
  
 	</session-factory>

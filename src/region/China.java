@@ -9,11 +9,13 @@ import javax.persistence.Entity;
 @DiscriminatorValue("CHN")
 public class China extends Region {
 
-	public China() {}
+	public China() {
+		this.setRegionName("China");
+	}
 	
 	public China(double callPrice, double percent) {
 		super();
-		this.regionName="China";
+		this.setRegionName("China");
 		this.setCallingPrice(callPrice);
 		this.computeRoamingTax(percent);
 	}

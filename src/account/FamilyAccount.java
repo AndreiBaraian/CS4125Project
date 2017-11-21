@@ -12,6 +12,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
+import computeTransaction.CreatedAccount;
 import customer.Customer;
 import promotion.PDFcreater;
 import region.Region;
@@ -30,7 +31,7 @@ public class FamilyAccount extends Account {
 	public FamilyAccount() {}
 	
 	public FamilyAccount(double balance, Region homeregion, Customer customer,List<String> numbers) {
-		super(balance, homeregion, customer);
+		super( balance, homeregion, customer);
 		this.numbers = numbers;
 		this.numbersString = numbersToString(this.numbers);
 		this.uniqueIdentifierFieldName = "customerId";

@@ -42,7 +42,9 @@ public class RegionBLL {
 		regions = regionDAO.getAll();
 		for(Region region : regions){
 			region = RegionFactory.getRegion(region);
+			//regions.add(region);
 		}
+		
 		return regions;
 	}
 	

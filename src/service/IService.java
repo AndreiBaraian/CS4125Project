@@ -12,4 +12,6 @@ public interface IService {
 	  * @post @nochange
 	  */
      public void applyPrice(double price);
+     
+     public void applyCustomerPrice(int duration, double roamingTax);
 }

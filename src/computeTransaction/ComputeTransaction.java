@@ -20,6 +20,7 @@ public class ComputeTransaction {
 	private static final String FILENAME = "generatedServices.csv";
 	private RegionBLL regionBLL;
 	
+	
 	public ComputeTransaction(){
 		accountBLL = new AccountBLL();
 		regionBLL = new RegionBLL();
@@ -27,20 +28,19 @@ public class ComputeTransaction {
 	
 	public Service computeBill(Service service){
 		double roamingTax = 0.0;
-		boolean international ;
+		Account account;
+		Account updatedAccount;
 		String number= service.getNumber();
-		Account account = accountBLL.getAccountByNumber(number);
+		account = accountBLL.getAccountByNumber(number);
 		if(account.getHomeregion().getRegionName().equalsIgnoreCase(service.getLocationFromString())){		
 			roamingTax= account.getHomeregion().getRoamingTax();
+			service.setInternational(true);
 		}		
-	
-		international = service.applyPrice(roamingTax);
-		updateAccount(account,service);
+		service.applyPrice(roamingTax);	
+		UpdateAccountContext updateAccountContext = new UpdateAccountContext(new CreatedAccount(), account,service, roamingTax);
+		updatedAccount = updateAccountContext.updateAccount();
+		accountBLL.modifyAccount(updatedAccount);
 		return service;
-	}
-	
-	public void updateAccount(Account account, Service service){
-		
 	}
 	
 	public void processServices(){

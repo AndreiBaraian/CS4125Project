@@ -9,6 +9,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
 
+import computeTransaction.AccountState;
+import computeTransaction.CreatedAccount;
 import customer.Customer;
 import promotion.PDFcreater;
 import region.Region;
@@ -27,7 +29,7 @@ public class EnterpriseAccount extends Account {
 	public EnterpriseAccount() {}
 
 	public EnterpriseAccount(double balance, Region homeregion,Customer customer, String endDate, String number) {
-		super(balance, homeregion,customer);
+		super( balance, homeregion,customer);
 		this.endDate = endDate;
 		this.number = number;
 		this.setCustomer(customer);

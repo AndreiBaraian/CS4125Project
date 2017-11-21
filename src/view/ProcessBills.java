@@ -8,7 +8,7 @@ import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
-import control.Control;
+import controller.ComputeTransactionListener;
 import controller.GenerateServicesListener;
 import controller.SetPricesActionListener;
 
@@ -37,7 +37,7 @@ public class ProcessBills extends JFrame {
 	private JLabel lblQuantity;
 	private JLabel lblFromcountry;
 	private JLabel lblTocountry;
-	private JButton btnComputeTranscation;
+	private JButton btnComputeTransaction;
 
 	
 
@@ -133,9 +133,10 @@ public class ProcessBills extends JFrame {
 		contentPane.add(btnSetPrices);
 		btnSetPrices.addActionListener( new SetPricesActionListener());
 		
-		btnComputeTranscation = new JButton("Compute Transaction");
-		btnComputeTranscation.setBounds(10, 240, 192, 36);
-		contentPane.add(btnComputeTranscation);
+		btnComputeTransaction = new JButton("Compute Transaction");
+		btnComputeTransaction.setBounds(10, 240, 192, 36);
+		contentPane.add(btnComputeTransaction);
+		btnComputeTransaction.addActionListener(new ComputeTransactionListener());
 		
 		JButton btnGeneratePerformedServices = new JButton("Generate Performed Services");
 		btnGeneratePerformedServices.setBounds(20, 26, 182, 23);

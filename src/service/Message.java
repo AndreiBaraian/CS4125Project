@@ -39,19 +39,17 @@ public class Message extends Service{
 	}
 	
 	@Override
-	public boolean applyPrice(double roamingTax) {
+	public void applyPrice(double roamingTax) {
 		double price;
-		boolean international;
 		if(locationFromString.equalsIgnoreCase(locationToString)){
 			price = roamingTax+locationFrom.getMessagePrice() * quantity;
-			international = false;
+			this.international = false;
 		}
 		else{
 			price = roamingTax+locationTo.getMessagePrice()/2+locationFrom.getMessagePrice() * quantity;
-			international = true;
+			this.international = true;
 		}
 		super.setCost(price) ;
-		return international;
 	}
 	public Region getLocationTo() {
 		return locationTo;
@@ -83,6 +81,18 @@ public class Message extends Service{
 	}
 	public double getInfo() {
 		return quantity;
+	}
+
+	@Override
+	public String changed() {
+		// TODO Auto-generated method stub
+		return "Messages";
+	}
+
+	@Override
+	public void applyCustomerPrice(int duration, double roamingTax) {
+		this.customerCost = roamingTax + (quantity * this.getLocationTo().getMessagePrice());		
+
 	}
 
 }

@@ -11,8 +11,9 @@ import javax.persistence.Transient;
 import region.Region;
 
 @Entity
-@Table(name = "message")
+@Table(name = "tb_message")
 public class Message extends Service{
+
 	@Transient
 	private double quantity;
 	
@@ -22,7 +23,7 @@ public class Message extends Service{
 	@Column(name = "locationTo")
 	private String locationToString;
 	
-	@Column(name = "limit")
+	@Column(name = "limitMsg")
 	private int limit;
 	
 	@Column(name = "words")
@@ -32,8 +33,9 @@ public class Message extends Service{
 		super(locationFrom, number,nrOfWords);
 		this.locationTo=locationTo;
 		this.nrOfWords=(int)nrOfWords;
-		this.locationToString = locationTo.toString();
+		this.locationToString = locationTo.getClass().getSimpleName();
 		this.quantity =  Math.ceil((float)nrOfWords/limit);
+		this.limit = 0;
 	}
 	
 	@Override
@@ -77,7 +79,7 @@ public class Message extends Service{
 
 	@Override
 	public String toString() {
-		return locationFromString + "," + number + "," + cost + "," + locationToString + "," + limit + "," + nrOfWords;
+		return locationFromString + "," + number + "," + cost + "," + locationToString + "," + nrOfWords;
 	}
 	public double getInfo() {
 		return quantity;

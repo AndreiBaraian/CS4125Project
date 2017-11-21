@@ -1,8 +1,8 @@
 package main;
 
 
+import computeTransaction.ComputeTransaction;
 import exceptions.InsertException;
-import insertions.DataInsert;
 
 public class Main {
 
@@ -13,15 +13,18 @@ public class Main {
 		Menu window = new Menu();
 		window.getFrmMainMenu().setVisible(true);
 		*/
-		/*
+		
+		
 		ComputeTransaction ct = new ComputeTransaction();
 		ct.processServices();
-		*/
 		
 		
+		
+		
+		/*
 		DataInsert dt = new DataInsert();
 		dt.insertRegions();
-		
+		*/
 	}
 
 }

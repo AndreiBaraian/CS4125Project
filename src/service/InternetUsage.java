@@ -9,7 +9,7 @@ import javax.persistence.Table;
 import region.Region;
 
 @Entity
-@Table(name = "internetusage")
+@Table(name = "tb_internetusage")
 public class InternetUsage extends Service{
 
 	@Column(name = "speed")

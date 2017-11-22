@@ -1,7 +1,7 @@
 package computeTransaction;
-
-import account.Account;
-import service.Service;
+/*
+ * @author Lucian Epure
+ */
 
 public abstract class  AccountState {
 

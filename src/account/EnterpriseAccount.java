@@ -8,9 +8,6 @@ package account;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-
-import computeTransaction.AccountState;
-import computeTransaction.CreatedAccount;
 import customer.Customer;
 import promotion.PDFcreater;
 import region.Region;

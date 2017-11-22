@@ -37,7 +37,7 @@ public class RegionBLL {
 		System.out.println(selectedRegion.getInternetPrice());
 	}
 	
-	private List<Region> getRegions(){
+	public List<Region> getRegions(){
 		List<Region> regions = new ArrayList<Region>();
 		regions = regionDAO.getAll();
 		for(Region region : regions){

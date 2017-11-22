@@ -1,5 +1,7 @@
 package computeTransaction;
-
+/*
+ * @author Lucian Epure
+ */
 
 public class UpdateInternationalMinutesState extends AccountState{
 

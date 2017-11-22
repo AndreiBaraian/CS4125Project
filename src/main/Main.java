@@ -1,22 +1,30 @@
 package main;
 
+
 import computeTransaction.ComputeTransaction;
+import control.Control;
 import exceptions.InsertException;
+import insertions.DataInsert;
+import view.Menu;
 
 public class Main {
 
 	public static void main(String[] args) throws InsertException {
 		
-		/*
+		DataInsert dt = new DataInsert();
+		dt.insertCustomersAndAccounts();
+		dt.insertRegions();
+		
+		
 		Control control = Control.getInstance();
 		Menu window = new Menu();
 		window.getFrmMainMenu().setVisible(true);
-		*/
 		
 		
-		ComputeTransaction ct = new ComputeTransaction();
+		
+		/*ComputeTransaction ct = new ComputeTransaction();
 		ct.processServices();
-		
+		*/
 		
 		
 		//// LUCIAN TESTING (don't remove until computeTransaction works) -> Auzi la el ce dume are
@@ -31,9 +39,7 @@ public class Main {
 		*/
 		
 ///
-		//DataInsert dt = new DataInsert();
-		///dt.insertCustomersAndAccounts();
-		//dt.insertRegions();
+	
 		
 
 	}

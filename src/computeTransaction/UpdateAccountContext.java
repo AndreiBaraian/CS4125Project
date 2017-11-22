@@ -1,5 +1,7 @@
 package computeTransaction;
-
+/*
+ * @author Lucian Epure
+ */
 import account.Account;
 import service.Service;
 

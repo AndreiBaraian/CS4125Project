@@ -1,5 +1,7 @@
 package computeTransaction;
-
+/*
+ * @author Lucian Epure
+ */
 public class UpdateMessagesState extends AccountState {
 
 	@Override
@@ -8,7 +10,8 @@ public class UpdateMessagesState extends AccountState {
 		if (messages < 0) {
 			accountContext.getAccount().setMessages(0);
 			accountContext.getService().applyCustomerPrice(Math.abs(messages), accountContext.getRoamingTax());
-		} else {
+		} 
+		else{
 			accountContext.getAccount().setMessages(messages);
 		}
 		accountContext.setState(new UpdateInternetState());

@@ -9,8 +9,11 @@ import java.util.Random;
 
 import bll.EnterpriseAccountBLL;
 import bll.FamilyAccountBLL;
+import bll.RegionBLL;
 import account.EnterpriseAccount;
 import account.FamilyAccount;
+import region.China;
+import region.Ireland;
 import region.Region;
 import region.Romania;
 import service.Service;
@@ -23,22 +26,18 @@ public class Control {
 	private List<Region> availableRegions;
 	private List<String> types;
 	private List<String> registeredNumbers;
-	
+	private RegionBLL regionBLL;
 	Random rand;
 	String outputFile = "generatedServices.csv";
 	BufferedWriter writer;
 	
 	private Control() {
-		types = new ArrayList<String>(Arrays.asList("Message", "Call", "Internet"));
 		
-		availableRegions = new ArrayList<Region>();
+		types = new ArrayList<String>(Arrays.asList("Message", "Call", "Internet"));
 		registeredNumbers =new ArrayList<String>();
 		services= new ArrayList<Service>();
-		Region romania= new Romania(0,0);
-		
-		//numi= "1112121";
-		availableRegions.add(romania);
-		//registeredNumbers.add(numi);
+		regionBLL = new RegionBLL();
+		availableRegions = regionBLL.getRegions();
 		rand = new Random();
 	}
 	
@@ -46,14 +45,6 @@ public class Control {
 		return controlInstance;
 	}
 	
-	public Region search(String name){
-		for (Region r:availableRegions){
-			if(r.getRegionName().equals(name))
-				return r;
-		}
-		System.out.println("Region not found");
-		return null;
-	}
 
 	public int generateRandomNumber(int min,int max)
 	{
@@ -93,12 +84,12 @@ public class Control {
 				from = availableRegions.get(rand.nextInt(availableRegions.size()));
 			} 
 			if (C.getFrom().equals("Any")==false)
-				from = this.search(C.getFrom());
+				from = regionBLL.search(C.getFrom());
 			if (C.getTo().equals("Any")) {
 				to = availableRegions.get(rand.nextInt(availableRegions.size()));
 			} 
 			if (C.getTo().equals("Any")==false)
-				to = this.search(C.getTo());
+				to = regionBLL.search(C.getTo());
 			duration = rand.nextInt((C.getMaxDuration() - C.getMinDuration()) + 1) + C.getMinDuration();
 			Service S= ServiceFactory.getService(generatedType, from, number, to, duration);
 			services.add(S);

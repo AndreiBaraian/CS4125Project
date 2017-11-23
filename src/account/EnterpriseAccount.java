@@ -34,19 +34,19 @@ public class EnterpriseAccount extends Account {
 	}
 	
 	@Override
-	public void computeDiscount() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
 	public Report generateReport(int leftMinutes, int leftMessages,double leftMobileData, int leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow) {
-		Report report = new Report(leftMinutes,leftMessages,leftMobileData,leftInternationalMinutes,leftDifferentProviderMinutes,costUntilNow); //get value from GUI
+		Report report = new Report(leftMinutes,leftMessages,leftMobileData,leftInternationalMinutes,leftDifferentProviderMinutes,costUntilNow); 
 		report.setNumber(number);
 		report.setEndDate(endDate);
 		PDFcreater pdf = new PDFcreater(report,this.getCustomer());
 		pdf.outputPDF();
 		return report;
+	}
+	
+	@Override
+	public void computeDiscount() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	public void extendDate(String date) {}

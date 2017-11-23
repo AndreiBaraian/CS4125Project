@@ -1,10 +1,8 @@
 package account;
-
 /**
  * @author Xiangkai Tang
  * @author Andrei Baraian 5% Hibernate annotations
  */
-
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.Transient;
@@ -15,7 +13,7 @@ import region.Region;
 import report.Report;
 
 @MappedSuperclass
-public abstract class Account extends DBRecord{
+public abstract class Account extends DBRecord implements IAccount{
 
 	@Column(name = "differentProviderMinutes")
 	private double differentProviderMinutes;

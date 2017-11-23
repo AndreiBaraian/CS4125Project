@@ -8,7 +8,7 @@ import javax.swing.JScrollPane;
 import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 
-import control.Control;
+import controller.ComputeTransactionListener;
 import controller.GenerateServicesListener;
 import controller.SetPricesActionListener;
 
@@ -37,7 +37,7 @@ public class ProcessBills extends JFrame {
 	private JLabel lblQuantity;
 	private JLabel lblFromcountry;
 	private JLabel lblTocountry;
-	private JButton btnComputeTranscation;
+	private JButton btnComputeTransaction;
 
 	
 
@@ -119,12 +119,16 @@ public class ProcessBills extends JFrame {
 		countryFromCB.setBounds(116, 156, 86, 17);
 		countryFromCB.addItem("Any");
 		countryFromCB.addItem("Romania");
+		countryFromCB.addItem("Ireland");
+		countryFromCB.addItem("China");
 		contentPane.add(countryFromCB);
 		
 		countryToCB = new JComboBox<String>();
 		countryToCB.setBounds(116, 181, 86, 20);
 		countryToCB.addItem("Any");
 		countryToCB.addItem("Romania");
+		countryToCB.addItem("Ireland");
+		countryToCB.addItem("China");
 		contentPane.add(countryToCB);
 		
 		
@@ -133,9 +137,10 @@ public class ProcessBills extends JFrame {
 		contentPane.add(btnSetPrices);
 		btnSetPrices.addActionListener( new SetPricesActionListener());
 		
-		btnComputeTranscation = new JButton("Compute Transaction");
-		btnComputeTranscation.setBounds(10, 240, 192, 36);
-		contentPane.add(btnComputeTranscation);
+		btnComputeTransaction = new JButton("Compute Transaction");
+		btnComputeTransaction.setBounds(10, 240, 192, 36);
+		contentPane.add(btnComputeTransaction);
+		btnComputeTransaction.addActionListener(new ComputeTransactionListener());
 		
 		JButton btnGeneratePerformedServices = new JButton("Generate Performed Services");
 		btnGeneratePerformedServices.setBounds(20, 26, 182, 23);

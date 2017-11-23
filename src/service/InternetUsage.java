@@ -9,7 +9,7 @@ import javax.persistence.Table;
 import region.Region;
 
 @Entity
-@Table(name = "internetusage")
+@Table(name = "tb_internetusage")
 public class InternetUsage extends Service{
 
 	@Column(name = "speed")
@@ -18,15 +18,22 @@ public class InternetUsage extends Service{
 	@Column(name = "traffic")
 	private int traffic;
 	
-	public InternetUsage(Region locationFrom, String number, double traffic) {
-		super(locationFrom, number,traffic);
-		this.traffic= (int)traffic;
+	public InternetUsage(Region locationFrom, String number, int traffic) {
+		super(locationFrom, number, traffic);
+		this.traffic= traffic;
 	}
 	
 	@Override
-	public boolean applyPrice(double roamingTax) {
-		super.setCost(roamingTax+locationFrom.getInternetPrice()*((float)traffic/1000));
-		return false;
+	public void applyPrice(double roamingTax) {
+		
+			super.setCost(roamingTax+locationFrom.getInternetPrice()*((float)traffic/10));
+			this.international = false;
+
+	}
+	@Override
+	public void applyCustomerPrice(int leftInternet, double roamingTax) {
+		super.setCustomerCost(roamingTax + (leftInternet/10) * this.locationFrom.getInternetPrice());
+		 
 	}
 	
 	public int getTraffic() {
@@ -48,8 +55,20 @@ public class InternetUsage extends Service{
 	}
 
 	@Override
-	public double getInfo() {
-		return this.cost;
+	public String toString() {
+		return locationFromString + "," + number + "," + cost + "," + locationFromString + "," + traffic;
 	}
+	public double getInfo() {
+		return this.traffic;
+	}
+
+	@Override
+	public String changed() {
+		// TODO Auto-generated method stub
+		return "Internet";
+	}
+
+	
+	
 	
 }

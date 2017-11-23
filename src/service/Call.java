@@ -28,28 +28,35 @@ public class Call extends Service implements Serializable {
 	
 	public Call(){ }
 	
-	public Call(Region locationFrom, String number, Region locationTo, double duration) {
-		super(locationFrom, number,duration);
-		this.locationFromString = locationFrom.toString();
-		this.locationTo=locationTo;
-		this.locationToString = locationTo.toString();
-		this.duration=(int)duration;
+	public Call(Region locationFrom, String number, Region locationTo, int duration) {
+		super(locationFrom, number, duration);
+		this.locationTo = locationTo;
+		this.locationToString = locationTo.getRegionName();
+		this.duration = duration;
 	}
 
 	@Override
-	public boolean applyPrice(double roamingTax) { 	
-		boolean international;
+	public void applyPrice(double roamingTax) { 	
 		double price;
-		if(locationFromString.equalsIgnoreCase(locationToString)){
-			price = roamingTax+locationFrom.getCallingPrice()*duration;
-			international = false;
+		if(locationFromString.equalsIgnoreCase(locationToString)&&this.international==false){
+			price = roamingTax+locationTo.getCallingPrice()*duration;
+			this.international = false;
 		}
 		else{
-			price = roamingTax+locationTo.getCallingPrice()/2+locationFrom.getCallingPrice();
-			international = true;
+			price = roamingTax+locationTo.getCallingPrice()/2+locationFrom.getCallingPrice()*duration;
+			this.international = true;
 		}
 		super.setCost(price);
-		return international;
+	}
+	@Override
+	public void applyCustomerPrice(int duration, double roamingTax) {
+		if(locationFromString.equalsIgnoreCase(locationToString)){
+			super.setCustomerCost( roamingTax + duration * this.getLocationTo().getCallingPrice());
+		}
+		else{
+			super.setCustomerCost( roamingTax +locationTo.getCallingPrice()/2 + duration * this.getLocationTo().getCallingPrice());
+		}
+			
 	}
 	
 	public int getDuration() {
@@ -72,8 +79,19 @@ public class Call extends Service implements Serializable {
 	}
 
 	@Override
+	public String toString() {
+		return locationFromString + "," + number + "," + cost + "," + locationToString + "," + duration;
+	}
+	
 	public double getInfo() {
 		return duration;
 	}
+
+	@Override
+	public String changed() {
+		return "Minutes";
+	}
+
+
 
 }

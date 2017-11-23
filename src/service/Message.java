@@ -11,8 +11,9 @@ import javax.persistence.Transient;
 import region.Region;
 
 @Entity
-@Table(name = "message")
+@Table(name = "tb_message")
 public class Message extends Service{
+
 	@Transient
 	private double quantity;
 	
@@ -22,35 +23,47 @@ public class Message extends Service{
 	@Column(name = "locationTo")
 	private String locationToString;
 	
-	@Column(name = "limit")
+	@Column(name = "limitMsg")
 	private int limit;
 	
 	@Column(name = "words")
 	private int nrOfWords;
 	
-	public Message(Region locationFrom, String number, Region locationTo, double nrOfWords) {
+	public Message(Region locationFrom, String number, Region locationTo, int nrOfWords) {
 		super(locationFrom, number,nrOfWords);
 		this.locationTo=locationTo;
 		this.nrOfWords=(int)nrOfWords;
-		this.locationToString = locationTo.toString();
-		this.quantity =  Math.ceil((float)nrOfWords/limit);
+		this.locationToString = locationTo.getClass().getSimpleName();
+		this.limit = 100;
+		this.quantity =  Math.ceil((float)nrOfWords/this.limit);
+		
 	}
 	
 	@Override
-	public boolean applyPrice(double roamingTax) {
+	public void applyPrice(double roamingTax) {
 		double price;
-		boolean international;
-		if(locationFromString.equalsIgnoreCase(locationToString)){
+		if(locationFromString.equalsIgnoreCase(locationToString)&&this.international==false){
 			price = roamingTax+locationFrom.getMessagePrice() * quantity;
-			international = false;
+			this.international = false;
 		}
 		else{
 			price = roamingTax+locationTo.getMessagePrice()/2+locationFrom.getMessagePrice() * quantity;
-			international = true;
+			this.international = true;
 		}
 		super.setCost(price) ;
-		return international;
 	}
+	
+	@Override
+	public void applyCustomerPrice(int duration, double roamingTax) {
+		if(locationFromString.equalsIgnoreCase(locationToString)){
+			super.setCustomerCost(roamingTax + this.getLocationFrom().getMessagePrice()*quantity);
+		}
+		else{
+			super.setCustomerCost(roamingTax +locationTo.getMessagePrice()/2+ this.getLocationFrom().getMessagePrice()*quantity);
+		}
+		
+	}
+
 	public Region getLocationTo() {
 		return locationTo;
 	}
@@ -76,8 +89,18 @@ public class Message extends Service{
 	}
 
 	@Override
+	public String toString() {
+		return locationFromString + "," + number + "," + cost + "," + locationToString + "," + nrOfWords;
+	}
 	public double getInfo() {
 		return quantity;
 	}
+
+	@Override
+	public String changed() {
+		// TODO Auto-generated method stub
+		return "Messages";
+	}
+
 
 }

@@ -1,19 +1,22 @@
 package bll;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import control.Control;
 import dao.AbstractDAO;
 import dao.RegionDAO;
 import exceptions.InsertException;
 import region.Region;
+import region.RegionFactory;
 
 public class RegionBLL {
 	
 	private AbstractDAO<Region> regionDAO;
+	private List<Region> regions;
 	
 	public RegionBLL(){
 		this.regionDAO = new RegionDAO();
+		regions = getRegions();
 	}
 	
 	public Integer add(Region region) throws InsertException{
@@ -34,8 +37,18 @@ public class RegionBLL {
 		System.out.println(selectedRegion.getInternetPrice());
 	}
 	
+	public List<Region> getRegions(){
+		List<Region> regions = new ArrayList<Region>();
+		regions = regionDAO.getAll();
+		for(Region region : regions){
+			region = RegionFactory.getRegion(region);
+			//regions.add(region);
+		}
+		
+		return regions;
+	}
+	
 	public Region search(String name){
-		List<Region> regions = regionDAO.getAll();
 		for(Region region : regions){
 			if(region.getRegionName().equals(name))
 				return region;

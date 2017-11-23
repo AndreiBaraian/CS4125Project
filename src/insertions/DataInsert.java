@@ -18,7 +18,6 @@ public class DataInsert {
 	private AccountBLL<EnterpriseAccount> enterpriseBLL;
 	private RegionBLL regionBLL;
 	
-	
 	public DataInsert(){
 		this.customerBLL = new CustomerBLL();
 		enterpriseBLL = new EnterpriseAccountBLL();
@@ -27,14 +26,16 @@ public class DataInsert {
 	
 	public void insertCustomersAndAccounts() throws InsertException{
 		Region romania = new Romania();
+		RegionBLL rb = new RegionBLL();
+		//rb.add(romania);
 		Customer customer1 = customerBLL.add("Andrei", "Baraian", 20, "Bihorului 14", "andrei@gmail.com");
 		enterpriseBLL.addAccount("Enterprise", romania, customer1, "0727455675", "12/11/2017");
 	}
 	
 	public void insertRegions() throws InsertException{
-		Region china = new China();
-		Region romania = new Romania();
-		Region ireland = new Ireland();
+		Region china = new China(10,8,8,6);
+		Region romania = new Romania(10,8,8,3);
+		Region ireland = new Ireland(10,8,8,5);
 		regionBLL.add(romania);
 		regionBLL.add(china);
 		regionBLL.add(ireland);

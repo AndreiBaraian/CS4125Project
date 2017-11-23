@@ -39,11 +39,5 @@ public class Promotion extends Account {
 		// TODO Auto-generated method stub	
 	}
 
-	@Override
-	public Report generateReport(double spentMinutes, double spentMessages,
-			double usedMobileData, double usedDifferentProviderMinutes,
-			double usedInternationalMinutes) {
-		// TODO Auto-generated method stub
-		return null;
-	}	
+		
 }

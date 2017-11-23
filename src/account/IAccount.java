@@ -23,7 +23,7 @@ public interface IAccount {
 	 * @post costUntilNow != null && costUntilNow >= 0
 	 * @post @result != null
 	 */
-	public Report generateReport(double spentMinutes, double spentMessages, double usedMobileData,double usedDifferentProviderMinutes,double usedInternationalMinutes);
+	public Report generateReport(int leftMinutes, int leftMessages,double leftMobileData, int leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow);
 	
 	/*
 	 * Compute discount for the account

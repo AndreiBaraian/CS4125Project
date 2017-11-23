@@ -35,7 +35,6 @@ public class SetPrices extends JFrame {
 	public SetPrices() {
 		
 		setTitle("Set Prices");
-		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 282, 280);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -65,6 +64,8 @@ public class SetPrices extends JFrame {
 		countryCB = new JComboBox<String>();
 		countryCB.setBounds(121, 27, 119, 20);
 		countryCB.addItem("Romania");
+		countryCB.addItem("Ireland");
+		countryCB.addItem("China");
 		contentPane.add(countryCB);
 		
 		
@@ -90,5 +91,38 @@ public class SetPrices extends JFrame {
 		contentPane.add(btnSet);
 		btnSet.addActionListener(new DoneSetting(previousTF,newTF,serviceTypeCB,countryCB));
 		
+		
 	}
+
+
+	public JTextField getPreviousTF() {
+		return previousTF;
+	}
+
+
+	public void setPreviousTF(String text) {
+		this.previousTF.setText(text);
+	}
+
+
+	public JComboBox<String> getServiceTypeCB() {
+		return serviceTypeCB;
+	}
+
+
+	public void setServiceTypeCB(JComboBox<String> serviceTypeCB) {
+		this.serviceTypeCB = serviceTypeCB;
+	}
+
+
+	public JComboBox<String> getCountryCB() {
+		return countryCB;
+	}
+
+
+	public void setCountryCB(JComboBox<String> countryCB) {
+		this.countryCB = countryCB;
+	}
+	
+	
 }

@@ -1,17 +1,26 @@
 package main;
 
-import promotion.FriendPromotion;
-import region.Romania;
+
+import account.Account;
 import account.EnterpriseAccount;
+import computeTransaction.ComputeTransaction;
+import computeTransaction.CreatedAccount;
+import computeTransaction.UpdateAccountContext;
 import control.Control;
 import customer.Customer;
 import exceptions.InsertException;
-import insertions.DataInsert;
 import view.Menu;
 
 public class Main {
 
 	public static void main(String[] args) throws InsertException {
+		
+		//DataInsert dt = new DataInsert();
+		//dt.insertCustomersAndAccounts();
+		//dt.insertRegions();
+		
+		//AccountBLL<?> accountBLL = new AccountBLL();
+		
 		
 		
 		/*
@@ -19,12 +28,30 @@ public class Main {
 		Menu window = new Menu();
 		window.getFrmMainMenu().setVisible(true);
 		*/
+
 		
-		/*
-		DataInsert dt = new DataInsert();
-		//dt.insertCustomersAndAccounts();
-		dt.insertRegions();
+		
+		/*ComputeTransaction ct = new ComputeTransaction();
+		ct.processServices();
 		*/
+		
+		
+		//// LUCIAN TESTING (don't remove until computeTransaction works) -> Auzi la el ce dume are
+		/*ComputeTransaction cT= new ComputeTransaction();
+		Customer customer = new Customer();
+		Account account = new EnterpriseAccount(0,new Romania(10,5),customer,"dada","fdfad");
+		Call call= new Call(new Romania(10,5),"dsads",new Romania(10,5),45);
+		UpdateAccountContext updateAccountContext = new UpdateAccountContext(new CreatedAccount(), account ,call, 0);
+		Account account2 = updateAccountContext.updateAccount();
+		System.out.println("Here"+account2.getBalance());*/
+	//
+		
+		
+///
+	
+		
+
+
 	}
 
 }

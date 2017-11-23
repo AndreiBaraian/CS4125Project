@@ -11,11 +11,17 @@ import dao.DBRecord;
 import region.Region;
 
 @MappedSuperclass
-public abstract class Service extends DBRecord {
+public abstract class Service extends DBRecord implements IService{
 	
 	@Transient
-	private double value;
+	protected int value;
 	
+	@Transient 
+	protected double customerCost;
+	
+	@Transient 
+	protected boolean international;
+
 	@Transient
 	protected Region locationFrom;
 	
@@ -33,13 +39,13 @@ public abstract class Service extends DBRecord {
 
 	public Service() {}
 	
-	
-	public Service(Region locationFrom, String number, double value){
-		this.locationFrom=locationFrom;
+	public Service(Region locationFrom, String number,int value){
+		this.locationFrom = locationFrom;
 		this.locationFromString = locationFrom.getRegionName();
-		this.value=value;
-		this.number=number;
+		this.number = number;
+		this.value = value;
 	}
+	public abstract String changed();
 	
 	public String getReferenceNumber() {
 		return referenceNumber;
@@ -52,7 +58,7 @@ public abstract class Service extends DBRecord {
 	public abstract void setReferenceNumber(String referenceNumber);
 
 
-	public abstract boolean applyPrice(double roamingTax);            ////////////////////// returns true if international service or false otherwise
+	public abstract void applyPrice(double roamingTax);            ////////////////////// returns true if international service or false otherwise
 	
 	public abstract double getInfo();
 	
@@ -81,20 +87,32 @@ public abstract class Service extends DBRecord {
 	public void setCost(double cost) {
 		this.cost = cost;
 	}
-
-
-	public double getValue() {
-		return value;
+	public boolean getInternational(){
+		return this.international;
+	}
+	public void setInternational(boolean international){
+		this.international = international;
+	}
+	public int getValue() {
+		return this.value;
 	}
 
-
-	public void setValue(double value) {
+	public void setValue(int value) {
 		this.value = value;
 	}
-	
+	public void setCustomerCost(double value){
+		this.customerCost = value;
+	}
+	public double getCustomerCost(){
+		return this.customerCost;
+	}
+
 	@Override
-	public String toString() {
-		return  id + ","  + locationFromString + "," + number + "," + cost+","+ value;
+	public abstract String toString();
+
+	public void applyCustomerPrice(double abs, double roamingTax) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

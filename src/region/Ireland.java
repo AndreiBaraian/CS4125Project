@@ -10,12 +10,16 @@ import javax.persistence.Entity;
 @DiscriminatorValue("IRE")
 public class Ireland extends Region {
 	
-	public Ireland() {}
+	public Ireland() {
+		this.setRegionName("Ireland");
+	}
 	
-	public Ireland(double callPrice, double percent) {
+	public Ireland(double callPrice, double internetPrice, double messagePrice, double percent) {
 		super();
-		this.regionName="Ireland";
+		this.setRegionName("Ireland");
 		this.setCallingPrice(callPrice);
+		this.setInternetPrice(internetPrice);
+		this.setMessagePrice(messagePrice);
 		this.computeRoamingTax(percent);
 	}
 	
@@ -37,7 +41,7 @@ public class Ireland extends Region {
 
 	@Override
 	public void setRegionName(String regionName) {
-		this.regionName = "Romania";
+		this.regionName = "Ireland";
 	}
 
 	@Override

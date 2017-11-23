@@ -17,6 +17,7 @@ public class ManageAccountsListener implements ActionListener{
 	private ManageAccounts manageAccounts;
 	private FamilyAccountBLL familyAccountBLL;
 	private EnterpriseAccountBLL enterpriseAccountBLL;
+	
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
 		

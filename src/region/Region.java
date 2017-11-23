@@ -28,8 +28,6 @@ public abstract class Region extends DBRecord{
 	
 	@Column(name = "internetPrice")
 	protected double internetPrice;
-	
-	
 
 	@Column(name = "roamingTax")
 	protected double roamingTax;
@@ -59,9 +57,11 @@ public abstract class Region extends DBRecord{
 	public String getRegionName() {
 		return regionName;
 	}
-
-	public abstract void setRegionName(String regionName);
 	
+	public void setRegionName(String regionName) {
+		this.regionName = regionName;
+	}
+
 	public double getMessagePrice() {
 		return messagePrice;
 	}

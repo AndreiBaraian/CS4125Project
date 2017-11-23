@@ -12,12 +12,16 @@ import javax.persistence.Entity;
 @DiscriminatorValue("RO")
 public class Romania extends Region {
 	
-	public Romania() {}
+	public Romania() {
+		this.setRegionName("Romania");
+	}
 	
-	public Romania(double callPrice, double percent) {
+	public Romania(double callPrice, double internetPrice, double messagePrice, double percent) {
 		super();
-		this.regionName="Romania";
+		this.setRegionName("Romania");
 		this.setCallingPrice(callPrice);
+		this.setInternetPrice(internetPrice);
+		this.setMessagePrice(messagePrice);
 		this.computeRoamingTax(percent);
 	}
 	

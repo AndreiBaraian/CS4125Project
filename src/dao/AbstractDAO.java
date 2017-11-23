@@ -23,8 +23,7 @@ import exceptions.InsertException;
 public abstract class AbstractDAO<T extends DBRecord> {
 	
 	@SuppressWarnings("unchecked")
-	protected final Class<T> parameterType = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass())
-			.getActualTypeArguments()[0];
+	protected final Class<T> parameterType = (Class<T>) ((ParameterizedType) getClass().getGenericSuperclass()).getActualTypeArguments()[0];
 	
 	protected final SessionFactory sessionFactory = SessionFactoryUtil.getInstance();
 	

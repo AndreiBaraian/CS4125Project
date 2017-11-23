@@ -8,7 +8,6 @@ package account;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
-
 import customer.Customer;
 import promotion.PDFcreater;
 import region.Region;
@@ -27,7 +26,7 @@ public class EnterpriseAccount extends Account {
 	public EnterpriseAccount() {}
 
 	public EnterpriseAccount(double balance, Region homeregion,Customer customer, String endDate, String number) {
-		super(balance, homeregion,customer);
+		super( balance, homeregion,customer);
 		this.endDate = endDate;
 		this.number = number;
 		this.setCustomer(customer);
@@ -75,11 +74,8 @@ public class EnterpriseAccount extends Account {
 	@Override
 	public String toString() {
 		return "EnterpriseAccount [endDate=" + endDate + ", number=" + number + ", customerSystemReference="
-				+ customerSystemReference + ", id=" + id + ", uniqueIdentifierFieldName=" + uniqueIdentifierFieldName
+				+ customerSystemReference + ",balance=" + balance + ", id=" + id + ", uniqueIdentifierFieldName=" + uniqueIdentifierFieldName
 				+ "]";
 	}
-	
-
-	
 	
 }

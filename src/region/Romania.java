@@ -16,10 +16,12 @@ public class Romania extends Region {
 		this.setRegionName("Romania");
 	}
 	
-	public Romania(double callPrice, double percent) {
+	public Romania(double callPrice, double internetPrice, double messagePrice, double percent) {
 		super();
 		this.setRegionName("Romania");
 		this.setCallingPrice(callPrice);
+		this.setInternetPrice(internetPrice);
+		this.setMessagePrice(messagePrice);
 		this.computeRoamingTax(percent);
 	}
 	

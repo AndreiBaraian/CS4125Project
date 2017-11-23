@@ -13,10 +13,12 @@ public class China extends Region {
 		this.setRegionName("China");
 	}
 	
-	public China(double callPrice, double percent) {
+	public China(double callPrice, double internetPrice, double messagePrice, double percent) {
 		super();
 		this.setRegionName("China");
 		this.setCallingPrice(callPrice);
+		this.setInternetPrice(internetPrice);
+		this.setMessagePrice(messagePrice);
 		this.computeRoamingTax(percent);
 	}
 	

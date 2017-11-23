@@ -33,9 +33,9 @@ public class DataInsert {
 	}
 	
 	public void insertRegions() throws InsertException{
-		Region china = new China(5,6);
-		Region romania = new Romania(2,3);
-		Region ireland = new Ireland(4,5);
+		Region china = new China(10,8,8,6);
+		Region romania = new Romania(10,8,8,3);
+		Region ireland = new Ireland(10,8,8,5);
 		regionBLL.add(romania);
 		regionBLL.add(china);
 		regionBLL.add(ireland);

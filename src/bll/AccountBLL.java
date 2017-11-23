@@ -31,7 +31,7 @@ public class AccountBLL<T extends Account> {
 	@SuppressWarnings("unchecked")
 	public Account addAccount(String type, Region region, Customer customer,String number,String endDate) throws InsertException{
 		Integer id = null;
-		Account account = AccountFactory.getAccount(type, 0, region, customer, number, endDate);
+		Account account = AccountFactory.getAccount(type, 0.0, region, customer, number, endDate);
 		id = abstractDAO.add((T) account);
 		account.setId(id);
 		return account;
@@ -56,10 +56,16 @@ public class AccountBLL<T extends Account> {
 	public Account getAccount(String id){   //this is the function for using number to get account by Conrad
 		List<?> listAccounts = null;
 		Account account = null;
-		accountDAO = new FamilyAccountDAO();
+		accountDAO = new EnterpriseAccountDAO();
 		listAccounts = accountDAO.getByField("id", id);
-		account = (FamilyAccount) listAccounts.get(0);
-		
+		if(listAccounts == null){
+			accountDAO = new FamilyAccountDAO();
+			listAccounts = accountDAO.getByField("id", id);
+			account = (FamilyAccount) listAccounts.get(0);
+		}
+		else{
+			account = (EnterpriseAccount) listAccounts.get(0);
+		}
 		return account;
 	}
 	

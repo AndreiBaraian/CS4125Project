@@ -34,14 +34,15 @@ public class Message extends Service{
 		this.locationTo=locationTo;
 		this.nrOfWords=(int)nrOfWords;
 		this.locationToString = locationTo.getClass().getSimpleName();
-		this.quantity =  Math.ceil((float)nrOfWords/limit);
-		this.limit = 0;
+		this.limit = 100;
+		this.quantity =  Math.ceil((float)nrOfWords/this.limit);
+		
 	}
 	
 	@Override
 	public void applyPrice(double roamingTax) {
 		double price;
-		if(locationFromString.equalsIgnoreCase(locationToString)){
+		if(locationFromString.equalsIgnoreCase(locationToString)&&this.international==false){
 			price = roamingTax+locationFrom.getMessagePrice() * quantity;
 			this.international = false;
 		}
@@ -51,6 +52,18 @@ public class Message extends Service{
 		}
 		super.setCost(price) ;
 	}
+	
+	@Override
+	public void applyCustomerPrice(int duration, double roamingTax) {
+		if(locationFromString.equalsIgnoreCase(locationToString)){
+			super.setCustomerCost(roamingTax + this.getLocationFrom().getMessagePrice()*quantity);
+		}
+		else{
+			super.setCustomerCost(roamingTax +locationTo.getMessagePrice()/2+ this.getLocationFrom().getMessagePrice()*quantity);
+		}
+		
+	}
+
 	public Region getLocationTo() {
 		return locationTo;
 	}
@@ -89,10 +102,5 @@ public class Message extends Service{
 		return "Messages";
 	}
 
-	@Override
-	public void applyCustomerPrice(int duration, double roamingTax) {
-		this.customerCost = roamingTax + (quantity * this.getLocationTo().getMessagePrice());		
-
-	}
 
 }

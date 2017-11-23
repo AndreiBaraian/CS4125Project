@@ -14,10 +14,12 @@ public class Ireland extends Region {
 		this.setRegionName("Ireland");
 	}
 	
-	public Ireland(double callPrice, double percent) {
+	public Ireland(double callPrice, double internetPrice, double messagePrice, double percent) {
 		super();
 		this.setRegionName("Ireland");
 		this.setCallingPrice(callPrice);
+		this.setInternetPrice(internetPrice);
+		this.setMessagePrice(messagePrice);
 		this.computeRoamingTax(percent);
 	}
 	

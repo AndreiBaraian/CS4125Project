@@ -38,15 +38,25 @@ public class Call extends Service implements Serializable {
 	@Override
 	public void applyPrice(double roamingTax) { 	
 		double price;
-		if(locationFromString.equalsIgnoreCase(locationToString)){
-			price = roamingTax+locationFrom.getCallingPrice()*duration;
+		if(locationFromString.equalsIgnoreCase(locationToString)&&this.international==false){
+			price = roamingTax+locationTo.getCallingPrice()*duration;
 			this.international = false;
 		}
 		else{
-			price = roamingTax+locationTo.getCallingPrice()/2+locationFrom.getCallingPrice();
+			price = roamingTax+locationTo.getCallingPrice()/2+locationFrom.getCallingPrice()*duration;
 			this.international = true;
 		}
 		super.setCost(price);
+	}
+	@Override
+	public void applyCustomerPrice(int duration, double roamingTax) {
+		if(locationFromString.equalsIgnoreCase(locationToString)){
+			super.setCustomerCost( roamingTax + duration * this.getLocationTo().getCallingPrice());
+		}
+		else{
+			super.setCustomerCost( roamingTax +locationTo.getCallingPrice()/2 + duration * this.getLocationTo().getCallingPrice());
+		}
+			
 	}
 	
 	public int getDuration() {
@@ -82,9 +92,6 @@ public class Call extends Service implements Serializable {
 		return "Minutes";
 	}
 
-	@Override
-	public void applyCustomerPrice(int duration, double roamingTax) {
-		this.customerCost = roamingTax + (duration * this.getLocationTo().getCallingPrice());		
-	}
+
 
 }

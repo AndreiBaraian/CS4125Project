@@ -11,7 +11,7 @@ public class UpdateInternationalMinutesState extends AccountState{
 		int internationalMinutes = accountContext.getAccount().getMinutes() - (int)accountContext.getService().getInfo();
 		if(accountContext.getService().getInternational() == true){
 			if(internationalMinutes < 0){
-				accountContext.getAccount().setMinutes(0);
+				accountContext.getAccount().setInternationalMinutes(0);;
 				accountContext.getService().applyCustomerPrice(Math.abs(internationalMinutes), accountContext.getRoamingTax());
 			}
 			else{

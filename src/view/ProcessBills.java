@@ -119,12 +119,16 @@ public class ProcessBills extends JFrame {
 		countryFromCB.setBounds(116, 156, 86, 17);
 		countryFromCB.addItem("Any");
 		countryFromCB.addItem("Romania");
+		countryFromCB.addItem("Ireland");
+		countryFromCB.addItem("China");
 		contentPane.add(countryFromCB);
 		
 		countryToCB = new JComboBox<String>();
 		countryToCB.setBounds(116, 181, 86, 20);
 		countryToCB.addItem("Any");
 		countryToCB.addItem("Romania");
+		countryToCB.addItem("Ireland");
+		countryToCB.addItem("China");
 		contentPane.add(countryToCB);
 		
 		

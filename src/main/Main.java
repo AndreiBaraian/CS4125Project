@@ -1,10 +1,17 @@
 package main;
 
 
+import account.Account;
+import account.EnterpriseAccount;
 import computeTransaction.ComputeTransaction;
+import computeTransaction.CreatedAccount;
+import computeTransaction.UpdateAccountContext;
 import control.Control;
+import customer.Customer;
 import exceptions.InsertException;
 import insertions.DataInsert;
+import region.Romania;
+import service.Call;
 import view.Menu;
 
 public class Main {
@@ -34,9 +41,9 @@ public class Main {
 		Call call= new Call(new Romania(10,5),"dsads",new Romania(10,5),45);
 		UpdateAccountContext updateAccountContext = new UpdateAccountContext(new CreatedAccount(), account ,call, 0);
 		Account account2 = updateAccountContext.updateAccount();
-		System.out.println("Here"+account2.getBalance());
-	\
-		*/
+		System.out.println("Here"+account2.getBalance());*/
+	//
+		
 		
 ///
 	

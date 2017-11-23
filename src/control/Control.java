@@ -32,7 +32,6 @@ public class Control {
 	BufferedWriter writer;
 	
 	private Control() {
-		
 		types = new ArrayList<String>(Arrays.asList("Message", "Call", "Internet"));
 		registeredNumbers =new ArrayList<String>();
 		services= new ArrayList<Service>();

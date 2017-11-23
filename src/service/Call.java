@@ -54,7 +54,7 @@ public class Call extends Service implements Serializable {
 			super.setCustomerCost( roamingTax + duration * this.getLocationTo().getCallingPrice());
 		}
 		else{
-			super.setCustomerCost( roamingTax +locationTo.getCallingPrice()/2 + duration * this.getLocationTo().getCallingPrice());
+			super.setCustomerCost( roamingTax +locationTo.getCallingPrice()/2 + duration *locationFrom.getCallingPrice());
 		}
 			
 	}

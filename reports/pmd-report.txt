@@ -1,0 +1,2135 @@
+src/account/Account.java:18:	Abstract classes should be named AbstractXXX
+src/account/Account.java:21:	Avoid excessively long variable names like differentProviderMinutes
+src/account/Account.java:21:	fieldCommentRequirement Required
+src/account/Account.java:24:	Avoid excessively long variable names like internationalMinutes
+src/account/Account.java:24:	fieldCommentRequirement Required
+src/account/Account.java:27:	fieldCommentRequirement Required
+src/account/Account.java:30:	fieldCommentRequirement Required
+src/account/Account.java:33:	fieldCommentRequirement Required
+src/account/Account.java:36:	fieldCommentRequirement Required
+src/account/Account.java:39:	fieldCommentRequirement Required
+src/account/Account.java:42:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/account/Account.java:42:	fieldCommentRequirement Required
+src/account/Account.java:45:	fieldCommentRequirement Required
+src/account/Account.java:48:	fieldCommentRequirement Required
+src/account/Account.java:51:	fieldCommentRequirement Required
+src/account/Account.java:54:	Avoid excessively long variable names like customerSystemReference
+src/account/Account.java:54:	fieldCommentRequirement Required
+src/account/Account.java:56:	Document empty constructor
+src/account/Account.java:56:	It is a good practice to call super() in a constructor
+src/account/Account.java:56:	publicMethodCommentRequirement Required
+src/account/Account.java:58:	It is a good practice to call super() in a constructor
+src/account/Account.java:58:	Parameter 'balance' is not assigned and could be declared final
+src/account/Account.java:58:	Parameter 'customer' is not assigned and could be declared final
+src/account/Account.java:58:	Parameter 'homeRegion' is not assigned and could be declared final
+src/account/Account.java:58:	publicMethodCommentRequirement Required
+src/account/Account.java:73:	Comment is too large: Too many lines
+src/account/Account.java:82:	Avoid excessively long variable names like leftDifferentProviderMinutes
+src/account/Account.java:82:	Avoid excessively long variable names like leftInternationalMinutes
+src/account/Account.java:82:	publicMethodCommentRequirement Required
+src/account/Account.java:84:	publicMethodCommentRequirement Required
+src/account/Account.java:87:	publicMethodCommentRequirement Required
+src/account/Account.java:91:	publicMethodCommentRequirement Required
+src/account/Account.java:95:	Parameter 'balance' is not assigned and could be declared final
+src/account/Account.java:95:	publicMethodCommentRequirement Required
+src/account/Account.java:99:	publicMethodCommentRequirement Required
+src/account/Account.java:103:	Parameter 'homeRegion' is not assigned and could be declared final
+src/account/Account.java:103:	publicMethodCommentRequirement Required
+src/account/Account.java:107:	publicMethodCommentRequirement Required
+src/account/Account.java:111:	Parameter 'homeRegionString' is not assigned and could be declared final
+src/account/Account.java:111:	publicMethodCommentRequirement Required
+src/account/Account.java:115:	publicMethodCommentRequirement Required
+src/account/Account.java:119:	Parameter 'customer' is not assigned and could be declared final
+src/account/Account.java:119:	publicMethodCommentRequirement Required
+src/account/Account.java:123:	publicMethodCommentRequirement Required
+src/account/Account.java:127:	Parameter 'customerName' is not assigned and could be declared final
+src/account/Account.java:127:	publicMethodCommentRequirement Required
+src/account/Account.java:131:	publicMethodCommentRequirement Required
+src/account/Account.java:135:	Avoid excessively long variable names like customerSystemReference
+src/account/Account.java:135:	Parameter 'customerSystemReference' is not assigned and could be declared final
+src/account/Account.java:135:	publicMethodCommentRequirement Required
+src/account/Account.java:139:	publicMethodCommentRequirement Required
+src/account/Account.java:143:	Parameter 'messages' is not assigned and could be declared final
+src/account/Account.java:143:	publicMethodCommentRequirement Required
+src/account/Account.java:147:	publicMethodCommentRequirement Required
+src/account/Account.java:151:	Parameter 'duration' is not assigned and could be declared final
+src/account/Account.java:151:	publicMethodCommentRequirement Required
+src/account/Account.java:155:	publicMethodCommentRequirement Required
+src/account/Account.java:159:	Parameter 'minutes' is not assigned and could be declared final
+src/account/Account.java:159:	publicMethodCommentRequirement Required
+src/account/Account.java:163:	publicMethodCommentRequirement Required
+src/account/Account.java:167:	Avoid excessively long variable names like differentProviderMinutes
+src/account/Account.java:167:	Parameter 'differentProviderMinutes' is not assigned and could be declared final
+src/account/Account.java:167:	publicMethodCommentRequirement Required
+src/account/Account.java:171:	publicMethodCommentRequirement Required
+src/account/Account.java:175:	Avoid excessively long variable names like internationalMinutes
+src/account/Account.java:175:	Parameter 'internationalMinutes' is not assigned and could be declared final
+src/account/Account.java:175:	publicMethodCommentRequirement Required
+src/account/Account.java:179:	publicMethodCommentRequirement Required
+src/account/Account.java:183:	Parameter 'mobileData' is not assigned and could be declared final
+src/account/Account.java:183:	publicMethodCommentRequirement Required
+src/account/AccountFactory.java:9:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/account/AccountFactory.java:9:	headerCommentRequirement Required
+src/account/AccountFactory.java:11:	Parameter 'balance' is not assigned and could be declared final
+src/account/AccountFactory.java:11:	Parameter 'customer' is not assigned and could be declared final
+src/account/AccountFactory.java:11:	Parameter 'endDate' is not assigned and could be declared final
+src/account/AccountFactory.java:11:	Parameter 'homeRegion' is not assigned and could be declared final
+src/account/AccountFactory.java:11:	Parameter 'number' is not assigned and could be declared final
+src/account/AccountFactory.java:11:	Parameter 'type' is not assigned and could be declared final
+src/account/AccountFactory.java:11:	publicMethodCommentRequirement Required
+src/account/AccountFactory.java:13:	Local variable 'numbers' could be declared final
+src/account/AccountFactory.java:15:	A method should have only one exit point, and that should be the last statement in the method
+src/account/AccountFactory.java:18:	A method should have only one exit point, and that should be the last statement in the method
+src/account/AccountFactory.java:21:	Avoid using if...else statements without curly braces
+src/account/EnterpriseAccount.java:21:	fieldCommentRequirement Required
+src/account/EnterpriseAccount.java:24:	fieldCommentRequirement Required
+src/account/EnterpriseAccount.java:26:	Document empty constructor
+src/account/EnterpriseAccount.java:26:	It is a good practice to call super() in a constructor
+src/account/EnterpriseAccount.java:26:	publicMethodCommentRequirement Required
+src/account/EnterpriseAccount.java:28:	Parameter 'balance' is not assigned and could be declared final
+src/account/EnterpriseAccount.java:28:	Parameter 'customer' is not assigned and could be declared final
+src/account/EnterpriseAccount.java:28:	Parameter 'endDate' is not assigned and could be declared final
+src/account/EnterpriseAccount.java:28:	Parameter 'homeregion' is not assigned and could be declared final
+src/account/EnterpriseAccount.java:28:	Parameter 'number' is not assigned and could be declared final
+src/account/EnterpriseAccount.java:28:	publicMethodCommentRequirement Required
+src/account/EnterpriseAccount.java:36:	publicMethodCommentRequirement Required
+src/account/EnterpriseAccount.java:42:	Avoid excessively long variable names like leftDifferentProviderMinutes
+src/account/EnterpriseAccount.java:42:	Avoid excessively long variable names like leftInternationalMinutes
+src/account/EnterpriseAccount.java:42:	Parameter 'costUntilNow' is not assigned and could be declared final
+src/account/EnterpriseAccount.java:42:	Parameter 'leftDifferentProviderMinutes' is not assigned and could be declared final
+src/account/EnterpriseAccount.java:42:	Parameter 'leftInternationalMinutes' is not assigned and could be declared final
+src/account/EnterpriseAccount.java:42:	Parameter 'leftMessages' is not assigned and could be declared final
+src/account/EnterpriseAccount.java:42:	Parameter 'leftMinutes' is not assigned and could be declared final
+src/account/EnterpriseAccount.java:42:	Parameter 'leftMobileData' is not assigned and could be declared final
+src/account/EnterpriseAccount.java:42:	publicMethodCommentRequirement Required
+src/account/EnterpriseAccount.java:43:	Local variable 'report' could be declared final
+src/account/EnterpriseAccount.java:46:	Local variable 'pdf' could be declared final
+src/account/EnterpriseAccount.java:51:	Document empty method
+src/account/EnterpriseAccount.java:51:	Parameter 'date' is not assigned and could be declared final
+src/account/EnterpriseAccount.java:51:	publicMethodCommentRequirement Required
+src/account/EnterpriseAccount.java:53:	publicMethodCommentRequirement Required
+src/account/EnterpriseAccount.java:57:	Parameter 'endDate' is not assigned and could be declared final
+src/account/EnterpriseAccount.java:57:	publicMethodCommentRequirement Required
+src/account/EnterpriseAccount.java:61:	publicMethodCommentRequirement Required
+src/account/EnterpriseAccount.java:65:	Parameter 'number' is not assigned and could be declared final
+src/account/EnterpriseAccount.java:65:	publicMethodCommentRequirement Required
+src/account/EnterpriseAccount.java:69:	publicMethodCommentRequirement Required
+src/account/EnterpriseAccount.java:75:	publicMethodCommentRequirement Required
+src/account/FamilyAccount.java:15:	Avoid unused imports such as 'computeTransaction.CreatedAccount'
+src/account/FamilyAccount.java:26:	fieldCommentRequirement Required
+src/account/FamilyAccount.java:29:	fieldCommentRequirement Required
+src/account/FamilyAccount.java:31:	Document empty constructor
+src/account/FamilyAccount.java:31:	It is a good practice to call super() in a constructor
+src/account/FamilyAccount.java:31:	publicMethodCommentRequirement Required
+src/account/FamilyAccount.java:33:	Parameter 'balance' is not assigned and could be declared final
+src/account/FamilyAccount.java:33:	Parameter 'customer' is not assigned and could be declared final
+src/account/FamilyAccount.java:33:	Parameter 'homeregion' is not assigned and could be declared final
+src/account/FamilyAccount.java:33:	Parameter 'numbers' is not assigned and could be declared final
+src/account/FamilyAccount.java:33:	publicMethodCommentRequirement Required
+src/account/FamilyAccount.java:41:	Avoid excessively long variable names like leftDifferentProviderMinutes
+src/account/FamilyAccount.java:41:	Avoid excessively long variable names like leftInternationalMinutes
+src/account/FamilyAccount.java:41:	Avoid reassigning parameters such as 'leftDifferentProviderMinutes'
+src/account/FamilyAccount.java:41:	Avoid reassigning parameters such as 'leftInternationalMinutes'
+src/account/FamilyAccount.java:41:	Avoid reassigning parameters such as 'leftMessages'
+src/account/FamilyAccount.java:41:	Avoid reassigning parameters such as 'leftMinutes'
+src/account/FamilyAccount.java:41:	Avoid reassigning parameters such as 'leftMobileData'
+src/account/FamilyAccount.java:41:	Parameter 'costUntilNow' is not assigned and could be declared final
+src/account/FamilyAccount.java:41:	publicMethodCommentRequirement Required
+src/account/FamilyAccount.java:47:	Comment is too large: Line too long
+src/account/FamilyAccount.java:48:	Local variable 'report' could be declared final
+src/account/FamilyAccount.java:50:	Local variable 'pdc' could be declared final
+src/account/FamilyAccount.java:56:	publicMethodCommentRequirement Required
+src/account/FamilyAccount.java:61:	publicMethodCommentRequirement Required
+src/account/FamilyAccount.java:65:	Parameter 'numbers' is not assigned and could be declared final
+src/account/FamilyAccount.java:65:	publicMethodCommentRequirement Required
+src/account/FamilyAccount.java:69:	publicMethodCommentRequirement Required
+src/account/FamilyAccount.java:73:	Parameter 'numbersString' is not assigned and could be declared final
+src/account/FamilyAccount.java:73:	publicMethodCommentRequirement Required
+src/account/FamilyAccount.java:77:	publicMethodCommentRequirement Required
+src/account/FamilyAccount.java:81:	Parameter 'numbers' is not assigned and could be declared final
+src/account/FamilyAccount.java:82:	Found 'DD'-anomaly for variable 'result' (lines '82'-'84').
+src/account/FamilyAccount.java:83:	Avoid using for statements without curly braces
+src/account/FamilyAccount.java:84:	Prefer StringBuffer over += for concatenating strings
+src/account/FamilyAccount.java:89:	publicMethodCommentRequirement Required
+src/account/IAccount.java:9:	headerCommentRequirement Required
+src/account/IAccount.java:11:	Comment is too large: Too many lines
+src/account/IAccount.java:26:	Avoid excessively long variable names like usedDifferentProviderMinutes
+src/account/IAccount.java:26:	Avoid excessively long variable names like usedInternationalMinutes
+src/account/IAccount.java:26:	Avoid modifiers which are implied by the context
+src/account/IAccount.java:26:	publicMethodCommentRequirement Required
+src/account/IAccount.java:33:	Avoid modifiers which are implied by the context
+src/account/IAccount.java:33:	publicMethodCommentRequirement Required
+src/account/Number.java:7:	headerCommentRequirement Required
+src/account/Number.java:9:	fieldCommentRequirement Required
+src/account/Number.java:11:	Parameter 'numberValue' is not assigned and could be declared final
+src/account/Number.java:11:	publicMethodCommentRequirement Required
+src/account/Number.java:16:	publicMethodCommentRequirement Required
+src/account/Number.java:20:	Parameter 'numberValue' is not assigned and could be declared final
+src/account/Number.java:20:	publicMethodCommentRequirement Required
+src/bll/AccountBLL.java:19:	headerCommentRequirement Required
+src/bll/AccountBLL.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/bll/AccountBLL.java:21:	fieldCommentRequirement Required
+src/bll/AccountBLL.java:22:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/bll/AccountBLL.java:22:	fieldCommentRequirement Required
+src/bll/AccountBLL.java:24:	Document empty constructor
+src/bll/AccountBLL.java:24:	publicMethodCommentRequirement Required
+src/bll/AccountBLL.java:26:	Parameter 'abstractDAO' is not assigned and could be declared final
+src/bll/AccountBLL.java:26:	publicMethodCommentRequirement Required
+src/bll/AccountBLL.java:32:	Parameter 'customer' is not assigned and could be declared final
+src/bll/AccountBLL.java:32:	Parameter 'endDate' is not assigned and could be declared final
+src/bll/AccountBLL.java:32:	Parameter 'number' is not assigned and could be declared final
+src/bll/AccountBLL.java:32:	Parameter 'region' is not assigned and could be declared final
+src/bll/AccountBLL.java:32:	Parameter 'type' is not assigned and could be declared final
+src/bll/AccountBLL.java:32:	publicMethodCommentRequirement Required
+src/bll/AccountBLL.java:33:	Avoid variables with short names like id
+src/bll/AccountBLL.java:33:	Found 'DD'-anomaly for variable 'id' (lines '33'-'35').
+src/bll/AccountBLL.java:34:	Local variable 'account' could be declared final
+src/bll/AccountBLL.java:36:	Potential violation of Law of Demeter (object not created locally)
+src/bll/AccountBLL.java:40:	Parameter 'number' is not assigned and could be declared final
+src/bll/AccountBLL.java:40:	publicMethodCommentRequirement Required
+src/bll/AccountBLL.java:41:	Found 'DD'-anomaly for variable 'listAccounts' (lines '41'-'44').
+src/bll/AccountBLL.java:42:	Found 'DD'-anomaly for variable 'account' (lines '42'-'48').
+src/bll/AccountBLL.java:42:	Found 'DD'-anomaly for variable 'account' (lines '42'-'51').
+src/bll/AccountBLL.java:48:	Potential violation of Law of Demeter (object not created locally)
+src/bll/AccountBLL.java:51:	Potential violation of Law of Demeter (object not created locally)
+src/bll/AccountBLL.java:56:	Avoid variables with short names like id
+src/bll/AccountBLL.java:56:	Parameter 'id' is not assigned and could be declared final
+src/bll/AccountBLL.java:56:	publicMethodCommentRequirement Required
+src/bll/AccountBLL.java:57:	Found 'DD'-anomaly for variable 'listAccounts' (lines '57'-'60').
+src/bll/AccountBLL.java:58:	Found 'DD'-anomaly for variable 'account' (lines '58'-'64').
+src/bll/AccountBLL.java:58:	Found 'DD'-anomaly for variable 'account' (lines '58'-'67').
+src/bll/AccountBLL.java:64:	Potential violation of Law of Demeter (object not created locally)
+src/bll/AccountBLL.java:67:	Potential violation of Law of Demeter (object not created locally)
+src/bll/AccountBLL.java:73:	Parameter 'newAccount' is not assigned and could be declared final
+src/bll/AccountBLL.java:73:	publicMethodCommentRequirement Required
+src/bll/AccountBLL.java:74:	Avoid using Literals in Conditional Statements
+src/bll/AccountBLL.java:74:	Potential violation of Law of Demeter (method chain calls)
+src/bll/AccountBLL.java:74:	Use equals() to compare strings instead of '==' or '!='
+src/bll/AccountBLL.java:78:	Avoid using if...else statements without curly braces
+src/bll/AccountBLL.java:83:	Parameter 'accountId' is not assigned and could be declared final
+src/bll/AccountBLL.java:83:	Parameter 'promotionType' is not assigned and could be declared final
+src/bll/AccountBLL.java:83:	publicMethodCommentRequirement Required
+src/bll/AccountBLL.java:84:	Avoid excessively long variable names like recievedAttributes
+src/bll/AccountBLL.java:84:	Local variable 'recievedAttributes' could be declared final
+src/bll/AccountBLL.java:85:	Local variable 'retrievedAccount' could be declared final
+src/bll/AccountBLL.java:85:	Potential violation of Law of Demeter (method chain calls)
+src/bll/AccountBLL.java:86:	Local variable 'promotedAccount' could be declared final
+src/bll/AccountBLL.java:87:	System.out.println is used
+src/bll/AccountBLL.java:93:	publicMethodCommentRequirement Required
+src/bll/AccountBLL.java:94:	Found 'DD'-anomaly for variable 'accounts' (lines '94'-'96').
+src/bll/AccountBLL.java:99:	Parameter 'accountId' is not assigned and could be declared final
+src/bll/AccountBLL.java:99:	publicMethodCommentRequirement Required
+src/bll/AccountBLL.java:100:	Comment is too large: Line too long
+src/bll/AccountBLL.java:102:	Local variable 'account' could be declared final
+src/bll/AccountBLL.java:102:	Potential violation of Law of Demeter (method chain calls)
+src/bll/AccountBLL.java:103:	Potential violation of Law of Demeter (object not created locally)
+src/bll/AccountBLL.java:103:	Potential violation of Law of Demeter (object not created locally)
+src/bll/AccountBLL.java:103:	Potential violation of Law of Demeter (object not created locally)
+src/bll/AccountBLL.java:103:	Potential violation of Law of Demeter (object not created locally)
+src/bll/AccountBLL.java:103:	Potential violation of Law of Demeter (object not created locally)
+src/bll/AccountBLL.java:103:	Potential violation of Law of Demeter (object not created locally)
+src/bll/AccountBLL.java:103:	Potential violation of Law of Demeter (object not created locally)
+src/bll/CallBLL.java:6:	headerCommentRequirement Required
+src/bll/CallBLL.java:8:	publicMethodCommentRequirement Required
+src/bll/CustomerBLL.java:19:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/bll/CustomerBLL.java:19:	Private field 'customerDAO' could be made final; it is only initialized in the declaration or constructor.
+src/bll/CustomerBLL.java:19:	fieldCommentRequirement Required
+src/bll/CustomerBLL.java:21:	publicMethodCommentRequirement Required
+src/bll/CustomerBLL.java:25:	Parameter 'address' is not assigned and could be declared final
+src/bll/CustomerBLL.java:25:	Parameter 'age' is not assigned and could be declared final
+src/bll/CustomerBLL.java:25:	Parameter 'email' is not assigned and could be declared final
+src/bll/CustomerBLL.java:25:	Parameter 'firstName' is not assigned and could be declared final
+src/bll/CustomerBLL.java:25:	Parameter 'lastName' is not assigned and could be declared final
+src/bll/CustomerBLL.java:25:	Rather than using a lot of String arguments, consider using a container object for those values.
+src/bll/CustomerBLL.java:25:	publicMethodCommentRequirement Required
+src/bll/CustomerBLL.java:26:	Local variable 'customer' could be declared final
+src/bll/CustomerBLL.java:28:	System.out.println is used
+src/bll/CustomerBLL.java:34:	Parameter 'firstName' is not assigned and could be declared final
+src/bll/CustomerBLL.java:34:	Parameter 'lastName' is not assigned and could be declared final
+src/bll/CustomerBLL.java:35:	Local variable 'allCustomers' could be declared final
+src/bll/CustomerBLL.java:36:	Local variable 'newSysReference' could be declared final
+src/bll/CustomerBLL.java:37:	StringBuffer (or StringBuilder).append is called 2 consecutive times with literal Strings. Use a single append with a single combined String.
+src/bll/CustomerBLL.java:37:	StringBuffer (or StringBuilder).append is called consecutively without reusing the target variable.
+src/bll/CustomerBLL.java:38:	Avoid appending characters as strings in StringBuffer.append.
+src/bll/CustomerBLL.java:38:	StringBuffer (or StringBuilder).append is called consecutively without reusing the target variable.
+src/bll/CustomerBLL.java:39:	StringBuffer (or StringBuilder).append is called consecutively without reusing the target variable.
+src/bll/CustomerBLL.java:41:	Local variable 'formatter' could be declared final
+src/bll/CustomerBLL.java:42:	Avoid appending characters as strings in StringBuffer.append.
+src/bll/CustomerBLL.java:42:	StringBuffer (or StringBuilder).append is called consecutively without reusing the target variable.
+src/bll/CustomerBLL.java:43:	Potential violation of Law of Demeter (method chain calls)
+src/bll/CustomerBLL.java:43:	StringBuffer (or StringBuilder).append is called consecutively without reusing the target variable.
+src/bll/CustomerBLL.java:44:	Avoid appending characters as strings in StringBuffer.append.
+src/bll/CustomerBLL.java:45:	Potential violation of Law of Demeter (object not created locally)
+src/bll/CustomerBLL.java:45:	Substitute calls to size() == 0 (or size() != 0, size() > 0, size() < 1) with calls to isEmpty()
+src/bll/CustomerBLL.java:46:	Avoid using if...else statements without curly braces
+src/bll/CustomerBLL.java:48:	Avoid excessively long variable names like sysReferenceComparator
+src/bll/CustomerBLL.java:48:	Found 'DU'-anomaly for variable 'sysReferenceComparator' (lines '48'-'63').
+src/bll/CustomerBLL.java:48:	Found 'DU'-anomaly for variable 'sysReferenceComparator' (lines '48'-'63').
+src/bll/CustomerBLL.java:48:	Local variable 'sysReferenceComparator' could be declared final
+src/bll/CustomerBLL.java:50:	Parameter 'ref1' is not assigned and could be declared final
+src/bll/CustomerBLL.java:50:	Parameter 'ref2' is not assigned and could be declared final
+src/bll/CustomerBLL.java:50:	publicMethodCommentRequirement Required
+src/bll/CustomerBLL.java:53:	Potential violation of Law of Demeter (object not created locally)
+src/bll/CustomerBLL.java:56:	Avoid excessively long variable names like currentSysReference
+src/bll/CustomerBLL.java:56:	Avoid variables with short names like c
+src/bll/CustomerBLL.java:56:	Local variable 'currentSysReference' could be declared final
+src/bll/CustomerBLL.java:56:	Potential violation of Law of Demeter (method chain calls)
+src/bll/CustomerBLL.java:56:	Potential violation of Law of Demeter (method chain calls)
+src/bll/CustomerBLL.java:56:	Potential violation of Law of Demeter (method chain calls)
+src/bll/CustomerBLL.java:56:	Potential violation of Law of Demeter (object not created locally)
+src/bll/CustomerBLL.java:57:	Potential violation of Law of Demeter (object not created locally)
+src/bll/CustomerBLL.java:59:	Local variable 'myFormatter' could be declared final
+src/bll/EnterpriseAccountBLL.java:6:	headerCommentRequirement Required
+src/bll/EnterpriseAccountBLL.java:8:	publicMethodCommentRequirement Required
+src/bll/FamilyAccountBLL.java:6:	headerCommentRequirement Required
+src/bll/FamilyAccountBLL.java:8:	publicMethodCommentRequirement Required
+src/bll/InternetUsageBLL.java:6:	headerCommentRequirement Required
+src/bll/InternetUsageBLL.java:8:	publicMethodCommentRequirement Required
+src/bll/MessageBLL.java:6:	headerCommentRequirement Required
+src/bll/MessageBLL.java:8:	publicMethodCommentRequirement Required
+src/bll/RegionBLL.java:12:	headerCommentRequirement Required
+src/bll/RegionBLL.java:14:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/bll/RegionBLL.java:14:	Private field 'regionDAO' could be made final; it is only initialized in the declaration or constructor.
+src/bll/RegionBLL.java:14:	fieldCommentRequirement Required
+src/bll/RegionBLL.java:15:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/bll/RegionBLL.java:15:	Private field 'regions' could be made final; it is only initialized in the declaration or constructor.
+src/bll/RegionBLL.java:15:	fieldCommentRequirement Required
+src/bll/RegionBLL.java:17:	publicMethodCommentRequirement Required
+src/bll/RegionBLL.java:19:	Overridable method 'getRegions' called during object construction
+src/bll/RegionBLL.java:22:	Parameter 'region' is not assigned and could be declared final
+src/bll/RegionBLL.java:22:	publicMethodCommentRequirement Required
+src/bll/RegionBLL.java:26:	Parameter 'newPrice' is not assigned and could be declared final
+src/bll/RegionBLL.java:26:	Parameter 'regionName' is not assigned and could be declared final
+src/bll/RegionBLL.java:26:	Parameter 'service' is not assigned and could be declared final
+src/bll/RegionBLL.java:26:	publicMethodCommentRequirement Required
+src/bll/RegionBLL.java:27:	Local variable 'selectedRegion' could be declared final
+src/bll/RegionBLL.java:28:	Position literals first in String comparisons for EqualsIgnoreCase
+src/bll/RegionBLL.java:29:	Avoid using if...else statements without curly braces
+src/bll/RegionBLL.java:29:	Potential violation of Law of Demeter (object not created locally)
+src/bll/RegionBLL.java:30:	Position literals first in String comparisons for EqualsIgnoreCase
+src/bll/RegionBLL.java:31:	Avoid using if...else statements without curly braces
+src/bll/RegionBLL.java:31:	Potential violation of Law of Demeter (object not created locally)
+src/bll/RegionBLL.java:33:	Avoid using if...else statements without curly braces
+src/bll/RegionBLL.java:33:	Potential violation of Law of Demeter (object not created locally)
+src/bll/RegionBLL.java:35:	Potential violation of Law of Demeter (object not created locally)
+src/bll/RegionBLL.java:35:	System.out.println is used
+src/bll/RegionBLL.java:36:	Potential violation of Law of Demeter (object not created locally)
+src/bll/RegionBLL.java:36:	System.out.println is used
+src/bll/RegionBLL.java:37:	Potential violation of Law of Demeter (object not created locally)
+src/bll/RegionBLL.java:37:	System.out.println is used
+src/bll/RegionBLL.java:40:	publicMethodCommentRequirement Required
+src/bll/RegionBLL.java:41:	Found 'DD'-anomaly for variable 'regions' (lines '41'-'42').
+src/bll/RegionBLL.java:51:	Found 'UR'-anomaly for variable 'region' (lines '51'-'53').
+src/bll/RegionBLL.java:51:	Parameter 'name' is not assigned and could be declared final
+src/bll/RegionBLL.java:51:	publicMethodCommentRequirement Required
+src/bll/RegionBLL.java:52:	Local variable 'region' could be declared final
+src/bll/RegionBLL.java:53:	Avoid using if statements without curly braces
+src/bll/RegionBLL.java:53:	Potential violation of Law of Demeter (method chain calls)
+src/bll/RegionBLL.java:54:	A method should have only one exit point, and that should be the last statement in the method
+src/bll/ServiceBLL.java:7:	Abstract classes should be named AbstractXXX
+src/bll/ServiceBLL.java:7:	This abstract class does not have any abstract methods
+src/bll/ServiceBLL.java:7:	headerCommentRequirement Required
+src/bll/ServiceBLL.java:9:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/bll/ServiceBLL.java:9:	Private field 'abstractDAO' could be made final; it is only initialized in the declaration or constructor.
+src/bll/ServiceBLL.java:9:	fieldCommentRequirement Required
+src/bll/ServiceBLL.java:11:	Parameter 'abstractDAO' is not assigned and could be declared final
+src/bll/ServiceBLL.java:11:	publicMethodCommentRequirement Required
+src/bll/ServiceBLL.java:16:	Parameter 'service' is not assigned and could be declared final
+src/bll/ServiceBLL.java:16:	publicMethodCommentRequirement Required
+src/bll/ServiceBLL.java:17:	Avoid variables with short names like id
+src/bll/ServiceBLL.java:17:	Found 'DD'-anomaly for variable 'id' (lines '17'-'18').
+src/computeTransaction/AccountState.java:1:	Package name contains upper case characters
+src/computeTransaction/AccountState.java:6:	Abstract classes should be named AbstractXXX
+src/computeTransaction/AccountState.java:6:	Each class should declare at least one constructor
+src/computeTransaction/AccountState.java:6:	headerCommentRequirement Required
+src/computeTransaction/AccountState.java:8:	publicMethodCommentRequirement Required
+src/computeTransaction/ComputeTransaction.java:1:	Package name contains upper case characters
+src/computeTransaction/ComputeTransaction.java:20:	headerCommentRequirement Required
+src/computeTransaction/ComputeTransaction.java:22:	Comment is too large: Line too long
+src/computeTransaction/ComputeTransaction.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/computeTransaction/ComputeTransaction.java:23:	Private field 'accountBLL' could be made final; it is only initialized in the declaration or constructor.
+src/computeTransaction/ComputeTransaction.java:23:	fieldCommentRequirement Required
+src/computeTransaction/ComputeTransaction.java:24:	Avoid unused private fields such as 'control'.
+src/computeTransaction/ComputeTransaction.java:24:	Private field 'control' could be made final; it is only initialized in the declaration or constructor.
+src/computeTransaction/ComputeTransaction.java:24:	fieldCommentRequirement Required
+src/computeTransaction/ComputeTransaction.java:25:	fieldCommentRequirement Required
+src/computeTransaction/ComputeTransaction.java:26:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/computeTransaction/ComputeTransaction.java:26:	Private field 'regionBLL' could be made final; it is only initialized in the declaration or constructor.
+src/computeTransaction/ComputeTransaction.java:26:	fieldCommentRequirement Required
+src/computeTransaction/ComputeTransaction.java:27:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/computeTransaction/ComputeTransaction.java:27:	Private field 'messageBLL' could be made final; it is only initialized in the declaration or constructor.
+src/computeTransaction/ComputeTransaction.java:27:	fieldCommentRequirement Required
+src/computeTransaction/ComputeTransaction.java:28:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/computeTransaction/ComputeTransaction.java:28:	Private field 'callBLL' could be made final; it is only initialized in the declaration or constructor.
+src/computeTransaction/ComputeTransaction.java:28:	fieldCommentRequirement Required
+src/computeTransaction/ComputeTransaction.java:29:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/computeTransaction/ComputeTransaction.java:29:	Private field 'internetUsageBLL' could be made final; it is only initialized in the declaration or constructor.
+src/computeTransaction/ComputeTransaction.java:29:	fieldCommentRequirement Required
+src/computeTransaction/ComputeTransaction.java:30:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/computeTransaction/ComputeTransaction.java:30:	fieldCommentRequirement Required
+src/computeTransaction/ComputeTransaction.java:31:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/computeTransaction/ComputeTransaction.java:31:	fieldCommentRequirement Required
+src/computeTransaction/ComputeTransaction.java:35:	publicMethodCommentRequirement Required
+src/computeTransaction/ComputeTransaction.java:45:	Parameter 'service' is not assigned and could be declared final
+src/computeTransaction/ComputeTransaction.java:45:	publicMethodCommentRequirement Required
+src/computeTransaction/ComputeTransaction.java:46:	Found 'DD'-anomaly for variable 'roamingTax' (lines '46'-'54').
+src/computeTransaction/ComputeTransaction.java:50:	Local variable 'number' could be declared final
+src/computeTransaction/ComputeTransaction.java:52:	Found 'DU'-anomaly for variable 'region' (lines '52'-'65').
+src/computeTransaction/ComputeTransaction.java:52:	Potential violation of Law of Demeter (object not created locally)
+src/computeTransaction/ComputeTransaction.java:53:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/ComputeTransaction.java:53:	Potential violation of Law of Demeter (object not created locally)
+src/computeTransaction/ComputeTransaction.java:54:	Potential violation of Law of Demeter (object not created locally)
+src/computeTransaction/ComputeTransaction.java:58:	Avoid excessively long variable names like updateAccountContext
+src/computeTransaction/ComputeTransaction.java:58:	Local variable 'updateAccountContext' could be declared final
+src/computeTransaction/ComputeTransaction.java:59:	Potential violation of Law of Demeter (object not created locally)
+src/computeTransaction/ComputeTransaction.java:68:	publicMethodCommentRequirement Required
+src/computeTransaction/ComputeTransaction.java:69:	Avoid variables with short names like br
+src/computeTransaction/ComputeTransaction.java:71:	Found 'DU'-anomaly for variable 'csvSplitBy' (lines '71'-'85').
+src/computeTransaction/ComputeTransaction.java:71:	Local variable 'csvSplitBy' could be declared final
+src/computeTransaction/ComputeTransaction.java:72:	Avoid assignments in operands
+src/computeTransaction/ComputeTransaction.java:72:	Found 'DU'-anomaly for variable 'line' (lines '72'-'85').
+src/computeTransaction/ComputeTransaction.java:72:	Potential violation of Law of Demeter (object not created locally)
+src/computeTransaction/ComputeTransaction.java:73:	Local variable 'serviceArg' could be declared final
+src/computeTransaction/ComputeTransaction.java:73:	Potential violation of Law of Demeter (object not created locally)
+src/computeTransaction/ComputeTransaction.java:74:	Local variable 'service' could be declared final
+src/computeTransaction/ComputeTransaction.java:74:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/ComputeTransaction.java:74:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/ComputeTransaction.java:74:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/ComputeTransaction.java:74:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/ComputeTransaction.java:74:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/ComputeTransaction.java:74:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/ComputeTransaction.java:74:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/ComputeTransaction.java:74:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/ComputeTransaction.java:75:	System.out.println is used
+src/computeTransaction/ComputeTransaction.java:76:	Local variable 'updatedService' could be declared final
+src/computeTransaction/ComputeTransaction.java:78:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/ComputeTransaction.java:78:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/ComputeTransaction.java:78:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/ComputeTransaction.java:80:	System.out.println is used
+src/computeTransaction/ComputeTransaction.java:82:	Avoid printStackTrace(); use a logger call instead.
+src/computeTransaction/ComputeTransaction.java:82:	Potential violation of Law of Demeter (object not created locally)
+src/computeTransaction/ComputeTransaction.java:84:	System.out.println is used
+src/computeTransaction/ComputeTransaction.java:87:	Parameter 'type' is not assigned and could be declared final
+src/computeTransaction/ComputeTransaction.java:88:	Found 'DD'-anomaly for variable 'serviceBLL' (lines '88'-'90').
+src/computeTransaction/ComputeTransaction.java:88:	Found 'DD'-anomaly for variable 'serviceBLL' (lines '88'-'92').
+src/computeTransaction/ComputeTransaction.java:88:	Found 'DD'-anomaly for variable 'serviceBLL' (lines '88'-'94').
+src/computeTransaction/ComputeTransaction.java:89:	Position literals first in String comparisons
+src/computeTransaction/ComputeTransaction.java:90:	Avoid using if...else statements without curly braces
+src/computeTransaction/ComputeTransaction.java:91:	Position literals first in String comparisons
+src/computeTransaction/ComputeTransaction.java:92:	Avoid using if...else statements without curly braces
+src/computeTransaction/ComputeTransaction.java:94:	Avoid using if...else statements without curly braces
+src/computeTransaction/CreatedAccount.java:1:	Package name contains upper case characters
+src/computeTransaction/CreatedAccount.java:6:	Each class should declare at least one constructor
+src/computeTransaction/CreatedAccount.java:6:	headerCommentRequirement Required
+src/computeTransaction/CreatedAccount.java:10:	Parameter 'context' is not assigned and could be declared final
+src/computeTransaction/CreatedAccount.java:10:	publicMethodCommentRequirement Required
+src/computeTransaction/UpdateAccountContext.java:1:	Package name contains upper case characters
+src/computeTransaction/UpdateAccountContext.java:8:	headerCommentRequirement Required
+src/computeTransaction/UpdateAccountContext.java:9:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/computeTransaction/UpdateAccountContext.java:9:	fieldCommentRequirement Required
+src/computeTransaction/UpdateAccountContext.java:10:	fieldCommentRequirement Required
+src/computeTransaction/UpdateAccountContext.java:11:	fieldCommentRequirement Required
+src/computeTransaction/UpdateAccountContext.java:12:	fieldCommentRequirement Required
+src/computeTransaction/UpdateAccountContext.java:13:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/computeTransaction/UpdateAccountContext.java:13:	Private field 'finalState' could be made final; it is only initialized in the declaration or constructor.
+src/computeTransaction/UpdateAccountContext.java:13:	fieldCommentRequirement Required
+src/computeTransaction/UpdateAccountContext.java:15:	Parameter 'account' is not assigned and could be declared final
+src/computeTransaction/UpdateAccountContext.java:15:	Parameter 'roamingTax' is not assigned and could be declared final
+src/computeTransaction/UpdateAccountContext.java:15:	Parameter 'service' is not assigned and could be declared final
+src/computeTransaction/UpdateAccountContext.java:15:	Parameter 'state' is not assigned and could be declared final
+src/computeTransaction/UpdateAccountContext.java:15:	publicMethodCommentRequirement Required
+src/computeTransaction/UpdateAccountContext.java:23:	publicMethodCommentRequirement Required
+src/computeTransaction/UpdateAccountContext.java:31:	Parameter 'state' is not assigned and could be declared final
+src/computeTransaction/UpdateAccountContext.java:31:	publicMethodCommentRequirement Required
+src/computeTransaction/UpdateAccountContext.java:35:	publicMethodCommentRequirement Required
+src/computeTransaction/UpdateAccountContext.java:39:	publicMethodCommentRequirement Required
+src/computeTransaction/UpdateAccountContext.java:43:	Parameter 'account' is not assigned and could be declared final
+src/computeTransaction/UpdateAccountContext.java:43:	publicMethodCommentRequirement Required
+src/computeTransaction/UpdateAccountContext.java:47:	publicMethodCommentRequirement Required
+src/computeTransaction/UpdateAccountContext.java:51:	Parameter 'service' is not assigned and could be declared final
+src/computeTransaction/UpdateAccountContext.java:51:	publicMethodCommentRequirement Required
+src/computeTransaction/UpdateAccountContext.java:55:	publicMethodCommentRequirement Required
+src/computeTransaction/UpdateAccountContext.java:59:	Parameter 'roamingTax' is not assigned and could be declared final
+src/computeTransaction/UpdateAccountContext.java:59:	publicMethodCommentRequirement Required
+src/computeTransaction/UpdateBalanceState.java:1:	Package name contains upper case characters
+src/computeTransaction/UpdateBalanceState.java:5:	Each class should declare at least one constructor
+src/computeTransaction/UpdateBalanceState.java:5:	headerCommentRequirement Required
+src/computeTransaction/UpdateBalanceState.java:8:	Parameter 'accountContext' is not assigned and could be declared final
+src/computeTransaction/UpdateBalanceState.java:8:	publicMethodCommentRequirement Required
+src/computeTransaction/UpdateBalanceState.java:9:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateBalanceState.java:9:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateBalanceState.java:9:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateBalanceState.java:9:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateBalanceState.java:9:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateInternationalMinutesState.java:1:	Package name contains upper case characters
+src/computeTransaction/UpdateInternationalMinutesState.java:6:	Each class should declare at least one constructor
+src/computeTransaction/UpdateInternationalMinutesState.java:6:	headerCommentRequirement Required
+src/computeTransaction/UpdateInternationalMinutesState.java:9:	Parameter 'accountContext' is not assigned and could be declared final
+src/computeTransaction/UpdateInternationalMinutesState.java:9:	publicMethodCommentRequirement Required
+src/computeTransaction/UpdateInternationalMinutesState.java:11:	Avoid excessively long variable names like internationalMinutes
+src/computeTransaction/UpdateInternationalMinutesState.java:11:	Found 'DU'-anomaly for variable 'internationalMinutes' (lines '11'-'22').
+src/computeTransaction/UpdateInternationalMinutesState.java:11:	Local variable 'internationalMinutes' could be declared final
+src/computeTransaction/UpdateInternationalMinutesState.java:11:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateInternationalMinutesState.java:11:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateInternationalMinutesState.java:12:	Avoid unnecessary comparisons in boolean expressions
+src/computeTransaction/UpdateInternationalMinutesState.java:12:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateInternationalMinutesState.java:14:	An empty statement (semicolon) not part of a loop
+src/computeTransaction/UpdateInternationalMinutesState.java:14:	An empty statement (semicolon) not part of a loop
+src/computeTransaction/UpdateInternationalMinutesState.java:14:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateInternationalMinutesState.java:15:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateInternationalMinutesState.java:18:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateInternetState.java:1:	Package name contains upper case characters
+src/computeTransaction/UpdateInternetState.java:5:	Each class should declare at least one constructor
+src/computeTransaction/UpdateInternetState.java:5:	headerCommentRequirement Required
+src/computeTransaction/UpdateInternetState.java:8:	Parameter 'accountContext' is not assigned and could be declared final
+src/computeTransaction/UpdateInternetState.java:8:	publicMethodCommentRequirement Required
+src/computeTransaction/UpdateInternetState.java:9:	Local variable 'mobileData' could be declared final
+src/computeTransaction/UpdateInternetState.java:9:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateInternetState.java:9:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateInternetState.java:11:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateInternetState.java:12:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateInternetState.java:15:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateMessagesState.java:1:	Package name contains upper case characters
+src/computeTransaction/UpdateMessagesState.java:5:	Each class should declare at least one constructor
+src/computeTransaction/UpdateMessagesState.java:5:	headerCommentRequirement Required
+src/computeTransaction/UpdateMessagesState.java:8:	Parameter 'accountContext' is not assigned and could be declared final
+src/computeTransaction/UpdateMessagesState.java:8:	publicMethodCommentRequirement Required
+src/computeTransaction/UpdateMessagesState.java:9:	Local variable 'messages' could be declared final
+src/computeTransaction/UpdateMessagesState.java:9:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateMessagesState.java:9:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateMessagesState.java:11:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateMessagesState.java:12:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateMessagesState.java:15:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateMinutesState.java:1:	Package name contains upper case characters
+src/computeTransaction/UpdateMinutesState.java:5:	Each class should declare at least one constructor
+src/computeTransaction/UpdateMinutesState.java:5:	headerCommentRequirement Required
+src/computeTransaction/UpdateMinutesState.java:8:	Parameter 'accountContext' is not assigned and could be declared final
+src/computeTransaction/UpdateMinutesState.java:8:	publicMethodCommentRequirement Required
+src/computeTransaction/UpdateMinutesState.java:9:	Local variable 'minutes' could be declared final
+src/computeTransaction/UpdateMinutesState.java:9:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateMinutesState.java:9:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateMinutesState.java:11:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateMinutesState.java:12:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdateMinutesState.java:15:	Potential violation of Law of Demeter (method chain calls)
+src/computeTransaction/UpdatedAccount.java:1:	Package name contains upper case characters
+src/computeTransaction/UpdatedAccount.java:5:	Each class should declare at least one constructor
+src/computeTransaction/UpdatedAccount.java:5:	headerCommentRequirement Required
+src/computeTransaction/UpdatedAccount.java:8:	Parameter 'context' is not assigned and could be declared final
+src/computeTransaction/UpdatedAccount.java:8:	publicMethodCommentRequirement Required
+src/computeTransaction/UpdatedAccount.java:9:	System.out.println is used
+src/control/Configuration.java:4:	headerCommentRequirement Required
+src/control/Configuration.java:5:	fieldCommentRequirement Required
+src/control/Configuration.java:6:	fieldCommentRequirement Required
+src/control/Configuration.java:7:	fieldCommentRequirement Required
+src/control/Configuration.java:8:	fieldCommentRequirement Required
+src/control/Configuration.java:9:	Avoid variables with short names like to
+src/control/Configuration.java:9:	fieldCommentRequirement Required
+src/control/Configuration.java:10:	fieldCommentRequirement Required
+src/control/Configuration.java:12:	Avoid variables with short names like to
+src/control/Configuration.java:12:	Parameter 'from' is not assigned and could be declared final
+src/control/Configuration.java:12:	Parameter 'maxDuration' is not assigned and could be declared final
+src/control/Configuration.java:12:	Parameter 'minDuration' is not assigned and could be declared final
+src/control/Configuration.java:12:	Parameter 'quantity' is not assigned and could be declared final
+src/control/Configuration.java:12:	Parameter 'to' is not assigned and could be declared final
+src/control/Configuration.java:12:	Parameter 'type' is not assigned and could be declared final
+src/control/Configuration.java:12:	publicMethodCommentRequirement Required
+src/control/Configuration.java:23:	publicMethodCommentRequirement Required
+src/control/Configuration.java:26:	Parameter 'type' is not assigned and could be declared final
+src/control/Configuration.java:26:	publicMethodCommentRequirement Required
+src/control/Configuration.java:29:	publicMethodCommentRequirement Required
+src/control/Configuration.java:32:	Parameter 'minDuration' is not assigned and could be declared final
+src/control/Configuration.java:32:	publicMethodCommentRequirement Required
+src/control/Configuration.java:35:	publicMethodCommentRequirement Required
+src/control/Configuration.java:38:	Parameter 'maxDuration' is not assigned and could be declared final
+src/control/Configuration.java:38:	publicMethodCommentRequirement Required
+src/control/Configuration.java:41:	publicMethodCommentRequirement Required
+src/control/Configuration.java:44:	Parameter 'from' is not assigned and could be declared final
+src/control/Configuration.java:44:	publicMethodCommentRequirement Required
+src/control/Configuration.java:47:	publicMethodCommentRequirement Required
+src/control/Configuration.java:50:	Avoid variables with short names like to
+src/control/Configuration.java:50:	Parameter 'to' is not assigned and could be declared final
+src/control/Configuration.java:50:	publicMethodCommentRequirement Required
+src/control/Configuration.java:53:	publicMethodCommentRequirement Required
+src/control/Configuration.java:56:	Parameter 'quantity' is not assigned and could be declared final
+src/control/Configuration.java:56:	publicMethodCommentRequirement Required
+src/control/Control.java:11:	Avoid unused imports such as 'bll.FamilyAccountBLL'
+src/control/Control.java:14:	Avoid unused imports such as 'account.FamilyAccount'
+src/control/Control.java:15:	Avoid unused imports such as 'region.China'
+src/control/Control.java:16:	Avoid unused imports such as 'region.Ireland'
+src/control/Control.java:18:	Avoid unused imports such as 'region.Romania'
+src/control/Control.java:22:	A class which only has private constructors should be final
+src/control/Control.java:22:	The class 'Control' has a Cyclomatic Complexity of 2 (Highest = 10).
+src/control/Control.java:22:	The class 'Control' has a Modified Cyclomatic Complexity of 2 (Highest = 10).
+src/control/Control.java:22:	The class 'Control' has a Standard Cyclomatic Complexity of 2 (Highest = 10).
+src/control/Control.java:22:	headerCommentRequirement Required
+src/control/Control.java:24:	Variables that are final and static should be all capitals, 'controlInstance' is not all capitals.
+src/control/Control.java:24:	fieldCommentRequirement Required
+src/control/Control.java:25:	fieldCommentRequirement Required
+src/control/Control.java:26:	fieldCommentRequirement Required
+src/control/Control.java:27:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/control/Control.java:27:	Private field 'types' could be made final; it is only initialized in the declaration or constructor.
+src/control/Control.java:27:	fieldCommentRequirement Required
+src/control/Control.java:28:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/control/Control.java:28:	Private field 'registeredNumbers' could be made final; it is only initialized in the declaration or constructor.
+src/control/Control.java:28:	fieldCommentRequirement Required
+src/control/Control.java:29:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/control/Control.java:29:	Private field 'regionBLL' could be made final; it is only initialized in the declaration or constructor.
+src/control/Control.java:29:	fieldCommentRequirement Required
+src/control/Control.java:30:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/control/Control.java:30:	Use explicit scoping instead of the default package private level
+src/control/Control.java:30:	fieldCommentRequirement Required
+src/control/Control.java:31:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/control/Control.java:31:	Use explicit scoping instead of the default package private level
+src/control/Control.java:31:	fieldCommentRequirement Required
+src/control/Control.java:32:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/control/Control.java:32:	Use explicit scoping instead of the default package private level
+src/control/Control.java:32:	fieldCommentRequirement Required
+src/control/Control.java:44:	publicMethodCommentRequirement Required
+src/control/Control.java:49:	Parameter 'max' is not assigned and could be declared final
+src/control/Control.java:49:	Parameter 'min' is not assigned and could be declared final
+src/control/Control.java:49:	publicMethodCommentRequirement Required
+src/control/Control.java:51:	Local variable 'random' could be declared final
+src/control/Control.java:52:	Avoid variables with short names like s
+src/control/Control.java:52:	Local variable 's' could be declared final
+src/control/Control.java:53:	Consider simply returning the value vs storing it in local variable 's'
+src/control/Control.java:56:	Avoid variables with short names like C
+src/control/Control.java:56:	Parameter 'C' is not assigned and could be declared final
+src/control/Control.java:56:	The method 'generateServices' has a Cyclomatic Complexity of 10.
+src/control/Control.java:56:	The method 'generateServices' has a Modified Cyclomatic Complexity of 10.
+src/control/Control.java:56:	The method 'generateServices' has a Standard Cyclomatic Complexity of 10.
+src/control/Control.java:56:	Variables should start with a lowercase character, 'C' starts with uppercase character.
+src/control/Control.java:56:	publicMethodCommentRequirement Required
+src/control/Control.java:57:	Avoid instantiating String objects; this is usually unnecessary.
+src/control/Control.java:57:	Found 'DD'-anomaly for variable 'generatedType' (lines '57'-'78').
+src/control/Control.java:58:	Found 'DD'-anomaly for variable 'from' (lines '58'-'84').
+src/control/Control.java:58:	Found 'DD'-anomaly for variable 'from' (lines '58'-'87').
+src/control/Control.java:59:	Avoid variables with short names like to
+src/control/Control.java:59:	Found 'DD'-anomaly for variable 'to' (lines '59'-'89').
+src/control/Control.java:59:	Found 'DD'-anomaly for variable 'to' (lines '59'-'92').
+src/control/Control.java:62:	Local variable 'quantity' could be declared final
+src/control/Control.java:64:	Avoid excessively long variable names like enterpriseAccountBLL
+src/control/Control.java:64:	Local variable 'enterpriseAccountBLL' could be declared final
+src/control/Control.java:65:	Potential violation of Law of Demeter (object not created locally)
+src/control/Control.java:68:	Avoid variables with short names like s
+src/control/Control.java:68:	Local variable 's' could be declared final
+src/control/Control.java:68:	Potential violation of Law of Demeter (object not created locally)
+src/control/Control.java:69:	Potential violation of Law of Demeter (method chain calls)
+src/control/Control.java:69:	Potential violation of Law of Demeter (method chain calls)
+src/control/Control.java:69:	Potential violation of Law of Demeter (object not created locally)
+src/control/Control.java:77:	Potential violation of Law of Demeter (method chain calls)
+src/control/Control.java:77:	The String literal "Any" appears 6 times in this file; the first occurrence is on line 77
+src/control/Control.java:78:	Found 'DD'-anomaly for variable 'generatedType' (lines '78'-'81').
+src/control/Control.java:80:	Avoid unnecessary comparisons in boolean expressions
+src/control/Control.java:80:	Avoid using if statements without curly braces
+src/control/Control.java:80:	Potential violation of Law of Demeter (method chain calls)
+src/control/Control.java:83:	Potential violation of Law of Demeter (method chain calls)
+src/control/Control.java:84:	Found 'DD'-anomaly for variable 'from' (lines '84'-'87').
+src/control/Control.java:86:	Avoid unnecessary comparisons in boolean expressions
+src/control/Control.java:86:	Avoid using if statements without curly braces
+src/control/Control.java:86:	Potential violation of Law of Demeter (method chain calls)
+src/control/Control.java:88:	Potential violation of Law of Demeter (method chain calls)
+src/control/Control.java:89:	Found 'DD'-anomaly for variable 'to' (lines '89'-'92').
+src/control/Control.java:91:	Avoid unnecessary comparisons in boolean expressions
+src/control/Control.java:91:	Avoid using if statements without curly braces
+src/control/Control.java:91:	Potential violation of Law of Demeter (method chain calls)
+src/control/Control.java:93:	Useless parentheses.
+src/control/Control.java:93:	Useless parentheses.
+src/control/Control.java:94:	Avoid variables with short names like S
+src/control/Control.java:94:	Local variable 'S' could be declared final
+src/control/Control.java:94:	Variables should start with a lowercase character, 'S' starts with uppercase character.
+src/control/Control.java:97:	Potential violation of Law of Demeter (method chain calls)
+src/control/Control.java:97:	Potential violation of Law of Demeter (method chain calls)
+src/control/Control.java:99:	System.out.println is used
+src/control/Control.java:107:	Avoid printStackTrace(); use a logger call instead.
+src/control/Control.java:107:	Potential violation of Law of Demeter (object not created locally)
+src/control/Control.java:111:	publicMethodCommentRequirement Required
+src/control/Control.java:115:	Parameter 'availableRegions' is not assigned and could be declared final
+src/control/Control.java:115:	publicMethodCommentRequirement Required
+src/control/Control.java:119:	publicMethodCommentRequirement Required
+src/control/Control.java:123:	Parameter 'services' is not assigned and could be declared final
+src/control/Control.java:123:	publicMethodCommentRequirement Required
+src/control/NumberControl.java:5:	Avoid unused imports such as 'account.Account'
+src/control/NumberControl.java:7:	Avoid unused imports such as 'account.EnterpriseAccount'
+src/control/NumberControl.java:10:	headerCommentRequirement Required
+src/control/NumberControl.java:12:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/control/NumberControl.java:12:	Use explicit scoping instead of the default package private level
+src/control/NumberControl.java:12:	fieldCommentRequirement Required
+src/control/NumberControl.java:13:	Avoid variables with short names like id
+src/control/NumberControl.java:13:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/control/NumberControl.java:13:	Private field 'id' could be made final; it is only initialized in the declaration or constructor.
+src/control/NumberControl.java:13:	fieldCommentRequirement Required
+src/control/NumberControl.java:14:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/control/NumberControl.java:14:	Private field 'numbers' could be made final; it is only initialized in the declaration or constructor.
+src/control/NumberControl.java:14:	fieldCommentRequirement Required
+src/control/NumberControl.java:16:	Avoid variables with short names like id
+src/control/NumberControl.java:16:	Parameter 'id' is not assigned and could be declared final
+src/control/NumberControl.java:16:	Parameter 'numbers' is not assigned and could be declared final
+src/control/NumberControl.java:16:	publicMethodCommentRequirement Required
+src/control/NumberControl.java:23:	publicMethodCommentRequirement Required
+src/control/NumberControl.java:24:	Local variable 'account' could be declared final
+src/control/NumberControl.java:25:	Potential violation of Law of Demeter (object not created locally)
+src/control/NumberControl.java:25:	Potential violation of Law of Demeter (object not created locally)
+src/controller/AddAccountListener.java:10:	Avoid unused imports such as 'control.Control'
+src/controller/AddAccountListener.java:15:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/AddAccountListener.java:15:	Private field 'table' could be made final; it is only initialized in the declaration or constructor.
+src/controller/AddAccountListener.java:15:	fieldCommentRequirement Required
+src/controller/AddAccountListener.java:16:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/AddAccountListener.java:16:	Perhaps 'addAccount' could be replaced by a local variable.
+src/controller/AddAccountListener.java:16:	fieldCommentRequirement Required
+src/controller/AddAccountListener.java:18:	Parameter 'table' is not assigned and could be declared final
+src/controller/AddAccountListener.java:18:	publicMethodCommentRequirement Required
+src/controller/AddAccountListener.java:23:	Parameter 'arg0' is not assigned and could be declared final
+src/controller/AddAccountListener.java:23:	publicMethodCommentRequirement Required
+src/controller/AddNumberListener.java:14:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/AddNumberListener.java:14:	Private field 'table' could be made final; it is only initialized in the declaration or constructor.
+src/controller/AddNumberListener.java:14:	fieldCommentRequirement Required
+src/controller/AddNumberListener.java:15:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/AddNumberListener.java:15:	Perhaps 'addNumber' could be replaced by a local variable.
+src/controller/AddNumberListener.java:15:	fieldCommentRequirement Required
+src/controller/AddNumberListener.java:16:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/AddNumberListener.java:16:	Private field 'selectedRow' could be made final; it is only initialized in the declaration or constructor.
+src/controller/AddNumberListener.java:16:	fieldCommentRequirement Required
+src/controller/AddNumberListener.java:17:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/AddNumberListener.java:17:	Private field 'selectedCol' could be made final; it is only initialized in the declaration or constructor.
+src/controller/AddNumberListener.java:17:	fieldCommentRequirement Required
+src/controller/AddNumberListener.java:21:	Parameter 'selectedCol' is not assigned and could be declared final
+src/controller/AddNumberListener.java:21:	Parameter 'selectedRow' is not assigned and could be declared final
+src/controller/AddNumberListener.java:21:	Parameter 'table' is not assigned and could be declared final
+src/controller/AddNumberListener.java:21:	publicMethodCommentRequirement Required
+src/controller/AddNumberListener.java:31:	Parameter 'arg0' is not assigned and could be declared final
+src/controller/AddNumberListener.java:31:	publicMethodCommentRequirement Required
+src/controller/ComputeTransactionListener.java:11:	Each class should declare at least one constructor
+src/controller/ComputeTransactionListener.java:11:	headerCommentRequirement Required
+src/controller/ComputeTransactionListener.java:12:	Avoid excessively long variable names like computeTransaction
+src/controller/ComputeTransactionListener.java:12:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/ComputeTransactionListener.java:12:	Use explicit scoping instead of the default package private level
+src/controller/ComputeTransactionListener.java:12:	fieldCommentRequirement Required
+src/controller/ComputeTransactionListener.java:14:	Avoid variables with short names like e
+src/controller/ComputeTransactionListener.java:14:	Parameter 'e' is not assigned and could be declared final
+src/controller/ComputeTransactionListener.java:14:	publicMethodCommentRequirement Required
+src/controller/ComputeTransactionListener.java:20:	Avoid printStackTrace(); use a logger call instead.
+src/controller/DoneAddingListener.java:21:	Avoid unused imports such as 'control.Control'
+src/controller/DoneAddingListener.java:27:	headerCommentRequirement Required
+src/controller/DoneAddingListener.java:29:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/DoneAddingListener.java:29:	Private field 'firstName' could be made final; it is only initialized in the declaration or constructor.
+src/controller/DoneAddingListener.java:29:	fieldCommentRequirement Required
+src/controller/DoneAddingListener.java:30:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/DoneAddingListener.java:30:	Private field 'lastName' could be made final; it is only initialized in the declaration or constructor.
+src/controller/DoneAddingListener.java:30:	fieldCommentRequirement Required
+src/controller/DoneAddingListener.java:31:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/DoneAddingListener.java:31:	Private field 'number' could be made final; it is only initialized in the declaration or constructor.
+src/controller/DoneAddingListener.java:31:	fieldCommentRequirement Required
+src/controller/DoneAddingListener.java:32:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/DoneAddingListener.java:32:	Private field 'address' could be made final; it is only initialized in the declaration or constructor.
+src/controller/DoneAddingListener.java:32:	fieldCommentRequirement Required
+src/controller/DoneAddingListener.java:33:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/DoneAddingListener.java:33:	Private field 'age' could be made final; it is only initialized in the declaration or constructor.
+src/controller/DoneAddingListener.java:33:	fieldCommentRequirement Required
+src/controller/DoneAddingListener.java:34:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/DoneAddingListener.java:34:	Private field 'email' could be made final; it is only initialized in the declaration or constructor.
+src/controller/DoneAddingListener.java:34:	fieldCommentRequirement Required
+src/controller/DoneAddingListener.java:35:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/DoneAddingListener.java:35:	Private field 'type' could be made final; it is only initialized in the declaration or constructor.
+src/controller/DoneAddingListener.java:35:	fieldCommentRequirement Required
+src/controller/DoneAddingListener.java:36:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/DoneAddingListener.java:36:	Private field 'regionCB' could be made final; it is only initialized in the declaration or constructor.
+src/controller/DoneAddingListener.java:36:	fieldCommentRequirement Required
+src/controller/DoneAddingListener.java:37:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/DoneAddingListener.java:37:	Private field 'endDate' could be made final; it is only initialized in the declaration or constructor.
+src/controller/DoneAddingListener.java:37:	fieldCommentRequirement Required
+src/controller/DoneAddingListener.java:38:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/DoneAddingListener.java:38:	Private field 'table' could be made final; it is only initialized in the declaration or constructor.
+src/controller/DoneAddingListener.java:38:	fieldCommentRequirement Required
+src/controller/DoneAddingListener.java:39:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/DoneAddingListener.java:39:	Perhaps 'model' could be replaced by a local variable.
+src/controller/DoneAddingListener.java:39:	fieldCommentRequirement Required
+src/controller/DoneAddingListener.java:40:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/DoneAddingListener.java:40:	Private field 'accountBLL' could be made final; it is only initialized in the declaration or constructor.
+src/controller/DoneAddingListener.java:40:	fieldCommentRequirement Required
+src/controller/DoneAddingListener.java:41:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/DoneAddingListener.java:41:	Private field 'customerBLL' could be made final; it is only initialized in the declaration or constructor.
+src/controller/DoneAddingListener.java:41:	fieldCommentRequirement Required
+src/controller/DoneAddingListener.java:42:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/DoneAddingListener.java:42:	Private field 'addAccount' could be made final; it is only initialized in the declaration or constructor.
+src/controller/DoneAddingListener.java:42:	fieldCommentRequirement Required
+src/controller/DoneAddingListener.java:43:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/DoneAddingListener.java:43:	Private field 'regionBLL' could be made final; it is only initialized in the declaration or constructor.
+src/controller/DoneAddingListener.java:43:	fieldCommentRequirement Required
+src/controller/DoneAddingListener.java:45:	Avoid long parameter lists.
+src/controller/DoneAddingListener.java:45:	Parameter 'firstName' is not assigned and could be declared final
+src/controller/DoneAddingListener.java:45:	Parameter 'lastName' is not assigned and could be declared final
+src/controller/DoneAddingListener.java:45:	Parameter 'number' is not assigned and could be declared final
+src/controller/DoneAddingListener.java:45:	Parameter 'type' is not assigned and could be declared final
+src/controller/DoneAddingListener.java:45:	publicMethodCommentRequirement Required
+src/controller/DoneAddingListener.java:46:	Parameter 'address' is not assigned and could be declared final
+src/controller/DoneAddingListener.java:46:	Parameter 'age' is not assigned and could be declared final
+src/controller/DoneAddingListener.java:46:	Parameter 'email' is not assigned and could be declared final
+src/controller/DoneAddingListener.java:46:	Parameter 'endDate' is not assigned and could be declared final
+src/controller/DoneAddingListener.java:46:	Parameter 'regionCB' is not assigned and could be declared final
+src/controller/DoneAddingListener.java:47:	Parameter 'addAccount' is not assigned and could be declared final
+src/controller/DoneAddingListener.java:47:	Parameter 'table' is not assigned and could be declared final
+src/controller/DoneAddingListener.java:65:	Parameter 'arg0' is not assigned and could be declared final
+src/controller/DoneAddingListener.java:65:	publicMethodCommentRequirement Required
+src/controller/DoneAddingListener.java:67:	Found 'DD'-anomaly for variable 'customer' (lines '67'-'71').
+src/controller/DoneAddingListener.java:68:	Found 'DD'-anomaly for variable 'region' (lines '68'-'72').
+src/controller/DoneAddingListener.java:69:	Found 'DD'-anomaly for variable 'account' (lines '69'-'73').
+src/controller/DoneAddingListener.java:72:	Potential violation of Law of Demeter (method chain calls)
+src/controller/DoneAddingListener.java:72:	Potential violation of Law of Demeter (method chain calls)
+src/controller/DoneAddingListener.java:75:	Avoid printStackTrace(); use a logger call instead.
+src/controller/DoneAddingListener.java:75:	Potential violation of Law of Demeter (object not created locally)
+src/controller/DoneAddingListener.java:78:	Potential violation of Law of Demeter (method chain calls)
+src/controller/DoneAddingListener.java:78:	Potential violation of Law of Demeter (method chain calls)
+src/controller/DoneAddingListener.java:78:	Potential violation of Law of Demeter (object not created locally)
+src/controller/DoneAddingListener.java:78:	Potential violation of Law of Demeter (object not created locally)
+src/controller/DoneAddingListener.java:78:	Potential violation of Law of Demeter (object not created locally)
+src/controller/DoneAddingListener.java:78:	Potential violation of Law of Demeter (object not created locally)
+src/controller/DoneAddingListener.java:82:	Parameter 'type' is not assigned and could be declared final
+src/controller/DoneAddingListener.java:83:	Found 'DD'-anomaly for variable 'accBLL' (lines '83'-'85').
+src/controller/DoneAddingListener.java:83:	Found 'DD'-anomaly for variable 'accBLL' (lines '83'-'87').
+src/controller/DoneAddingListener.java:84:	A switch with less than three branches is inefficient, use a if statement instead.
+src/controller/DoneAddingListener.java:84:	Switch statements should have a default label
+src/controller/GenerateServicesListener.java:20:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/GenerateServicesListener.java:20:	Private field 'min' could be made final; it is only initialized in the declaration or constructor.
+src/controller/GenerateServicesListener.java:20:	fieldCommentRequirement Required
+src/controller/GenerateServicesListener.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/GenerateServicesListener.java:21:	Private field 'max' could be made final; it is only initialized in the declaration or constructor.
+src/controller/GenerateServicesListener.java:21:	fieldCommentRequirement Required
+src/controller/GenerateServicesListener.java:22:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/GenerateServicesListener.java:22:	Private field 'quantity' could be made final; it is only initialized in the declaration or constructor.
+src/controller/GenerateServicesListener.java:22:	fieldCommentRequirement Required
+src/controller/GenerateServicesListener.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/GenerateServicesListener.java:23:	Private field 'type' could be made final; it is only initialized in the declaration or constructor.
+src/controller/GenerateServicesListener.java:23:	fieldCommentRequirement Required
+src/controller/GenerateServicesListener.java:24:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/GenerateServicesListener.java:24:	Private field 'from' could be made final; it is only initialized in the declaration or constructor.
+src/controller/GenerateServicesListener.java:24:	fieldCommentRequirement Required
+src/controller/GenerateServicesListener.java:25:	Avoid variables with short names like to
+src/controller/GenerateServicesListener.java:25:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/GenerateServicesListener.java:25:	Private field 'to' could be made final; it is only initialized in the declaration or constructor.
+src/controller/GenerateServicesListener.java:25:	fieldCommentRequirement Required
+src/controller/GenerateServicesListener.java:26:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/GenerateServicesListener.java:26:	Private field 'table' could be made final; it is only initialized in the declaration or constructor.
+src/controller/GenerateServicesListener.java:26:	fieldCommentRequirement Required
+src/controller/GenerateServicesListener.java:27:	Avoid variables with short names like c
+src/controller/GenerateServicesListener.java:27:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/GenerateServicesListener.java:27:	Perhaps 'c' could be replaced by a local variable.
+src/controller/GenerateServicesListener.java:27:	fieldCommentRequirement Required
+src/controller/GenerateServicesListener.java:28:	Avoid variables with short names like t
+src/controller/GenerateServicesListener.java:28:	Avoid variables with short names like to
+src/controller/GenerateServicesListener.java:28:	Parameter 'from' is not assigned and could be declared final
+src/controller/GenerateServicesListener.java:28:	Parameter 'max' is not assigned and could be declared final
+src/controller/GenerateServicesListener.java:28:	Parameter 'min' is not assigned and could be declared final
+src/controller/GenerateServicesListener.java:28:	Parameter 'quantity' is not assigned and could be declared final
+src/controller/GenerateServicesListener.java:28:	Parameter 't' is not assigned and could be declared final
+src/controller/GenerateServicesListener.java:28:	Parameter 'table' is not assigned and could be declared final
+src/controller/GenerateServicesListener.java:28:	Parameter 'to' is not assigned and could be declared final
+src/controller/GenerateServicesListener.java:28:	publicMethodCommentRequirement Required
+src/controller/GenerateServicesListener.java:41:	Found 'UR'-anomaly for variable 's' (lines '41'-'54').
+src/controller/GenerateServicesListener.java:41:	Parameter 'arg0' is not assigned and could be declared final
+src/controller/GenerateServicesListener.java:41:	publicMethodCommentRequirement Required
+src/controller/GenerateServicesListener.java:45:	Local variable 'config' could be declared final
+src/controller/GenerateServicesListener.java:50:	Found 'DU'-anomaly for variable 'model' (lines '50'-'59').
+src/controller/GenerateServicesListener.java:50:	Local variable 'model' could be declared final
+src/controller/GenerateServicesListener.java:51:	Local variable 's' could be declared final
+src/controller/GenerateServicesListener.java:54:	Avoid instantiating new objects inside loops
+src/controller/GenerateServicesListener.java:54:	Potential violation of Law of Demeter (method chain calls)
+src/controller/GenerateServicesListener.java:54:	Potential violation of Law of Demeter (method chain calls)
+src/controller/ManageAccountsListener.java:15:	Each class should declare at least one constructor
+src/controller/ManageAccountsListener.java:15:	headerCommentRequirement Required
+src/controller/ManageAccountsListener.java:17:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/ManageAccountsListener.java:17:	Perhaps 'manageAccounts' could be replaced by a local variable.
+src/controller/ManageAccountsListener.java:17:	fieldCommentRequirement Required
+src/controller/ManageAccountsListener.java:18:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/ManageAccountsListener.java:18:	Perhaps 'familyAccountBLL' could be replaced by a local variable.
+src/controller/ManageAccountsListener.java:18:	fieldCommentRequirement Required
+src/controller/ManageAccountsListener.java:19:	Avoid excessively long variable names like enterpriseAccountBLL
+src/controller/ManageAccountsListener.java:19:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/ManageAccountsListener.java:19:	Perhaps 'enterpriseAccountBLL' could be replaced by a local variable.
+src/controller/ManageAccountsListener.java:19:	fieldCommentRequirement Required
+src/controller/ManageAccountsListener.java:22:	Parameter 'arg0' is not assigned and could be declared final
+src/controller/ManageAccountsListener.java:22:	publicMethodCommentRequirement Required
+src/controller/ManageAccountsListener.java:25:	Avoid excessively long variable names like enterpriseAccounts
+src/controller/ManageAccountsListener.java:26:	Local variable 'allAccounts' could be declared final
+src/controller/PromotionListener.java:12:	headerCommentRequirement Required
+src/controller/PromotionListener.java:14:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/PromotionListener.java:14:	Private field 'table' could be made final; it is only initialized in the declaration or constructor.
+src/controller/PromotionListener.java:14:	fieldCommentRequirement Required
+src/controller/PromotionListener.java:15:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/PromotionListener.java:15:	Private field 'selectedRow' could be made final; it is only initialized in the declaration or constructor.
+src/controller/PromotionListener.java:15:	fieldCommentRequirement Required
+src/controller/PromotionListener.java:16:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/PromotionListener.java:16:	Private field 'selectedCol' could be made final; it is only initialized in the declaration or constructor.
+src/controller/PromotionListener.java:16:	fieldCommentRequirement Required
+src/controller/PromotionListener.java:18:	Parameter 'accounts' is not assigned and could be declared final
+src/controller/PromotionListener.java:18:	Parameter 'selectedCol' is not assigned and could be declared final
+src/controller/PromotionListener.java:18:	Parameter 'selectedRow' is not assigned and could be declared final
+src/controller/PromotionListener.java:18:	publicMethodCommentRequirement Required
+src/controller/PromotionListener.java:25:	Parameter 'arg0' is not assigned and could be declared final
+src/controller/PromotionListener.java:25:	publicMethodCommentRequirement Required
+src/controller/PromotionListener.java:27:	Avoid variables with short names like ap
+src/controller/PromotionListener.java:27:	Local variable 'ap' could be declared final
+src/controller/RemoveAccountListener.java:8:	Avoid unused imports such as 'java.awt.event.MouseEvent'
+src/controller/RemoveAccountListener.java:9:	Avoid unused imports such as 'java.awt.event.MouseListener'
+src/controller/RemoveAccountListener.java:15:	Avoid unused imports such as 'account.Account'
+src/controller/RemoveAccountListener.java:18:	headerCommentRequirement Required
+src/controller/RemoveAccountListener.java:20:	Avoid unused private fields such as 'c'.
+src/controller/RemoveAccountListener.java:20:	Avoid variables with short names like c
+src/controller/RemoveAccountListener.java:20:	fieldCommentRequirement Required
+src/controller/RemoveAccountListener.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/RemoveAccountListener.java:21:	Private field 'table' could be made final; it is only initialized in the declaration or constructor.
+src/controller/RemoveAccountListener.java:21:	fieldCommentRequirement Required
+src/controller/RemoveAccountListener.java:22:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/RemoveAccountListener.java:22:	Private field 'row' could be made final; it is only initialized in the declaration or constructor.
+src/controller/RemoveAccountListener.java:22:	fieldCommentRequirement Required
+src/controller/RemoveAccountListener.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/RemoveAccountListener.java:23:	Private field 'col' could be made final; it is only initialized in the declaration or constructor.
+src/controller/RemoveAccountListener.java:23:	fieldCommentRequirement Required
+src/controller/RemoveAccountListener.java:25:	Parameter 'col' is not assigned and could be declared final
+src/controller/RemoveAccountListener.java:25:	Parameter 'row' is not assigned and could be declared final
+src/controller/RemoveAccountListener.java:25:	Parameter 'table' is not assigned and could be declared final
+src/controller/RemoveAccountListener.java:25:	publicMethodCommentRequirement Required
+src/controller/RemoveAccountListener.java:33:	Avoid variables with short names like e
+src/controller/RemoveAccountListener.java:33:	Parameter 'e' is not assigned and could be declared final
+src/controller/RemoveAccountListener.java:33:	publicMethodCommentRequirement Required
+src/controller/RemoveAccountListener.java:34:	Local variable 'result' could be declared final
+src/controller/RemoveAccountListener.java:36:	Avoid unused local variables such as 'id'.
+src/controller/RemoveAccountListener.java:36:	Avoid variables with short names like id
+src/controller/RemoveAccountListener.java:36:	Found 'DU'-anomaly for variable 'id' (lines '36'-'43').
+src/controller/RemoveAccountListener.java:36:	Local variable 'id' could be declared final
+src/controller/RemoveAccountListener.java:36:	Potential violation of Law of Demeter (method chain calls)
+src/controller/RemoveAccountListener.java:41:	Potential violation of Law of Demeter (method chain calls)
+src/controller/ReportListener.java:10:	Avoid unused imports such as 'account.Account'
+src/controller/ReportListener.java:13:	headerCommentRequirement Required
+src/controller/ReportListener.java:14:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/ReportListener.java:14:	Private field 'table' could be made final; it is only initialized in the declaration or constructor.
+src/controller/ReportListener.java:14:	fieldCommentRequirement Required
+src/controller/ReportListener.java:15:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/ReportListener.java:15:	Private field 'col' could be made final; it is only initialized in the declaration or constructor.
+src/controller/ReportListener.java:15:	fieldCommentRequirement Required
+src/controller/ReportListener.java:16:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/ReportListener.java:16:	Private field 'row' could be made final; it is only initialized in the declaration or constructor.
+src/controller/ReportListener.java:16:	fieldCommentRequirement Required
+src/controller/ReportListener.java:17:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/ReportListener.java:17:	Private field 'accountBLL' could be made final; it is only initialized in the declaration or constructor.
+src/controller/ReportListener.java:17:	fieldCommentRequirement Required
+src/controller/ReportListener.java:19:	Parameter 'col' is not assigned and could be declared final
+src/controller/ReportListener.java:19:	Parameter 'row' is not assigned and could be declared final
+src/controller/ReportListener.java:19:	Parameter 'table' is not assigned and could be declared final
+src/controller/ReportListener.java:19:	publicMethodCommentRequirement Required
+src/controller/ReportListener.java:27:	Parameter 'arg0' is not assigned and could be declared final
+src/controller/ReportListener.java:27:	publicMethodCommentRequirement Required
+src/controller/ReportListener.java:28:	Avoid variables with short names like id
+src/controller/ReportListener.java:28:	Local variable 'id' could be declared final
+src/controller/ReportListener.java:28:	Potential violation of Law of Demeter (method chain calls)
+src/controller/SetPricesActionListener.java:13:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/SetPricesActionListener.java:13:	Perhaps 'setPrices' could be replaced by a local variable.
+src/controller/SetPricesActionListener.java:13:	fieldCommentRequirement Required
+src/controller/SetPricesActionListener.java:14:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/SetPricesActionListener.java:14:	Private field 'regionBLL' could be made final; it is only initialized in the declaration or constructor.
+src/controller/SetPricesActionListener.java:14:	fieldCommentRequirement Required
+src/controller/SetPricesActionListener.java:15:	Avoid unused private fields such as 'region'.
+src/controller/SetPricesActionListener.java:15:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/controller/SetPricesActionListener.java:15:	Perhaps 'region' could be replaced by a local variable.
+src/controller/SetPricesActionListener.java:15:	fieldCommentRequirement Required
+src/controller/SetPricesActionListener.java:17:	publicMethodCommentRequirement Required
+src/controller/SetPricesActionListener.java:21:	Avoid variables with short names like e
+src/controller/SetPricesActionListener.java:21:	Parameter 'e' is not assigned and could be declared final
+src/controller/SetPricesActionListener.java:21:	publicMethodCommentRequirement Required
+src/controller/SetPricesActionListener.java:24:	Avoid unused local variables such as 'service'.
+src/controller/SetPricesActionListener.java:24:	Found 'DU'-anomaly for variable 'service' (lines '24'-'28').
+src/controller/SetPricesActionListener.java:24:	Local variable 'service' could be declared final
+src/controller/SetPricesActionListener.java:24:	Potential violation of Law of Demeter (method chain calls)
+src/controller/SetPricesActionListener.java:25:	Local variable 'regionName' could be declared final
+src/controller/SetPricesActionListener.java:25:	Potential violation of Law of Demeter (method chain calls)
+src/controller/SetPricesActionListener.java:27:	Comment is too large: Line too long
+src/customer/Customer.java:14:	headerCommentRequirement Required
+src/customer/Customer.java:17:	fieldCommentRequirement Required
+src/customer/Customer.java:20:	fieldCommentRequirement Required
+src/customer/Customer.java:23:	fieldCommentRequirement Required
+src/customer/Customer.java:26:	fieldCommentRequirement Required
+src/customer/Customer.java:29:	fieldCommentRequirement Required
+src/customer/Customer.java:32:	fieldCommentRequirement Required
+src/customer/Customer.java:34:	Document empty constructor
+src/customer/Customer.java:34:	It is a good practice to call super() in a constructor
+src/customer/Customer.java:34:	publicMethodCommentRequirement Required
+src/customer/Customer.java:36:	It is a good practice to call super() in a constructor
+src/customer/Customer.java:36:	Parameter 'address' is not assigned and could be declared final
+src/customer/Customer.java:36:	Parameter 'age' is not assigned and could be declared final
+src/customer/Customer.java:36:	Parameter 'email' is not assigned and could be declared final
+src/customer/Customer.java:36:	Parameter 'firstName' is not assigned and could be declared final
+src/customer/Customer.java:36:	Parameter 'lastName' is not assigned and could be declared final
+src/customer/Customer.java:36:	publicMethodCommentRequirement Required
+src/customer/Customer.java:44:	publicMethodCommentRequirement Required
+src/customer/Customer.java:48:	Parameter 'firstName' is not assigned and could be declared final
+src/customer/Customer.java:48:	publicMethodCommentRequirement Required
+src/customer/Customer.java:52:	publicMethodCommentRequirement Required
+src/customer/Customer.java:56:	Parameter 'lastName' is not assigned and could be declared final
+src/customer/Customer.java:56:	publicMethodCommentRequirement Required
+src/customer/Customer.java:60:	publicMethodCommentRequirement Required
+src/customer/Customer.java:64:	Parameter 'age' is not assigned and could be declared final
+src/customer/Customer.java:64:	publicMethodCommentRequirement Required
+src/customer/Customer.java:68:	publicMethodCommentRequirement Required
+src/customer/Customer.java:72:	Parameter 'address' is not assigned and could be declared final
+src/customer/Customer.java:72:	publicMethodCommentRequirement Required
+src/customer/Customer.java:76:	publicMethodCommentRequirement Required
+src/customer/Customer.java:80:	Parameter 'email' is not assigned and could be declared final
+src/customer/Customer.java:80:	publicMethodCommentRequirement Required
+src/customer/Customer.java:84:	publicMethodCommentRequirement Required
+src/customer/Customer.java:88:	Parameter 'systemReference' is not assigned and could be declared final
+src/customer/Customer.java:88:	publicMethodCommentRequirement Required
+src/customer/Customer.java:93:	publicMethodCommentRequirement Required
+src/dao/AbstractDAO.java:23:	Each class should declare at least one constructor
+src/dao/AbstractDAO.java:23:	This abstract class does not have any abstract methods
+src/dao/AbstractDAO.java:26:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/dao/AbstractDAO.java:26:	fieldCommentRequirement Required
+src/dao/AbstractDAO.java:28:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/dao/AbstractDAO.java:28:	fieldCommentRequirement Required
+src/dao/AbstractDAO.java:30:	Avoid excessively long variable names like uniqueIdentifierFieldName
+src/dao/AbstractDAO.java:30:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/dao/AbstractDAO.java:30:	fieldCommentRequirement Required
+src/dao/AbstractDAO.java:32:	Parameter 'object' is not assigned and could be declared final
+src/dao/AbstractDAO.java:32:	publicMethodCommentRequirement Required
+src/dao/AbstractDAO.java:33:	Local variable 'session' could be declared final
+src/dao/AbstractDAO.java:34:	Avoid variables with short names like tx
+src/dao/AbstractDAO.java:34:	Found 'DD'-anomaly for variable 'tx' (lines '34'-'35').
+src/dao/AbstractDAO.java:35:	Found 'DU'-anomaly for variable 'tx' (lines '35'-'48').
+src/dao/AbstractDAO.java:35:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:36:	Local variable 'builder' could be declared final
+src/dao/AbstractDAO.java:36:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:37:	Local variable 'query' could be declared final
+src/dao/AbstractDAO.java:37:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:38:	Local variable 'root' could be declared final
+src/dao/AbstractDAO.java:38:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:39:	Potential violation of Law of Demeter (method chain calls)
+src/dao/AbstractDAO.java:39:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:39:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:39:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:40:	Avoid variables with short names like q
+src/dao/AbstractDAO.java:40:	Local variable 'q' could be declared final
+src/dao/AbstractDAO.java:40:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:41:	Local variable 'list' could be declared final
+src/dao/AbstractDAO.java:41:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:42:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:42:	Substitute calls to size() == 0 (or size() != 0, size() > 0, size() < 1) with calls to isEmpty()
+src/dao/AbstractDAO.java:43:	Avoid using if...else statements without curly braces
+src/dao/AbstractDAO.java:43:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:45:	Avoid using if...else statements without curly braces
+src/dao/AbstractDAO.java:46:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:50:	Parameter 'newObject' is not assigned and could be declared final
+src/dao/AbstractDAO.java:50:	publicMethodCommentRequirement Required
+src/dao/AbstractDAO.java:51:	Local variable 'session' could be declared final
+src/dao/AbstractDAO.java:52:	Avoid variables with short names like tx
+src/dao/AbstractDAO.java:52:	Found 'DD'-anomaly for variable 'tx' (lines '52'-'54').
+src/dao/AbstractDAO.java:54:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:56:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:57:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:60:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:62:	Avoid printStackTrace(); use a logger call instead.
+src/dao/AbstractDAO.java:62:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:64:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:68:	publicMethodCommentRequirement Required
+src/dao/AbstractDAO.java:69:	Found 'DD'-anomaly for variable 'objects' (lines '69'-'79').
+src/dao/AbstractDAO.java:70:	Local variable 'session' could be declared final
+src/dao/AbstractDAO.java:71:	Avoid variables with short names like tx
+src/dao/AbstractDAO.java:71:	Found 'DD'-anomaly for variable 'tx' (lines '71'-'73').
+src/dao/AbstractDAO.java:73:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:74:	Local variable 'builder' could be declared final
+src/dao/AbstractDAO.java:74:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:75:	Local variable 'query' could be declared final
+src/dao/AbstractDAO.java:75:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:76:	Local variable 'root' could be declared final
+src/dao/AbstractDAO.java:76:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:77:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:78:	Avoid variables with short names like q
+src/dao/AbstractDAO.java:78:	Local variable 'q' could be declared final
+src/dao/AbstractDAO.java:78:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:79:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:80:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:82:	Avoid printStackTrace(); use a logger call instead.
+src/dao/AbstractDAO.java:82:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:83:	Avoid using if statements without curly braces
+src/dao/AbstractDAO.java:84:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:89:	Parameter 'fieldName' is not assigned and could be declared final
+src/dao/AbstractDAO.java:89:	Parameter 'value' is not assigned and could be declared final
+src/dao/AbstractDAO.java:89:	publicMethodCommentRequirement Required
+src/dao/AbstractDAO.java:90:	Found 'DD'-anomaly for variable 'objects' (lines '90'-'99').
+src/dao/AbstractDAO.java:91:	Avoid variables with short names like tx
+src/dao/AbstractDAO.java:91:	Found 'DD'-anomaly for variable 'tx' (lines '91'-'93').
+src/dao/AbstractDAO.java:93:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:94:	Local variable 'builder' could be declared final
+src/dao/AbstractDAO.java:94:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:95:	Local variable 'query' could be declared final
+src/dao/AbstractDAO.java:95:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:96:	Local variable 'root' could be declared final
+src/dao/AbstractDAO.java:96:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:97:	Potential violation of Law of Demeter (method chain calls)
+src/dao/AbstractDAO.java:97:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:97:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:97:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:98:	Avoid variables with short names like q
+src/dao/AbstractDAO.java:98:	Local variable 'q' could be declared final
+src/dao/AbstractDAO.java:98:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:99:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:100:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:102:	Avoid printStackTrace(); use a logger call instead.
+src/dao/AbstractDAO.java:102:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:103:	Avoid using if statements without curly braces
+src/dao/AbstractDAO.java:104:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:106:	Avoid using if statements without curly braces
+src/dao/AbstractDAO.java:106:	Potential violation of Law of Demeter (object not created locally)
+src/dao/AbstractDAO.java:106:	Substitute calls to size() == 0 (or size() != 0, size() > 0, size() < 1) with calls to isEmpty()
+src/dao/AbstractDAO.java:107:	Assigning an Object to null is a code smell.  Consider refactoring.
+src/dao/AccountDAO.java:11:	It is a good practice to call super() in a constructor
+src/dao/AccountDAO.java:11:	publicMethodCommentRequirement Required
+src/dao/CallDAO.java:11:	It is a good practice to call super() in a constructor
+src/dao/CallDAO.java:11:	publicMethodCommentRequirement Required
+src/dao/CustomerDAO.java:11:	It is a good practice to call super() in a constructor
+src/dao/CustomerDAO.java:11:	publicMethodCommentRequirement Required
+src/dao/DBRecord.java:14:	Abstract classes should be named AbstractXXX
+src/dao/DBRecord.java:14:	Each class should declare at least one constructor
+src/dao/DBRecord.java:19:	Avoid variables with short names like id
+src/dao/DBRecord.java:19:	fieldCommentRequirement Required
+src/dao/DBRecord.java:22:	Avoid excessively long variable names like uniqueIdentifierFieldName
+src/dao/DBRecord.java:22:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/dao/DBRecord.java:22:	fieldCommentRequirement Required
+src/dao/DBRecord.java:24:	publicMethodCommentRequirement Required
+src/dao/DBRecord.java:28:	Avoid variables with short names like id
+src/dao/DBRecord.java:28:	Parameter 'id' is not assigned and could be declared final
+src/dao/DBRecord.java:28:	publicMethodCommentRequirement Required
+src/dao/DBRecord.java:32:	publicMethodCommentRequirement Required
+src/dao/DBRecord.java:36:	publicMethodCommentRequirement Required
+src/dao/EnterpriseAccountDAO.java:11:	Avoid unnecessary constructors - the compiler will generate these for you
+src/dao/EnterpriseAccountDAO.java:11:	publicMethodCommentRequirement Required
+src/dao/FamilyAccountDAO.java:5:	headerCommentRequirement Required
+src/dao/FamilyAccountDAO.java:7:	Avoid unnecessary constructors - the compiler will generate these for you
+src/dao/FamilyAccountDAO.java:7:	publicMethodCommentRequirement Required
+src/dao/InternetUsageDAO.java:11:	It is a good practice to call super() in a constructor
+src/dao/InternetUsageDAO.java:11:	publicMethodCommentRequirement Required
+src/dao/MessageDAO.java:5:	headerCommentRequirement Required
+src/dao/MessageDAO.java:7:	It is a good practice to call super() in a constructor
+src/dao/MessageDAO.java:7:	publicMethodCommentRequirement Required
+src/dao/RegionDAO.java:11:	It is a good practice to call super() in a constructor
+src/dao/RegionDAO.java:11:	publicMethodCommentRequirement Required
+src/dao/SessionFactoryUtil.java:10:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/dao/SessionFactoryUtil.java:12:	Avoid using redundant field initializer for 'sessionFactory'
+src/dao/SessionFactoryUtil.java:12:	fieldCommentRequirement Required
+src/dao/SessionFactoryUtil.java:14:	publicMethodCommentRequirement Required
+src/dao/SessionFactoryUtil.java:15:	Singleton is not thread safe
+src/dao/SessionFactoryUtil.java:16:	This statement may have some unnecessary parentheses
+src/dao/SessionFactoryUtil.java:16:	Useless parentheses.
+src/dao/SessionFactoryUtil.java:16:	Useless parentheses.
+src/exceptions/InsertException.java:3:	headerCommentRequirement Required
+src/exceptions/InsertException.java:5:	fieldCommentRequirement Required
+src/exceptions/InsertException.java:7:	publicMethodCommentRequirement Required
+src/insertions/DataInsert.java:15:	headerCommentRequirement Required
+src/insertions/DataInsert.java:17:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/insertions/DataInsert.java:17:	Private field 'customerBLL' could be made final; it is only initialized in the declaration or constructor.
+src/insertions/DataInsert.java:17:	fieldCommentRequirement Required
+src/insertions/DataInsert.java:18:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/insertions/DataInsert.java:18:	Private field 'enterpriseBLL' could be made final; it is only initialized in the declaration or constructor.
+src/insertions/DataInsert.java:18:	fieldCommentRequirement Required
+src/insertions/DataInsert.java:19:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/insertions/DataInsert.java:19:	Private field 'regionBLL' could be made final; it is only initialized in the declaration or constructor.
+src/insertions/DataInsert.java:19:	fieldCommentRequirement Required
+src/insertions/DataInsert.java:21:	publicMethodCommentRequirement Required
+src/insertions/DataInsert.java:27:	publicMethodCommentRequirement Required
+src/insertions/DataInsert.java:28:	Local variable 'romania' could be declared final
+src/insertions/DataInsert.java:29:	Avoid unused local variables such as 'rb'.
+src/insertions/DataInsert.java:29:	Avoid variables with short names like rb
+src/insertions/DataInsert.java:29:	Found 'DU'-anomaly for variable 'rb' (lines '29'-'33').
+src/insertions/DataInsert.java:29:	Local variable 'rb' could be declared final
+src/insertions/DataInsert.java:31:	Local variable 'customer1' could be declared final
+src/insertions/DataInsert.java:35:	publicMethodCommentRequirement Required
+src/insertions/DataInsert.java:36:	Local variable 'china' could be declared final
+src/insertions/DataInsert.java:37:	Local variable 'romania' could be declared final
+src/insertions/DataInsert.java:38:	Local variable 'ireland' could be declared final
+src/main/Main.java:4:	Avoid unused imports such as 'account.Account'
+src/main/Main.java:5:	Avoid unused imports such as 'account.EnterpriseAccount'
+src/main/Main.java:6:	Avoid unused imports such as 'computeTransaction.ComputeTransaction'
+src/main/Main.java:7:	Avoid unused imports such as 'computeTransaction.CreatedAccount'
+src/main/Main.java:8:	Avoid unused imports such as 'computeTransaction.UpdateAccountContext'
+src/main/Main.java:10:	Avoid unused imports such as 'customer.Customer'
+src/main/Main.java:13:	Avoid unused imports such as 'region.Romania'
+src/main/Main.java:14:	Avoid unused imports such as 'service.Call'
+src/main/Main.java:17:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/main/Main.java:17:	Avoid short class names like Main
+src/main/Main.java:17:	headerCommentRequirement Required
+src/main/Main.java:19:	Consider using varargs for methods or constructors which take an array the last parameter.
+src/main/Main.java:19:	Parameter 'args' is not assigned and could be declared final
+src/main/Main.java:19:	publicMethodCommentRequirement Required
+src/main/Main.java:21:	Avoid variables with short names like dt
+src/main/Main.java:21:	Local variable 'dt' could be declared final
+src/main/Main.java:26:	Avoid unused local variables such as 'control'.
+src/main/Main.java:26:	Found 'DU'-anomaly for variable 'control' (lines '26'-'52').
+src/main/Main.java:26:	Local variable 'control' could be declared final
+src/main/Main.java:27:	Local variable 'window' could be declared final
+src/main/Main.java:28:	Potential violation of Law of Demeter (method chain calls)
+src/main/Main.java:37:	Comment is too large: Line too long
+src/main/Main.java:38:	Comment is too large: Too many lines
+src/main/Main.java:40:	Comment is too large: Line too long
+src/main/Main.java:42:	Comment is too large: Line too long
+src/promotion/FriendPromotion.java:10:	headerCommentRequirement Required
+src/promotion/FriendPromotion.java:13:	Parameter 'account' is not assigned and could be declared final
+src/promotion/FriendPromotion.java:13:	publicMethodCommentRequirement Required
+src/promotion/FriendPromotion.java:21:	Parameter 'spentMessages' is not assigned and could be declared final
+src/promotion/FriendPromotion.java:21:	Parameter 'spentMinutes' is not assigned and could be declared final
+src/promotion/FriendPromotion.java:21:	publicMethodCommentRequirement Required
+src/promotion/FriendPromotion.java:22:	Avoid excessively long variable names like usedDifferentProviderMinutes
+src/promotion/FriendPromotion.java:22:	Avoid excessively long variable names like usedInternationalMinutes
+src/promotion/FriendPromotion.java:22:	Parameter 'usedDifferentProviderMinutes' is not assigned and could be declared final
+src/promotion/FriendPromotion.java:22:	Parameter 'usedInternationalMinutes' is not assigned and could be declared final
+src/promotion/FriendPromotion.java:22:	Parameter 'usedMobileData' is not assigned and could be declared final
+src/promotion/FriendPromotion.java:28:	Avoid excessively long variable names like leftDifferentProviderMinutes
+src/promotion/FriendPromotion.java:29:	Avoid excessively long variable names like leftInternationalMinutes
+src/promotion/FriendPromotion.java:30:	Local variable 'costUntilNow' could be declared final
+src/promotion/FriendPromotion.java:76:	Avoid variables with short names like r
+src/promotion/FriendPromotion.java:76:	Local variable 'r' could be declared final
+src/promotion/FriendPromotion.java:77:	Local variable 'pdfc' could be declared final
+src/promotion/FriendPromotion.java:81:	Document empty method
+src/promotion/FriendPromotion.java:81:	publicMethodCommentRequirement Required
+src/promotion/PDFcreater.java:16:	headerCommentRequirement Required
+src/promotion/PDFcreater.java:18:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/promotion/PDFcreater.java:18:	Use explicit scoping instead of the default package private level
+src/promotion/PDFcreater.java:18:	fieldCommentRequirement Required
+src/promotion/PDFcreater.java:19:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/promotion/PDFcreater.java:19:	Use explicit scoping instead of the default package private level
+src/promotion/PDFcreater.java:19:	fieldCommentRequirement Required
+src/promotion/PDFcreater.java:21:	Avoid variables with short names like r
+src/promotion/PDFcreater.java:21:	Parameter 'customer' is not assigned and could be declared final
+src/promotion/PDFcreater.java:21:	Parameter 'r' is not assigned and could be declared final
+src/promotion/PDFcreater.java:21:	publicMethodCommentRequirement Required
+src/promotion/PDFcreater.java:27:	Found 'UR'-anomaly for variable 'item' (lines '27'-'47').
+src/promotion/PDFcreater.java:27:	publicMethodCommentRequirement Required
+src/promotion/PDFcreater.java:28:	Local variable 'document' could be declared final
+src/promotion/PDFcreater.java:30:	Local variable 'writer' could be declared final
+src/promotion/PDFcreater.java:45:	Found 'DU'-anomaly for variable 'num' (lines '45'-'59').
+src/promotion/PDFcreater.java:46:	Local variable 'item' could be declared final
+src/promotion/PDFcreater.java:47:	Avoid instantiating new objects inside loops
+src/promotion/PDFcreater.java:48:	Found 'DU'-anomaly for variable 'num' (lines '48'-'59').
+src/promotion/PDFcreater.java:54:	Avoid printStackTrace(); use a logger call instead.
+src/promotion/PDFcreater.java:56:	Avoid printStackTrace(); use a logger call instead.
+src/promotion/Promotion.java:10:	headerCommentRequirement Required
+src/promotion/Promotion.java:12:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/promotion/Promotion.java:12:	Use explicit scoping instead of the default package private level
+src/promotion/Promotion.java:12:	fieldCommentRequirement Required
+src/promotion/Promotion.java:14:	fieldCommentRequirement Required
+src/promotion/Promotion.java:16:	It is a good practice to call super() in a constructor
+src/promotion/Promotion.java:16:	Parameter 'account' is not assigned and could be declared final
+src/promotion/Promotion.java:16:	publicMethodCommentRequirement Required
+src/promotion/Promotion.java:22:	Document empty constructor
+src/promotion/Promotion.java:22:	It is a good practice to call super() in a constructor
+src/promotion/Promotion.java:22:	publicMethodCommentRequirement Required
+src/promotion/Promotion.java:29:	publicMethodCommentRequirement Required
+src/promotion/Promotion.java:33:	Parameter 'giftpoints' is not assigned and could be declared final
+src/promotion/Promotion.java:33:	publicMethodCommentRequirement Required
+src/promotion/Promotion.java:37:	Avoid excessively long variable names like leftDifferentProviderMinutes
+src/promotion/Promotion.java:37:	Avoid excessively long variable names like leftInternationalMinutes
+src/promotion/Promotion.java:37:	Parameter 'costUntilNow' is not assigned and could be declared final
+src/promotion/Promotion.java:37:	Parameter 'leftDifferentProviderMinutes' is not assigned and could be declared final
+src/promotion/Promotion.java:37:	Parameter 'leftInternationalMinutes' is not assigned and could be declared final
+src/promotion/Promotion.java:37:	Parameter 'leftMessages' is not assigned and could be declared final
+src/promotion/Promotion.java:37:	Parameter 'leftMinutes' is not assigned and could be declared final
+src/promotion/Promotion.java:37:	Parameter 'leftMobileData' is not assigned and could be declared final
+src/promotion/Promotion.java:37:	publicMethodCommentRequirement Required
+src/promotion/Promotion.java:42:	publicMethodCommentRequirement Required
+src/promotion/PromotionFactory.java:7:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/promotion/PromotionFactory.java:7:	headerCommentRequirement Required
+src/promotion/PromotionFactory.java:9:	Parameter 'account' is not assigned and could be declared final
+src/promotion/PromotionFactory.java:9:	Parameter 'type' is not assigned and could be declared final
+src/promotion/PromotionFactory.java:9:	publicMethodCommentRequirement Required
+src/promotion/PromotionFactory.java:10:	Found 'DD'-anomaly for variable 'decoratedAccount' (lines '10'-'12').
+src/promotion/PromotionFactory.java:10:	Found 'DD'-anomaly for variable 'decoratedAccount' (lines '10'-'16').
+src/promotion/PromotionFactory.java:10:	Found 'DD'-anomaly for variable 'decoratedAccount' (lines '10'-'20').
+src/promotion/PromotionFactory.java:12:	Found 'DD'-anomaly for variable 'decoratedAccount' (lines '12'-'13').
+src/promotion/PromotionFactory.java:13:	Potential violation of Law of Demeter (method chain calls)
+src/promotion/PromotionFactory.java:13:	Potential violation of Law of Demeter (method chain calls)
+src/promotion/PromotionFactory.java:16:	Found 'DD'-anomaly for variable 'decoratedAccount' (lines '16'-'17').
+src/promotion/PromotionFactory.java:17:	Potential violation of Law of Demeter (method chain calls)
+src/promotion/PromotionFactory.java:17:	Potential violation of Law of Demeter (method chain calls)
+src/promotion/PromotionFactory.java:20:	Found 'DD'-anomaly for variable 'decoratedAccount' (lines '20'-'21').
+src/promotion/PromotionFactory.java:21:	Potential violation of Law of Demeter (method chain calls)
+src/promotion/PromotionFactory.java:21:	Potential violation of Law of Demeter (method chain calls)
+src/promotion/PromotionFactory.java:26:	Parameter 'decoratedAccount' is not assigned and could be declared final
+src/promotion/PromotionFactory.java:26:	Parameter 'type' is not assigned and could be declared final
+src/promotion/PromotionFactory.java:28:	Found 'DD'-anomaly for variable 'newAccount' (lines '28'-'30').
+src/promotion/PromotionFactory.java:28:	Found 'DD'-anomaly for variable 'newAccount' (lines '28'-'33').
+src/promotion/PromotionFactory.java:29:	Position literals first in String comparisons
+src/promotion/PromotionFactory.java:30:	Found 'DD'-anomaly for variable 'newAccount' (lines '30'-'33').
+src/promotion/PromotionFactory.java:32:	Avoid using if statements without curly braces
+src/promotion/PromotionFactory.java:32:	Position literals first in String comparisons
+src/promotion/SurferPromotion.java:10:	headerCommentRequirement Required
+src/promotion/SurferPromotion.java:12:	Parameter 'account' is not assigned and could be declared final
+src/promotion/SurferPromotion.java:12:	publicMethodCommentRequirement Required
+src/promotion/SurferPromotion.java:20:	Parameter 'spentMessages' is not assigned and could be declared final
+src/promotion/SurferPromotion.java:20:	Parameter 'spentMinutes' is not assigned and could be declared final
+src/promotion/SurferPromotion.java:20:	publicMethodCommentRequirement Required
+src/promotion/SurferPromotion.java:21:	Avoid excessively long variable names like usedDifferentProviderMinutes
+src/promotion/SurferPromotion.java:21:	Avoid excessively long variable names like usedInternationalMinutes
+src/promotion/SurferPromotion.java:21:	Parameter 'usedDifferentProviderMinutes' is not assigned and could be declared final
+src/promotion/SurferPromotion.java:21:	Parameter 'usedInternationalMinutes' is not assigned and could be declared final
+src/promotion/SurferPromotion.java:21:	Parameter 'usedMobileData' is not assigned and could be declared final
+src/promotion/SurferPromotion.java:25:	Avoid excessively long variable names like leftDifferentProviderMinutes
+src/promotion/SurferPromotion.java:26:	Avoid excessively long variable names like leftInternationalMinutes
+src/promotion/SurferPromotion.java:27:	Local variable 'costUntilNow' could be declared final
+src/promotion/SurferPromotion.java:63:	Avoid variables with short names like r
+src/promotion/SurferPromotion.java:63:	Local variable 'r' could be declared final
+src/promotion/SurferPromotion.java:64:	Local variable 'pdfc' could be declared final
+src/promotion/SurferPromotion.java:64:	Unnecessary use of fully qualified name 'account.getCustomer' due to existing import 'account.*'
+src/promotion/SurferPromotion.java:68:	Document empty method
+src/promotion/SurferPromotion.java:68:	publicMethodCommentRequirement Required
+src/promotion/TravelerPromotion.java:10:	headerCommentRequirement Required
+src/promotion/TravelerPromotion.java:12:	Parameter 'account' is not assigned and could be declared final
+src/promotion/TravelerPromotion.java:12:	publicMethodCommentRequirement Required
+src/promotion/TravelerPromotion.java:20:	Parameter 'spentMessages' is not assigned and could be declared final
+src/promotion/TravelerPromotion.java:20:	Parameter 'spentMinutes' is not assigned and could be declared final
+src/promotion/TravelerPromotion.java:20:	publicMethodCommentRequirement Required
+src/promotion/TravelerPromotion.java:21:	Avoid excessively long variable names like usedDifferentProviderMinutes
+src/promotion/TravelerPromotion.java:21:	Avoid excessively long variable names like usedInternationalMinutes
+src/promotion/TravelerPromotion.java:21:	Parameter 'usedDifferentProviderMinutes' is not assigned and could be declared final
+src/promotion/TravelerPromotion.java:21:	Parameter 'usedInternationalMinutes' is not assigned and could be declared final
+src/promotion/TravelerPromotion.java:21:	Parameter 'usedMobileData' is not assigned and could be declared final
+src/promotion/TravelerPromotion.java:27:	Avoid excessively long variable names like leftDifferentProviderMinutes
+src/promotion/TravelerPromotion.java:28:	Avoid excessively long variable names like leftInternationalMinutes
+src/promotion/TravelerPromotion.java:29:	Local variable 'costUntilNow' could be declared final
+src/promotion/TravelerPromotion.java:75:	Avoid variables with short names like r
+src/promotion/TravelerPromotion.java:75:	Local variable 'r' could be declared final
+src/promotion/TravelerPromotion.java:76:	Local variable 'pdfc' could be declared final
+src/promotion/TravelerPromotion.java:76:	Unnecessary use of fully qualified name 'account.getCustomer' due to existing import 'account.*'
+src/promotion/TravelerPromotion.java:80:	Document empty method
+src/promotion/TravelerPromotion.java:80:	publicMethodCommentRequirement Required
+src/region/China.java:10:	headerCommentRequirement Required
+src/region/China.java:12:	It is a good practice to call super() in a constructor
+src/region/China.java:12:	publicMethodCommentRequirement Required
+src/region/China.java:16:	Parameter 'callPrice' is not assigned and could be declared final
+src/region/China.java:16:	Parameter 'internetPrice' is not assigned and could be declared final
+src/region/China.java:16:	Parameter 'messagePrice' is not assigned and could be declared final
+src/region/China.java:16:	Parameter 'percent' is not assigned and could be declared final
+src/region/China.java:16:	publicMethodCommentRequirement Required
+src/region/China.java:26:	Parameter 'callPrice' is not assigned and could be declared final
+src/region/China.java:26:	publicMethodCommentRequirement Required
+src/region/China.java:31:	Parameter 'percent' is not assigned and could be declared final
+src/region/China.java:31:	publicMethodCommentRequirement Required
+src/region/China.java:32:	Local variable 'roaming' could be declared final
+src/region/China.java:37:	publicMethodCommentRequirement Required
+src/region/China.java:42:	Parameter 'regionName' is not assigned and could be declared final
+src/region/China.java:42:	publicMethodCommentRequirement Required
+src/region/China.java:47:	publicMethodCommentRequirement Required
+src/region/China.java:53:	Parameter 'messagePrice' is not assigned and could be declared final
+src/region/China.java:53:	publicMethodCommentRequirement Required
+src/region/China.java:59:	Parameter 'internetPrice' is not assigned and could be declared final
+src/region/China.java:59:	publicMethodCommentRequirement Required
+src/region/Ireland.java:11:	headerCommentRequirement Required
+src/region/Ireland.java:13:	It is a good practice to call super() in a constructor
+src/region/Ireland.java:13:	publicMethodCommentRequirement Required
+src/region/Ireland.java:17:	Parameter 'callPrice' is not assigned and could be declared final
+src/region/Ireland.java:17:	Parameter 'internetPrice' is not assigned and could be declared final
+src/region/Ireland.java:17:	Parameter 'messagePrice' is not assigned and could be declared final
+src/region/Ireland.java:17:	Parameter 'percent' is not assigned and could be declared final
+src/region/Ireland.java:17:	publicMethodCommentRequirement Required
+src/region/Ireland.java:27:	Parameter 'callPrice' is not assigned and could be declared final
+src/region/Ireland.java:27:	publicMethodCommentRequirement Required
+src/region/Ireland.java:32:	Parameter 'percent' is not assigned and could be declared final
+src/region/Ireland.java:32:	publicMethodCommentRequirement Required
+src/region/Ireland.java:33:	Local variable 'roaming' could be declared final
+src/region/Ireland.java:38:	publicMethodCommentRequirement Required
+src/region/Ireland.java:43:	Parameter 'regionName' is not assigned and could be declared final
+src/region/Ireland.java:43:	publicMethodCommentRequirement Required
+src/region/Ireland.java:48:	publicMethodCommentRequirement Required
+src/region/Ireland.java:54:	Parameter 'messagePrice' is not assigned and could be declared final
+src/region/Ireland.java:54:	publicMethodCommentRequirement Required
+src/region/Ireland.java:60:	Parameter 'internetPrice' is not assigned and could be declared final
+src/region/Ireland.java:60:	publicMethodCommentRequirement Required
+src/region/Region.java:21:	Abstract classes should be named AbstractXXX
+src/region/Region.java:24:	fieldCommentRequirement Required
+src/region/Region.java:27:	fieldCommentRequirement Required
+src/region/Region.java:30:	fieldCommentRequirement Required
+src/region/Region.java:33:	fieldCommentRequirement Required
+src/region/Region.java:36:	fieldCommentRequirement Required
+src/region/Region.java:38:	Avoid unnecessary constructors - the compiler will generate these for you
+src/region/Region.java:38:	Document empty constructor
+src/region/Region.java:38:	It is a good practice to call super() in a constructor
+src/region/Region.java:38:	publicMethodCommentRequirement Required
+src/region/Region.java:41:	publicMethodCommentRequirement Required
+src/region/Region.java:43:	publicMethodCommentRequirement Required
+src/region/Region.java:47:	Parameter 'roamingTax' is not assigned and could be declared final
+src/region/Region.java:47:	publicMethodCommentRequirement Required
+src/region/Region.java:51:	publicMethodCommentRequirement Required
+src/region/Region.java:55:	publicMethodCommentRequirement Required
+src/region/Region.java:57:	publicMethodCommentRequirement Required
+src/region/Region.java:61:	Parameter 'regionName' is not assigned and could be declared final
+src/region/Region.java:61:	publicMethodCommentRequirement Required
+src/region/Region.java:65:	publicMethodCommentRequirement Required
+src/region/Region.java:69:	publicMethodCommentRequirement Required
+src/region/Region.java:71:	publicMethodCommentRequirement Required
+src/region/Region.java:75:	publicMethodCommentRequirement Required
+src/region/RegionFactory.java:3:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/region/RegionFactory.java:3:	headerCommentRequirement Required
+src/region/RegionFactory.java:5:	Parameter 'region' is not assigned and could be declared final
+src/region/RegionFactory.java:5:	publicMethodCommentRequirement Required
+src/region/RegionFactory.java:6:	Found 'DD'-anomaly for variable 'customRegion' (lines '6'-'10').
+src/region/RegionFactory.java:6:	Found 'DD'-anomaly for variable 'customRegion' (lines '6'-'12').
+src/region/RegionFactory.java:6:	Found 'DD'-anomaly for variable 'customRegion' (lines '6'-'8').
+src/region/RegionFactory.java:7:	Avoid using Literals in Conditional Statements
+src/region/RegionFactory.java:7:	Avoid using if statements without curly braces
+src/region/RegionFactory.java:7:	Use equals() to compare strings instead of '==' or '!='
+src/region/RegionFactory.java:8:	Found 'DD'-anomaly for variable 'customRegion' (lines '8'-'10').
+src/region/RegionFactory.java:8:	Found 'DD'-anomaly for variable 'customRegion' (lines '8'-'12').
+src/region/RegionFactory.java:9:	Avoid using Literals in Conditional Statements
+src/region/RegionFactory.java:9:	Avoid using if statements without curly braces
+src/region/RegionFactory.java:9:	Use equals() to compare strings instead of '==' or '!='
+src/region/RegionFactory.java:10:	Found 'DD'-anomaly for variable 'customRegion' (lines '10'-'12').
+src/region/RegionFactory.java:11:	Avoid using Literals in Conditional Statements
+src/region/RegionFactory.java:11:	Avoid using if statements without curly braces
+src/region/RegionFactory.java:11:	Use equals() to compare strings instead of '==' or '!='
+src/region/Romania.java:15:	It is a good practice to call super() in a constructor
+src/region/Romania.java:15:	publicMethodCommentRequirement Required
+src/region/Romania.java:19:	Parameter 'callPrice' is not assigned and could be declared final
+src/region/Romania.java:19:	Parameter 'internetPrice' is not assigned and could be declared final
+src/region/Romania.java:19:	Parameter 'messagePrice' is not assigned and could be declared final
+src/region/Romania.java:19:	Parameter 'percent' is not assigned and could be declared final
+src/region/Romania.java:19:	publicMethodCommentRequirement Required
+src/region/Romania.java:29:	Parameter 'callPrice' is not assigned and could be declared final
+src/region/Romania.java:29:	publicMethodCommentRequirement Required
+src/region/Romania.java:34:	Parameter 'percent' is not assigned and could be declared final
+src/region/Romania.java:34:	publicMethodCommentRequirement Required
+src/region/Romania.java:35:	Local variable 'roaming' could be declared final
+src/region/Romania.java:40:	publicMethodCommentRequirement Required
+src/region/Romania.java:45:	Parameter 'regionName' is not assigned and could be declared final
+src/region/Romania.java:45:	publicMethodCommentRequirement Required
+src/region/Romania.java:50:	publicMethodCommentRequirement Required
+src/region/Romania.java:56:	Parameter 'messagePrice' is not assigned and could be declared final
+src/region/Romania.java:56:	publicMethodCommentRequirement Required
+src/region/Romania.java:62:	Parameter 'internetPrice' is not assigned and could be declared final
+src/region/Romania.java:62:	publicMethodCommentRequirement Required
+src/report/Report.java:9:	headerCommentRequirement Required
+src/report/Report.java:11:	fieldCommentRequirement Required
+src/report/Report.java:12:	fieldCommentRequirement Required
+src/report/Report.java:13:	fieldCommentRequirement Required
+src/report/Report.java:14:	fieldCommentRequirement Required
+src/report/Report.java:15:	fieldCommentRequirement Required
+src/report/Report.java:16:	fieldCommentRequirement Required
+src/report/Report.java:17:	fieldCommentRequirement Required
+src/report/Report.java:18:	fieldCommentRequirement Required
+src/report/Report.java:19:	Variables should start with a lowercase character, 'CostUntilNow' starts with uppercase character.
+src/report/Report.java:19:	fieldCommentRequirement Required
+src/report/Report.java:20:	fieldCommentRequirement Required
+src/report/Report.java:21:	Avoid excessively long variable names like leftInternationalMinutes
+src/report/Report.java:21:	fieldCommentRequirement Required
+src/report/Report.java:22:	Avoid excessively long variable names like leftDifferentProviderMinutes
+src/report/Report.java:22:	fieldCommentRequirement Required
+src/report/Report.java:24:	Avoid excessively long variable names like leftDifferentProviderMinutes
+src/report/Report.java:24:	Avoid excessively long variable names like leftInternationalMinutes
+src/report/Report.java:24:	Avoid unused constructor parameters such as 'leftInternationalMinutes'.
+src/report/Report.java:24:	Parameter 'costUntilNow' is not assigned and could be declared final
+src/report/Report.java:24:	Parameter 'leftDifferentProviderMinutes' is not assigned and could be declared final
+src/report/Report.java:24:	Parameter 'leftInternationalMinutes' is not assigned and could be declared final
+src/report/Report.java:24:	Parameter 'leftMessages' is not assigned and could be declared final
+src/report/Report.java:24:	Parameter 'leftMinutes' is not assigned and could be declared final
+src/report/Report.java:24:	Parameter 'leftMobileData' is not assigned and could be declared final
+src/report/Report.java:24:	publicMethodCommentRequirement Required
+src/report/Report.java:34:	publicMethodCommentRequirement Required
+src/report/Report.java:38:	Parameter 'endate' is not assigned and could be declared final
+src/report/Report.java:38:	publicMethodCommentRequirement Required
+src/report/Report.java:42:	publicMethodCommentRequirement Required
+src/report/Report.java:46:	Parameter 'number' is not assigned and could be declared final
+src/report/Report.java:46:	publicMethodCommentRequirement Required
+src/report/Report.java:50:	publicMethodCommentRequirement Required
+src/report/Report.java:54:	Parameter 'numberCount' is not assigned and could be declared final
+src/report/Report.java:54:	publicMethodCommentRequirement Required
+src/report/Report.java:58:	publicMethodCommentRequirement Required
+src/report/Report.java:62:	Parameter 'numbers' is not assigned and could be declared final
+src/report/Report.java:62:	publicMethodCommentRequirement Required
+src/report/Report.java:66:	publicMethodCommentRequirement Required
+src/report/Report.java:70:	Parameter 'leftMinutes' is not assigned and could be declared final
+src/report/Report.java:70:	publicMethodCommentRequirement Required
+src/report/Report.java:74:	publicMethodCommentRequirement Required
+src/report/Report.java:78:	Parameter 'leftMessages' is not assigned and could be declared final
+src/report/Report.java:78:	publicMethodCommentRequirement Required
+src/report/Report.java:82:	publicMethodCommentRequirement Required
+src/report/Report.java:86:	Parameter 'leftMobileData' is not assigned and could be declared final
+src/report/Report.java:86:	publicMethodCommentRequirement Required
+src/report/Report.java:90:	publicMethodCommentRequirement Required
+src/report/Report.java:94:	Parameter 'mobileData2' is not assigned and could be declared final
+src/report/Report.java:94:	publicMethodCommentRequirement Required
+src/report/Report.java:98:	publicMethodCommentRequirement Required
+src/report/Report.java:102:	Parameter 'costUntilNow' is not assigned and could be declared final
+src/report/Report.java:102:	publicMethodCommentRequirement Required
+src/report/Report.java:106:	publicMethodCommentRequirement Required
+src/report/Report.java:110:	Parameter 'usedMobileData' is not assigned and could be declared final
+src/report/Report.java:110:	publicMethodCommentRequirement Required
+src/report/Report.java:114:	publicMethodCommentRequirement Required
+src/report/Report.java:118:	Avoid excessively long variable names like leftInternationalMinutes
+src/report/Report.java:118:	Parameter 'leftInternationalMinutes' is not assigned and could be declared final
+src/report/Report.java:118:	publicMethodCommentRequirement Required
+src/report/Report.java:122:	publicMethodCommentRequirement Required
+src/report/Report.java:126:	Avoid excessively long variable names like leftDifferentProviderMinutes
+src/report/Report.java:126:	Parameter 'leftDifferentProviderMinutes' is not assigned and could be declared final
+src/report/Report.java:126:	publicMethodCommentRequirement Required
+src/service/Call.java:16:	Avoid short class names like Call
+src/service/Call.java:18:	fieldCommentRequirement Required
+src/service/Call.java:21:	fieldCommentRequirement Required
+src/service/Call.java:24:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/service/Call.java:24:	fieldCommentRequirement Required
+src/service/Call.java:27:	fieldCommentRequirement Required
+src/service/Call.java:29:	Document empty constructor
+src/service/Call.java:29:	It is a good practice to call super() in a constructor
+src/service/Call.java:29:	publicMethodCommentRequirement Required
+src/service/Call.java:31:	Parameter 'duration' is not assigned and could be declared final
+src/service/Call.java:31:	Parameter 'locationFrom' is not assigned and could be declared final
+src/service/Call.java:31:	Parameter 'locationTo' is not assigned and could be declared final
+src/service/Call.java:31:	Parameter 'number' is not assigned and could be declared final
+src/service/Call.java:31:	publicMethodCommentRequirement Required
+src/service/Call.java:39:	Parameter 'roamingTax' is not assigned and could be declared final
+src/service/Call.java:39:	publicMethodCommentRequirement Required
+src/service/Call.java:41:	Avoid unnecessary comparisons in boolean expressions
+src/service/Call.java:52:	Parameter 'duration' is not assigned and could be declared final
+src/service/Call.java:52:	Parameter 'roamingTax' is not assigned and could be declared final
+src/service/Call.java:52:	publicMethodCommentRequirement Required
+src/service/Call.java:62:	publicMethodCommentRequirement Required
+src/service/Call.java:65:	Parameter 'duration' is not assigned and could be declared final
+src/service/Call.java:65:	publicMethodCommentRequirement Required
+src/service/Call.java:69:	publicMethodCommentRequirement Required
+src/service/Call.java:72:	Parameter 'locationTo' is not assigned and could be declared final
+src/service/Call.java:72:	publicMethodCommentRequirement Required
+src/service/Call.java:77:	Parameter 'referenceNumber' is not assigned and could be declared final
+src/service/Call.java:77:	publicMethodCommentRequirement Required
+src/service/Call.java:82:	publicMethodCommentRequirement Required
+src/service/Call.java:86:	publicMethodCommentRequirement Required
+src/service/Call.java:91:	publicMethodCommentRequirement Required
+src/service/IService.java:7:	headerCommentRequirement Required
+src/service/IService.java:14:	Avoid modifiers which are implied by the context
+src/service/IService.java:14:	publicMethodCommentRequirement Required
+src/service/IService.java:16:	Avoid modifiers which are implied by the context
+src/service/IService.java:16:	publicMethodCommentRequirement Required
+src/service/InternetUsage.java:16:	fieldCommentRequirement Required
+src/service/InternetUsage.java:19:	fieldCommentRequirement Required
+src/service/InternetUsage.java:21:	Parameter 'locationFrom' is not assigned and could be declared final
+src/service/InternetUsage.java:21:	Parameter 'number' is not assigned and could be declared final
+src/service/InternetUsage.java:21:	Parameter 'traffic' is not assigned and could be declared final
+src/service/InternetUsage.java:21:	publicMethodCommentRequirement Required
+src/service/InternetUsage.java:27:	Parameter 'roamingTax' is not assigned and could be declared final
+src/service/InternetUsage.java:27:	publicMethodCommentRequirement Required
+src/service/InternetUsage.java:34:	Parameter 'leftInternet' is not assigned and could be declared final
+src/service/InternetUsage.java:34:	Parameter 'roamingTax' is not assigned and could be declared final
+src/service/InternetUsage.java:34:	publicMethodCommentRequirement Required
+src/service/InternetUsage.java:39:	publicMethodCommentRequirement Required
+src/service/InternetUsage.java:42:	Parameter 'traffic' is not assigned and could be declared final
+src/service/InternetUsage.java:42:	publicMethodCommentRequirement Required
+src/service/InternetUsage.java:45:	publicMethodCommentRequirement Required
+src/service/InternetUsage.java:48:	Parameter 'speed' is not assigned and could be declared final
+src/service/InternetUsage.java:48:	publicMethodCommentRequirement Required
+src/service/InternetUsage.java:53:	Parameter 'referenceNumber' is not assigned and could be declared final
+src/service/InternetUsage.java:53:	publicMethodCommentRequirement Required
+src/service/InternetUsage.java:58:	publicMethodCommentRequirement Required
+src/service/InternetUsage.java:61:	publicMethodCommentRequirement Required
+src/service/InternetUsage.java:66:	publicMethodCommentRequirement Required
+src/service/Message.java:18:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/service/Message.java:18:	Private field 'quantity' could be made final; it is only initialized in the declaration or constructor.
+src/service/Message.java:18:	fieldCommentRequirement Required
+src/service/Message.java:21:	fieldCommentRequirement Required
+src/service/Message.java:24:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/service/Message.java:24:	Private field 'locationToString' could be made final; it is only initialized in the declaration or constructor.
+src/service/Message.java:24:	fieldCommentRequirement Required
+src/service/Message.java:27:	fieldCommentRequirement Required
+src/service/Message.java:30:	fieldCommentRequirement Required
+src/service/Message.java:32:	Parameter 'locationFrom' is not assigned and could be declared final
+src/service/Message.java:32:	Parameter 'locationTo' is not assigned and could be declared final
+src/service/Message.java:32:	Parameter 'nrOfWords' is not assigned and could be declared final
+src/service/Message.java:32:	Parameter 'number' is not assigned and could be declared final
+src/service/Message.java:32:	publicMethodCommentRequirement Required
+src/service/Message.java:43:	Parameter 'roamingTax' is not assigned and could be declared final
+src/service/Message.java:43:	publicMethodCommentRequirement Required
+src/service/Message.java:45:	Avoid unnecessary comparisons in boolean expressions
+src/service/Message.java:57:	Parameter 'duration' is not assigned and could be declared final
+src/service/Message.java:57:	Parameter 'roamingTax' is not assigned and could be declared final
+src/service/Message.java:57:	publicMethodCommentRequirement Required
+src/service/Message.java:67:	publicMethodCommentRequirement Required
+src/service/Message.java:70:	Parameter 'locationTo' is not assigned and could be declared final
+src/service/Message.java:70:	publicMethodCommentRequirement Required
+src/service/Message.java:73:	publicMethodCommentRequirement Required
+src/service/Message.java:76:	Parameter 'limit' is not assigned and could be declared final
+src/service/Message.java:76:	publicMethodCommentRequirement Required
+src/service/Message.java:79:	publicMethodCommentRequirement Required
+src/service/Message.java:82:	Parameter 'nrOfWords' is not assigned and could be declared final
+src/service/Message.java:82:	publicMethodCommentRequirement Required
+src/service/Message.java:87:	Parameter 'referenceNumber' is not assigned and could be declared final
+src/service/Message.java:87:	publicMethodCommentRequirement Required
+src/service/Message.java:92:	publicMethodCommentRequirement Required
+src/service/Message.java:95:	publicMethodCommentRequirement Required
+src/service/Message.java:100:	publicMethodCommentRequirement Required
+src/service/Service.java:14:	Abstract classes should be named AbstractXXX
+src/service/Service.java:17:	fieldCommentRequirement Required
+src/service/Service.java:20:	fieldCommentRequirement Required
+src/service/Service.java:23:	fieldCommentRequirement Required
+src/service/Service.java:26:	fieldCommentRequirement Required
+src/service/Service.java:29:	Avoid excessively long variable names like locationFromString
+src/service/Service.java:29:	fieldCommentRequirement Required
+src/service/Service.java:32:	fieldCommentRequirement Required
+src/service/Service.java:35:	fieldCommentRequirement Required
+src/service/Service.java:38:	fieldCommentRequirement Required
+src/service/Service.java:40:	Document empty constructor
+src/service/Service.java:40:	It is a good practice to call super() in a constructor
+src/service/Service.java:40:	publicMethodCommentRequirement Required
+src/service/Service.java:42:	It is a good practice to call super() in a constructor
+src/service/Service.java:42:	Parameter 'locationFrom' is not assigned and could be declared final
+src/service/Service.java:42:	Parameter 'number' is not assigned and could be declared final
+src/service/Service.java:42:	Parameter 'value' is not assigned and could be declared final
+src/service/Service.java:42:	publicMethodCommentRequirement Required
+src/service/Service.java:48:	publicMethodCommentRequirement Required
+src/service/Service.java:50:	publicMethodCommentRequirement Required
+src/service/Service.java:54:	publicMethodCommentRequirement Required
+src/service/Service.java:58:	publicMethodCommentRequirement Required
+src/service/Service.java:61:	publicMethodCommentRequirement Required
+src/service/Service.java:63:	publicMethodCommentRequirement Required
+src/service/Service.java:65:	publicMethodCommentRequirement Required
+src/service/Service.java:68:	Avoid excessively long variable names like locationFromString
+src/service/Service.java:68:	Parameter 'locationFromString' is not assigned and could be declared final
+src/service/Service.java:68:	publicMethodCommentRequirement Required
+src/service/Service.java:72:	publicMethodCommentRequirement Required
+src/service/Service.java:75:	Parameter 'locationFrom' is not assigned and could be declared final
+src/service/Service.java:75:	publicMethodCommentRequirement Required
+src/service/Service.java:78:	publicMethodCommentRequirement Required
+src/service/Service.java:81:	Parameter 'number' is not assigned and could be declared final
+src/service/Service.java:81:	publicMethodCommentRequirement Required
+src/service/Service.java:84:	publicMethodCommentRequirement Required
+src/service/Service.java:87:	Parameter 'cost' is not assigned and could be declared final
+src/service/Service.java:87:	publicMethodCommentRequirement Required
+src/service/Service.java:90:	A getX() method which returns a boolean should be named isX()
+src/service/Service.java:90:	publicMethodCommentRequirement Required
+src/service/Service.java:93:	Parameter 'international' is not assigned and could be declared final
+src/service/Service.java:93:	publicMethodCommentRequirement Required
+src/service/Service.java:96:	publicMethodCommentRequirement Required
+src/service/Service.java:100:	Parameter 'value' is not assigned and could be declared final
+src/service/Service.java:100:	publicMethodCommentRequirement Required
+src/service/Service.java:103:	Parameter 'value' is not assigned and could be declared final
+src/service/Service.java:103:	publicMethodCommentRequirement Required
+src/service/Service.java:106:	publicMethodCommentRequirement Required
+src/service/Service.java:111:	publicMethodCommentRequirement Required
+src/service/Service.java:113:	An empty method in an abstract class should be abstract instead
+src/service/Service.java:113:	Parameter 'abs' is not assigned and could be declared final
+src/service/Service.java:113:	Parameter 'roamingTax' is not assigned and could be declared final
+src/service/Service.java:113:	publicMethodCommentRequirement Required
+src/service/ServiceFactory.java:7:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/service/ServiceFactory.java:8:	Parameter 'locationFrom' is not assigned and could be declared final
+src/service/ServiceFactory.java:8:	Parameter 'locationTo' is not assigned and could be declared final
+src/service/ServiceFactory.java:8:	Parameter 'number' is not assigned and could be declared final
+src/service/ServiceFactory.java:8:	Parameter 'type' is not assigned and could be declared final
+src/service/ServiceFactory.java:8:	Parameter 'value' is not assigned and could be declared final
+src/service/ServiceFactory.java:8:	publicMethodCommentRequirement Required
+src/service/ServiceFactory.java:10:	A method should have only one exit point, and that should be the last statement in the method
+src/service/ServiceFactory.java:13:	A method should have only one exit point, and that should be the last statement in the method
+src/service/ServiceFactory.java:16:	Avoid using if...else statements without curly braces
+src/test/EnterpriseAccountTest.java:13:	Each class should declare at least one constructor
+src/test/EnterpriseAccountTest.java:13:	headerCommentRequirement Required
+src/test/EnterpriseAccountTest.java:15:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/EnterpriseAccountTest.java:15:	Use explicit scoping instead of the default package private level
+src/test/EnterpriseAccountTest.java:15:	fieldCommentRequirement Required
+src/test/EnterpriseAccountTest.java:16:	Avoid variables with short names like ea
+src/test/EnterpriseAccountTest.java:16:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/EnterpriseAccountTest.java:16:	Use explicit scoping instead of the default package private level
+src/test/EnterpriseAccountTest.java:16:	fieldCommentRequirement Required
+src/test/EnterpriseAccountTest.java:19:	publicMethodCommentRequirement Required
+src/test/FamilyAccountTest.java:15:	Each class should declare at least one constructor
+src/test/FamilyAccountTest.java:15:	headerCommentRequirement Required
+src/test/FamilyAccountTest.java:17:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/FamilyAccountTest.java:17:	Use explicit scoping instead of the default package private level
+src/test/FamilyAccountTest.java:17:	fieldCommentRequirement Required
+src/test/FamilyAccountTest.java:20:	publicMethodCommentRequirement Required
+src/test/FamilyAccountTest.java:21:	Local variable 'number' could be declared final
+src/test/FamilyAccountTest.java:23:	Local variable 'conrad' could be declared final
+src/test/FamilyAccountTest.java:24:	Avoid variables with short names like fa
+src/test/FamilyAccountTest.java:24:	Local variable 'fa' could be declared final
+src/test/FriendPromotionTest.java:14:	Each class should declare at least one constructor
+src/test/FriendPromotionTest.java:14:	headerCommentRequirement Required
+src/test/FriendPromotionTest.java:16:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/FriendPromotionTest.java:16:	Use explicit scoping instead of the default package private level
+src/test/FriendPromotionTest.java:16:	fieldCommentRequirement Required
+src/test/FriendPromotionTest.java:17:	Avoid variables with short names like fp
+src/test/FriendPromotionTest.java:17:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/FriendPromotionTest.java:17:	Use explicit scoping instead of the default package private level
+src/test/FriendPromotionTest.java:17:	fieldCommentRequirement Required
+src/test/FriendPromotionTest.java:20:	publicMethodCommentRequirement Required
+src/test/RegionTest.java:11:	Each class should declare at least one constructor
+src/test/RegionTest.java:11:	headerCommentRequirement Required
+src/test/RegionTest.java:13:	Avoid variables with short names like rg
+src/test/RegionTest.java:13:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/RegionTest.java:13:	Use explicit scoping instead of the default package private level
+src/test/RegionTest.java:13:	fieldCommentRequirement Required
+src/test/RegionTest.java:16:	publicMethodCommentRequirement Required
+src/test/RegionTest.java:17:	Local variable 'check' could be declared final
+src/test/SurferPromotionTest.java:14:	Each class should declare at least one constructor
+src/test/SurferPromotionTest.java:14:	headerCommentRequirement Required
+src/test/SurferPromotionTest.java:16:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/SurferPromotionTest.java:16:	Use explicit scoping instead of the default package private level
+src/test/SurferPromotionTest.java:16:	fieldCommentRequirement Required
+src/test/SurferPromotionTest.java:17:	Avoid excessively long variable names like SurferPromotionEnterpriseAccount
+src/test/SurferPromotionTest.java:17:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/SurferPromotionTest.java:17:	Use explicit scoping instead of the default package private level
+src/test/SurferPromotionTest.java:17:	Variables should start with a lowercase character, 'SurferPromotionEnterpriseAccount' starts with uppercase character.
+src/test/SurferPromotionTest.java:17:	fieldCommentRequirement Required
+src/test/SurferPromotionTest.java:20:	publicMethodCommentRequirement Required
+src/test/TestAccountWithPromotion.java:14:	Each class should declare at least one constructor
+src/test/TestAccountWithPromotion.java:14:	headerCommentRequirement Required
+src/test/TestAccountWithPromotion.java:16:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/TestAccountWithPromotion.java:16:	Use explicit scoping instead of the default package private level
+src/test/TestAccountWithPromotion.java:16:	fieldCommentRequirement Required
+src/test/TestAccountWithPromotion.java:17:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/TestAccountWithPromotion.java:17:	Use explicit scoping instead of the default package private level
+src/test/TestAccountWithPromotion.java:17:	Variables should start with a lowercase character, 'EnterpriseFriend' starts with uppercase character.
+src/test/TestAccountWithPromotion.java:17:	fieldCommentRequirement Required
+src/test/TestAccountWithPromotion.java:20:	publicMethodCommentRequirement Required
+src/test/TestRunner.java:11:	All methods are static.  Consider using a utility class instead. Alternatively, you could add a private constructor or make the class abstract to silence this warning.
+src/test/TestRunner.java:11:	headerCommentRequirement Required
+src/test/TestRunner.java:13:	Consider using varargs for methods or constructors which take an array the last parameter.
+src/test/TestRunner.java:13:	Found 'UR'-anomaly for variable 'failure' (lines '13'-'18').
+src/test/TestRunner.java:13:	Parameter 'args' is not assigned and could be declared final
+src/test/TestRunner.java:13:	publicMethodCommentRequirement Required
+src/test/TestRunner.java:15:	Local variable 'result' could be declared final
+src/test/TestRunner.java:17:	Local variable 'failure' could be declared final
+src/test/TestRunner.java:17:	Potential violation of Law of Demeter (object not created locally)
+src/test/TestRunner.java:18:	System.out.println is used
+src/test/TestRunner.java:20:	Potential violation of Law of Demeter (object not created locally)
+src/test/TestRunner.java:20:	System.out.println is used
+src/test/TravelerPromotionTest.java:14:	Each class should declare at least one constructor
+src/test/TravelerPromotionTest.java:14:	headerCommentRequirement Required
+src/test/TravelerPromotionTest.java:16:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/TravelerPromotionTest.java:16:	Use explicit scoping instead of the default package private level
+src/test/TravelerPromotionTest.java:16:	fieldCommentRequirement Required
+src/test/TravelerPromotionTest.java:17:	Avoid variables with short names like tp
+src/test/TravelerPromotionTest.java:17:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/test/TravelerPromotionTest.java:17:	Use explicit scoping instead of the default package private level
+src/test/TravelerPromotionTest.java:17:	fieldCommentRequirement Required
+src/test/TravelerPromotionTest.java:20:	publicMethodCommentRequirement Required
+src/view/AddAccount.java:19:	fieldCommentRequirement Required
+src/view/AddAccount.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/AddAccount.java:21:	Perhaps 'contentPane' could be replaced by a local variable.
+src/view/AddAccount.java:21:	Private field 'contentPane' could be made final; it is only initialized in the declaration or constructor.
+src/view/AddAccount.java:21:	fieldCommentRequirement Required
+src/view/AddAccount.java:22:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/AddAccount.java:22:	Perhaps 'nameTF' could be replaced by a local variable.
+src/view/AddAccount.java:22:	Private field 'nameTF' could be made final; it is only initialized in the declaration or constructor.
+src/view/AddAccount.java:22:	fieldCommentRequirement Required
+src/view/AddAccount.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/AddAccount.java:23:	Perhaps 'numberTF' could be replaced by a local variable.
+src/view/AddAccount.java:23:	Private field 'numberTF' could be made final; it is only initialized in the declaration or constructor.
+src/view/AddAccount.java:23:	fieldCommentRequirement Required
+src/view/AddAccount.java:24:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/AddAccount.java:24:	Perhaps 'ageTF' could be replaced by a local variable.
+src/view/AddAccount.java:24:	Private field 'ageTF' could be made final; it is only initialized in the declaration or constructor.
+src/view/AddAccount.java:24:	fieldCommentRequirement Required
+src/view/AddAccount.java:25:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/AddAccount.java:25:	Perhaps 'emailTF' could be replaced by a local variable.
+src/view/AddAccount.java:25:	Private field 'emailTF' could be made final; it is only initialized in the declaration or constructor.
+src/view/AddAccount.java:25:	fieldCommentRequirement Required
+src/view/AddAccount.java:26:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/AddAccount.java:26:	Perhaps 'addressTF' could be replaced by a local variable.
+src/view/AddAccount.java:26:	Private field 'addressTF' could be made final; it is only initialized in the declaration or constructor.
+src/view/AddAccount.java:26:	fieldCommentRequirement Required
+src/view/AddAccount.java:27:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/AddAccount.java:27:	Perhaps 'endDateTF' could be replaced by a local variable.
+src/view/AddAccount.java:27:	Private field 'endDateTF' could be made final; it is only initialized in the declaration or constructor.
+src/view/AddAccount.java:27:	fieldCommentRequirement Required
+src/view/AddAccount.java:28:	Avoid unused private fields such as 'table'.
+src/view/AddAccount.java:28:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/AddAccount.java:28:	Perhaps 'table' could be replaced by a local variable.
+src/view/AddAccount.java:28:	Private field 'table' could be made final; it is only initialized in the declaration or constructor.
+src/view/AddAccount.java:28:	fieldCommentRequirement Required
+src/view/AddAccount.java:29:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/AddAccount.java:29:	Perhaps 'lastNameTF' could be replaced by a local variable.
+src/view/AddAccount.java:29:	Private field 'lastNameTF' could be made final; it is only initialized in the declaration or constructor.
+src/view/AddAccount.java:29:	fieldCommentRequirement Required
+src/view/AddAccount.java:31:	It is a good practice to call super() in a constructor
+src/view/AddAccount.java:31:	Parameter 'table' is not assigned and could be declared final
+src/view/AddAccount.java:31:	publicMethodCommentRequirement Required
+src/view/AddAccount.java:40:	Local variable 'lblName' could be declared final
+src/view/AddAccount.java:44:	Local variable 'typeCB' could be declared final
+src/view/AddAccount.java:55:	Local variable 'lblType' could be declared final
+src/view/AddAccount.java:59:	Local variable 'lblNumber' could be declared final
+src/view/AddAccount.java:68:	Local variable 'lblAddress' could be declared final
+src/view/AddAccount.java:77:	Local variable 'lblAge' could be declared final
+src/view/AddAccount.java:86:	Local variable 'lblEmail' could be declared final
+src/view/AddAccount.java:95:	Local variable 'lblRegion' could be declared final
+src/view/AddAccount.java:99:	Local variable 'regionCB' could be declared final
+src/view/AddAccount.java:104:	Local variable 'btnAdd' could be declared final
+src/view/AddAccount.java:108:	Local variable 'lblEndDate' could be declared final
+src/view/AddAccount.java:117:	Local variable 'lblLastName' could be declared final
+src/view/AddNumber.java:7:	Avoid unused imports such as 'java.awt.EventQueue'
+src/view/AddNumber.java:19:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/AddNumber.java:19:	Private field 'contentPane' could be made final; it is only initialized in the declaration or constructor.
+src/view/AddNumber.java:19:	fieldCommentRequirement Required
+src/view/AddNumber.java:20:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/AddNumber.java:20:	Perhaps 'numberTF' could be replaced by a local variable.
+src/view/AddNumber.java:20:	fieldCommentRequirement Required
+src/view/AddNumber.java:21:	Avoid excessively long variable names like accountSelectedRow
+src/view/AddNumber.java:21:	Avoid unused private fields such as 'accountSelectedRow'.
+src/view/AddNumber.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/AddNumber.java:21:	Perhaps 'accountSelectedRow' could be replaced by a local variable.
+src/view/AddNumber.java:21:	fieldCommentRequirement Required
+src/view/AddNumber.java:22:	Avoid excessively long variable names like accountSelectedCol
+src/view/AddNumber.java:22:	Avoid unused private fields such as 'accountSelectedCol'.
+src/view/AddNumber.java:22:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/AddNumber.java:22:	Perhaps 'accountSelectedCol' could be replaced by a local variable.
+src/view/AddNumber.java:22:	fieldCommentRequirement Required
+src/view/AddNumber.java:23:	Avoid unused private fields such as 'accountsTable'.
+src/view/AddNumber.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/AddNumber.java:23:	Perhaps 'accountsTable' could be replaced by a local variable.
+src/view/AddNumber.java:23:	fieldCommentRequirement Required
+src/view/AddNumber.java:33:	It is a good practice to call super() in a constructor
+src/view/AddNumber.java:42:	It is a good practice to call super() in a constructor
+src/view/AddNumber.java:42:	Parameter 'accountsTable' is not assigned and could be declared final
+src/view/AddNumber.java:42:	Parameter 'selectedCol' is not assigned and could be declared final
+src/view/AddNumber.java:42:	Parameter 'selectedRow' is not assigned and could be declared final
+src/view/AddNumber.java:42:	publicMethodCommentRequirement Required
+src/view/AddNumber.java:55:	Local variable 'lblNumber' could be declared final
+src/view/AddNumber.java:64:	Local variable 'btnAdd' could be declared final
+src/view/ApplyPromotion.java:17:	fieldCommentRequirement Required
+src/view/ApplyPromotion.java:18:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ApplyPromotion.java:18:	Perhaps 'contentPane' could be replaced by a local variable.
+src/view/ApplyPromotion.java:18:	Private field 'contentPane' could be made final; it is only initialized in the declaration or constructor.
+src/view/ApplyPromotion.java:18:	fieldCommentRequirement Required
+src/view/ApplyPromotion.java:19:	Avoid excessively long variable names like availablePromotions
+src/view/ApplyPromotion.java:19:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ApplyPromotion.java:19:	Perhaps 'availablePromotions' could be replaced by a local variable.
+src/view/ApplyPromotion.java:19:	Private field 'availablePromotions' could be made final; it is only initialized in the declaration or constructor.
+src/view/ApplyPromotion.java:19:	fieldCommentRequirement Required
+src/view/ApplyPromotion.java:20:	Avoid excessively long variable names like availablePromotionsH
+src/view/ApplyPromotion.java:20:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ApplyPromotion.java:20:	Perhaps 'availablePromotionsH' could be replaced by a local variable.
+src/view/ApplyPromotion.java:20:	Private field 'availablePromotionsH' could be made final; it is only initialized in the declaration or constructor.
+src/view/ApplyPromotion.java:20:	fieldCommentRequirement Required
+src/view/ApplyPromotion.java:21:	Avoid excessively long variable names like accountSelectedRow
+src/view/ApplyPromotion.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ApplyPromotion.java:21:	Perhaps 'accountSelectedRow' could be replaced by a local variable.
+src/view/ApplyPromotion.java:21:	Private field 'accountSelectedRow' could be made final; it is only initialized in the declaration or constructor.
+src/view/ApplyPromotion.java:21:	fieldCommentRequirement Required
+src/view/ApplyPromotion.java:22:	Avoid excessively long variable names like accountSelectedCol
+src/view/ApplyPromotion.java:22:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ApplyPromotion.java:22:	Perhaps 'accountSelectedCol' could be replaced by a local variable.
+src/view/ApplyPromotion.java:22:	Private field 'accountSelectedCol' could be made final; it is only initialized in the declaration or constructor.
+src/view/ApplyPromotion.java:22:	fieldCommentRequirement Required
+src/view/ApplyPromotion.java:23:	Avoid unused private fields such as 'accountsTable'.
+src/view/ApplyPromotion.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ApplyPromotion.java:23:	Perhaps 'accountsTable' could be replaced by a local variable.
+src/view/ApplyPromotion.java:23:	Private field 'accountsTable' could be made final; it is only initialized in the declaration or constructor.
+src/view/ApplyPromotion.java:23:	fieldCommentRequirement Required
+src/view/ApplyPromotion.java:26:	It is a good practice to call super() in a constructor
+src/view/ApplyPromotion.java:26:	Parameter 'accountsTable' is not assigned and could be declared final
+src/view/ApplyPromotion.java:26:	Parameter 'selectedCol' is not assigned and could be declared final
+src/view/ApplyPromotion.java:26:	Parameter 'selectedRow' is not assigned and could be declared final
+src/view/ApplyPromotion.java:26:	publicMethodCommentRequirement Required
+src/view/ApplyPromotion.java:31:	Avoid unused local variables such as 'name'.
+src/view/ApplyPromotion.java:31:	Local variable 'name' could be declared final
+src/view/ApplyPromotion.java:40:	Local variable 'applyPromotionCB' could be declared final
+src/view/ApplyPromotion.java:47:	Local variable 'promotionsColumn' could be declared final
+src/view/ApplyPromotion.java:49:	Avoid unused local variables such as 'promotionModel'.
+src/view/ApplyPromotion.java:51:	Avoid excessively long variable names like availablePromotionsModel
+src/view/ApplyPromotion.java:63:	Local variable 'lblPromotion' could be declared final
+src/view/ApplyPromotion.java:67:	Local variable 'btnConfirm' could be declared final
+src/view/DoneAddNumber.java:7:	Avoid unused imports such as 'bll.AccountBLL'
+src/view/DoneAddNumber.java:10:	headerCommentRequirement Required
+src/view/DoneAddNumber.java:12:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/DoneAddNumber.java:12:	Private field 'numberTF' could be made final; it is only initialized in the declaration or constructor.
+src/view/DoneAddNumber.java:12:	fieldCommentRequirement Required
+src/view/DoneAddNumber.java:13:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/DoneAddNumber.java:13:	Private field 'table' could be made final; it is only initialized in the declaration or constructor.
+src/view/DoneAddNumber.java:13:	fieldCommentRequirement Required
+src/view/DoneAddNumber.java:14:	Avoid excessively long variable names like accountSelectedRow
+src/view/DoneAddNumber.java:14:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/DoneAddNumber.java:14:	Private field 'accountSelectedRow' could be made final; it is only initialized in the declaration or constructor.
+src/view/DoneAddNumber.java:14:	fieldCommentRequirement Required
+src/view/DoneAddNumber.java:16:	Parameter 'numberTF' is not assigned and could be declared final
+src/view/DoneAddNumber.java:16:	Parameter 'table' is not assigned and could be declared final
+src/view/DoneAddNumber.java:16:	publicMethodCommentRequirement Required
+src/view/DoneAddNumber.java:17:	Avoid excessively long variable names like accountSelectedRow
+src/view/DoneAddNumber.java:17:	Parameter 'accountSelectedRow' is not assigned and could be declared final
+src/view/DoneAddNumber.java:25:	Parameter 'arg0' is not assigned and could be declared final
+src/view/DoneAddNumber.java:25:	publicMethodCommentRequirement Required
+src/view/DoneAddNumber.java:28:	Avoid variables with short names like nc
+src/view/DoneAddNumber.java:28:	Local variable 'nc' could be declared final
+src/view/DoneAddNumber.java:28:	Potential violation of Law of Demeter (method chain calls)
+src/view/DoneAddNumber.java:30:	Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+src/view/DoneAddNumber.java:31:	Avoid printStackTrace(); use a logger call instead.
+src/view/DonePromoting.java:17:	headerCommentRequirement Required
+src/view/DonePromoting.java:19:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/DonePromoting.java:19:	Private field 'applyPromotion' could be made final; it is only initialized in the declaration or constructor.
+src/view/DonePromoting.java:19:	fieldCommentRequirement Required
+src/view/DonePromoting.java:20:	Avoid excessively long variable names like availablePromotionsTable
+src/view/DonePromoting.java:20:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/DonePromoting.java:20:	Private field 'availablePromotionsTable' could be made final; it is only initialized in the declaration or constructor.
+src/view/DonePromoting.java:20:	fieldCommentRequirement Required
+src/view/DonePromoting.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/DonePromoting.java:21:	Perhaps 'promotionModel' could be replaced by a local variable.
+src/view/DonePromoting.java:21:	fieldCommentRequirement Required
+src/view/DonePromoting.java:22:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/DonePromoting.java:22:	Perhaps 'accountModel' could be replaced by a local variable.
+src/view/DonePromoting.java:22:	fieldCommentRequirement Required
+src/view/DonePromoting.java:23:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/DonePromoting.java:23:	Private field 'accountsTable' could be made final; it is only initialized in the declaration or constructor.
+src/view/DonePromoting.java:23:	fieldCommentRequirement Required
+src/view/DonePromoting.java:24:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/DonePromoting.java:24:	Private field 'selectedRow' could be made final; it is only initialized in the declaration or constructor.
+src/view/DonePromoting.java:24:	fieldCommentRequirement Required
+src/view/DonePromoting.java:25:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/DonePromoting.java:25:	Private field 'selectedCol' could be made final; it is only initialized in the declaration or constructor.
+src/view/DonePromoting.java:25:	fieldCommentRequirement Required
+src/view/DonePromoting.java:26:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/DonePromoting.java:26:	Private field 'accountBLL' could be made final; it is only initialized in the declaration or constructor.
+src/view/DonePromoting.java:26:	fieldCommentRequirement Required
+src/view/DonePromoting.java:28:	Avoid excessively long variable names like availablePromotionsTable
+src/view/DonePromoting.java:28:	Avoid excessively long variable names like selectedAccountCol
+src/view/DonePromoting.java:28:	Avoid excessively long variable names like selectedAccountRow
+src/view/DonePromoting.java:28:	Parameter 'accountsTable' is not assigned and could be declared final
+src/view/DonePromoting.java:28:	Parameter 'applyPromotion' is not assigned and could be declared final
+src/view/DonePromoting.java:28:	Parameter 'availablePromotionsTable' is not assigned and could be declared final
+src/view/DonePromoting.java:28:	Parameter 'selectedAccountCol' is not assigned and could be declared final
+src/view/DonePromoting.java:28:	Parameter 'selectedAccountRow' is not assigned and could be declared final
+src/view/DonePromoting.java:28:	publicMethodCommentRequirement Required
+src/view/DonePromoting.java:37:	Avoid variables with short names like e
+src/view/DonePromoting.java:37:	Parameter 'e' is not assigned and could be declared final
+src/view/DonePromoting.java:37:	publicMethodCommentRequirement Required
+src/view/DonePromoting.java:38:	Avoid excessively long variable names like recievedAttributes
+src/view/DonePromoting.java:38:	Found 'DD'-anomaly for variable 'recievedAttributes' (lines '38'-'46').
+src/view/DonePromoting.java:41:	Local variable 'accountId' could be declared final
+src/view/DonePromoting.java:41:	Potential violation of Law of Demeter (method chain calls)
+src/view/DonePromoting.java:42:	Local variable 'promotion' could be declared final
+src/view/DonePromoting.java:42:	Potential violation of Law of Demeter (method chain calls)
+src/view/DonePromoting.java:47:	Potential violation of Law of Demeter (object not created locally)
+src/view/DonePromoting.java:48:	Potential violation of Law of Demeter (object not created locally)
+src/view/DonePromoting.java:53:	Comment is too large: Too many lines
+src/view/DonePromoting.java:54:	Comment is too large: Line too long
+src/view/DonePromoting.java:58:	Comment is too large: Line too long
+src/view/DonePromoting.java:61:	Comment is too large: Line too long
+src/view/DonePromoting.java:64:	Comment is too large: Line too long
+src/view/DonePromoting.java:68:	Comment is too large: Line too long
+src/view/DonePromoting.java:70:	Comment is too large: Line too long
+src/view/DonePromoting.java:73:	Comment is too large: Line too long
+src/view/DonePromoting.java:77:	Comment is too large: Line too long
+src/view/DonePromoting.java:79:	Comment is too large: Line too long
+src/view/DonePromoting.java:82:	Comment is too large: Line too long
+src/view/DonePromoting.java:84:	Comment is too large: Line too long
+src/view/DonePromoting.java:86:	Comment is too large: Line too long
+src/view/DonePromoting.java:89:	Comment is too large: Line too long
+src/view/DonePromoting.java:91:	Comment is too large: Line too long
+src/view/DonePromoting.java:93:	Comment is too large: Line too long
+src/view/DonePromoting.java:96:	Comment is too large: Line too long
+src/view/DonePromoting.java:98:	Comment is too large: Line too long
+src/view/DonePromoting.java:100:	Comment is too large: Line too long
+src/view/DonePromoting.java:108:	Parameter 'type' is not assigned and could be declared final
+src/view/DonePromoting.java:109:	Found 'DD'-anomaly for variable 'accountBLL' (lines '109'-'112').
+src/view/DonePromoting.java:109:	Found 'DD'-anomaly for variable 'accountBLL' (lines '109'-'116').
+src/view/DonePromoting.java:110:	System.out.println is used
+src/view/DonePromoting.java:111:	Position literals first in String comparisons
+src/view/DonePromoting.java:113:	System.out.println is used
+src/view/DonePromoting.java:116:	Avoid using if...else statements without curly braces
+src/view/DoneSetting.java:11:	Avoid unused imports such as 'region.Region'
+src/view/DoneSetting.java:15:	headerCommentRequirement Required
+src/view/DoneSetting.java:17:	Avoid unused private fields such as 'previousPrice'.
+src/view/DoneSetting.java:17:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/DoneSetting.java:17:	Perhaps 'previousPrice' could be replaced by a local variable.
+src/view/DoneSetting.java:17:	Private field 'previousPrice' could be made final; it is only initialized in the declaration or constructor.
+src/view/DoneSetting.java:17:	fieldCommentRequirement Required
+src/view/DoneSetting.java:18:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/DoneSetting.java:18:	Private field 'newPriceTF' could be made final; it is only initialized in the declaration or constructor.
+src/view/DoneSetting.java:18:	fieldCommentRequirement Required
+src/view/DoneSetting.java:19:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/DoneSetting.java:19:	Private field 'serviceTypeCB' could be made final; it is only initialized in the declaration or constructor.
+src/view/DoneSetting.java:19:	fieldCommentRequirement Required
+src/view/DoneSetting.java:20:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/DoneSetting.java:20:	Private field 'countryCB' could be made final; it is only initialized in the declaration or constructor.
+src/view/DoneSetting.java:20:	fieldCommentRequirement Required
+src/view/DoneSetting.java:21:	Avoid unused private fields such as 'c'.
+src/view/DoneSetting.java:21:	Avoid variables with short names like c
+src/view/DoneSetting.java:21:	fieldCommentRequirement Required
+src/view/DoneSetting.java:22:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/DoneSetting.java:22:	Perhaps 'regionbll' could be replaced by a local variable.
+src/view/DoneSetting.java:22:	fieldCommentRequirement Required
+src/view/DoneSetting.java:24:	Parameter 'countryCB' is not assigned and could be declared final
+src/view/DoneSetting.java:24:	Parameter 'newTF' is not assigned and could be declared final
+src/view/DoneSetting.java:24:	Parameter 'previousTF' is not assigned and could be declared final
+src/view/DoneSetting.java:24:	Parameter 'serviceTypeCB' is not assigned and could be declared final
+src/view/DoneSetting.java:24:	publicMethodCommentRequirement Required
+src/view/DoneSetting.java:33:	Parameter 'arg0' is not assigned and could be declared final
+src/view/DoneSetting.java:33:	publicMethodCommentRequirement Required
+src/view/DoneSetting.java:34:	Local variable 'newPrice' could be declared final
+src/view/DoneSetting.java:35:	Local variable 'service' could be declared final
+src/view/DoneSetting.java:36:	Local variable 'regionName' could be declared final
+src/view/DoneSetting.java:37:	System.out.println is used
+src/view/ManageAccounts.java:25:	fieldCommentRequirement Required
+src/view/ManageAccounts.java:26:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ManageAccounts.java:26:	Perhaps 'contentPane' could be replaced by a local variable.
+src/view/ManageAccounts.java:26:	Private field 'contentPane' could be made final; it is only initialized in the declaration or constructor.
+src/view/ManageAccounts.java:26:	fieldCommentRequirement Required
+src/view/ManageAccounts.java:27:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ManageAccounts.java:27:	Private field 'accounts' could be made final; it is only initialized in the declaration or constructor.
+src/view/ManageAccounts.java:27:	fieldCommentRequirement Required
+src/view/ManageAccounts.java:28:	Avoid unused private fields such as 'numbers'.
+src/view/ManageAccounts.java:28:	fieldCommentRequirement Required
+src/view/ManageAccounts.java:29:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ManageAccounts.java:29:	Perhaps 'accountsH' could be replaced by a local variable.
+src/view/ManageAccounts.java:29:	Private field 'accountsH' could be made final; it is only initialized in the declaration or constructor.
+src/view/ManageAccounts.java:29:	fieldCommentRequirement Required
+src/view/ManageAccounts.java:30:	Avoid unused private fields such as 'numbersH'.
+src/view/ManageAccounts.java:30:	fieldCommentRequirement Required
+src/view/ManageAccounts.java:31:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ManageAccounts.java:31:	fieldCommentRequirement Required
+src/view/ManageAccounts.java:32:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ManageAccounts.java:32:	fieldCommentRequirement Required
+src/view/ManageAccounts.java:33:	Avoid unused private fields such as 'obj'.
+src/view/ManageAccounts.java:33:	Avoid using redundant field initializer for 'obj'
+src/view/ManageAccounts.java:33:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ManageAccounts.java:33:	Perhaps 'obj' could be replaced by a local variable.
+src/view/ManageAccounts.java:33:	fieldCommentRequirement Required
+src/view/ManageAccounts.java:34:	Avoid unused private fields such as 'allAccounts'.
+src/view/ManageAccounts.java:34:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ManageAccounts.java:34:	Perhaps 'allAccounts' could be replaced by a local variable.
+src/view/ManageAccounts.java:34:	Private field 'allAccounts' could be made final; it is only initialized in the declaration or constructor.
+src/view/ManageAccounts.java:34:	fieldCommentRequirement Required
+src/view/ManageAccounts.java:36:	Found 'UR'-anomaly for variable 'account' (lines '36'-'71').
+src/view/ManageAccounts.java:36:	It is a good practice to call super() in a constructor
+src/view/ManageAccounts.java:36:	Parameter 'allAccounts' is not assigned and could be declared final
+src/view/ManageAccounts.java:36:	publicMethodCommentRequirement Required
+src/view/ManageAccounts.java:45:	Local variable 'btnAddAccount' could be declared final
+src/view/ManageAccounts.java:49:	Local variable 'btnRemoveAccount' could be declared final
+src/view/ManageAccounts.java:53:	Local variable 'btnAddNumber' could be declared final
+src/view/ManageAccounts.java:57:	Local variable 'btnRemoveNumber' could be declared final
+src/view/ManageAccounts.java:61:	Local variable 'btnReport' could be declared final
+src/view/ManageAccounts.java:65:	Local variable 'accountsColumn' could be declared final
+src/view/ManageAccounts.java:70:	Local variable 'account' could be declared final
+src/view/ManageAccounts.java:71:	Avoid instantiating new objects inside loops
+src/view/ManageAccounts.java:75:	Parameter 'evt' is not assigned and could be declared final
+src/view/ManageAccounts.java:75:	publicMethodCommentRequirement Required
+src/view/ManageAccounts.java:86:	Local variable 'btnApplyPromotion' could be declared final
+src/view/Menu.java:10:	Avoid unused imports such as 'control.Control'
+src/view/Menu.java:15:	Avoid short class names like Menu
+src/view/Menu.java:17:	fieldCommentRequirement Required
+src/view/Menu.java:18:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/Menu.java:18:	Perhaps 'processBills' could be replaced by a local variable.
+src/view/Menu.java:18:	fieldCommentRequirement Required
+src/view/Menu.java:19:	Avoid unused private fields such as 'manageAccounts'.
+src/view/Menu.java:19:	fieldCommentRequirement Required
+src/view/Menu.java:35:	Potential violation of Law of Demeter (method chain calls)
+src/view/Menu.java:36:	Potential violation of Law of Demeter (method chain calls)
+src/view/Menu.java:37:	Potential violation of Law of Demeter (method chain calls)
+src/view/Menu.java:38:	Potential violation of Law of Demeter (method chain calls)
+src/view/Menu.java:38:	Potential violation of Law of Demeter (method chain calls)
+src/view/Menu.java:40:	Local variable 'btnProcessBills' could be declared final
+src/view/Menu.java:42:	Potential violation of Law of Demeter (method chain calls)
+src/view/Menu.java:42:	Potential violation of Law of Demeter (method chain calls)
+src/view/Menu.java:44:	Parameter 'arg0' is not assigned and could be declared final
+src/view/Menu.java:44:	publicMethodCommentRequirement Required
+src/view/Menu.java:51:	Local variable 'btnManageAccounts' could be declared final
+src/view/Menu.java:53:	Potential violation of Law of Demeter (method chain calls)
+src/view/Menu.java:53:	Potential violation of Law of Demeter (method chain calls)
+src/view/Menu.java:70:	Parameter 'frmMainMenu' is not assigned and could be declared final
+src/view/Menu.java:70:	publicMethodCommentRequirement Required
+src/view/ProcessBills.java:21:	Too many fields
+src/view/ProcessBills.java:23:	fieldCommentRequirement Required
+src/view/ProcessBills.java:24:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ProcessBills.java:24:	Perhaps 'contentPane' could be replaced by a local variable.
+src/view/ProcessBills.java:24:	Private field 'contentPane' could be made final; it is only initialized in the declaration or constructor.
+src/view/ProcessBills.java:24:	fieldCommentRequirement Required
+src/view/ProcessBills.java:25:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ProcessBills.java:25:	Perhaps 'table' could be replaced by a local variable.
+src/view/ProcessBills.java:25:	Private field 'table' could be made final; it is only initialized in the declaration or constructor.
+src/view/ProcessBills.java:25:	fieldCommentRequirement Required
+src/view/ProcessBills.java:26:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ProcessBills.java:26:	Perhaps 'btnSetPrices' could be replaced by a local variable.
+src/view/ProcessBills.java:26:	Private field 'btnSetPrices' could be made final; it is only initialized in the declaration or constructor.
+src/view/ProcessBills.java:26:	fieldCommentRequirement Required
+src/view/ProcessBills.java:27:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ProcessBills.java:27:	Perhaps 'lblType' could be replaced by a local variable.
+src/view/ProcessBills.java:27:	Private field 'lblType' could be made final; it is only initialized in the declaration or constructor.
+src/view/ProcessBills.java:27:	fieldCommentRequirement Required
+src/view/ProcessBills.java:28:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ProcessBills.java:28:	fieldCommentRequirement Required
+src/view/ProcessBills.java:29:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ProcessBills.java:29:	fieldCommentRequirement Required
+src/view/ProcessBills.java:30:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ProcessBills.java:30:	fieldCommentRequirement Required
+src/view/ProcessBills.java:31:	Avoid variables with short names like h
+src/view/ProcessBills.java:31:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ProcessBills.java:31:	Perhaps 'h' could be replaced by a local variable.
+src/view/ProcessBills.java:31:	Private field 'h' could be made final; it is only initialized in the declaration or constructor.
+src/view/ProcessBills.java:31:	fieldCommentRequirement Required
+src/view/ProcessBills.java:32:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ProcessBills.java:32:	fieldCommentRequirement Required
+src/view/ProcessBills.java:33:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ProcessBills.java:33:	fieldCommentRequirement Required
+src/view/ProcessBills.java:34:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ProcessBills.java:34:	Perhaps 'lblMinDuration' could be replaced by a local variable.
+src/view/ProcessBills.java:34:	Private field 'lblMinDuration' could be made final; it is only initialized in the declaration or constructor.
+src/view/ProcessBills.java:34:	fieldCommentRequirement Required
+src/view/ProcessBills.java:35:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ProcessBills.java:35:	Perhaps 'lblMaxDuration' could be replaced by a local variable.
+src/view/ProcessBills.java:35:	Private field 'lblMaxDuration' could be made final; it is only initialized in the declaration or constructor.
+src/view/ProcessBills.java:35:	fieldCommentRequirement Required
+src/view/ProcessBills.java:36:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ProcessBills.java:36:	Perhaps 'quantityTF' could be replaced by a local variable.
+src/view/ProcessBills.java:36:	Private field 'quantityTF' could be made final; it is only initialized in the declaration or constructor.
+src/view/ProcessBills.java:36:	fieldCommentRequirement Required
+src/view/ProcessBills.java:37:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ProcessBills.java:37:	Perhaps 'lblQuantity' could be replaced by a local variable.
+src/view/ProcessBills.java:37:	Private field 'lblQuantity' could be made final; it is only initialized in the declaration or constructor.
+src/view/ProcessBills.java:37:	fieldCommentRequirement Required
+src/view/ProcessBills.java:38:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ProcessBills.java:38:	Perhaps 'lblFromcountry' could be replaced by a local variable.
+src/view/ProcessBills.java:38:	Private field 'lblFromcountry' could be made final; it is only initialized in the declaration or constructor.
+src/view/ProcessBills.java:38:	fieldCommentRequirement Required
+src/view/ProcessBills.java:39:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ProcessBills.java:39:	Perhaps 'lblTocountry' could be replaced by a local variable.
+src/view/ProcessBills.java:39:	Private field 'lblTocountry' could be made final; it is only initialized in the declaration or constructor.
+src/view/ProcessBills.java:39:	fieldCommentRequirement Required
+src/view/ProcessBills.java:40:	Avoid excessively long variable names like btnComputeTransaction
+src/view/ProcessBills.java:40:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/ProcessBills.java:40:	Perhaps 'btnComputeTransaction' could be replaced by a local variable.
+src/view/ProcessBills.java:40:	Private field 'btnComputeTransaction' could be made final; it is only initialized in the declaration or constructor.
+src/view/ProcessBills.java:40:	fieldCommentRequirement Required
+src/view/ProcessBills.java:44:	It is a good practice to call super() in a constructor
+src/view/ProcessBills.java:44:	publicMethodCommentRequirement Required
+src/view/ProcessBills.java:55:	Local variable 'column' could be declared final
+src/view/ProcessBills.java:145:	Avoid excessively long variable names like btnGeneratePerformedServices
+src/view/ProcessBills.java:145:	Local variable 'btnGeneratePerformedServices' could be declared final
+src/view/SetPrices.java:9:	Avoid unused imports such as 'control.Control'
+src/view/SetPrices.java:19:	fieldCommentRequirement Required
+src/view/SetPrices.java:20:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/SetPrices.java:20:	Perhaps 'contentPane' could be replaced by a local variable.
+src/view/SetPrices.java:20:	Private field 'contentPane' could be made final; it is only initialized in the declaration or constructor.
+src/view/SetPrices.java:20:	fieldCommentRequirement Required
+src/view/SetPrices.java:21:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/SetPrices.java:21:	Perhaps 'btnSet' could be replaced by a local variable.
+src/view/SetPrices.java:21:	Private field 'btnSet' could be made final; it is only initialized in the declaration or constructor.
+src/view/SetPrices.java:21:	fieldCommentRequirement Required
+src/view/SetPrices.java:22:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/SetPrices.java:22:	Perhaps 'lblServiceType' could be replaced by a local variable.
+src/view/SetPrices.java:22:	Private field 'lblServiceType' could be made final; it is only initialized in the declaration or constructor.
+src/view/SetPrices.java:22:	fieldCommentRequirement Required
+src/view/SetPrices.java:23:	fieldCommentRequirement Required
+src/view/SetPrices.java:24:	fieldCommentRequirement Required
+src/view/SetPrices.java:25:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/SetPrices.java:25:	Perhaps 'lblNew' could be replaced by a local variable.
+src/view/SetPrices.java:25:	Private field 'lblNew' could be made final; it is only initialized in the declaration or constructor.
+src/view/SetPrices.java:25:	fieldCommentRequirement Required
+src/view/SetPrices.java:26:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/SetPrices.java:26:	Perhaps 'lblPrevious' could be replaced by a local variable.
+src/view/SetPrices.java:26:	Private field 'lblPrevious' could be made final; it is only initialized in the declaration or constructor.
+src/view/SetPrices.java:26:	fieldCommentRequirement Required
+src/view/SetPrices.java:27:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/SetPrices.java:27:	Perhaps 'lblCountry' could be replaced by a local variable.
+src/view/SetPrices.java:27:	Private field 'lblCountry' could be made final; it is only initialized in the declaration or constructor.
+src/view/SetPrices.java:27:	fieldCommentRequirement Required
+src/view/SetPrices.java:28:	Private field 'previousTF' could be made final; it is only initialized in the declaration or constructor.
+src/view/SetPrices.java:28:	fieldCommentRequirement Required
+src/view/SetPrices.java:29:	Found non-transient, non-static member. Please mark as transient or provide accessors.
+src/view/SetPrices.java:29:	Perhaps 'newTF' could be replaced by a local variable.
+src/view/SetPrices.java:29:	Private field 'newTF' could be made final; it is only initialized in the declaration or constructor.
+src/view/SetPrices.java:29:	fieldCommentRequirement Required
+src/view/SetPrices.java:35:	It is a good practice to call super() in a constructor
+src/view/SetPrices.java:98:	publicMethodCommentRequirement Required
+src/view/SetPrices.java:103:	Parameter 'text' is not assigned and could be declared final
+src/view/SetPrices.java:103:	publicMethodCommentRequirement Required
+src/view/SetPrices.java:108:	publicMethodCommentRequirement Required
+src/view/SetPrices.java:113:	Parameter 'serviceTypeCB' is not assigned and could be declared final
+src/view/SetPrices.java:113:	publicMethodCommentRequirement Required
+src/view/SetPrices.java:118:	publicMethodCommentRequirement Required
+src/view/SetPrices.java:123:	Parameter 'countryCB' is not assigned and could be declared final
+src/view/SetPrices.java:123:	publicMethodCommentRequirement Required

@@ -74,7 +74,7 @@ public class EnterpriseAccount extends Account {
 	@Override
 	public String toString() {
 		return "EnterpriseAccount [endDate=" + endDate + ", number=" + number + ", customerSystemReference="
-				+ customerSystemReference + ", id=" + id + ", uniqueIdentifierFieldName=" + uniqueIdentifierFieldName
+				+ customerSystemReference + ",balance=" + balance + ", id=" + id + ", uniqueIdentifierFieldName=" + uniqueIdentifierFieldName
 				+ "]";
 	}
 	

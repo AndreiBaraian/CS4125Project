@@ -1,19 +1,21 @@
 package main;
 
 
-import computeTransaction.ComputeTransaction;
+import bll.AccountBLL;
 import control.Control;
 import exceptions.InsertException;
-import insertions.DataInsert;
 import view.Menu;
 
 public class Main {
 
 	public static void main(String[] args) throws InsertException {
 		
-		DataInsert dt = new DataInsert();
-		dt.insertCustomersAndAccounts();
-		dt.insertRegions();
+		//DataInsert dt = new DataInsert();
+		//dt.insertCustomersAndAccounts();
+		//dt.insertRegions();
+		
+		//AccountBLL<?> accountBLL = new AccountBLL();
+		
 		
 		
 		Control control = Control.getInstance();

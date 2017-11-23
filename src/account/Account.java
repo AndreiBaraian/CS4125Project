@@ -36,7 +36,7 @@ public abstract class Account extends DBRecord{
 	private int messages;
 	
 	@Column(name = "balance")
-	private double balance;
+	protected double balance;
 	
 	@Transient
 	private Region homeRegion;

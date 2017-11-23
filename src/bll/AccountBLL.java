@@ -56,10 +56,16 @@ public class AccountBLL<T extends Account> {
 	public Account getAccount(String id){   //this is the function for using number to get account by Conrad
 		List<?> listAccounts = null;
 		Account account = null;
-		accountDAO = new FamilyAccountDAO();
+		accountDAO = new EnterpriseAccountDAO();
 		listAccounts = accountDAO.getByField("id", id);
-		account = (FamilyAccount) listAccounts.get(0);
-		
+		if(listAccounts == null){
+			accountDAO = new FamilyAccountDAO();
+			listAccounts = accountDAO.getByField("id", id);
+			account = (FamilyAccount) listAccounts.get(0);
+		}
+		else{
+			account = (EnterpriseAccount) listAccounts.get(0);
+		}
 		return account;
 	}
 	

@@ -60,11 +60,16 @@ public class Control {
 		String number;
 		int quantity = C.getQuantity();
 		List<EnterpriseAccount> enterpriseAccount;
+		List<FamilyAccount> familyAccount;
 		EnterpriseAccountBLL enterpriseAccountBLL = new EnterpriseAccountBLL();
 		enterpriseAccount = enterpriseAccountBLL.getAll();
+		FamilyAccountBLL familyAccountBLL = new FamilyAccountBLL();
+		familyAccount = familyAccountBLL.getAll();
 		for(int i = 0;i< quantity;i++)
 		{
 			int s = generateRandomNumber(0,enterpriseAccount.size());
+			int s2 = generateRandomNumber(0,familyAccount.size());
+			registeredNumbers.add(familyAccount.get(s2).getNumbersString().substring(0, 9));
 			registeredNumbers.add(enterpriseAccount.get(s).getNumber());
 		}
 		try {

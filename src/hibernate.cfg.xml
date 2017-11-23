@@ -30,7 +30,10 @@
  		<mapping class="region.Region"/>
  		<mapping class="customer.Customer"/>
  		<mapping class="region.Romania"/>
+<<<<<<< HEAD
+=======
  		<mapping class="region.Ireland"/>
+>>>>>>> origin/master
  		<mapping class="region.China"/>
  		<mapping class="region.Ireland"/>
  

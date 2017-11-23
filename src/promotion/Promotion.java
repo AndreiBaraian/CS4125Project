@@ -9,7 +9,7 @@ import report.Report;
 
 public class Promotion extends Account {
 	
-	Account account;
+	protected Account account;
 	
 	private double giftpoints;
 	
@@ -19,12 +19,12 @@ public class Promotion extends Account {
 		this.account = account;
 	}
 	
-	public Promotion(){	
+
+	public Promotion() {}
+
+	public Account getAccount() {
+		return account;
 	}
-	
-
-	
-
 
 	public double getGiftpoints() {
 		return giftpoints;
@@ -41,5 +41,7 @@ public class Promotion extends Account {
 
 	public void computeDiscount() {
 		// TODO Auto-generated method stub	
-	}	
+	}
+
+		
 }

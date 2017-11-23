@@ -1,15 +1,17 @@
 package main;
 
 
+
+import insertions.DataInsert;
 import account.Account;
 import account.EnterpriseAccount;
 import computeTransaction.ComputeTransaction;
 import computeTransaction.CreatedAccount;
 import computeTransaction.UpdateAccountContext;
+=======
+>>>>>>> origin/master
 import control.Control;
-import customer.Customer;
 import exceptions.InsertException;
-import insertions.DataInsert;
 import region.Romania;
 import service.Call;
 import view.Menu;
@@ -19,14 +21,19 @@ public class Main {
 	public static void main(String[] args) throws InsertException {
 		
 		DataInsert dt = new DataInsert();
-		dt.insertCustomersAndAccounts();
+		//dt.insertCustomersAndAccounts();
 		dt.insertRegions();
+		
+		//AccountBLL<?> accountBLL = new AccountBLL();
+		
+		
 		
 		
 		Control control = Control.getInstance();
 		Menu window = new Menu();
 		window.getFrmMainMenu().setVisible(true);
 		
+
 		
 		
 		/*ComputeTransaction ct = new ComputeTransaction();
@@ -48,6 +55,7 @@ public class Main {
 ///
 	
 		
+
 
 	}
 

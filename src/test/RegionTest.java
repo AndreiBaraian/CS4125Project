@@ -9,8 +9,10 @@ import static org.junit.Assert.*;
 import region.*;
 
 public class RegionTest {
-	
-	Region rg = new Romania(100,50,8,8);
+
+	Region rg = new Romania(100,50, 50, 50);
+
+
 	
 	@Test
 	public void testComputeRoamingTax(){

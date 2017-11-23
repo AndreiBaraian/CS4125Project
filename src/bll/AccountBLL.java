@@ -31,7 +31,7 @@ public class AccountBLL<T extends Account> {
 	@SuppressWarnings("unchecked")
 	public Account addAccount(String type, Region region, Customer customer,String number,String endDate) throws InsertException{
 		Integer id = null;
-		Account account = AccountFactory.getAccount(type, 0, region, customer, number, endDate);
+		Account account = AccountFactory.getAccount(type, 0.0, region, customer, number, endDate);
 		id = abstractDAO.add((T) account);
 		account.setId(id);
 		return account;

@@ -51,9 +51,7 @@ public class ComputeTransaction {
 		account = accountBLL.getAccountByNumber(number);
 		
 		region = regionBLL.search(account.getHomeRegionString());
-		//System.out.println(account.getHomeRegionString());
-		//System.out.println(service.getLocationFromString());
-		if(account.getHomeRegionString().equalsIgnoreCase(service.getLocationFromString())){		
+		if(!account.getHomeRegionString().equalsIgnoreCase(service.getLocationFromString())){		
 			roamingTax = region.getRoamingTax();
 			service.setInternational(true);
 		}		

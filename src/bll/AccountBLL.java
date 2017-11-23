@@ -84,7 +84,7 @@ public class AccountBLL<T extends Account> {
 		List<String> recievedAttributes = new ArrayList<String>();
 		Account retrievedAccount = abstractDAO.getByField("id", accountId).get(0);
 		Account promotedAccount = PromotionFactory.applyPromotion(promotionType, retrievedAccount);
-		System.out.println(promotedAccount.toString());
+		//System.out.println(promotedAccount.toString());
 		abstractDAO.modify((T) promotedAccount);
 		recievedAttributes.add(Integer.toString(promotedAccount.getMinutes()));
 		recievedAttributes.add(Integer.toString(promotedAccount.getMessages()));

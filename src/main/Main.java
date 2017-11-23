@@ -1,12 +1,6 @@
 package main;
 
-import account.Account;
-import account.EnterpriseAccount;
-import computeTransaction.ComputeTransaction;
-import computeTransaction.CreatedAccount;
-import computeTransaction.UpdateAccountContext;
 import control.Control;
-import customer.Customer;
 import exceptions.InsertException;
 import view.Menu;
 

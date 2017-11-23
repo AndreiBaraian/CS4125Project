@@ -10,7 +10,7 @@ import region.*;
 
 public class RegionTest {
 	
-	Region rg = new Romania(100,50);
+	Region rg = new Romania(100,50, 0, 0);
 	
 	@Test
 	public void testComputeRoamingTax(){

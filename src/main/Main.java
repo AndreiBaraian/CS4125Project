@@ -1,14 +1,16 @@
 package main;
 
 
+
 import insertions.DataInsert;
 import account.Account;
 import account.EnterpriseAccount;
 import computeTransaction.ComputeTransaction;
 import computeTransaction.CreatedAccount;
 import computeTransaction.UpdateAccountContext;
+=======
+>>>>>>> origin/master
 import control.Control;
-import customer.Customer;
 import exceptions.InsertException;
 import region.Romania;
 import service.Call;

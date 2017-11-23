@@ -80,4 +80,11 @@ public class FriendPromotion extends Promotion {
 	}
 	public void computeDiscount(){ 
 	}
+	
+	@Override
+	public String toString() {
+		return "FriendPromotion [account=" + account + ", balance=" + balance + ", customerSystemReference="
+				+ customerSystemReference + ", id=" + id + ", uniqueIdentifierFieldName=" + uniqueIdentifierFieldName
+				+ "]";
+	}
 }

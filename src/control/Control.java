@@ -70,7 +70,7 @@ public class Control {
 		{
 			int s = generateRandomNumber(0,enterpriseAccount.size());
 			int s2 = generateRandomNumber(0,familyAccount.size());
-			registeredNumbers.add(familyAccount.get(s2).getNumbersString());
+			registeredNumbers.add(familyAccount.get(s2).getNumbersString().substring(0, 9));
 			registeredNumbers.add(enterpriseAccount.get(s).getNumber());
 		}
 		try {

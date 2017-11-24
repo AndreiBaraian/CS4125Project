@@ -50,7 +50,7 @@ public class GenerateServicesListener implements ActionListener{
 		DefaultTableModel model= (DefaultTableModel) table.getModel();
 		for(Service s: c.getServices())
 		{
-			
+			//System.out.println(s.getValue());
 				model.addRow(new Object[]{ s.getClass().getSimpleName(),s.getNumber(),s.getLocationFrom().getRegionName(),s.getValue() , "Not yet"});
 			
 			

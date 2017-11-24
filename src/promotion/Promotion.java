@@ -19,6 +19,7 @@ public class Promotion extends Account {
 		this.account = account;
 	}
 	
+
 	public Promotion() {}
 
 	public Account getAccount() {
@@ -40,5 +41,7 @@ public class Promotion extends Account {
 
 	public void computeDiscount() {
 		// TODO Auto-generated method stub	
-	}	
+	}
+
+		
 }

@@ -1,5 +1,7 @@
 package view;
-
+/*
+ * @author Xiangkai Tang
+ */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JTable;
@@ -18,7 +20,7 @@ public class DoneAddNumber implements ActionListener {
 		super();
 		this.numberTF = numberTF;
 		this.table = table;
-		this.accountSelectedRow = accountSelectedRow;
+		this.accountSelectedRow = table.getSelectedRow();
 	}
 
 	@Override

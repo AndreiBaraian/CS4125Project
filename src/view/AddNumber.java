@@ -41,8 +41,10 @@ public class AddNumber extends JFrame {
 	
 	public AddNumber(JTable accountsTable,int selectedRow,int selectedCol){
 		
-		this.accountSelectedRow = selectedRow;
+		this.accountsTable = accountsTable;
+		this.accountSelectedRow = accountsTable.getSelectedRow();
 		this.accountSelectedCol = selectedCol;
+		
 		
 		setTitle("Add Number");
 		this.accountsTable = accountsTable;
@@ -65,7 +67,7 @@ public class AddNumber extends JFrame {
 		btnAdd.setBounds(58, 80, 89, 23);
 		contentPane.add(btnAdd);
 		
-		btnAdd.addActionListener(new DoneAddNumber(numberTF, accountsTable, selectedCol));
+		btnAdd.addActionListener(new DoneAddNumber(numberTF, accountsTable, selectedRow));
 		
 	}
 

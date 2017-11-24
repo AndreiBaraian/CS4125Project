@@ -21,7 +21,7 @@ public class AddNumberListener implements ActionListener{
 	public AddNumberListener(JTable table, int selectedRow, int selectedCol) {
 		super();
 		this.table = table;
-		this.selectedRow = selectedRow;
+		this.selectedRow = table.getSelectedRow();
 		this.selectedCol = selectedCol;
 	}
 

@@ -29,9 +29,6 @@ public abstract class Account extends DBRecord{
 	@Column(name = "minutes")
 	private int minutes;
 	
-	@Column(name = "duration")
-	private double duration;
-	
 	@Column(name = "messages")
 	private int messages;
 	
@@ -60,7 +57,6 @@ public abstract class Account extends DBRecord{
 		this.minutes=0;
 		this.internationalMinutes=0;
 		this.mobileData=0;
-		
 		this.customer = customer;
 		this.balance = balance;
 		this.homeRegion = homeRegion;
@@ -69,15 +65,6 @@ public abstract class Account extends DBRecord{
 		this.customerSystemReference = customer.getSystemReference();
 		this.uniqueIdentifierFieldName = "customerId";
 	}
-
-/*
-	public void updateAccount(Service service){
-		this.service = service;
-		while(this.accountState == finalState){
-			this.accountState.update(this);
-		}
-	
-	}*/
 	
 	public abstract Report generateReport(int leftMinutes, int leftMessages,double leftMobileData, int leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow);
 	
@@ -142,14 +129,6 @@ public abstract class Account extends DBRecord{
 
 	public void setMessages(int messages) {
 		this.messages = messages;
-	}
-
-	public double getDuration() {
-		return duration;
-	}
-
-	public void setDuration(double duration) {
-		this.duration = duration;
 	}
 
 	public int getMinutes() {

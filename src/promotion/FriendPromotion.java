@@ -12,10 +12,7 @@ public class FriendPromotion extends Promotion {
 	
 	public FriendPromotion(Account account) {
 		super(account);
-		this.setMinutes(super.getMinutes()+100);
-		this.setDuration(super.getDuration()+200); 
-		this.setGiftpoints(super.getGiftpoints()+300);
-		this.setDifferentProviderMinutes(super.getDifferentProviderMinutes()+200); 
+		account.setDifferentProviderMinutes(super.getDifferentProviderMinutes()+200); 
 	}
 
 	public Report generateReport(int spentMinutes, int spentMessages,

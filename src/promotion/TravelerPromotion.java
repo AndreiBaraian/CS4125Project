@@ -12,9 +12,6 @@ public class TravelerPromotion extends Promotion {
 	public TravelerPromotion(Account account) {
 		super(account);
 		this.setInternationalMinutes(super.getInternationalMinutes()+500);
-		this.setMinutes(super.getMinutes()+300);
-		this.setDuration(super.getDuration()+30);
-		this.setGiftpoints(super.getGiftpoints()+100);
 	}
 	
 	public Report generateReport(int spentMinutes, int spentMessages,

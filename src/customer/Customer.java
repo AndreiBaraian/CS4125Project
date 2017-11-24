@@ -3,15 +3,20 @@ package customer;
  * @author Xiangkai Tang
  */
 
+import java.util.Observable;
+import java.util.Observer;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
 
 import dao.DBRecord;
 
 @Entity
 @Table(name = "tb_customer")
-public class Customer extends DBRecord {
+public class Customer extends DBRecord implements Observer{
 	
 	@Column(name = "firstName")
 	private String firstName;
@@ -93,5 +98,21 @@ public class Customer extends DBRecord {
 	public String getUniqueIdentifierFieldValue() {
 		return systemReference;
 	}
+
+
+	@Override
+	public void update(Observable o, Object newBalance) {
+		Object message = new Object();
+		message = "Mr/Mrs "+this.getFirstName()+" "+this.getLastName()+" Your new account balance is:"+newBalance;
+		JOptionPane pane = new JOptionPane(message,JOptionPane.INFORMATION_MESSAGE);
+		JDialog dialog = pane.createDialog(null, "Title");
+        dialog.setModal(false);
+        dialog.setVisible(true);
+		//JOptionPane.showConfirmDialog(null, message, "Balance",JOptionPane.OK_OPTION);
+	}
+
+
+
+
 	
 }

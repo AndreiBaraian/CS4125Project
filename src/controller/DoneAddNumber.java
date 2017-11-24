@@ -1,4 +1,4 @@
-package view;
+package controller;
 /*
  * @author Xiangkai Tang
  */

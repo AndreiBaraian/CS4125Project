@@ -45,6 +45,7 @@ public class AccountBLL<T extends Account> {
 		if(listAccounts == null){
 			accountDAO = new FamilyAccountDAO();
 			listAccounts = accountDAO.getByField("numbersString", number);
+			System.out.println(number);
 			account = (FamilyAccount) listAccounts.get(0);
 		}
 		else{

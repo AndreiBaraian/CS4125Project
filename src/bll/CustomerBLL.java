@@ -30,6 +30,7 @@ public class CustomerBLL {
 		// maybe set the new id to the object
 		return customer;
 	}
+
 	
 	private String getNextSystemReference(String firstName, String lastName){
 		List<Customer> allCustomers = customerDAO.getAll();

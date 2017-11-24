@@ -7,11 +7,13 @@ import java.io.IOException;
 import account.Account;
 import bll.AccountBLL;
 import bll.CallBLL;
+import bll.CustomerBLL;
 import bll.InternetUsageBLL;
 import bll.MessageBLL;
 import bll.RegionBLL;
 import bll.ServiceBLL;
 import control.Control;
+import customer.Customer;
 import exceptions.InsertException;
 import region.Region;
 import service.Service;
@@ -26,6 +28,7 @@ public class ComputeTransaction {
 	private RegionBLL regionBLL;
 	private MessageBLL messageBLL;
 	private CallBLL callBLL;
+	private CustomerBLL customerBLL;
 	private InternetUsageBLL internetUsageBLL;
 	private double fullBill;
 	private double customersBill;
@@ -38,6 +41,7 @@ public class ComputeTransaction {
 		messageBLL = new MessageBLL();
 		callBLL = new CallBLL();
 		internetUsageBLL = new InternetUsageBLL();
+		customerBLL = new CustomerBLL();
 		fullBill = 0.0;
 		customersBill = 0.0;
 	}
@@ -45,11 +49,12 @@ public class ComputeTransaction {
 	public Service computeBill(Service service){
 		double roamingTax = 0.0;
 		Account account;
+		Customer customer;
 		Account updatedAccount;
 		Region region;
 		String number= service.getNumber();
+		System.out.println(number);
 		account = accountBLL.getAccountByNumber(number);
-		
 		region = regionBLL.search(account.getHomeRegionString());
 		if(!account.getHomeRegionString().equalsIgnoreCase(service.getLocationFromString())){		
 			roamingTax = region.getRoamingTax();
@@ -57,9 +62,8 @@ public class ComputeTransaction {
 		}		
 		service.applyPrice(roamingTax);	
 		UpdateAccountContext updateAccountContext = new UpdateAccountContext(new CreatedAccount(), account,service, roamingTax);
+		updateAccountContext.getAccount().addObserver(new Customer());
 		updatedAccount = updateAccountContext.updateAccount();
-		System.out.println(updatedAccount.getBalance());
-		System.out.println(updatedAccount.toString());
 		accountBLL.modifyAccount(updatedAccount);
 		fullBill = fullBill+service.getCost();
 		customersBill = customersBill+service.getCustomerCost();

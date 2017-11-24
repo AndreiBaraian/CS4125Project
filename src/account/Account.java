@@ -1,4 +1,7 @@
 package account;
+import java.util.Observable;
+import java.util.Observer;
+
 /**
  * @author Xiangkai Tang
  * @author Andrei Baraian 5% Hibernate annotations
@@ -13,7 +16,7 @@ import region.Region;
 import report.Report;
 
 @MappedSuperclass
-public abstract class Account extends DBRecord implements IAccount{
+public abstract class Account extends DBRecord implements IAccount,Subject{
 
 	@Column(name = "differentProviderMinutes")
 	private double differentProviderMinutes;
@@ -51,14 +54,18 @@ public abstract class Account extends DBRecord implements IAccount{
 	@Column(name = "customerSystemReference")
 	protected String customerSystemReference;
 	
-	public Account() {}
+	@Transient
+	private Observer accountObserver;
+	
+	public Account() {
+
+	}
 	
 	public Account(double balance, Region homeRegion,Customer customer) {
 		this.messages=0;
 		this.minutes=0;
 		this.internationalMinutes=0;
 		this.mobileData=0;
-		
 		this.customer = customer;
 		this.balance = balance;
 		this.homeRegion = homeRegion;
@@ -66,6 +73,7 @@ public abstract class Account extends DBRecord implements IAccount{
 		this.customerName = customer.getFirstName() + " " + customer.getLastName();
 		this.customerSystemReference = customer.getSystemReference();
 		this.uniqueIdentifierFieldName = "customerId";
+		this.addObserver(customer);
 	}
 
 /*
@@ -81,17 +89,34 @@ public abstract class Account extends DBRecord implements IAccount{
 	
 	public abstract void computeDiscount();
 	
+	public void addObserver(Observer observer) {
+		this.accountObserver = observer;
+	}
+	
+	public void removeObserver(Observer observer){
+		
+	}
+	
+	public void notifyObservers(){
+		this.getObserver().update(new Observable(), this.getBalance());
+	}
+	
 	@Override
 	public String getUniqueIdentifierFieldValue(){
 		return customerSystemReference;
 	}
-
+	
+	public Observer getObserver(){
+		return this.accountObserver;
+	}
 	public double getBalance() {
 		return balance;
+		
 	}
 
 	public void setBalance(double balance) {
 		this.balance = balance;
+		this.notifyObservers();
 	}
 
 	public Region getHomeregion() {

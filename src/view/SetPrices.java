@@ -7,6 +7,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
 import control.Control;
+import controller.DoneSetting;
 
 import javax.swing.JLabel;
 import javax.swing.JComboBox;

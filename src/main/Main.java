@@ -8,8 +8,7 @@ import account.EnterpriseAccount;
 import computeTransaction.ComputeTransaction;
 import computeTransaction.CreatedAccount;
 import computeTransaction.UpdateAccountContext;
-=======
->>>>>>> origin/master
+
 import control.Control;
 import exceptions.InsertException;
 import region.Romania;

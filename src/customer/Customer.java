@@ -12,7 +12,7 @@ import dao.DBRecord;
 @Entity
 @Table(name = "tb_customer")
 public class Customer extends DBRecord {
-	
+
 	@Column(name = "firstName")
 	private String firstName;
 	
@@ -92,6 +92,12 @@ public class Customer extends DBRecord {
 	@Override
 	public String getUniqueIdentifierFieldValue() {
 		return systemReference;
+	}
+	
+	@Override
+	public String toString() {
+		return "Customer [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", address=" + address
+				+ ", email=" + email + ", systemReference=" + systemReference + ", id=" + id + "]";
 	}
 	
 }

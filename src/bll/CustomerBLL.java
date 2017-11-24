@@ -33,7 +33,8 @@ public class CustomerBLL {
 	
 	public Customer getCustomer(String customerSystemReference){
 		Customer customer = null;
-		customer = (Customer) customerDAO.getByField("customerSystemReference", customerSystemReference);
+		customer = (Customer) customerDAO.getByField("systemReference", customerSystemReference).get(0);
+		System.out.println(customer.toString());
 		return customer;
 	}
 	

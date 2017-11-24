@@ -99,6 +99,8 @@ public class AddAccount extends JFrame {
 		JComboBox<String> regionCB = new JComboBox<String>();
 		regionCB.setBounds(86, 184, 113, 20);
 		regionCB.addItem("Romania");
+		regionCB.addItem("Ireland");
+		regionCB.addItem("China");
 		contentPane.add(regionCB);
 		
 		JButton btnAdd = new JButton("Add");

@@ -53,8 +53,8 @@ public class ComputeTransaction {
 		Account updatedAccount;
 		Region region;
 		String number= service.getNumber();
-		System.out.println(number);
 		account = accountBLL.getAccountByNumber(number);
+		account.addObserver(account.getCustomer());
 		region = regionBLL.search(account.getHomeRegionString());
 		if(!account.getHomeRegionString().equalsIgnoreCase(service.getLocationFromString())){		
 			roamingTax = region.getRoamingTax();
@@ -62,7 +62,7 @@ public class ComputeTransaction {
 		}		
 		service.applyPrice(roamingTax);	
 		UpdateAccountContext updateAccountContext = new UpdateAccountContext(new CreatedAccount(), account,service, roamingTax);
-		updateAccountContext.getAccount().addObserver(new Customer());
+		//updateAccountContext.getAccount().addObserver();
 		updatedAccount = updateAccountContext.updateAccount();
 		accountBLL.modifyAccount(updatedAccount);
 		fullBill = fullBill+service.getCost();

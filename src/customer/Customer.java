@@ -16,7 +16,6 @@ import dao.DBRecord;
 
 @Entity
 @Table(name = "tb_customer")
-
 public class Customer extends DBRecord implements Observer{
 	
 	@Column(name = "firstName")
@@ -106,7 +105,7 @@ public class Customer extends DBRecord implements Observer{
 		Object message = new Object();
 		message = "Mr/Mrs "+this.getFirstName()+" "+this.getLastName()+" Your new account balance is:"+newBalance;
 		JOptionPane pane = new JOptionPane(message,JOptionPane.INFORMATION_MESSAGE);
-		JDialog dialog = pane.createDialog(null, "Title");
+		JDialog dialog = pane.createDialog(null, "Balance");
         dialog.setModal(false);
         dialog.setVisible(true);
 		//JOptionPane.showConfirmDialog(null, message, "Balance",JOptionPane.OK_OPTION);

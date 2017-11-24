@@ -54,6 +54,8 @@ public class AccountBLL<T extends Account> {
 		else{
 			account = (EnterpriseAccount) listAccounts.get(0);
 		}
+		Customer customer = customerBLL.getCustomer(account.getCustomerSystemReference());
+		account.setCustomer(customerBLL.getCustomer(account.getCustomerSystemReference()));
 		return account;
 	}
 	

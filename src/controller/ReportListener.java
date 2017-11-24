@@ -21,7 +21,7 @@ public ReportListener(JTable table, int row, int col)
 	this.table = table;
 	this.row = row;
 	this.col = col;
-	accountBLL=new AccountBLL();
+	accountBLL = new AccountBLL();
 }
 	@Override
 	public void actionPerformed(ActionEvent arg0) {

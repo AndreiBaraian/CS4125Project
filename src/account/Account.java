@@ -30,9 +30,6 @@ public abstract class Account extends DBRecord implements IAccount,Subject{
 	@Column(name = "minutes")
 	private int minutes;
 	
-	@Column(name = "duration")
-	private double duration;
-	
 	@Column(name = "messages")
 	private int messages;
 	
@@ -75,15 +72,6 @@ public abstract class Account extends DBRecord implements IAccount,Subject{
 		this.uniqueIdentifierFieldName = "customerId";
 		this.addObserver(customer);
 	}
-
-/*
-	public void updateAccount(Service service){
-		this.service = service;
-		while(this.accountState == finalState){
-			this.accountState.update(this);
-		}
-	
-	}*/
 	
 	public abstract Report generateReport(int leftMinutes, int leftMessages,double leftMobileData, int leftInternationalMinutes,double leftDifferentProviderMinutes,double costUntilNow);
 	
@@ -165,14 +153,6 @@ public abstract class Account extends DBRecord implements IAccount,Subject{
 
 	public void setMessages(int messages) {
 		this.messages = messages;
-	}
-
-	public double getDuration() {
-		return duration;
-	}
-
-	public void setDuration(double duration) {
-		this.duration = duration;
 	}
 
 	public int getMinutes() {

@@ -12,9 +12,6 @@ public class SurferPromotion extends Promotion {
 	public SurferPromotion(Account account) {
 		super(account);
 		this.setMobileData(super.getMobileData()+90);
-		this.setMinutes(super.getMinutes()+50);
-		this.setDuration(super.getDuration()+60); 
-		this.setGiftpoints(super.getGiftpoints()+70);
 	}
 	
 	public Report generateReport(int spentMinutes, int spentMessages,

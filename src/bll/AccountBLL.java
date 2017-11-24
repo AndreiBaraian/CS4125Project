@@ -20,8 +20,11 @@ public class AccountBLL<T extends Account> {
 	
 	private AbstractDAO<T> abstractDAO;
 	private AccountDAO accountDAO;
+	private CustomerBLL customerBLL;
 	
-	public AccountBLL() {}
+	public AccountBLL() {
+		this.customerBLL = new CustomerBLL();
+	}
 	
 	public AccountBLL(AbstractDAO<T> abstractDAO) {
 		this.abstractDAO = abstractDAO;
@@ -67,6 +70,12 @@ public class AccountBLL<T extends Account> {
 		else{
 			account = (EnterpriseAccount) listAccounts.get(0);
 		}
+		//System.out.println(account.getCustomerSystemReference());
+		//System.out.println(customerBLL.getCustomer(account.getCustomerSystemReference()));
+		System.out.println(account.getCustomerSystemReference());
+		Customer customer = customerBLL.getCustomer(account.getCustomerSystemReference());
+		System.out.println(customer.toString());
+		account.setCustomer(customerBLL.getCustomer(account.getCustomerSystemReference()));
 		return account;
 	}
 	
@@ -85,7 +94,6 @@ public class AccountBLL<T extends Account> {
 		List<String> recievedAttributes = new ArrayList<String>();
 		Account retrievedAccount = abstractDAO.getByField("id", accountId).get(0);
 		Account promotedAccount = PromotionFactory.applyPromotion(promotionType, retrievedAccount);
-		//System.out.println(promotedAccount.toString());
 		abstractDAO.modify((T) promotedAccount);
 		recievedAttributes.add(Integer.toString(promotedAccount.getMinutes()));
 		recievedAttributes.add(Integer.toString(promotedAccount.getMessages()));
@@ -99,8 +107,7 @@ public class AccountBLL<T extends Account> {
 	}
 	public void presentReport(String accountId){
 		//--------------------------------------------------------------------------- get account from data base, based on id;
-		
-		Account account =  abstractDAO.getByField("id", accountId).get(0);
+		Account account =  getAccount(accountId);
 		account.generateReport(account.getMinutes(),account.getMessages(),account.getMobileData(),account.getInternationalMinutes(),account.getDifferentProviderMinutes(),account.getBalance());
 	}
 }

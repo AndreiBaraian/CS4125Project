@@ -32,6 +32,13 @@ public class CustomerBLL {
 	}
 
 	
+	public Customer getCustomer(String customerSystemReference){
+		Customer customer = null;
+		customer = (Customer) customerDAO.getByField("systemReference", customerSystemReference).get(0);
+		System.out.println(customer.toString());
+		return customer;
+	}
+	
 	private String getNextSystemReference(String firstName, String lastName){
 		List<Customer> allCustomers = customerDAO.getAll();
 		StringBuilder newSysReference = new StringBuilder();

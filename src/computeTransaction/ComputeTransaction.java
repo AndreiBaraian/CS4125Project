@@ -1,19 +1,21 @@
 package computeTransaction;
-
+/*
+ * @author Lucian Epure 50%
+ */
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+import javax.swing.JDialog;
+import javax.swing.JOptionPane;
+
 import account.Account;
 import bll.AccountBLL;
 import bll.CallBLL;
-import bll.CustomerBLL;
 import bll.InternetUsageBLL;
 import bll.MessageBLL;
 import bll.RegionBLL;
 import bll.ServiceBLL;
-import control.Control;
-import customer.Customer;
 import exceptions.InsertException;
 import region.Region;
 import service.Service;
@@ -23,33 +25,28 @@ public class ComputeTransaction {
 
 	//----------------------------------------------------------have the take the services from the data base and process all of them one by one
 	private AccountBLL<?> accountBLL;
-	private Control control=Control.getInstance();
 	private static final String FILENAME = "generatedServices.csv";
 	private RegionBLL regionBLL;
 	private MessageBLL messageBLL;
 	private CallBLL callBLL;
-	private CustomerBLL customerBLL;
 	private InternetUsageBLL internetUsageBLL;
 	private double fullBill;
 	private double customersBill;
-
 	
-	
+	@SuppressWarnings("rawtypes")
 	public ComputeTransaction(){
-		accountBLL = new AccountBLL();
-		regionBLL = new RegionBLL();
-		messageBLL = new MessageBLL();
-		callBLL = new CallBLL();
-		internetUsageBLL = new InternetUsageBLL();
-		customerBLL = new CustomerBLL();
-		fullBill = 0.0;
-		customersBill = 0.0;
+		this.accountBLL = new AccountBLL();
+		this.regionBLL = new RegionBLL();
+		this.messageBLL = new MessageBLL();
+		this.callBLL = new CallBLL();
+		this.internetUsageBLL = new InternetUsageBLL();
+		this.fullBill = 0.0;
+		this.customersBill = 0.0;
 	}
 	
 	public Service computeBill(Service service){
 		double roamingTax = 0.0;
 		Account account;
-		Customer customer;
 		Account updatedAccount;
 		Region region;
 		String number= service.getNumber();
@@ -62,7 +59,6 @@ public class ComputeTransaction {
 		}		
 		service.applyPrice(roamingTax);	
 		UpdateAccountContext updateAccountContext = new UpdateAccountContext(new CreatedAccount(), account,service, roamingTax);
-		//updateAccountContext.getAccount().addObserver();
 		updatedAccount = updateAccountContext.updateAccount();
 		accountBLL.modifyAccount(updatedAccount);
 		fullBill = fullBill+service.getCost();
@@ -80,15 +76,19 @@ public class ComputeTransaction {
 				String[] serviceArg = line.split(csvSplitBy);
 				Service service = ServiceFactory.getService(serviceArg[0], regionBLL.search(serviceArg[1]), serviceArg[2], regionBLL.search(serviceArg[4]), Integer.parseInt(serviceArg[5]));
 				System.out.println(service.toString());
-				Service updatedService = computeBill(service);
-				
+				Service updatedService = computeBill(service);	
 				getBLL(service.getClass().getName()).addService(updatedService);
 			}
 			System.out.println("Finished");
 		}catch(IOException e){
 			e.printStackTrace();
 		}
-		System.out.println(fullBill);
+		Object message = new Object();
+		message = "The total value of the bill is: " + this.fullBill;
+		JOptionPane pane = new JOptionPane(message,JOptionPane.INFORMATION_MESSAGE);
+		JDialog dialog = pane.createDialog(null, "TOTAL");
+        dialog.setModal(false);
+        dialog.setVisible(true);
 	}
 	
 	private ServiceBLL<?> getBLL(String type){

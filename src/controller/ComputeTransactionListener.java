@@ -9,7 +9,9 @@ import computeTransaction.ComputeTransaction;
 import exceptions.InsertException;
 
 public class ComputeTransactionListener implements ActionListener{
+	
 	ComputeTransaction computeTransaction; 
+	
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		computeTransaction = new ComputeTransaction(); 

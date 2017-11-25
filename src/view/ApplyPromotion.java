@@ -31,8 +31,6 @@ public class ApplyPromotion extends JFrame {
 		this.accountSelectedCol=selectedCol;
 		this.accountSelectedRow=selectedRow;
 		
-		String name = accountsTable.getValueAt(0, 4).toString();
-		
 		setTitle("Apply Promotion");
 		setBounds(100, 100, 430, 174);
 		contentPane = new JPanel();
@@ -48,8 +46,6 @@ public class ApplyPromotion extends JFrame {
 		applyPromotionCB.addItem("Traveler");
 		
 		Object[] promotionsColumn = {  "Added Promotions" };
-
-		final DefaultTableModel promotionModel = new DefaultTableModel(promotionsColumn, 0);
 		
 		final DefaultTableModel availablePromotionsModel = new DefaultTableModel(promotionsColumn, 0);
 		availablePromotions = new JTable(availablePromotionsModel);
@@ -70,6 +66,6 @@ public class ApplyPromotion extends JFrame {
 		JButton btnConfirm = new JButton("Confirm");
 		btnConfirm.setBounds(57, 98, 89, 23);
 		contentPane.add(btnConfirm);
-		btnConfirm.addActionListener(new DonePromoting(applyPromotionCB,availablePromotions,accountsTable,accountSelectedRow,accountSelectedCol));
+		btnConfirm.addActionListener(new DonePromoting(applyPromotionCB,availablePromotions,this.accountsTable,accountSelectedRow,accountSelectedCol));
 	}
 }

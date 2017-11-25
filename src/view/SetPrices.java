@@ -6,7 +6,6 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import control.Control;
 import controller.DoneSetting;
 
 import javax.swing.JLabel;
@@ -30,9 +29,6 @@ public class SetPrices extends JFrame {
 	private JTextField newTF;
 	
 
-	/**
-	 * Create the frame.
-	 */
 	public SetPrices() {
 		
 		setTitle("Set Prices");
@@ -90,7 +86,7 @@ public class SetPrices extends JFrame {
 		btnSet = new JButton("Set");
 		btnSet.setBounds(57, 207, 89, 23);
 		contentPane.add(btnSet);
-		btnSet.addActionListener(new DoneSetting(previousTF,newTF,serviceTypeCB,countryCB));
+		btnSet.addActionListener(new DoneSetting(newTF,serviceTypeCB,countryCB));
 		
 		
 	}

@@ -9,6 +9,7 @@ import javax.swing.JFrame;
 
 import control.Control;
 import controller.ManageAccountsListener;
+import controller.ProcessBillsListener;
 
 import javax.swing.JButton;
 
@@ -40,13 +41,7 @@ public class Menu {
 		JButton btnProcessBills = new JButton("Process Bills");
 		btnProcessBills.setBounds(79, 50, 231, 23);
 		getFrmMainMenu().getContentPane().add(btnProcessBills);
-		btnProcessBills.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-
-				processBills = new ProcessBills();
-				processBills.setVisible(true);
-			}
-		});
+		btnProcessBills.addActionListener(new ProcessBillsListener());
 		
 		JButton btnManageAccounts = new JButton("Manage Accounts");
 		btnManageAccounts.setBounds(79, 108, 231, 23);

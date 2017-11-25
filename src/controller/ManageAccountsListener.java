@@ -1,5 +1,7 @@
 package controller;
-
+/*
+ * @author Lucian Epure
+ */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -20,7 +22,6 @@ public class ManageAccountsListener implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		
 		List<FamilyAccount> familyAccounts;
 		List<EnterpriseAccount> enterpriseAccounts;
 		List<Account> allAccounts = new ArrayList<Account>();
@@ -31,9 +32,6 @@ public class ManageAccountsListener implements ActionListener{
 		allAccounts.addAll(enterpriseAccounts);
 		allAccounts.addAll(familyAccounts);
 		manageAccounts = new ManageAccounts(allAccounts);
-		manageAccounts.setVisible(true);
-		
-	}
-
-	
+		manageAccounts.setVisible(true);	
+	}	
 }

@@ -4,7 +4,7 @@ package view;
  * @author Xiangkai Tang 5% implement of add number
  */
 import java.awt.BorderLayout;
-import java.awt.EventQueue;
+
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -18,22 +18,13 @@ import controller.DoneAddNumber;
 
 public class AddNumber extends JFrame {
 
+	private static final long serialVersionUID = -896697261248020811L;
 	private JPanel contentPane;
 	private JTextField numberTF;
 	private int accountSelectedRow;
-	private int accountSelectedCol;
 	private JTable accountsTable;
-	
-	/**
-	 * Launch the application.
-	 */
-	
 
-	/**
-	 * Create the frame.
-	 */
-	public AddNumber() {
-		
+	public AddNumber() {	
 		setBounds(100, 100, 450, 300);
 		contentPane = new JPanel();
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -42,11 +33,8 @@ public class AddNumber extends JFrame {
 	}
 	
 	public AddNumber(JTable accountsTable,int selectedRow,int selectedCol){
-		
 		this.accountsTable = accountsTable;
 		this.accountSelectedRow = accountsTable.getSelectedRow();
-		this.accountSelectedCol = selectedCol;
-		
 		
 		setTitle("Add Number");
 		this.accountsTable = accountsTable;
@@ -69,8 +57,7 @@ public class AddNumber extends JFrame {
 		btnAdd.setBounds(58, 80, 89, 23);
 		contentPane.add(btnAdd);
 		
-		btnAdd.addActionListener(new DoneAddNumber(numberTF, accountsTable, selectedRow));
-		
+		btnAdd.addActionListener(new DoneAddNumber(numberTF, this.accountsTable, this.accountSelectedRow));		
 	}
 
 }

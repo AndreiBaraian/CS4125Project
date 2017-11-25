@@ -12,13 +12,12 @@ import bll.FamilyAccountBLL;
 import bll.RegionBLL;
 import account.EnterpriseAccount;
 import account.FamilyAccount;
-import region.China;
-import region.Ireland;
 import region.Region;
-import region.Romania;
 import service.Service;
 import service.ServiceFactory;
-
+/*
+ * @author Lucian Epure 50%
+ */
 public class Control {
 	
 	private static final Control controlInstance= new Control();
@@ -45,20 +44,19 @@ public class Control {
 	}
 	
 
-	public int generateRandomNumber(int min,int max)
-	{
+	public int generateRandomNumber(int min,int max){
         Random random = new Random();
         int s = random.nextInt(max)%(max-min+1) + min;
         return s;
 	}
 	
-	public void generateServices(Configuration C) {
+	public void generateServices(Configuration configuration) {
 		String generatedType = new String();
 		Region from=null;
 		Region to= null;
 		int duration;
 		String number;
-		int quantity = C.getQuantity();
+		int quantity = configuration.getQuantity();
 		List<EnterpriseAccount> enterpriseAccount;
 		List<FamilyAccount> familyAccount;
 		EnterpriseAccountBLL enterpriseAccountBLL = new EnterpriseAccountBLL();
@@ -78,23 +76,23 @@ public class Control {
 		for (int i = 0; i < quantity; i++) {
 
 			number= registeredNumbers.get(rand.nextInt(registeredNumbers.size()));
-			if (C.getType().equals("Any")) {
+			if (configuration.getType().equals("Any")) {
 				generatedType = types.get(rand.nextInt(types.size()));
 			} 
-			if (C.getType().equals("Any")==false)
-				generatedType = C.getType();
+			if (configuration.getType().equals("Any")==false)
+				generatedType = configuration.getType();
 
-			if (C.getFrom().equals("Any")) {
+			if (configuration.getFrom().equals("Any")) {
 				from = availableRegions.get(rand.nextInt(availableRegions.size()));
 			} 
-			if (C.getFrom().equals("Any")==false)
-				from = regionBLL.search(C.getFrom());
-			if (C.getTo().equals("Any")) {
+			if (configuration.getFrom().equals("Any")==false)
+				from = regionBLL.search(configuration.getFrom());
+			if (configuration.getTo().equals("Any")) {
 				to = availableRegions.get(rand.nextInt(availableRegions.size()));
 			} 
-			if (C.getTo().equals("Any")==false)
-				to = regionBLL.search(C.getTo());
-			duration = rand.nextInt((C.getMaxDuration() - C.getMinDuration()) + 1) + C.getMinDuration();
+			if (configuration.getTo().equals("Any")==false)
+				to = regionBLL.search(configuration.getTo());
+			duration = rand.nextInt((configuration.getMaxDuration() - configuration.getMinDuration()) + 1) + configuration.getMinDuration();
 			Service S= ServiceFactory.getService(generatedType, from, number, to, duration);
 			services.add(S);
 			

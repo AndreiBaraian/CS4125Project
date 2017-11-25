@@ -103,7 +103,6 @@ public class AccountBLL<T extends Account> {
 	}
 	public List<T> getAll(){
 		List<T> accounts = new ArrayList<T>();
-		
 		accounts = abstractDAO.getAll();
 		return accounts;
 	}

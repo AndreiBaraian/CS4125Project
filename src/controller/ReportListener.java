@@ -6,8 +6,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import javax.swing.JTable;
-
-import account.Account;
 import bll.AccountBLL;
 
 public class ReportListener implements ActionListener{
@@ -16,8 +14,8 @@ private int col;
 private int row;
 private AccountBLL<?> accountBLL;
 
-public ReportListener(JTable table, int row, int col)
-{
+@SuppressWarnings("rawtypes")
+public ReportListener(JTable table, int row, int col){
 	this.table = table;
 	this.row = row;
 	this.col = col;
@@ -25,8 +23,7 @@ public ReportListener(JTable table, int row, int col)
 }
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		String id= table.getValueAt(row, col).toString();
-		
+		String id= table.getValueAt(row, col).toString();	
 		accountBLL.presentReport(id);
 	}
 		

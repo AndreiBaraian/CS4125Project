@@ -1,4 +1,7 @@
 package account;
+/*
+ * @author Lucian Epure 40% observer 
+ */
 import java.util.Observable;
 import java.util.Observer;
 
@@ -16,7 +19,7 @@ import region.Region;
 import report.Report;
 
 @MappedSuperclass
-public abstract class Account extends DBRecord implements IAccount,Subject{
+public abstract class Account extends DBRecord implements IAccount,ObserverSubject{
 
 	@Column(name = "differentProviderMinutes")
 	private double differentProviderMinutes;

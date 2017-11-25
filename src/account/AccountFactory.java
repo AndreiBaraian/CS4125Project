@@ -1,5 +1,7 @@
 package account;
-
+/*
+ * @author Lucian Epure
+ */
 import java.util.ArrayList;
 import java.util.List;
 

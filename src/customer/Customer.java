@@ -111,10 +111,6 @@ public class Customer extends DBRecord implements Observer{
 		//JOptionPane.showConfirmDialog(null, message, "Balance",JOptionPane.OK_OPTION);
 	}
 
-
-
-
-	
 	@Override
 	public String toString() {
 		return "Customer [firstName=" + firstName + ", lastName=" + lastName + ", age=" + age + ", address=" + address

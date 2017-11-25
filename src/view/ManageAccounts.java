@@ -25,12 +25,9 @@ public class ManageAccounts extends JFrame {
 	private static final long serialVersionUID = 1L;
 	private JPanel contentPane;
 	private JTable accounts;
-	private JTable numbers;
 	private JScrollPane accountsH;
-	private JScrollPane numbersH;
 	private int selectedRow;
 	private int selectedCol;
-	private Object obj=null;
 	private List<Account> allAccounts;
 	
 	public ManageAccounts(List<Account> allAccounts) {
@@ -75,7 +72,6 @@ public class ManageAccounts extends JFrame {
 			 public void mouseClicked(java.awt.event.MouseEvent evt) {
 			   selectedRow = accounts.rowAtPoint(evt.getPoint());
 			   selectedCol = accounts.columnAtPoint(evt.getPoint());
-			   obj=accounts.getValueAt(selectedRow,selectedCol);
 			 }
 			});
 		accountsH = new JScrollPane(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS, JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);

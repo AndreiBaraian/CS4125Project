@@ -48,66 +48,9 @@ public class DonePromoting implements ActionListener{
 		recievedMessages = recievedAttributes.get(1);
 		accountModel.setValueAt(recievedMinutes, selectedRow, 4);
 		accountModel.setValueAt(recievedMessages, selectedRow, 5);
-		
-	
-		/*
-		 * if(accountsTable.getValueAt(selectedRow, 3).toString()=="Family"&&promotion=="Surfer")
-		{
-			List<String> numbers = new ArrayList<>();
-			numbers.add(DoneAddingListener.custo_number);
-			Account SurferPromotionFamilyAccount = new SurferPromotion(new FamilyAccount(Double.parseDouble(accountsTable.getValueAt(selectedRow, 6).toString()),new Romania(),DoneAddingListener.customer));
-			
-			System.out.println("Promotion Complete! your promotion type is "+promotion);
-			System.out.println("Applied Account is "+accountsTable.getValueAt(selectedRow, 3).toString() +" Account");
-			System.out.println("Account owner is "+id);
-		}
-		if(accountsTable.getValueAt(selectedRow, 3).toString()=="Family"&&promotion=="Friend")
-		{
-			List<String> numbers = new ArrayList<>();
-			numbers.add(DoneAddingListener.custo_number);
-			Account FriendPromotionFamilyAccount = new FriendPromotion(new FamilyAccount(Double.parseDouble(accountsTable.getValueAt(selectedRow, 6).toString()),new Romania(),DoneAddingListener.customer));
-			System.out.println("Promotion Complete! your promotion type is "+promotion);
-			System.out.println("Applied Account is "+accountsTable.getValueAt(selectedRow, 3).toString() +" Account");
-			System.out.println("Account owner is "+id);
-		}
-		if(accountsTable.getValueAt(selectedRow, 3).toString()=="Family"&&promotion=="Traveler")
-		{
-			List<String> numbers = new ArrayList<>();
-			numbers.add(DoneAddingListener.custo_number);
-			Account TravelerPromotionFamilyAccount = new TravelerPromotion(new FamilyAccount(Double.parseDouble(accountsTable.getValueAt(selectedRow, 6).toString()),new Romania(),DoneAddingListener.customer));
-			System.out.println("Promotion Complete! your promotion type is "+promotion);
-			System.out.println("Applied Account is "+accountsTable.getValueAt(selectedRow, 3).toString() +" Account");
-			System.out.println("Account owner is "+id);
-		}
-		if(accountsTable.getValueAt(selectedRow, 3).toString()=="Enterprise"&&promotion=="Surfer")
-		{
-			Account SurferPromotionEnterpriseAccount = new SurferPromotion(new EnterpriseAccount(Double.parseDouble(accountsTable.getValueAt(selectedRow, 6).toString()),new Romania(),DoneAddingListener.customer,DoneAddingListener.endate,DoneAddingListener.custo_number));
-			System.out.println("Promotion Complete! your promotion type is "+promotion);
-			System.out.println("Applied Account is "+accountsTable.getValueAt(selectedRow, 3).toString() +" Account");
-			System.out.println("Account owner is "+id);
-		}
-		if(accountsTable.getValueAt(selectedRow, 3).toString()=="Enterprise"&&promotion=="Friend")
-		{
-			Account FriendPromotionEnterpriseAccount = new FriendPromotion(new EnterpriseAccount(Double.parseDouble(accountsTable.getValueAt(selectedRow, 6).toString()),new Romania(),DoneAddingListener.customer,DoneAddingListener.endate,DoneAddingListener.custo_number));
-			System.out.println("Promotion Complete! your promotion type is "+promotion);
-			System.out.println("Applied Account is "+accountsTable.getValueAt(selectedRow, 3).toString() +" Account");
-			System.out.println("Account owner is "+id);
-		}
-		if(accountsTable.getValueAt(selectedRow, 3).toString()=="Enterprise"&&promotion=="Travler")
-		{
-			Account TravelerPromotionEnterpriseAccount = new TravelerPromotion(new EnterpriseAccount(Double.parseDouble(accountsTable.getValueAt(selectedRow, 6).toString()),new Romania(),DoneAddingListener.customer,DoneAddingListener.endate,DoneAddingListener.custo_number));
-			System.out.println("Promotion Complete! your promotion type is "+promotion);
-			System.out.println("Applied Account is "+accountsTable.getValueAt(selectedRow, 3).toString() +" Account");
-			System.out.println("Account owner is "+id);
-		}
-		
-		
-*/
 	}
-	
-	private AccountBLL<?> getBLL(String type) {
+		private AccountBLL<?> getBLL(String type) {
 		AccountBLL<?> accountBLL = null;
-		System.out.println(type);
 		if(type.equals("EnterpriseAccount")) {
 			accountBLL = new EnterpriseAccountBLL();
 			System.out.println("I am here");

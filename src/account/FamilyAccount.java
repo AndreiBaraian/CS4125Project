@@ -12,7 +12,6 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
-import computeTransaction.CreatedAccount;
 import customer.Customer;
 import promotion.PDFcreater;
 import region.Region;
@@ -54,8 +53,7 @@ public class FamilyAccount extends Account {
 
 	@Override
 	public void computeDiscount() {
-		// TODO Auto-generated method stub
-		
+	
 	}
 
 	public List<String> getNumbers() {

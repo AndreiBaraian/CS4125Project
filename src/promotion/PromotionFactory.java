@@ -5,8 +5,6 @@ package promotion;
  */
 
 import account.Account;
-import account.EnterpriseAccount;
-import account.FamilyAccount;
 
 public class PromotionFactory {
 	

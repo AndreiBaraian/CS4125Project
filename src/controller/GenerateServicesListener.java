@@ -26,35 +26,23 @@ public class GenerateServicesListener implements ActionListener{
 	private JTable table;
 	private Control c;
 	public GenerateServicesListener(JComboBox<String> t, JComboBox<String> from, JComboBox<String> to, JTextField min, JTextField max, JTextField quantity,JTable table){
-		
 		this.type=t;
 		this.from=from;
 		this.to=to;
 		this.min=min;
 		this.max=max;
 		this.quantity=quantity;
-		this.table=table;
-		
+		this.table=table;	
 	}
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		// TODO Auto-generated method stub
-		
-		
 		Configuration config= new Configuration((String)type.getSelectedItem(),(String)from.getSelectedItem(),(String)to.getSelectedItem(),min.getText(),max.getText(),quantity.getText());
 		c=Control.getInstance();
 		c.generateServices(config);
-		
-		
 		DefaultTableModel model= (DefaultTableModel) table.getModel();
-		for(Service s: c.getServices())
-		{
-			//System.out.println(s.getValue());
-				model.addRow(new Object[]{ s.getClass().getSimpleName(),s.getNumber(),s.getLocationFrom().getRegionName(),s.getValue() , "Not yet"});
-			
-			
-
+		for(Service s: c.getServices()){
+				model.addRow(new Object[]{ s.getClass().getSimpleName(),s.getNumber(),s.getLocationFrom().getRegionName(),s.getValue() ,"Not yet" });
 			}
 		}
 		

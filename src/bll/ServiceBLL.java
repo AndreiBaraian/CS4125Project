@@ -1,5 +1,9 @@
 package bll;
 
+/**
+ * @author Andrei Baraian
+ */
+
 import dao.AbstractDAO;
 import exceptions.InsertException;
 import service.Service;

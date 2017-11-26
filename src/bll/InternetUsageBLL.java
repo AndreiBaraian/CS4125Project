@@ -1,5 +1,9 @@
 package bll;
 
+/**
+ * @author Andrei Baraian
+ */
+
 import dao.InternetUsageDAO;
 import service.InternetUsage;
 

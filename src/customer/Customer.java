@@ -1,6 +1,8 @@
 package customer;
-/*
+/**
  * @author Xiangkai Tang
+ * @author Lucian Epure 30% Observer
+ * @author Andre Baraian 10% Hibernate annotations
  */
 
 import java.util.Observable;

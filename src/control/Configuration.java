@@ -1,7 +1,13 @@
 package control;
 
+/**
+ * 
+ * @author Lucian Epure
+ *
+ */
 
 public class Configuration {
+	
 	private String type;
 	private int minDuration;
 	private int maxDuration;
@@ -9,8 +15,7 @@ public class Configuration {
 	private String to;
 	private int quantity;
 
-	public Configuration(String type,String from, String to,String minDuration, String maxDuration,String quantity)
-	{
+	public Configuration(String type,String from, String to,String minDuration, String maxDuration,String quantity){
 		this.type=type;
 		this.from=from;
 		this.to=to;

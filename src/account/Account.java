@@ -1,6 +1,7 @@
 package account;
 /*
- * @author Lucian Epure 40% observer 
+ * @author Lucian Epure 40% observer
+ * @author Andrei Baraian 10% Hibernate annotations 
  */
 import java.util.Observable;
 import java.util.Observer;

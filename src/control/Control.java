@@ -16,7 +16,7 @@ import region.Region;
 import service.Service;
 import service.ServiceFactory;
 /*
- * @author Lucian Epure 50%
+ * @author Lucian Epure
  */
 public class Control {
 	

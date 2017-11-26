@@ -1,5 +1,9 @@
 package bll;
 
+/**
+ * @author Andrei Baraian
+ */
+
 import account.EnterpriseAccount;
 import dao.EnterpriseAccountDAO;
 

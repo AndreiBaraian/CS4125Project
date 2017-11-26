@@ -1,7 +1,10 @@
 package controller;
-/*
+
+/**
  * @author Lucian Epure
+ * @author Andre Baraian 20%
  */
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -53,7 +56,7 @@ public class DonePromoting implements ActionListener{
 		AccountBLL<?> accountBLL = null;
 		if(type.equals("EnterpriseAccount")) {
 			accountBLL = new EnterpriseAccountBLL();
-			System.out.println("I am here");
+			//System.out.println("I am here");
 		}
 		else
 			accountBLL = new FamilyAccountBLL();

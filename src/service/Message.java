@@ -1,6 +1,8 @@
 package service;
+
 /**
  * @author Lucian Epure 
+ * @author Andre Baraian 10% Hibernate annotations
  */
 
 import javax.persistence.Column;

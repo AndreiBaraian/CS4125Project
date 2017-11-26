@@ -1,7 +1,8 @@
 package controller;
 
-/*
- * @author Lucian Epure
+/**
+ * @author Lucian Epure 50%
+ * @author Andrei Baraian 50%
  * 
  */
 import java.awt.event.ActionEvent;

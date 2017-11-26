@@ -1,7 +1,10 @@
 package service;
+
 /**
  * @author Lucian Epure 
+ * @author Andre Baraian 10% Hibernate annotations
  */
+
 import java.io.Serializable;
 
 import javax.persistence.Column;

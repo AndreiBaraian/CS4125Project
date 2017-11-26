@@ -1,5 +1,9 @@
 package insertions;
 
+/**
+ * @author Andrei Baraian
+ */
+
 import account.EnterpriseAccount;
 import bll.AccountBLL;
 import bll.CustomerBLL;

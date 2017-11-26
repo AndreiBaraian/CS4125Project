@@ -1,6 +1,7 @@
 package computeTransaction;
-/*
+/**
  * @author Lucian Epure 50%
+ * @author Andrei Baraian 50% (processServices)
  */
 import java.io.BufferedReader;
 import java.io.FileReader;

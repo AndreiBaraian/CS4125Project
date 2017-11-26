@@ -1,5 +1,9 @@
 package bll;
 
+/**
+ * @author Andrei Baraian
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 
